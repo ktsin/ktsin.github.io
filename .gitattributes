@@ -1,0 +1,5 @@
+*.dll binary
+*.wasm binary
+*.blat binary
+*.js binary
+
