@@ -1,0 +1,12 @@
+baseURL = 'https://ktsin.github.io/'
+languageCode = 'en-us'
+title = 'My blog'
+theme = 'paper'
+
+#theme config
+[params]
+comments = false
+math = false
+name = 'Pavel Kazutsin'
+bio = '.NET Software Engineer'
+color = 'light'
