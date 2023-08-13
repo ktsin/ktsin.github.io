@@ -54,8 +54,6 @@ jobs:
         run: |
           mkdir -p ./public
           mv -vf ./s3 ./public/
-          ls -alh ./s3
-          ls -alh ./public
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
