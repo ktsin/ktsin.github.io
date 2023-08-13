@@ -63,7 +63,7 @@ jobs:
 
       - name: Move static files to publish directory
         run: |
-            mv -rf ./s3 ./public/
+            mv -vf ./s3 ./public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
