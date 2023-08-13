@@ -63,7 +63,10 @@ jobs:
 
       - name: Move static files to publish directory
         run: |
+            ls -alh
             mv -vf ./s3 ./public/
+        #execute script in repository root
+        working-directory: ${{ github.workspace }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
