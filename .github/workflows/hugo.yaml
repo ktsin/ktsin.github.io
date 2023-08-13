@@ -50,6 +50,12 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Copy static content
+        run: |
+          mkdir -p ./public
+          mv -vf ./s3 ./public/
+          ls -alh ./s3
+          ls -alh ./public
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -60,10 +66,8 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: Move static files to publish directory
-        run: |
-            mv -vf ./s3 ./public/
+        #execute script in repository root
+        working-directory: ${{ github.workspace }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
