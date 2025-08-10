@@ -31150,6 +31150,7 @@ background-color: #f0f8ff;
     // Initialize navigation functionality
     function initializeNavigation() {
         addCollapsibleFunctionality();
+        collapseAllByDefault();
         highlightCurrentPage();
         addControlButtons();
     }
@@ -31202,6 +31203,14 @@ background-color: #f0f8ff;
                     });
                 }
             }
+        }
+    }
+    
+    // Collapse all sections by default
+    function collapseAllByDefault() {
+        var collapsibleItems = document.querySelectorAll('#mainlist .collapsible');
+        for (var i = 0; i < collapsibleItems.length; i++) {
+            collapsibleItems[i].classList.add('collapsed');
         }
     }
     
@@ -31259,8 +31268,10 @@ background-color: #f0f8ff;
                             }
                         }
                         
-                        // Scroll current item into view
-                        link.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        // Scroll current item to the top of navigation panel
+                        setTimeout(function() {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
                         break;
                     }
                 }
