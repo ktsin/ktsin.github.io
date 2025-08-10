@@ -1,12 +1,84 @@
-baseURL = 'https://ktsin.github.io/'
+baseURL = 'https://ktsin.xyz/'
 languageCode = 'en-us'
-title = 'My blog'
+title = 'My Blog'
 theme = 'paper'
 
-#theme config
+# Hugo version compatibility
+# Minimum Hugo version required
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.110.0"
+
+# Markup configuration for latest Hugo
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'github'
+    lineNos = true
+    codeFences = true
+    tabWidth = 4
+
+# Performance optimizations
+[caches]
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "10m"
+  [caches.getcsv]
+    dir = ":cacheDir/:project"
+    maxAge = "10m"
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"
+  [caches.assets]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"
+
+# Theme config
 [params]
-comments = false
-math = false
-name = 'Pavel Kazutsin'
-bio = '.NET Software Engineer'
-color = 'light'
+  comments = false
+  math = false
+  name = 'Pavel Kazutsin'
+  bio = '.NET Software Engineer'
+  color = 'light'
+  
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "symbian"
+    name = "Symbian SDK"
+    url = "/s3/"
+    weight = 30
+
+# Sitemap configuration
+[sitemap]
+  changefreq = 'monthly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+# Privacy configuration
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
