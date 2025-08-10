@@ -33,7 +33,22 @@ margin-bottom:4px;
 #mainlist a {
 color: #026690;
 font-family:verdana, sans-serif;
-font-size:.8em
+font-size:.8em;
+text-decoration: none;
+display: block;
+padding: 2px 4px;
+border-radius: 3px;
+}
+
+#mainlist a:hover {
+background-color: #f0f8ff;
+color: #004080;
+}
+
+#mainlist a.current {
+background-color: #026690;
+color: white;
+font-weight: bold;
 }
 
 
@@ -45,6 +60,44 @@ font-size:.8em
 #mainlist ul ul ul ul ul ul ul {
 padding-left:10px;
 margin-left:-5px;
+}
+
+/* Collapsible functionality */
+.collapsible {
+position: relative;
+}
+
+.collapsible > a::before {
+content: '▼';
+margin-right: 6px;
+font-size: 0.7em;
+color: #666;
+cursor: pointer;
+display: inline-block;
+width: 12px;
+text-align: center;
+}
+
+.collapsible.collapsed > a::before {
+content: '▶';
+}
+
+.collapsible.collapsed > ul {
+display: none;
+}
+
+.toggle-btn {
+background: none;
+border: none;
+color: #026690;
+cursor: pointer;
+font-size: 0.8em;
+padding: 2px 4px;
+margin: 2px;
+}
+
+.toggle-btn:hover {
+background-color: #f0f8ff;
 }
 </style>
 
@@ -31091,5 +31144,154 @@ margin-left:-5px;
 </ul>
 </li>
 </ul>
+
+<script type="text/javascript">
+(function() {
+    // Initialize navigation functionality
+    function initializeNavigation() {
+        addCollapsibleFunctionality();
+        highlightCurrentPage();
+        addControlButtons();
+    }
+    
+    // Add control buttons for expand/collapse all
+    function addControlButtons() {
+        var controls = document.createElement('div');
+        controls.style.cssText = 'padding: 5px; border-bottom: 1px solid #ccc; margin-bottom: 5px;';
+        
+        var expandBtn = document.createElement('button');
+        expandBtn.className = 'toggle-btn';
+        expandBtn.innerHTML = 'Expand All';
+        expandBtn.onclick = function() { toggleAllSections(false); };
+        
+        var collapseBtn = document.createElement('button');
+        collapseBtn.className = 'toggle-btn';
+        collapseBtn.innerHTML = 'Collapse All';
+        collapseBtn.onclick = function() { toggleAllSections(true); };
+        
+        controls.appendChild(expandBtn);
+        controls.appendChild(collapseBtn);
+        
+        document.body.insertBefore(controls, document.getElementById('mainlist'));
+    }
+    
+    // Add collapsible functionality to list items with children
+    function addCollapsibleFunctionality() {
+        var allLis = document.querySelectorAll('#mainlist li');
+        
+        for (var i = 0; i < allLis.length; i++) {
+            var li = allLis[i];
+            var childUl = li.querySelector('ul');
+            
+            if (childUl) {
+                li.className = 'collapsible';
+                
+                // Add click handler to the link
+                var link = li.querySelector('a');
+                if (link) {
+                    link.addEventListener('click', function(e) {
+                        // Only toggle if clicking on the arrow area
+                        var rect = this.getBoundingClientRect();
+                        var clickX = e.clientX - rect.left;
+                        
+                        if (clickX <= 20) { // Click on arrow area
+                            e.preventDefault();
+                            e.stopPropagation();
+                            toggleSection(this.parentNode);
+                        }
+                    });
+                }
+            }
+        }
+    }
+    
+    // Toggle individual section
+    function toggleSection(li) {
+        if (li.classList.contains('collapsed')) {
+            li.classList.remove('collapsed');
+        } else {
+            li.classList.add('collapsed');
+        }
+    }
+    
+    // Toggle all sections
+    function toggleAllSections(collapse) {
+        var collapsibles = document.querySelectorAll('.collapsible');
+        
+        for (var i = 0; i < collapsibles.length; i++) {
+            if (collapse) {
+                collapsibles[i].classList.add('collapsed');
+            } else {
+                collapsibles[i].classList.remove('collapsed');
+            }
+        }
+    }
+    
+    // Highlight current page based on parent window URL
+    function highlightCurrentPage() {
+        try {
+            var parentUrl = window.parent.location.href;
+            var currentPage = parentUrl.split('/').pop().split('#')[0];
+            
+            if (currentPage && currentPage !== '') {
+                var links = document.querySelectorAll('#mainlist a');
+                
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    var linkHref = link.getAttribute('href');
+                    
+                    if (linkHref && linkHref === currentPage) {
+                        link.className = 'current';
+                        
+                        // Expand parent sections to show current item
+                        var parentLi = link.parentNode;
+                        while (parentLi && parentLi.tagName === 'LI') {
+                            if (parentLi.classList.contains('collapsible')) {
+                                parentLi.classList.remove('collapsed');
+                            }
+                            
+                            // Move up to parent ul, then parent li
+                            var parentUl = parentLi.parentNode;
+                            if (parentUl && parentUl.tagName === 'UL') {
+                                parentLi = parentUl.parentNode;
+                            } else {
+                                break;
+                            }
+                        }
+                        
+                        // Scroll current item into view
+                        link.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        break;
+                    }
+                }
+            }
+        } catch (e) {
+            // Cross-origin access might be blocked, continue without highlighting
+            console.log('Cannot access parent frame URL for highlighting');
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeNavigation);
+    } else {
+        initializeNavigation();
+    }
+    
+    // Listen for messages from parent frame to update highlighting
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'pageChanged') {
+            // Clear previous highlighting
+            var currentLinks = document.querySelectorAll('#mainlist a.current');
+            for (var i = 0; i < currentLinks.length; i++) {
+                currentLinks[i].classList.remove('current');
+            }
+            
+            // Highlight new page
+            highlightCurrentPage();
+        }
+    });
+})();
+</script>
 </body>
 </html>
