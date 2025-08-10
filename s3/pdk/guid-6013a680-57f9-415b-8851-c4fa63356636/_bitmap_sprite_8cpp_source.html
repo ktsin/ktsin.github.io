@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Graphics/WS/BitmapSprite/BitmapSprite.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Graphics/WS/BitmapSprite/BitmapSprite.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -77,12 +77,12 @@
 <a name="l00037"></a>00037 <span class="comment">// method. </span>
 <a name="l00038"></a>00038 <span class="comment">//</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;eikenv.h&gt;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;w32std.h&gt;</span>
-<a name="l00042"></a>00042 <span class="preprocessor">#include &quot;Base.h&quot;</span>
-<a name="l00043"></a>00043 <span class="preprocessor">#include &quot;BitmapSprite.h&quot;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include <eikenv.h></span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include <w32std.h></span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include "Base.h"</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include "BitmapSprite.h"</span>
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;bitmapsprite.mbg&gt;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include <bitmapsprite.mbg></span>
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 CSprite::CSprite(CWsClient *aClient) : iClient(aClient), iSpritePos(80, 75)
 <a name="l00048"></a>00048         {
@@ -90,7 +90,7 @@
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 CSprite::~CSprite()
 <a name="l00052"></a>00052         {
-<a name="l00053"></a>00053         <span class="keywordflow">for</span> (TInt i=0; i&lt;8; i++)
+<a name="l00053"></a>00053         <span class="keywordflow">for</span> (TInt i=0; i<8; i++)
 <a name="l00054"></a>00054                 {
 <a name="l00055"></a>00055                 <span class="keyword">delete</span> iSpriteMember[i].iBitmap;
 <a name="l00056"></a>00056                 <span class="keyword">delete</span> iSpriteMember[i].iMaskBitmap;
@@ -107,23 +107,23 @@
 <a name="l00067"></a>00067 <span class="keywordtype">void</span> CSprite::ConstructL(CWindow* aWindow)
 <a name="l00068"></a>00068         {
 <a name="l00069"></a>00069         CEikonEnv* eikenv=CEikonEnv::Static();
-<a name="l00070"></a>00070         iSprite = RWsSprite(iClient-&gt;iWs);
-<a name="l00071"></a>00071         User::LeaveIfError(iSprite.Construct(aWindow-&gt;Window(), iSpritePos, 0));
+<a name="l00070"></a>00070         iSprite = RWsSprite(iClient->iWs);
+<a name="l00071"></a>00071         User::LeaveIfError(iSprite.Construct(aWindow->Window(), iSpritePos, 0));
 <a name="l00072"></a>00072         <span class="comment">// Initialize sprite members</span>
-<a name="l00073"></a>00073         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KStar,<span class="stringliteral">&quot;*&quot;</span>); <span class="comment">// &quot;*&quot; means &quot;the &lt;app-name&gt;.mbm file in the app directory&quot;</span>
-<a name="l00074"></a>00074         <span class="keywordflow">for</span> (TInt i=0; i&lt;8; i++)
+<a name="l00073"></a>00073         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KStar,<span class="stringliteral">"*"</span>); <span class="comment">// "*" means "the <app-name>.mbm file in the app directory"</span>
+<a name="l00074"></a>00074         <span class="keywordflow">for</span> (TInt i=0; i<8; i++)
 <a name="l00075"></a>00075                 {
 <a name="l00076"></a>00076                 iSpriteMember[i].iInvertMask = EFalse;
 <a name="l00077"></a>00077                 iSpriteMember[i].iOffset = TPoint (0,0);
 <a name="l00078"></a>00078                 iSpriteMember[i].iInterval = TTimeIntervalMicroSeconds32 (200000);
-<a name="l00079"></a>00079                 iSpriteMember[i].iBitmap = eikenv-&gt;CreateBitmapL(KStar, i);
+<a name="l00079"></a>00079                 iSpriteMember[i].iBitmap = eikenv->CreateBitmapL(KStar, i);
 <a name="l00080"></a>00080                 <span class="keywordflow">if</span> (i%2 == 0)
 <a name="l00081"></a>00081                         {
-<a name="l00082"></a>00082                         iSpriteMember[i].iMaskBitmap=eikenv-&gt;CreateBitmapL(KStar, EMbmBitmapspriteMil1mask);
+<a name="l00082"></a>00082                         iSpriteMember[i].iMaskBitmap=eikenv->CreateBitmapL(KStar, EMbmBitmapspriteMil1mask);
 <a name="l00083"></a>00083                         }
 <a name="l00084"></a>00084                 <span class="keywordflow">else</span>
 <a name="l00085"></a>00085                         {
-<a name="l00086"></a>00086                         iSpriteMember[i].iMaskBitmap=eikenv-&gt;CreateBitmapL(KStar, EMbmBitmapspriteMil2mask);
+<a name="l00086"></a>00086                         iSpriteMember[i].iMaskBitmap=eikenv->CreateBitmapL(KStar, EMbmBitmapspriteMil2mask);
 <a name="l00087"></a>00087                         }
 <a name="l00088"></a>00088                 User::LeaveIfError(iSprite.AppendMember(iSpriteMember[i]));
 <a name="l00089"></a>00089                 }
@@ -159,27 +159,27 @@
 <a name="l00121"></a>00121 <span class="comment">|       Output:         None</span>
 <a name="l00122"></a>00122 <span class="comment">\****************************************************************************/</span>
 <a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="keywordtype">void</span> CMainWindow::Draw(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00124"></a>00124 <span class="keywordtype">void</span> CMainWindow::Draw(<span class="keyword">const</span> TRect& aRect)
 <a name="l00125"></a>00125         {
 <a name="l00126"></a>00126         <span class="comment">// Draw a hatched pattern to illustrate that sprite is drawn only </span>
 <a name="l00127"></a>00127         <span class="comment">// where its bitmap mask is 0</span>
 <a name="l00128"></a>00128         CWindowGc* gc=SystemGc(); <span class="comment">// get a gc</span>
-<a name="l00129"></a>00129         gc-&gt;SetClippingRect(aRect); <span class="comment">// clip outside this rect</span>
-<a name="l00130"></a>00130         gc-&gt;Clear(aRect); <span class="comment">// clear</span>
-<a name="l00131"></a>00131         gc-&gt;SetPenStyle(CGraphicsContext::ESolidPen);
-<a name="l00132"></a>00132         gc-&gt;SetPenColor(TRgb::Gray4(2));
+<a name="l00129"></a>00129         gc->SetClippingRect(aRect); <span class="comment">// clip outside this rect</span>
+<a name="l00130"></a>00130         gc->Clear(aRect); <span class="comment">// clear</span>
+<a name="l00131"></a>00131         gc->SetPenStyle(CGraphicsContext::ESolidPen);
+<a name="l00132"></a>00132         gc->SetPenColor(TRgb::Gray4(2));
 <a name="l00133"></a>00133         TSize size = Window().Size();
 <a name="l00134"></a>00134         TInt width = size.iWidth;
 <a name="l00135"></a>00135         TInt height = size.iHeight;
 <a name="l00136"></a>00136         TInt numHoriz=height/5;
 <a name="l00137"></a>00137         TInt numVert=width/10;
-<a name="l00138"></a>00138         <span class="keywordflow">for</span> (TInt i=numHoriz; i&gt;0; i--)
+<a name="l00138"></a>00138         <span class="keywordflow">for</span> (TInt i=numHoriz; i>0; i--)
 <a name="l00139"></a>00139                 {
-<a name="l00140"></a>00140                 gc-&gt;DrawLine (TPoint(0,height/numHoriz*i), TPoint(width, height/numHoriz*i));
+<a name="l00140"></a>00140                 gc->DrawLine (TPoint(0,height/numHoriz*i), TPoint(width, height/numHoriz*i));
 <a name="l00141"></a>00141                 }
-<a name="l00142"></a>00142         <span class="keywordflow">for</span> (TInt j=numVert; j&gt;0; j--)
+<a name="l00142"></a>00142         <span class="keywordflow">for</span> (TInt j=numVert; j>0; j--)
 <a name="l00143"></a>00143                 {
-<a name="l00144"></a>00144                 gc-&gt;DrawLine (TPoint(width/numVert*j, 0), TPoint(width/numVert*j, height));
+<a name="l00144"></a>00144                 gc->DrawLine (TPoint(width/numVert*j, 0), TPoint(width/numVert*j, height));
 <a name="l00145"></a>00145                 }
 <a name="l00146"></a>00146         }
 <a name="l00147"></a>00147 
@@ -191,19 +191,19 @@
 <a name="l00153"></a>00153 <span class="comment">|       Output:         None</span>
 <a name="l00154"></a>00154 <span class="comment">\****************************************************************************/</span>
 <a name="l00155"></a>00155 
-<a name="l00156"></a>00156 <span class="keywordtype">void</span> CMainWindow::HandlePointerEvent (TPointerEvent&amp; <span class="comment">/*aPointerEvent*/</span>)
+<a name="l00156"></a>00156 <span class="keywordtype">void</span> CMainWindow::HandlePointerEvent (TPointerEvent& <span class="comment">/*aPointerEvent*/</span>)
 <a name="l00157"></a>00157         {       
 <a name="l00158"></a>00158         }
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160 
 <a name="l00162"></a>00162 <span class="comment">//                                       CExampleWsClient implementation</span>
 <a name="l00164"></a>00164 <span class="comment"></span>
-<a name="l00165"></a>00165 CExampleWsClient* CExampleWsClient::NewL(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00165"></a>00165 CExampleWsClient* CExampleWsClient::NewL(<span class="keyword">const</span> TRect& aRect)
 <a name="l00166"></a>00166         {
 <a name="l00167"></a>00167         <span class="comment">// make new client</span>
 <a name="l00168"></a>00168         CExampleWsClient* client=<span class="keyword">new</span> (ELeave) CExampleWsClient(aRect); 
 <a name="l00169"></a>00169         CleanupStack::PushL(client); <span class="comment">// push, just in case</span>
-<a name="l00170"></a>00170         client-&gt;ConstructL(); <span class="comment">// construct and run</span>
+<a name="l00170"></a>00170         client->ConstructL(); <span class="comment">// construct and run</span>
 <a name="l00171"></a>00171         CleanupStack::Pop();
 <a name="l00172"></a>00172         <span class="keywordflow">return</span> client;
 <a name="l00173"></a>00173         }
@@ -214,7 +214,7 @@
 <a name="l00178"></a>00178 <span class="comment">|                               ConstructMainWindowL()</span>
 <a name="l00179"></a>00179 <span class="comment">\****************************************************************************/</span>
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181 CExampleWsClient::CExampleWsClient(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00181"></a>00181 CExampleWsClient::CExampleWsClient(<span class="keyword">const</span> TRect& aRect)
 <a name="l00182"></a>00182 :iRect(aRect)
 <a name="l00183"></a>00183         {
 <a name="l00184"></a>00184         }
@@ -228,7 +228,7 @@
 <a name="l00192"></a>00192 
 <a name="l00193"></a>00193 <span class="comment">/****************************************************************************\</span>
 <a name="l00194"></a>00194 <span class="comment">|       Function:       CExampleWsClient::ConstructMainWindowL()</span>
-<a name="l00195"></a>00195 <span class="comment">|                               Called by base class&#39;s ConstructL</span>
+<a name="l00195"></a>00195 <span class="comment">|                               Called by base class's ConstructL</span>
 <a name="l00196"></a>00196 <span class="comment">|       Purpose:        Allocates and creates all the windows owned by this client</span>
 <a name="l00197"></a>00197 <span class="comment">|                               (See list of windows in CExampleWsCLient declaration).</span>
 <a name="l00198"></a>00198 <span class="comment">\****************************************************************************/</span>
@@ -236,9 +236,9 @@
 <a name="l00200"></a>00200 <span class="keywordtype">void</span> CExampleWsClient::ConstructMainWindowL()
 <a name="l00201"></a>00201         {
 <a name="l00202"></a>00202         iMainWindow=<span class="keyword">new</span> (ELeave) CMainWindow(<span class="keyword">this</span>);
-<a name="l00203"></a>00203         iMainWindow-&gt;ConstructL(iRect, TRgb (255,255,255));
+<a name="l00203"></a>00203         iMainWindow->ConstructL(iRect, TRgb (255,255,255));
 <a name="l00204"></a>00204         iSprite=<span class="keyword">new</span> (ELeave) CSprite (<span class="keyword">this</span>);
-<a name="l00205"></a>00205         iSprite-&gt;ConstructL(iMainWindow);
+<a name="l00205"></a>00205         iSprite->ConstructL(iMainWindow);
 <a name="l00206"></a>00206         }
 <a name="l00207"></a>00207 
 <a name="l00208"></a>00208 
@@ -263,7 +263,7 @@
 <a name="l00227"></a>00227                 <span class="keywordflow">break</span>;
 <a name="l00228"></a>00228         <span class="keywordflow">case</span> EEventKey:
 <a name="l00229"></a>00229                 {
-<a name="l00230"></a>00230                 TKeyEvent&amp; keyEvent=*iWsEvent.Key(); <span class="comment">// get key event</span>
+<a name="l00230"></a>00230                 TKeyEvent& keyEvent=*iWsEvent.Key(); <span class="comment">// get key event</span>
 <a name="l00231"></a>00231                 HandleKeyEventL (keyEvent);
 <a name="l00232"></a>00232                 <span class="keywordflow">break</span>;
 <a name="l00233"></a>00233                 }
@@ -282,8 +282,8 @@
 <a name="l00246"></a>00246         <span class="keywordflow">case</span> EEventPointer:
 <a name="l00247"></a>00247                 {
 <a name="l00248"></a>00248                 CWindow* window=(CWindow*)(iWsEvent.Handle()); <span class="comment">// get window</span>
-<a name="l00249"></a>00249                 TPointerEvent&amp; pointerEvent=*iWsEvent.Pointer();
-<a name="l00250"></a>00250                 window-&gt;HandlePointerEvent (pointerEvent);
+<a name="l00249"></a>00249                 TPointerEvent& pointerEvent=*iWsEvent.Pointer();
+<a name="l00250"></a>00250                 window->HandlePointerEvent (pointerEvent);
 <a name="l00251"></a>00251                 <span class="keywordflow">break</span>;
 <a name="l00252"></a>00252                 }
 <a name="l00253"></a>00253         <span class="keywordflow">case</span> EEventPointerExit:
@@ -304,33 +304,33 @@
 <a name="l00268"></a>00268 <span class="comment">/****************************************************************************\</span>
 <a name="l00269"></a>00269 <span class="comment">|       Function:       CExampleWsClient::HandleKeyEventL()</span>
 <a name="l00270"></a>00270 <span class="comment">|       Purpose:        Processes key events for CExampleWsClient</span>
-<a name="l00271"></a>00271 <span class="comment">|                               Gets the key code from the key event.  Exits on &#39;Escape&#39;</span>
+<a name="l00271"></a>00271 <span class="comment">|                               Gets the key code from the key event.  Exits on 'Escape'</span>
 <a name="l00272"></a>00272 <span class="comment">\****************************************************************************/</span>
-<a name="l00273"></a>00273 <span class="keywordtype">void</span> CExampleWsClient::HandleKeyEventL (TKeyEvent&amp; aKeyEvent)
+<a name="l00273"></a>00273 <span class="keywordtype">void</span> CExampleWsClient::HandleKeyEventL (TKeyEvent& aKeyEvent)
 <a name="l00274"></a>00274         {
 <a name="l00275"></a>00275         TUint   code = aKeyEvent.iCode;
 <a name="l00276"></a>00276         <span class="keywordflow">switch</span> (code)
 <a name="l00277"></a>00277                 {
 <a name="l00278"></a>00278                 <span class="keywordflow">case</span> EKeyLeftArrow:
-<a name="l00279"></a>00279                         iSprite-&gt;UpdatePos(TPoint(-2,0));
+<a name="l00279"></a>00279                         iSprite->UpdatePos(TPoint(-2,0));
 <a name="l00280"></a>00280                         <span class="keywordflow">break</span>;
 <a name="l00281"></a>00281                 <span class="keywordflow">case</span> EKeyRightArrow:
-<a name="l00282"></a>00282                         iSprite-&gt;UpdatePos(TPoint(2,0));
+<a name="l00282"></a>00282                         iSprite->UpdatePos(TPoint(2,0));
 <a name="l00283"></a>00283                         <span class="keywordflow">break</span>;
 <a name="l00284"></a>00284                 <span class="keywordflow">case</span> EKeyUpArrow:
-<a name="l00285"></a>00285                         iSprite-&gt;UpdatePos(TPoint(0,-2));
+<a name="l00285"></a>00285                         iSprite->UpdatePos(TPoint(0,-2));
 <a name="l00286"></a>00286                         <span class="keywordflow">break</span>;
 <a name="l00287"></a>00287                 <span class="keywordflow">case</span> EKeyDownArrow:
-<a name="l00288"></a>00288                         iSprite-&gt;UpdatePos(TPoint(0,2));
+<a name="l00288"></a>00288                         iSprite->UpdatePos(TPoint(0,2));
 <a name="l00289"></a>00289                         <span class="keywordflow">break</span>;
 <a name="l00290"></a>00290                 }
 <a name="l00291"></a>00291         }
 <a name="l00292"></a>00292 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

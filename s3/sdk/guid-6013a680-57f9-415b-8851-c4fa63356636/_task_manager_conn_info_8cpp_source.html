@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/Symbian_OS_End-to-End_Sockets_API_Example/SocketTaskManager_S60/src/TaskManagerConnInfo.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -47,8 +47,8 @@
 <a name="l00009"></a>00009 <span class="comment">*/</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// INCLUDE FILES</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;TaskManagerConnInfo.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;TaskManager.pan&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "TaskManagerConnInfo.h"</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "TaskManager.pan"</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="comment">// CONSTANTS</span>
 <a name="l00016"></a>00016 <span class="keyword">const</span> TInt TTaskManagerConnInfo::KDefaultPort = 3000;
@@ -66,9 +66,9 @@
 <a name="l00028"></a>00028 <span class="comment">// Sets the server address.</span>
 <a name="l00029"></a>00029 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00030"></a>00030 <span class="comment">//</span>
-<a name="l00031"></a>00031 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetServerAddress( <span class="keyword">const</span> TDesC&amp; aAddress )
+<a name="l00031"></a>00031 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetServerAddress( <span class="keyword">const</span> TDesC& aAddress )
 <a name="l00032"></a>00032         {
-<a name="l00033"></a>00033         <span class="keywordflow">if</span>( aAddress.Length() &gt; KMaxServerNameLength )
+<a name="l00033"></a>00033         <span class="keywordflow">if</span>( aAddress.Length() > KMaxServerNameLength )
 <a name="l00034"></a>00034                 {
 <a name="l00035"></a>00035                 Panic(ETaskManagerServerAddressTooLong);
 <a name="l00036"></a>00036                 }
@@ -80,7 +80,7 @@
 <a name="l00042"></a>00042 <span class="comment">// Gets the server address.</span>
 <a name="l00043"></a>00043 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00044"></a>00044 <span class="comment">//</span>
-<a name="l00045"></a>00045 TBufC&lt; KMaxServerNameLength &gt; TTaskManagerConnInfo::ServerAddress()<span class="keyword"> const</span>
+<a name="l00045"></a>00045 TBufC< KMaxServerNameLength > TTaskManagerConnInfo::ServerAddress()<span class="keyword"> const</span>
 <a name="l00046"></a>00046 <span class="keyword">        </span>{
 <a name="l00047"></a>00047         <span class="keywordflow">return</span> iServerAddress;
 <a name="l00048"></a>00048         }
@@ -110,9 +110,9 @@
 <a name="l00072"></a>00072 <span class="comment">// Sets the username.</span>
 <a name="l00073"></a>00073 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00074"></a>00074 <span class="comment">//              </span>
-<a name="l00075"></a>00075 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetUsername( <span class="keyword">const</span> TDesC&amp; aUsername )
+<a name="l00075"></a>00075 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetUsername( <span class="keyword">const</span> TDesC& aUsername )
 <a name="l00076"></a>00076         {
-<a name="l00077"></a>00077         <span class="keywordflow">if</span>( aUsername.Length() &gt; KMaxUsernameLength )
+<a name="l00077"></a>00077         <span class="keywordflow">if</span>( aUsername.Length() > KMaxUsernameLength )
 <a name="l00078"></a>00078                 {
 <a name="l00079"></a>00079                 Panic(ETaskManagerUsernameTooLong); 
 <a name="l00080"></a>00080                 }
@@ -124,7 +124,7 @@
 <a name="l00086"></a>00086 <span class="comment">// Gets the username.</span>
 <a name="l00087"></a>00087 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00088"></a>00088 <span class="comment">//              </span>
-<a name="l00089"></a>00089 TBufC&lt; KMaxUsernameLength &gt; TTaskManagerConnInfo::Username()<span class="keyword"> const</span>
+<a name="l00089"></a>00089 TBufC< KMaxUsernameLength > TTaskManagerConnInfo::Username()<span class="keyword"> const</span>
 <a name="l00090"></a>00090 <span class="keyword">        </span>{
 <a name="l00091"></a>00091         <span class="keywordflow">return</span> iUsername;       
 <a name="l00092"></a>00092         }
@@ -134,9 +134,9 @@
 <a name="l00096"></a>00096 <span class="comment">// Sets the password.</span>
 <a name="l00097"></a>00097 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00098"></a>00098 <span class="comment">//                      </span>
-<a name="l00099"></a>00099 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetPassword( <span class="keyword">const</span> TDesC&amp; aPassword )
+<a name="l00099"></a>00099 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetPassword( <span class="keyword">const</span> TDesC& aPassword )
 <a name="l00100"></a>00100         {
-<a name="l00101"></a>00101         <span class="keywordflow">if</span>( aPassword.Length() &gt; KMaxPasswordLength )
+<a name="l00101"></a>00101         <span class="keywordflow">if</span>( aPassword.Length() > KMaxPasswordLength )
 <a name="l00102"></a>00102                 {
 <a name="l00103"></a>00103                 Panic(ETaskManagerPasswordTooLong);
 <a name="l00104"></a>00104                 }
@@ -148,7 +148,7 @@
 <a name="l00110"></a>00110 <span class="comment">// Gets the password.</span>
 <a name="l00111"></a>00111 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00112"></a>00112 <span class="comment">//              </span>
-<a name="l00113"></a>00113 TBufC&lt; KMaxPasswordLength &gt; TTaskManagerConnInfo::Password()<span class="keyword"> const</span>
+<a name="l00113"></a>00113 TBufC< KMaxPasswordLength > TTaskManagerConnInfo::Password()<span class="keyword"> const</span>
 <a name="l00114"></a>00114 <span class="keyword">        </span>{
 <a name="l00115"></a>00115         <span class="keywordflow">return</span> iPassword;       
 <a name="l00116"></a>00116         }
@@ -158,7 +158,7 @@
 <a name="l00120"></a>00120 <span class="comment">// Sets the IAP.</span>
 <a name="l00121"></a>00121 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00122"></a>00122 <span class="comment">//                      </span>
-<a name="l00123"></a>00123 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetIap( <span class="keyword">const</span> TUint32&amp; aId)
+<a name="l00123"></a>00123 <span class="keywordtype">void</span> TTaskManagerConnInfo::SetIap( <span class="keyword">const</span> TUint32& aId)
 <a name="l00124"></a>00124         {
 <a name="l00125"></a>00125         iIap = aId;
 <a name="l00126"></a>00126         }
@@ -178,12 +178,12 @@
 <a name="l00140"></a>00140 <span class="comment">// Saves the connection data to the given stream.</span>
 <a name="l00141"></a>00141 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00142"></a>00142 <span class="comment">//              </span>
-<a name="l00143"></a><a class="code" href="class_t_task_manager_conn_info.html#acb7e404330f92bd4eae0683b183daa32">00143</a> <span class="keywordtype">void</span> <a class="code" href="class_t_task_manager_conn_info.html#acb7e404330f92bd4eae0683b183daa32">TTaskManagerConnInfo::ExternalizeL</a>(RWriteStream&amp; aStream)<span class="keyword"> const</span>
+<a name="l00143"></a><a class="code" href="class_t_task_manager_conn_info.html#acb7e404330f92bd4eae0683b183daa32">00143</a> <span class="keywordtype">void</span> <a class="code" href="class_t_task_manager_conn_info.html#acb7e404330f92bd4eae0683b183daa32">TTaskManagerConnInfo::ExternalizeL</a>(RWriteStream& aStream)<span class="keyword"> const</span>
 <a name="l00144"></a>00144 <span class="keyword">        </span>{
-<a name="l00145"></a>00145         aStream &lt;&lt; iServerAddress;
+<a name="l00145"></a>00145         aStream << iServerAddress;
 <a name="l00146"></a>00146         aStream.WriteInt32L(iPort);
-<a name="l00147"></a>00147         aStream &lt;&lt; iUsername;
-<a name="l00148"></a>00148         aStream &lt;&lt; iIap;
+<a name="l00147"></a>00147         aStream << iUsername;
+<a name="l00148"></a>00148         aStream << iIap;
 <a name="l00149"></a>00149         }
 <a name="l00150"></a>00150 
 <a name="l00151"></a>00151 <span class="comment">// ----------------------------------------------------------</span>
@@ -191,20 +191,20 @@
 <a name="l00153"></a>00153 <span class="comment">// Reads the connections data from the given stream.</span>
 <a name="l00154"></a>00154 <span class="comment">// ----------------------------------------------------------</span>
 <a name="l00155"></a>00155 <span class="comment">//                      </span>
-<a name="l00156"></a><a class="code" href="class_t_task_manager_conn_info.html#a855ce6338d8c0d0b6a1419100e8e7a37">00156</a> <span class="keywordtype">void</span> <a class="code" href="class_t_task_manager_conn_info.html#a855ce6338d8c0d0b6a1419100e8e7a37">TTaskManagerConnInfo::InternalizeL</a>(RReadStream&amp; aStream)
+<a name="l00156"></a><a class="code" href="class_t_task_manager_conn_info.html#a855ce6338d8c0d0b6a1419100e8e7a37">00156</a> <span class="keywordtype">void</span> <a class="code" href="class_t_task_manager_conn_info.html#a855ce6338d8c0d0b6a1419100e8e7a37">TTaskManagerConnInfo::InternalizeL</a>(RReadStream& aStream)
 <a name="l00157"></a>00157         {
-<a name="l00158"></a>00158         aStream &gt;&gt; iServerAddress;
+<a name="l00158"></a>00158         aStream >> iServerAddress;
 <a name="l00159"></a>00159         iPort  = aStream.ReadInt32L();
-<a name="l00160"></a>00160         aStream &gt;&gt; iUsername;
-<a name="l00161"></a>00161         aStream &gt;&gt; iIap;
+<a name="l00160"></a>00160         aStream >> iUsername;
+<a name="l00161"></a>00161         aStream >> iIap;
 <a name="l00162"></a>00162         }
 <a name="l00163"></a>00163         
 <a name="l00164"></a>00164 <span class="comment">// End of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Multimedia/MmfExSinkSource/Mmfdes.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -43,9 +43,9 @@
 <a name="l00003"></a>00003 <span class="comment">// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00004"></a>00004 <span class="comment">// All rights reserved.</span>
 <a name="l00005"></a>00005 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00006"></a>00006 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00006"></a>00006 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00007"></a>00007 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00008"></a>00008 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00008"></a>00008 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00009"></a>00009 <span class="comment">//</span>
 <a name="l00010"></a>00010 <span class="comment">// Initial Contributors:</span>
 <a name="l00011"></a>00011 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -57,17 +57,17 @@
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;f32file.h&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;e32std.h&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;mmfdatabuffer.h&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include <f32file.h></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include <e32std.h></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <mmfdatabuffer.h></span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;mmfexdes.h&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;MmfExSinkSourceUIDs.hrh&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include "mmfexdes.h"</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include "MmfExSinkSourceUIDs.hrh"</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="comment">// Panic function</span>
 <a name="l00028"></a>00028 <span class="keywordtype">void</span> Panic(TMMFExDescriptorPanicCode aPanicCode)
 <a name="l00029"></a>00029         {
-<a name="l00030"></a>00030         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMMFExDescriptorPanicCategory, <span class="stringliteral">&quot;MMFExDescriptor&quot;</span>);
+<a name="l00030"></a>00030         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMMFExDescriptorPanicCategory, <span class="stringliteral">"MMFExDescriptor"</span>);
 <a name="l00031"></a>00031         User::Panic(KMMFExDescriptorPanicCategory, aPanicCode);
 <a name="l00032"></a>00032         }
 <a name="l00033"></a>00033 
@@ -107,26 +107,26 @@
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 <span class="comment">// MDataSource factory</span>
 <a name="l00069"></a>00069 <span class="comment">// aInitData is a packaged TMMFExDescriptorParams</span>
-<a name="l00070"></a>00070 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructSourceL( <span class="keyword">const</span> TDesC8&amp; aInitData )
+<a name="l00070"></a>00070 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructSourceL( <span class="keyword">const</span> TDesC8& aInitData )
 <a name="l00071"></a>00071         {
 <a name="l00072"></a>00072         ConstructL( aInitData ) ;
 <a name="l00073"></a>00073         }
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 <span class="comment">// MDataSink factory</span>
 <a name="l00076"></a>00076 <span class="comment">// aInitData is a packaged TMMFExDescriptorParams</span>
-<a name="l00077"></a>00077 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructSinkL( <span class="keyword">const</span> TDesC8&amp; aInitData )
+<a name="l00077"></a>00077 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructSinkL( <span class="keyword">const</span> TDesC8& aInitData )
 <a name="l00078"></a>00078         {
 <a name="l00079"></a>00079         ConstructL( aInitData ) ;
 <a name="l00080"></a>00080         }
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 <span class="comment">// Construction helper</span>
 <a name="l00083"></a>00083 <span class="comment">// aInitData is a packaged TMMFExDescriptorParams</span>
-<a name="l00084"></a>00084 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructL( <span class="keyword">const</span> TDesC8&amp; aInitData ) 
+<a name="l00084"></a>00084 <span class="keywordtype">void</span> CMMFExDescriptor::ConstructL( <span class="keyword">const</span> TDesC8& aInitData ) 
 <a name="l00085"></a>00085         {
 <a name="l00086"></a>00086         <span class="comment">// get descriptor to which to read/write, and the thread </span>
 <a name="l00087"></a>00087         <span class="comment">// to which it belongs</span>
 <a name="l00088"></a>00088         <a class="code" href="class_t_m_m_f_ex_descriptor_params.html">TMMFExDescriptorParams</a> params;
-<a name="l00089"></a>00089         TPckgC&lt;TMMFExDescriptorParams&gt; config(params);
+<a name="l00089"></a>00089         TPckgC<TMMFExDescriptorParams> config(params);
 <a name="l00090"></a>00090         config.Set(aInitData);
 <a name="l00091"></a>00091         iDes = STATIC_CAST( TDes8*, config().iDes);
 <a name="l00092"></a>00092         User::LeaveIfError( iDesThread.Open( config().iDesThreadId ) );
@@ -152,34 +152,34 @@
 <a name="l00112"></a>00112         <span class="comment">// If there is not enough to fill the target then copy what there is</span>
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114         <span class="comment">// Use of a single iOffset will preclude use by more than one client (use ReadBufferL())</span>
-<a name="l00115"></a>00115         <span class="keywordflow">if</span> ( aBuffer-&gt;Type() == KUidMmfDataBuffer  ) 
+<a name="l00115"></a>00115         <span class="keywordflow">if</span> ( aBuffer->Type() == KUidMmfDataBuffer  ) 
 <a name="l00116"></a>00116                 {
-<a name="l00117"></a>00117                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00117"></a>00117                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00118"></a>00118                 TInt targetMaxLength = bufferDes.MaxLength();
-<a name="l00119"></a>00119                 TInt sourceLength = iDes-&gt;Length();
+<a name="l00119"></a>00119                 TInt sourceLength = iDes->Length();
 <a name="l00120"></a>00120                 
-<a name="l00121"></a>00121                 <span class="keywordflow">if</span> ( ( sourceLength - iOffset - targetMaxLength ) &gt; 0 )
+<a name="l00121"></a>00121                 <span class="keywordflow">if</span> ( ( sourceLength - iOffset - targetMaxLength ) > 0 )
 <a name="l00122"></a>00122                         {
-<a name="l00123"></a>00123                         bufferDes = iDes-&gt;Mid(iOffset,targetMaxLength);
+<a name="l00123"></a>00123                         bufferDes = iDes->Mid(iOffset,targetMaxLength);
 <a name="l00124"></a>00124                         iOffset += targetMaxLength;
 <a name="l00125"></a>00125                         }
 <a name="l00126"></a>00126                 <span class="keywordflow">else</span>
 <a name="l00127"></a>00127                         bufferDes.SetLength(0);
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129                 <span class="comment">// Check if the buffer is the last buffer and if so set the last buffer flag on the CMMFDataBuffer</span>
-<a name="l00130"></a>00130                 TInt requestSize = aBuffer-&gt;RequestSize();
+<a name="l00130"></a>00130                 TInt requestSize = aBuffer->RequestSize();
 <a name="l00131"></a>00131                 <span class="keywordflow">if</span> (requestSize)
 <a name="l00132"></a>00132                         { <span class="comment">// The buffer has a request size  - so assume last buffer if length is less than the request size</span>
-<a name="l00133"></a>00133                         <span class="keywordflow">if</span> (bufferDes.Length() &lt; requestSize)   
-<a name="l00134"></a>00134                                 aBuffer-&gt;SetLastBuffer(ETrue);
+<a name="l00133"></a>00133                         <span class="keywordflow">if</span> (bufferDes.Length() < requestSize)   
+<a name="l00134"></a>00134                                 aBuffer->SetLastBuffer(ETrue);
 <a name="l00135"></a>00135                         }
 <a name="l00136"></a>00136                 <span class="keywordflow">else</span>
 <a name="l00137"></a>00137                         { <span class="comment">// There is no request size so assume last buffer if length is less than the max length</span>
-<a name="l00138"></a>00138                         <span class="keywordflow">if</span> (bufferDes.Length() &lt; bufferDes.MaxLength()) 
-<a name="l00139"></a>00139                                 aBuffer-&gt;SetLastBuffer(ETrue);
+<a name="l00138"></a>00138                         <span class="keywordflow">if</span> (bufferDes.Length() < bufferDes.MaxLength()) 
+<a name="l00139"></a>00139                                 aBuffer->SetLastBuffer(ETrue);
 <a name="l00140"></a>00140                         }
 <a name="l00141"></a>00141 
-<a name="l00142"></a>00142                 aConsumer-&gt;BufferFilledL( aBuffer ) ;
+<a name="l00142"></a>00142                 aConsumer->BufferFilledL( aBuffer ) ;
 <a name="l00143"></a>00143                 }
 <a name="l00144"></a>00144         <span class="keywordflow">else</span>
 <a name="l00145"></a>00145                 User::Leave(KErrNotSupported);
@@ -195,12 +195,12 @@
 <a name="l00155"></a>00155 <span class="comment">// tests if the plug-in can create a source buffer</span>
 <a name="l00156"></a>00156 TBool CMMFExDescriptor::CanCreateSourceBuffer()
 <a name="l00157"></a>00157         {
-<a name="l00158"></a>00158         <span class="comment">// this can&#39;t: it needs a descriptor from another thread</span>
+<a name="l00158"></a>00158         <span class="comment">// this can't: it needs a descriptor from another thread</span>
 <a name="l00159"></a>00159         <span class="keywordflow">return</span> EFalse ;
 <a name="l00160"></a>00160         }
 <a name="l00161"></a>00161 
 <a name="l00162"></a>00162 <span class="comment">// creates a source buffer</span>
-<a name="l00163"></a>00163 CMMFBuffer* CMMFExDescriptor::CreateSourceBufferL(  TMediaId <span class="comment">/*aMediaId*/</span>, TBool&amp; <span class="comment">/*aReference*/</span> )
+<a name="l00163"></a>00163 CMMFBuffer* CMMFExDescriptor::CreateSourceBufferL(  TMediaId <span class="comment">/*aMediaId*/</span>, TBool& <span class="comment">/*aReference*/</span> )
 <a name="l00164"></a>00164         {
 <a name="l00165"></a>00165         <span class="comment">// is not supported in this plug-in</span>
 <a name="l00166"></a>00166         User::Leave(KErrNotSupported);
@@ -227,28 +227,28 @@
 <a name="l00187"></a>00187 
 <a name="l00188"></a>00188         <span class="comment">// Use of a single iOffset will preclude use by more than one client (use ReadBufferL())</span>
 <a name="l00189"></a>00189 
-<a name="l00190"></a>00190         <span class="keywordflow">if</span> ( aBuffer-&gt;Type() == KUidMmfDataBuffer  ) 
+<a name="l00190"></a>00190         <span class="keywordflow">if</span> ( aBuffer->Type() == KUidMmfDataBuffer  ) 
 <a name="l00191"></a>00191                 {
-<a name="l00192"></a>00192                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00192"></a>00192                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00193"></a>00193 
 <a name="l00194"></a>00194                 TInt sourceLength = bufferDes.Length() ;        
-<a name="l00195"></a>00195                 TInt targetLength = iDes-&gt;MaxLength() - iOffset;
-<a name="l00196"></a>00196                 <span class="keywordflow">if</span> ( targetLength&gt;0 )
+<a name="l00195"></a>00195                 TInt targetLength = iDes->MaxLength() - iOffset;
+<a name="l00196"></a>00196                 <span class="keywordflow">if</span> ( targetLength>0 )
 <a name="l00197"></a>00197                         {
-<a name="l00198"></a>00198                         <span class="keywordflow">if</span> (sourceLength&gt;targetLength)
+<a name="l00198"></a>00198                         <span class="keywordflow">if</span> (sourceLength>targetLength)
 <a name="l00199"></a>00199                                 {
 <a name="l00200"></a>00200                                 sourceLength = targetLength;
 <a name="l00201"></a>00201                                 bufferDes.SetLength(targetLength);
 <a name="l00202"></a>00202                                 }
 <a name="l00203"></a>00203 
-<a name="l00204"></a>00204                         iDes-&gt;Append(bufferDes) ;
+<a name="l00204"></a>00204                         iDes->Append(bufferDes) ;
 <a name="l00205"></a>00205 
 <a name="l00206"></a>00206                         iOffset += sourceLength ;
 <a name="l00207"></a>00207                         }
 <a name="l00208"></a>00208                 <span class="keywordflow">else</span>
 <a name="l00209"></a>00209                         bufferDes.SetLength(0);
 <a name="l00210"></a>00210 
-<a name="l00211"></a>00211                 aSupplier-&gt;BufferEmptiedL( aBuffer ) ;
+<a name="l00211"></a>00211                 aSupplier->BufferEmptiedL( aBuffer ) ;
 <a name="l00212"></a>00212                 }
 <a name="l00213"></a>00213         }
 <a name="l00214"></a>00214 
@@ -262,12 +262,12 @@
 <a name="l00222"></a>00222 <span class="comment">// tests if the plug-in can create a sink buffer</span>
 <a name="l00223"></a>00223 TBool CMMFExDescriptor::CanCreateSinkBuffer()
 <a name="l00224"></a>00224         {
-<a name="l00225"></a>00225         <span class="comment">// this can&#39;t: it needs a descriptor from another thread        </span>
+<a name="l00225"></a>00225         <span class="comment">// this can't: it needs a descriptor from another thread        </span>
 <a name="l00226"></a>00226         <span class="keywordflow">return</span> EFalse ;
 <a name="l00227"></a>00227         }
 <a name="l00228"></a>00228 
 <a name="l00229"></a>00229 <span class="comment">// creates a sink buffer</span>
-<a name="l00230"></a>00230 CMMFBuffer* CMMFExDescriptor::CreateSinkBufferL( TMediaId <span class="comment">/*aMediaId*/</span> , TBool&amp; <span class="comment">/*aReference*/</span>)
+<a name="l00230"></a>00230 CMMFBuffer* CMMFExDescriptor::CreateSinkBufferL( TMediaId <span class="comment">/*aMediaId*/</span> , TBool& <span class="comment">/*aReference*/</span>)
 <a name="l00231"></a>00231         {
 <a name="l00232"></a>00232         <span class="comment">// not supported in this plug-in</span>
 <a name="l00233"></a>00233         User::Leave(KErrNotSupported);
@@ -279,14 +279,14 @@
 <a name="l00239"></a>00239 <span class="comment">// Loads aBuffer with specified amount of data from a specified point in the source descriptor </span>
 <a name="l00240"></a>00240 <span class="keywordtype">void</span> CMMFExDescriptor::ReadBufferL(TInt aLength, CMMFBuffer* aBuffer, TInt aPosition, MDataSink* aConsumer)
 <a name="l00241"></a>00241         {
-<a name="l00242"></a>00242         <span class="keywordflow">if</span> (aBuffer-&gt;Type() == KUidMmfDataBuffer) 
+<a name="l00242"></a>00242         <span class="keywordflow">if</span> (aBuffer->Type() == KUidMmfDataBuffer) 
 <a name="l00243"></a>00243                 {
-<a name="l00244"></a>00244                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00244"></a>00244                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00245"></a>00245 
-<a name="l00246"></a>00246                 <span class="keywordflow">if</span> (aLength&gt;bufferDes.MaxLength())
+<a name="l00246"></a>00246                 <span class="keywordflow">if</span> (aLength>bufferDes.MaxLength())
 <a name="l00247"></a>00247                         User::Leave(KErrOverflow);
 <a name="l00248"></a>00248 
-<a name="l00249"></a>00249                 <span class="keywordflow">if</span> ((aLength&lt;0) || (aPosition&lt;0))
+<a name="l00249"></a>00249                 <span class="keywordflow">if</span> ((aLength<0) || (aPosition<0))
 <a name="l00250"></a>00250                         User::Leave(KErrArgument);
 <a name="l00251"></a>00251 
 <a name="l00252"></a>00252                 ReadBufferL(aBuffer, aPosition, aConsumer);
@@ -298,39 +298,39 @@
 <a name="l00258"></a>00258 <span class="comment">// Loads aBuffer from a specified point in the source descriptor  </span>
 <a name="l00259"></a>00259 <span class="keywordtype">void</span> CMMFExDescriptor::ReadBufferL(CMMFBuffer* aBuffer, TInt aPosition, MDataSink* aConsumer)
 <a name="l00260"></a>00260         {
-<a name="l00261"></a>00261         <span class="keywordflow">if</span> (aBuffer-&gt;Type() == KUidMmfDataBuffer) 
+<a name="l00261"></a>00261         <span class="keywordflow">if</span> (aBuffer->Type() == KUidMmfDataBuffer) 
 <a name="l00262"></a>00262                 {
-<a name="l00263"></a>00263                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00263"></a>00263                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00264"></a>00264 
-<a name="l00265"></a>00265                 TInt sourceLength = iDes-&gt;Length() ;
+<a name="l00265"></a>00265                 TInt sourceLength = iDes->Length() ;
 <a name="l00266"></a>00266                 TInt destinationMaxLength = bufferDes.MaxLength();
 <a name="l00267"></a>00267                 TInt len = sourceLength - aPosition;
-<a name="l00268"></a>00268                 <span class="keywordflow">if</span> (len &gt; destinationMaxLength)
+<a name="l00268"></a>00268                 <span class="keywordflow">if</span> (len > destinationMaxLength)
 <a name="l00269"></a>00269                         len = destinationMaxLength;
 <a name="l00270"></a>00270 
-<a name="l00271"></a>00271                 <span class="keywordflow">if</span> (len&gt;0)
+<a name="l00271"></a>00271                 <span class="keywordflow">if</span> (len>0)
 <a name="l00272"></a>00272                         {
-<a name="l00273"></a>00273                         TPtrC8 srcPtr(iDes-&gt;Mid(aPosition,len));
+<a name="l00273"></a>00273                         TPtrC8 srcPtr(iDes->Mid(aPosition,len));
 <a name="l00274"></a>00274                         bufferDes.Copy(srcPtr);
 <a name="l00275"></a>00275                         }
 <a name="l00276"></a>00276                 <span class="keywordflow">else</span>
 <a name="l00277"></a>00277                         bufferDes.SetLength(0);
 <a name="l00278"></a>00278 
 <a name="l00279"></a>00279                 <span class="comment">// Check if the buffer is the last buffer and if so set the last buffer flag on the CMMFDataBuffer</span>
-<a name="l00280"></a>00280                 TInt requestSize = aBuffer-&gt;RequestSize();
+<a name="l00280"></a>00280                 TInt requestSize = aBuffer->RequestSize();
 <a name="l00281"></a>00281                 <span class="keywordflow">if</span> (requestSize)
 <a name="l00282"></a>00282                         { <span class="comment">// The buffer has a request size  - so assume last buffer if length is less than the request size</span>
-<a name="l00283"></a>00283                         <span class="keywordflow">if</span> (bufferDes.Length() &lt; requestSize)   
-<a name="l00284"></a>00284                                 aBuffer-&gt;SetLastBuffer(ETrue);
+<a name="l00283"></a>00283                         <span class="keywordflow">if</span> (bufferDes.Length() < requestSize)   
+<a name="l00284"></a>00284                                 aBuffer->SetLastBuffer(ETrue);
 <a name="l00285"></a>00285                         }
 <a name="l00286"></a>00286                 <span class="keywordflow">else</span>
 <a name="l00287"></a>00287                         { <span class="comment">// There is no request size so assume last buffer if length is less than the max length</span>
-<a name="l00288"></a>00288                         <span class="keywordflow">if</span> (bufferDes.Length() &lt; bufferDes.MaxLength()) 
-<a name="l00289"></a>00289                                 aBuffer-&gt;SetLastBuffer(ETrue);
+<a name="l00288"></a>00288                         <span class="keywordflow">if</span> (bufferDes.Length() < bufferDes.MaxLength()) 
+<a name="l00289"></a>00289                                 aBuffer->SetLastBuffer(ETrue);
 <a name="l00290"></a>00290                         }
 <a name="l00291"></a>00291 
 <a name="l00292"></a>00292                 <span class="keywordflow">if</span> (aConsumer)
-<a name="l00293"></a>00293                         aConsumer-&gt;BufferFilledL(aBuffer);
+<a name="l00293"></a>00293                         aConsumer->BufferFilledL(aBuffer);
 <a name="l00294"></a>00294                 }
 <a name="l00295"></a>00295         <span class="keywordflow">else</span>
 <a name="l00296"></a>00296                 User::Leave(KErrNotSupported);
@@ -346,9 +346,9 @@
 <a name="l00306"></a>00306 <span class="comment">// Writes aBuffer at specified location into the sink descriptor</span>
 <a name="l00307"></a>00307 <span class="keywordtype">void</span> CMMFExDescriptor::WriteBufferL(CMMFBuffer* aBuffer, TInt aPosition, MDataSource* aSupplier) 
 <a name="l00308"></a>00308         {
-<a name="l00309"></a>00309         <span class="keywordflow">if</span> (aBuffer-&gt;Type() == KUidMmfDataBuffer)
+<a name="l00309"></a>00309         <span class="keywordflow">if</span> (aBuffer->Type() == KUidMmfDataBuffer)
 <a name="l00310"></a>00310                 {
-<a name="l00311"></a>00311                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00311"></a>00311                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313                 WriteBufferL(bufferDes.Length(), aBuffer, aPosition, aSupplier);
 <a name="l00314"></a>00314                 }
@@ -359,50 +359,50 @@
 <a name="l00319"></a>00319 <span class="comment">// Writes specified length of aBuffer at specified location into the sink descriptor</span>
 <a name="l00320"></a>00320 <span class="keywordtype">void</span> CMMFExDescriptor::WriteBufferL(TInt aLength, CMMFBuffer* aBuffer, TInt aPosition, MDataSource* aSupplier)
 <a name="l00321"></a>00321         {
-<a name="l00322"></a>00322         <span class="keywordflow">if</span> (aBuffer-&gt;Type() == KUidMmfDataBuffer) 
+<a name="l00322"></a>00322         <span class="keywordflow">if</span> (aBuffer->Type() == KUidMmfDataBuffer) 
 <a name="l00323"></a>00323                 {
-<a name="l00324"></a>00324                 TDes8&amp; bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)-&gt;Data();
+<a name="l00324"></a>00324                 TDes8& bufferDes = STATIC_CAST(CMMFDataBuffer*, aBuffer)->Data();
 <a name="l00325"></a>00325 
-<a name="l00326"></a>00326                 <span class="keywordflow">if</span> (aLength&gt;bufferDes.Length() || (aLength&lt;0) || (aPosition&lt;0))
+<a name="l00326"></a>00326                 <span class="keywordflow">if</span> (aLength>bufferDes.Length() || (aLength<0) || (aPosition<0))
 <a name="l00327"></a>00327                         User::Leave(KErrArgument);
 <a name="l00328"></a>00328 
 <a name="l00329"></a>00329                 TInt sourceLength = aLength;
-<a name="l00330"></a>00330                 TPtr8 bufferPtr(((sourceLength) ? &amp;bufferDes[0] : NULL), sourceLength, sourceLength);
-<a name="l00331"></a>00331                 TInt targetLength = iDes-&gt;MaxLength() - aPosition;
-<a name="l00332"></a>00332                 <span class="keywordflow">if</span> (targetLength&gt;0 &amp;&amp; sourceLength &gt; 0)
+<a name="l00330"></a>00330                 TPtr8 bufferPtr(((sourceLength) ? &bufferDes[0] : NULL), sourceLength, sourceLength);
+<a name="l00331"></a>00331                 TInt targetLength = iDes->MaxLength() - aPosition;
+<a name="l00332"></a>00332                 <span class="keywordflow">if</span> (targetLength>0 && sourceLength > 0)
 <a name="l00333"></a>00333                         {
-<a name="l00334"></a>00334                         <span class="keywordflow">if</span> (sourceLength&gt;targetLength)
+<a name="l00334"></a>00334                         <span class="keywordflow">if</span> (sourceLength>targetLength)
 <a name="l00335"></a>00335                                 User::Leave(KErrOverflow);
 <a name="l00336"></a>00336 
-<a name="l00337"></a>00337                         <span class="keywordflow">if</span> ((iDes-&gt;Length() - aPosition) &gt; 0)
+<a name="l00337"></a>00337                         <span class="keywordflow">if</span> ((iDes->Length() - aPosition) > 0)
 <a name="l00338"></a>00338                                 {
-<a name="l00339"></a>00339                                 TInt bytesToReplace = iDes-&gt;Length() - aPosition;
-<a name="l00340"></a>00340                                 <span class="keywordflow">if</span> (sourceLength &gt; bytesToReplace) 
+<a name="l00339"></a>00339                                 TInt bytesToReplace = iDes->Length() - aPosition;
+<a name="l00340"></a>00340                                 <span class="keywordflow">if</span> (sourceLength > bytesToReplace) 
 <a name="l00341"></a>00341                                         {
 <a name="l00342"></a>00342                                         TPtrC8 replaceBuf = bufferPtr.Left(bytesToReplace);
 <a name="l00343"></a>00343                                         TPtrC8 appendBuf = bufferPtr.Right(sourceLength-bytesToReplace);
-<a name="l00344"></a>00344                                         iDes-&gt;Replace(aPosition, bytesToReplace, replaceBuf);
-<a name="l00345"></a>00345                                         iDes-&gt;Append(appendBuf);
+<a name="l00344"></a>00344                                         iDes->Replace(aPosition, bytesToReplace, replaceBuf);
+<a name="l00345"></a>00345                                         iDes->Append(appendBuf);
 <a name="l00346"></a>00346                                         } 
 <a name="l00347"></a>00347                                 <span class="keywordflow">else</span>
-<a name="l00348"></a>00348                                         iDes-&gt;Replace(aPosition, sourceLength, bufferPtr);
+<a name="l00348"></a>00348                                         iDes->Replace(aPosition, sourceLength, bufferPtr);
 <a name="l00349"></a>00349 
 <a name="l00350"></a>00350                                 } 
-<a name="l00351"></a>00351                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aPosition == iDes-&gt;Length())
-<a name="l00352"></a>00352                                 iDes-&gt;Append(bufferPtr.Ptr(),sourceLength);
+<a name="l00351"></a>00351                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aPosition == iDes->Length())
+<a name="l00352"></a>00352                                 iDes->Append(bufferPtr.Ptr(),sourceLength);
 <a name="l00353"></a>00353                         <span class="keywordflow">else</span>
 <a name="l00354"></a>00354                                 {
-<a name="l00355"></a>00355                                 iDes-&gt;AppendFill(0,aPosition - iDes-&gt;Length());
-<a name="l00356"></a>00356                                 iDes-&gt;Append(bufferPtr.Ptr(),sourceLength);
+<a name="l00355"></a>00355                                 iDes->AppendFill(0,aPosition - iDes->Length());
+<a name="l00356"></a>00356                                 iDes->Append(bufferPtr.Ptr(),sourceLength);
 <a name="l00357"></a>00357                                 }
 <a name="l00358"></a>00358                         }
-<a name="l00359"></a>00359                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (targetLength&lt;0)
+<a name="l00359"></a>00359                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (targetLength<0)
 <a name="l00360"></a>00360                         User::Leave(KErrArgument);
 <a name="l00361"></a>00361                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aLength != 0)
 <a name="l00362"></a>00362                         User::Leave(KErrOverflow);
 <a name="l00363"></a>00363 
 <a name="l00364"></a>00364                 <span class="keywordflow">if</span> (aSupplier)
-<a name="l00365"></a>00365                         aSupplier-&gt;BufferEmptiedL(aBuffer);
+<a name="l00365"></a>00365                         aSupplier->BufferEmptiedL(aBuffer);
 <a name="l00366"></a>00366                 }
 <a name="l00367"></a>00367         <span class="keywordflow">else</span>
 <a name="l00368"></a>00368                 User::Leave(KErrNotSupported);
@@ -418,8 +418,8 @@
 <a name="l00378"></a>00378 TInt64 CMMFExDescriptor::BytesFree() 
 <a name="l00379"></a>00379         {
 <a name="l00380"></a>00380         <span class="comment">// get difference between length and maxlength</span>
-<a name="l00381"></a>00381         TInt64 length = iDes-&gt;Length() ;
-<a name="l00382"></a>00382         TInt64 maxLength =  iDes-&gt;MaxLength() ;
+<a name="l00381"></a>00381         TInt64 length = iDes->Length() ;
+<a name="l00382"></a>00382         TInt64 maxLength =  iDes->MaxLength() ;
 <a name="l00383"></a>00383         <span class="keywordflow">return</span>( maxLength - length ) ;
 <a name="l00384"></a>00384         }
 <a name="l00385"></a>00385 
@@ -427,14 +427,14 @@
 <a name="l00387"></a>00387 TInt CMMFExDescriptor::Size() 
 <a name="l00388"></a>00388         {
 <a name="l00389"></a>00389         <span class="comment">// Length (not max length) of descriptor</span>
-<a name="l00390"></a>00390         TInt length = iDes-&gt;Length();
+<a name="l00390"></a>00390         TInt length = iDes->Length();
 <a name="l00391"></a>00391         <span class="keywordflow">return</span>(length);
 <a name="l00392"></a>00392         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Telephony/ETel3rdPartyExample/PhoneMonitoring/CMainMenu.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/Telephony/ETel3rdPartyExample/PhoneMonitoring/CMainMenu.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -52,17 +52,17 @@
 <a name="l00014"></a>00014 <span class="comment">//</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;CMainMenu.h&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "CMainMenu.h"</span>
 <a name="l00018"></a>00018 
-<a name="l00025"></a>00025 <a class="code" href="class_c_main_menu.html">CMainMenu</a>* <a class="code" href="class_c_main_menu.html#a8c87bb581a573b0168a6506de90d317c">CMainMenu::NewLC</a>(CConsoleBase&amp; aConsole)
+<a name="l00025"></a>00025 <a class="code" href="class_c_main_menu.html">CMainMenu</a>* <a class="code" href="class_c_main_menu.html#a8c87bb581a573b0168a6506de90d317c">CMainMenu::NewLC</a>(CConsoleBase& aConsole)
 <a name="l00026"></a>00026         {
 <a name="l00027"></a>00027         <a class="code" href="class_c_main_menu.html">CMainMenu</a>* <span class="keyword">self</span> = <span class="keyword">new</span>(ELeave) <a class="code" href="class_c_main_menu.html">CMainMenu</a>(aConsole);
 <a name="l00028"></a>00028         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00029"></a>00029         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00029"></a>00029         <span class="keyword">self</span>->ConstructL();
 <a name="l00030"></a>00030         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00031"></a>00031         }
 <a name="l00032"></a>00032 
-<a name="l00038"></a>00038 CMainMenu::CMainMenu(CConsoleBase&amp; aConsole)
+<a name="l00038"></a>00038 CMainMenu::CMainMenu(CConsoleBase& aConsole)
 <a name="l00039"></a>00039         : <a class="code" href="class_c_base_menu_async.html">CBaseMenuAsync</a>(aConsole)
 <a name="l00040"></a>00040         {
 <a name="l00041"></a>00041         <span class="comment">// Empty method</span>
@@ -136,17 +136,17 @@
 <a name="l00122"></a>00122                 <span class="keywordflow">default</span>:
 <a name="l00123"></a>00123                         <span class="keywordflow">break</span>;  
 <a name="l00124"></a>00124                         }
-<a name="l00125"></a>00125                 TRAPD(errNotify, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-&gt;<a class="code" href="class_c_i_s_v_a_p_i_base.html#ab6f0b35112b18c2058f88ab35a9a68c7">RequestNotificationL</a>());
+<a name="l00125"></a>00125                 TRAPD(errNotify, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-><a class="code" href="class_c_i_s_v_a_p_i_base.html#ab6f0b35112b18c2058f88ab35a9a68c7">RequestNotificationL</a>());
 <a name="l00126"></a>00126                 <span class="keywordflow">if</span> (errNotify != KErrNone)
 <a name="l00127"></a>00127                         {
-<a name="l00128"></a>00128                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;Notification Request for TTelISVExampleType&quot;</span>));
-<a name="l00129"></a>00129                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;%d left with error code &quot;</span>), aDerivedType);
-<a name="l00130"></a>00130                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;%d\n&quot;</span>), errNotify);
+<a name="l00128"></a>00128                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"Notification Request for TTelISVExampleType"</span>));
+<a name="l00129"></a>00129                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"%d left with error code "</span>), aDerivedType);
+<a name="l00130"></a>00130                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"%d\n"</span>), errNotify);
 <a name="l00131"></a>00131                         <span class="keywordflow">return</span>;
 <a name="l00132"></a>00132                         };
 <a name="l00133"></a>00133                         
 <a name="l00134"></a>00134                 <span class="comment">// Check the type of iLastOperation to see what it has been cast to.</span>
-<a name="l00135"></a>00135                 <span class="keywordflow">switch</span>(<a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-&gt;<a class="code" href="class_c_i_s_v_a_p_i_base.html#a5f58d0283c6a33fc1c446c5770584700">GetExampleType</a>())
+<a name="l00135"></a>00135                 <span class="keywordflow">switch</span>(<a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-><a class="code" href="class_c_i_s_v_a_p_i_base.html#a5f58d0283c6a33fc1c446c5770584700">GetExampleType</a>())
 <a name="l00136"></a>00136                         {
 <a name="l00137"></a>00137                 <span class="keywordflow">case</span> KBatteryInfo:
 <a name="l00138"></a>00138                         <a class="code" href="class_c_base_menu_async.html#a22833931dad95ad360390ebd990f9015">iState</a> = EGetFlightModeInfo;
@@ -155,7 +155,7 @@
 <a name="l00141"></a>00141                         <a class="code" href="class_c_base_menu_async.html#a3fac170d8c1ca25c8b7fc38a571518f5">CompleteOwnRequest</a>(KErrNone);
 <a name="l00142"></a>00142                         <span class="keywordflow">break</span>;
 <a name="l00143"></a>00143                 <span class="keywordflow">case</span> KSignalInfo:
-<a name="l00144"></a>00144                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(KMenuMsg);
+<a name="l00144"></a>00144                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(KMenuMsg);
 <a name="l00145"></a>00145                         GetInput();
 <a name="l00146"></a>00146                         <span class="keywordflow">break</span>;
 <a name="l00147"></a>00147                 <span class="keywordflow">case</span> KFlightModeInfo:
@@ -193,11 +193,11 @@
 <a name="l00185"></a>00185                         {
 <a name="l00186"></a>00186                         Cancel();
 <a name="l00187"></a>00187                         }
-<a name="l00188"></a>00188                 <span class="keywordflow">if</span> (iSignalInfo-&gt;IsActive())
+<a name="l00188"></a>00188                 <span class="keywordflow">if</span> (iSignalInfo->IsActive())
 <a name="l00189"></a>00189                         {
-<a name="l00190"></a>00190                         iSignalInfo-&gt;Cancel();
+<a name="l00190"></a>00190                         iSignalInfo->Cancel();
 <a name="l00191"></a>00191                         }
-<a name="l00192"></a>00192                 <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(KMenuMsg);
+<a name="l00192"></a>00192                 <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(KMenuMsg);
 <a name="l00193"></a>00193                 GetInput();
 <a name="l00194"></a>00194                 <span class="keywordflow">break</span>;
 <a name="l00195"></a>00195         
@@ -239,11 +239,11 @@
 <a name="l00234"></a>00234         <span class="keywordflow">case</span> EStart:
 <a name="l00235"></a>00235                 <a class="code" href="class_c_base_menu_async.html#a22833931dad95ad360390ebd990f9015">iState</a> = EGetIndicator;
 <a name="l00236"></a>00236                 <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a> = iPhoneId;
-<a name="l00237"></a>00237                 TRAPD(errPhone, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-&gt;<a class="code" href="class_c_i_s_v_a_p_i_base.html#ae582ca026eb25869ea1e130fe16d2e79">StartRequestL</a>());
+<a name="l00237"></a>00237                 TRAPD(errPhone, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-><a class="code" href="class_c_i_s_v_a_p_i_base.html#ae582ca026eb25869ea1e130fe16d2e79">StartRequestL</a>());
 <a name="l00238"></a>00238                 <span class="keywordflow">if</span> (errPhone != KErrNone)
 <a name="l00239"></a>00239                         {
-<a name="l00240"></a>00240                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;Request left with error code &quot;</span>));
-<a name="l00241"></a>00241                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;%d\n&quot;</span>), errPhone);
+<a name="l00240"></a>00240                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"Request left with error code "</span>));
+<a name="l00241"></a>00241                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"%d\n"</span>), errPhone);
 <a name="l00242"></a>00242                         <span class="keywordflow">return</span>;
 <a name="l00243"></a>00243                         };
 <a name="l00244"></a>00244                 <span class="keywordflow">break</span>;
@@ -255,26 +255,26 @@
 <a name="l00250"></a>00250         <span class="keywordflow">case</span> EGetSignalInfo:
 <a name="l00251"></a>00251         <span class="keywordflow">case</span> EGetFlightModeInfo:
 <a name="l00252"></a>00252                 <a class="code" href="class_c_base_menu_async.html#a22833931dad95ad360390ebd990f9015">iState</a> = ESetNotifier;
-<a name="l00253"></a>00253                 TRAPD(err, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-&gt;<a class="code" href="class_c_i_s_v_a_p_i_base.html#ae582ca026eb25869ea1e130fe16d2e79">StartRequestL</a>());
+<a name="l00253"></a>00253                 TRAPD(err, <a class="code" href="class_c_base_menu_async.html#a6bfb6f0e05a99a7371048f641f90ca88">iLastOperation</a>-><a class="code" href="class_c_i_s_v_a_p_i_base.html#ae582ca026eb25869ea1e130fe16d2e79">StartRequestL</a>());
 <a name="l00254"></a>00254                 <span class="keywordflow">if</span> (err != KErrNone)
 <a name="l00255"></a>00255                         {
-<a name="l00256"></a>00256                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;Request left with error code &quot;</span>));
-<a name="l00257"></a>00257                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;Printf(_L(<span class="stringliteral">&quot;%d\n&quot;</span>), err);
+<a name="l00256"></a>00256                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"Request left with error code "</span>));
+<a name="l00257"></a>00257                         <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->Printf(_L(<span class="stringliteral">"%d\n"</span>), err);
 <a name="l00258"></a>00258                         <span class="keywordflow">return</span>;
 <a name="l00259"></a>00259                         }
 <a name="l00260"></a>00260                 <span class="keywordflow">break</span>;
 <a name="l00261"></a>00261         <span class="keywordflow">case</span> EWaitingForKeyPress:
 <a name="l00262"></a>00262                 {
-<a name="l00263"></a>00263                 TInt c = <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;KeyCode();
+<a name="l00263"></a>00263                 TInt c = <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->KeyCode();
 <a name="l00264"></a>00264                 <span class="keywordflow">switch</span>(c)
 <a name="l00265"></a>00265                         {
-<a name="l00266"></a>00266                 <span class="keywordflow">case</span> <span class="charliteral">&#39;E&#39;</span>:
-<a name="l00267"></a>00267                 <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>:
+<a name="l00266"></a>00266                 <span class="keywordflow">case</span> <span class="charliteral">'E'</span>:
+<a name="l00267"></a>00267                 <span class="keywordflow">case</span> <span class="charliteral">'e'</span>:
 <a name="l00268"></a>00268                 <span class="keywordflow">case</span> EKeyEscape:
-<a name="l00269"></a>00269                         iGetIndicator-&gt;Cancel();
-<a name="l00270"></a>00270                         iBatteryInfo-&gt;Cancel();
-<a name="l00271"></a>00271                         iSignalInfo-&gt;Cancel();
-<a name="l00272"></a>00272                         iFlightModeInfo-&gt;Cancel();
+<a name="l00269"></a>00269                         iGetIndicator->Cancel();
+<a name="l00270"></a>00270                         iBatteryInfo->Cancel();
+<a name="l00271"></a>00271                         iSignalInfo->Cancel();
+<a name="l00272"></a>00272                         iFlightModeInfo->Cancel();
 <a name="l00273"></a>00273 
 <a name="l00274"></a>00274                         CActiveScheduler::Stop();
 <a name="l00275"></a>00275                         <span class="keywordflow">break</span>;
@@ -296,15 +296,15 @@
 <a name="l00294"></a>00294                 }
 <a name="l00295"></a>00295         <span class="keywordflow">else</span>
 <a name="l00296"></a>00296                 {
-<a name="l00297"></a>00297                 <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>-&gt;ReadCancel();
+<a name="l00297"></a>00297                 <a class="code" href="class_c_base_menu_async.html#a675a3d53fde921b957f88e6c2694b99e">iConsole</a>->ReadCancel();
 <a name="l00298"></a>00298                 }
 <a name="l00299"></a>00299         }
 <a name="l00300"></a>00300 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

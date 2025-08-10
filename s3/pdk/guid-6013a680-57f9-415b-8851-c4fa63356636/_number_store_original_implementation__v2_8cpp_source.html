@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Basics/ExtensionPattern/src_original_v2/NumberStoreOriginalImplementation_v2.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Basics/ExtensionPattern/src_original_v2/NumberStoreOriginalImplementation_v2.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -54,13 +54,13 @@
 <a name="l00014"></a>00014 <span class="comment">// CPP file demonstrating Extension DLL pattern</span>
 <a name="l00015"></a>00015 <span class="comment">// This file contains the original implementation of the CNumberStore function.</span>
 <a name="l00016"></a>00016 <span class="comment">// This file has _not_ been modified in order to add public extension functions.</span>
-<a name="l00017"></a>00017 <span class="comment">// The only extension is to add the private &quot;DoMultiplyNumbers&quot; function which is</span>
-<a name="l00018"></a>00018 <span class="comment">// deliberately &quot;private&quot; to stop code calling it.  It must be called through the </span>
-<a name="l00019"></a>00019 <span class="comment">// public &quot;MultiplyNumbers&quot; function which is available in the extension dll.</span>
+<a name="l00017"></a>00017 <span class="comment">// The only extension is to add the private "DoMultiplyNumbers" function which is</span>
+<a name="l00018"></a>00018 <span class="comment">// deliberately "private" to stop code calling it.  It must be called through the </span>
+<a name="l00019"></a>00019 <span class="comment">// public "MultiplyNumbers" function which is available in the extension dll.</span>
 <a name="l00020"></a>00020 <span class="comment">//</span>
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;NumberStore.h&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <NumberStore.h></span>
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025         
 <a name="l00026"></a>00026 <span class="comment">//This constant is defined in the CPP to demonstrate an intrusive change; </span>
@@ -103,27 +103,27 @@
 <a name="l00063"></a>00063 <span class="comment">// Each of these set to panic to demonstrate if any legacy code calls them inadvertently</span>
 <a name="l00064"></a>00064 EXPORT_C <span class="keywordtype">void</span> NewOwnerFunction1()
 <a name="l00065"></a>00065         {
-<a name="l00066"></a>00066         User::Panic(_L(<span class="stringliteral">&quot;New Function Called&quot;</span>),1);
+<a name="l00066"></a>00066         User::Panic(_L(<span class="stringliteral">"New Function Called"</span>),1);
 <a name="l00067"></a>00067         }
 <a name="l00068"></a>00068         
 <a name="l00069"></a>00069 EXPORT_C <span class="keywordtype">void</span> NewOwnerFunction2()
 <a name="l00070"></a>00070         {
-<a name="l00071"></a>00071         User::Panic(_L(<span class="stringliteral">&quot;New Function Called&quot;</span>),2);
+<a name="l00071"></a>00071         User::Panic(_L(<span class="stringliteral">"New Function Called"</span>),2);
 <a name="l00072"></a>00072         }
 <a name="l00073"></a>00073         
 <a name="l00074"></a>00074 EXPORT_C <span class="keywordtype">void</span> NewOwnerFunction3()
 <a name="l00075"></a>00075         {
-<a name="l00076"></a>00076         User::Panic(_L(<span class="stringliteral">&quot;New Function Called&quot;</span>),3);
+<a name="l00076"></a>00076         User::Panic(_L(<span class="stringliteral">"New Function Called"</span>),3);
 <a name="l00077"></a>00077         }
 <a name="l00078"></a>00078         
 <a name="l00079"></a>00079 EXPORT_C <span class="keywordtype">void</span> NewOwnerFunction4()
 <a name="l00080"></a>00080         {
-<a name="l00081"></a>00081         User::Panic(_L(<span class="stringliteral">&quot;New Function Called&quot;</span>),4);
+<a name="l00081"></a>00081         User::Panic(_L(<span class="stringliteral">"New Function Called"</span>),4);
 <a name="l00082"></a>00082         }
 <a name="l00083"></a>00083         
 <a name="l00084"></a>00084 EXPORT_C <span class="keywordtype">void</span> NewOwnerFunction5()
 <a name="l00085"></a>00085         {
-<a name="l00086"></a>00086         User::Panic(_L(<span class="stringliteral">&quot;New Function Called&quot;</span>),5);
+<a name="l00086"></a>00086         User::Panic(_L(<span class="stringliteral">"New Function Called"</span>),5);
 <a name="l00087"></a>00087         }
 <a name="l00088"></a>00088         
 <a name="l00089"></a>00089 <span class="comment">//Function implementations of private functions which are only used by the extension dll</span>
@@ -135,10 +135,10 @@
 <a name="l00095"></a>00095         <span class="keywordflow">return</span> (iNumber1*iNumber2*KMagicMultiplyer);
 <a name="l00096"></a>00096         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

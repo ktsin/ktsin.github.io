@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/S60_3rd_Edition_TextMTM_Example/modules/Server/src/TXTSCPMV.CPP Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -44,38 +44,38 @@
 <a name="l00004"></a>00004 <span class="comment">//</span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 <span class="preprocessor">#if !defined(__E32STD_H__)</span>
-<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#include &lt;e32std.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#include <e32std.h></span>
 <a name="l00008"></a>00008 <span class="preprocessor">#endif</span>
 <a name="l00009"></a>00009 <span class="preprocessor"></span>
 <a name="l00010"></a>00010 <span class="preprocessor">#if !defined(__TXTETEXT_H__)</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#include &lt;txtetext.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#include <txtetext.h></span>
 <a name="l00012"></a>00012 <span class="preprocessor">#endif</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
 <a name="l00014"></a>00014 <span class="preprocessor">#if !defined(__TXTRICH_H__)</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#include &lt;txtrich.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#include <txtrich.h></span>
 <a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
 <a name="l00017"></a>00017 <span class="preprocessor"></span>
 <a name="l00018"></a>00018 <span class="preprocessor">#if !defined(__APPARC_H__)</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#include &lt;apparc.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#include <apparc.h></span>
 <a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>
 <a name="l00022"></a>00022 <span class="preprocessor">#if !defined(__MSVUIDS_H__)</span>
-<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#include &lt;MSVUIDS.H&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#include <MSVUIDS.H></span>
 <a name="l00024"></a>00024 <span class="preprocessor">#endif</span>
 <a name="l00025"></a>00025 <span class="preprocessor"></span>
 <a name="l00026"></a>00026 <span class="preprocessor">#if !defined(__MSVIDS_H__)</span>
-<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#include &lt;MSVIDS.H&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#include <MSVIDS.H></span>
 <a name="l00028"></a>00028 <span class="preprocessor">#endif</span>
 <a name="l00029"></a>00029 <span class="preprocessor"></span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;txtserv.h&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;txtscpmv.h&quot;</span> 
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;txtspan.h&quot;</span> 
+<a name="l00030"></a>00030 <span class="preprocessor">#include "txtserv.h"</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include "txtscpmv.h"</span> 
+<a name="l00032"></a>00032 <span class="preprocessor">#include "txtspan.h"</span> 
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="comment">//</span>
 <a name="l00035"></a>00035 <span class="comment">// CTxtActiveOper: base class for move, copy and delete operations </span>
 <a name="l00036"></a>00036 <span class="comment">//</span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 CTxtActiveOper::CTxtActiveOper(RFs&amp; aFs, CMsvServerEntry&amp; aServerEntry)
+<a name="l00038"></a>00038 CTxtActiveOper::CTxtActiveOper(RFs& aFs, CMsvServerEntry& aServerEntry)
 <a name="l00039"></a>00039         : CActive(0), iServerEntry(aServerEntry), iFs(aFs)
 <a name="l00040"></a>00040         { 
 <a name="l00041"></a>00041 
@@ -89,7 +89,7 @@
 <a name="l00049"></a>00049         Cancel(); 
 <a name="l00050"></a>00050         }
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keywordtype">void</span> CTxtActiveOper::Start(TMsvId&amp; aSourceId, TMsvId&amp; aDestId, TRequestStatus&amp; aStatus)
+<a name="l00052"></a>00052 <span class="keywordtype">void</span> CTxtActiveOper::Start(TMsvId& aSourceId, TMsvId& aDestId, TRequestStatus& aStatus)
 <a name="l00053"></a>00053 <span class="comment">//</span>
 <a name="l00054"></a>00054 <span class="comment">// Start asynchronous transfer.</span>
 <a name="l00055"></a>00055 <span class="comment">//</span>
@@ -98,10 +98,10 @@
 <a name="l00058"></a>00058         iDestId   = aDestId;
 <a name="l00059"></a>00059         
 <a name="l00060"></a>00060         iStatus = KRequestPending;
-<a name="l00061"></a>00061         iReportStatus = &amp;aStatus; 
+<a name="l00061"></a>00061         iReportStatus = &aStatus; 
 <a name="l00062"></a>00062         SetActive(); 
 <a name="l00063"></a>00063         aStatus = KRequestPending; 
-<a name="l00064"></a>00064         TRequestStatus *sP=&amp;iStatus;
+<a name="l00064"></a>00064         TRequestStatus *sP=&iStatus;
 <a name="l00065"></a>00065         User::RequestComplete(sP, KErrNone); 
 <a name="l00066"></a>00066         }
 <a name="l00067"></a>00067 
@@ -121,7 +121,7 @@
 <a name="l00081"></a>00081         <span class="comment">// after calling User::RequestComplete</span>
 <a name="l00082"></a>00082         <span class="keywordflow">if</span> (errorCode)
 <a name="l00083"></a>00083                 {
-<a name="l00084"></a>00084                 iCurrentCaller-&gt;Progress().iErrorCode = errorCode;
+<a name="l00084"></a>00084                 iCurrentCaller->Progress().iErrorCode = errorCode;
 <a name="l00085"></a>00085                 User::RequestComplete(iReportStatus, KErrNone);
 <a name="l00086"></a>00086                 }
 <a name="l00087"></a>00087         }
@@ -131,25 +131,25 @@
 <a name="l00091"></a>00091 <span class="comment">// for each one of them, waiting for completion.</span>
 <a name="l00092"></a>00092 <span class="comment">//</span>
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>* CTxtCopyMoveBase::NewL(<a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* aActiveOperation, <span class="keyword">const</span> CMsvEntrySelection&amp; aSource, 
-<a name="l00095"></a>00095                                                                          CMsvServerEntry&amp; aDestination, TMsvId&amp; aServiceEntryId, TParse&amp; aParse)
+<a name="l00094"></a>00094 <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>* CTxtCopyMoveBase::NewL(<a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* aActiveOperation, <span class="keyword">const</span> CMsvEntrySelection& aSource, 
+<a name="l00095"></a>00095                                                                          CMsvServerEntry& aDestination, TMsvId& aServiceEntryId, TParse& aParse)
 <a name="l00096"></a>00096         {
 <a name="l00097"></a>00097         <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>(aActiveOperation,aSource,
 <a name="l00098"></a>00098                 aDestination, aServiceEntryId, aParse);
 <a name="l00099"></a>00099         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00100"></a>00100         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00100"></a>00100         <span class="keyword">self</span>->ConstructL();
 <a name="l00101"></a>00101         CleanupStack::Pop();
 <a name="l00102"></a>00102         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00103"></a>00103         }
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>* CTxtCopyMoveBase::CopyConstructL(<span class="keyword">const</span> CMsvEntrySelection&amp; aSource)
+<a name="l00105"></a>00105 <a class="code" href="class_c_txt_copy_move_base.html">CTxtCopyMoveBase</a>* CTxtCopyMoveBase::CopyConstructL(<span class="keyword">const</span> CMsvEntrySelection& aSource)
 <a name="l00106"></a>00106         {
-<a name="l00107"></a>00107         <a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* newActive = iActiveOperation-&gt;CopyConstructL();
+<a name="l00107"></a>00107         <a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* newActive = iActiveOperation->CopyConstructL();
 <a name="l00108"></a>00108         <span class="keywordflow">return</span> NewL(newActive, aSource, iDestination, iServiceEntryId, iServiceDestinationpath);
 <a name="l00109"></a>00109         }
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111 CTxtCopyMoveBase::CTxtCopyMoveBase(<a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* aActiveOperation, <span class="keyword">const</span> CMsvEntrySelection&amp; aSource, 
-<a name="l00112"></a>00112                                                                    CMsvServerEntry&amp; aDestination, TMsvId&amp; aServiceEntryId, TParse&amp; aParse)
+<a name="l00111"></a>00111 CTxtCopyMoveBase::CTxtCopyMoveBase(<a class="code" href="class_c_txt_active_oper.html">CTxtActiveOper</a>* aActiveOperation, <span class="keyword">const</span> CMsvEntrySelection& aSource, 
+<a name="l00112"></a>00112                                                                    CMsvServerEntry& aDestination, TMsvId& aServiceEntryId, TParse& aParse)
 <a name="l00113"></a>00113         : CActive( KMsgTxtRefreshMailboxPriority ),
 <a name="l00114"></a>00114         iActiveOperation(aActiveOperation), iSource(aSource), iDestination(aDestination), 
 <a name="l00115"></a>00115         iServiceEntryId(aServiceEntryId), iServiceDestinationpath(aParse)
@@ -159,12 +159,12 @@
 <a name="l00119"></a>00119 <span class="keywordtype">void</span> CTxtCopyMoveBase::ConstructL()
 <a name="l00120"></a>00120         {
 <a name="l00121"></a>00121         iDestId = iDestination.Entry().Id();
-<a name="l00122"></a>00122         iActiveOperation-&gt;SetCurrentCaller(<span class="keyword">this</span>);
-<a name="l00123"></a>00123         <span class="keywordflow">if</span> (iActiveOperation-&gt;MoveIsToService())        
+<a name="l00122"></a>00122         iActiveOperation->SetCurrentCaller(<span class="keyword">this</span>);
+<a name="l00123"></a>00123         <span class="keywordflow">if</span> (iActiveOperation->MoveIsToService())        
 <a name="l00124"></a>00124                 {
 <a name="l00125"></a>00125                 __ASSERT_ALWAYS(iDestination.Entry().iServiceId == iServiceEntryId, gPanic(ETxtsInvalidService));
 <a name="l00126"></a>00126                 }
-<a name="l00127"></a>00127         CActiveScheduler::Add(<span class="keyword">this</span>);      <span class="comment">// Add CTxtCopyMoveBase to scheduler&#39;s queue</span>
+<a name="l00127"></a>00127         CActiveScheduler::Add(<span class="keyword">this</span>);      <span class="comment">// Add CTxtCopyMoveBase to scheduler's queue</span>
 <a name="l00128"></a>00128         }
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 CTxtCopyMoveBase::~CTxtCopyMoveBase()
@@ -184,12 +184,12 @@
 <a name="l00144"></a>00144         iTxtCopyMoveState =     ETxtFinished;
 <a name="l00145"></a>00145         }
 <a name="l00146"></a>00146 
-<a name="l00147"></a>00147 <span class="keywordtype">void</span> CTxtCopyMoveBase::Start(TRequestStatus&amp; aStatus)
+<a name="l00147"></a>00147 <span class="keywordtype">void</span> CTxtCopyMoveBase::Start(TRequestStatus& aStatus)
 <a name="l00148"></a>00148 <span class="comment">//</span>
 <a name="l00149"></a>00149 <span class="comment">// Start me up</span>
 <a name="l00150"></a>00150 <span class="comment">//</span>
 <a name="l00151"></a>00151         {
-<a name="l00152"></a>00152         iReportStatus = &amp;aStatus;
+<a name="l00152"></a>00152         iReportStatus = &aStatus;
 <a name="l00153"></a>00153 
 <a name="l00154"></a>00154         iMsgCounter = -1;
 <a name="l00155"></a>00155         <span class="comment">// set up progress object</span>
@@ -207,7 +207,7 @@
 <a name="l00167"></a>00167                 }
 <a name="l00168"></a>00168         aStatus = KRequestPending; 
 <a name="l00169"></a>00169         SetActive(); 
-<a name="l00170"></a>00170         TRequestStatus *sP=&amp;iStatus;
+<a name="l00170"></a>00170         TRequestStatus *sP=&iStatus;
 <a name="l00171"></a>00171         User::RequestComplete(sP, KErrNone); 
 <a name="l00172"></a>00172         }
 <a name="l00173"></a>00173 
@@ -228,9 +228,9 @@
 <a name="l00188"></a>00188 <span class="keywordtype">void</span> CTxtCopyMoveBase::CheckDeleteSource()
 <a name="l00189"></a>00189 <span class="comment">// Delete previous source message if necessary</span>
 <a name="l00190"></a>00190         {
-<a name="l00191"></a>00191         <span class="keywordflow">if</span> (iMsgCounter&gt;=0)
+<a name="l00191"></a>00191         <span class="keywordflow">if</span> (iMsgCounter>=0)
 <a name="l00192"></a>00192                 {
-<a name="l00193"></a>00193                 <span class="keywordflow">if</span> (iActiveOperation-&gt;DeleteSourceAfterwards()) 
+<a name="l00193"></a>00193                 <span class="keywordflow">if</span> (iActiveOperation->DeleteSourceAfterwards()) 
 <a name="l00194"></a>00194                         {
 <a name="l00195"></a>00195                         <span class="comment">//delete the previous source</span>
 <a name="l00196"></a>00196                         iDestination.SetEntry(iSource[iMsgCounter]);
@@ -242,7 +242,7 @@
 <a name="l00202"></a>00202         }
 <a name="l00203"></a>00203 
 <a name="l00204"></a>00204 
-<a name="l00205"></a>00205 <span class="keywordtype">void</span> CTxtCopyMoveBase::SetupNewEntryL(TMsvId&amp; aSourceMsgId, TMsvId&amp; aNewDestMsvId)
+<a name="l00205"></a>00205 <span class="keywordtype">void</span> CTxtCopyMoveBase::SetupNewEntryL(TMsvId& aSourceMsgId, TMsvId& aNewDestMsvId)
 <a name="l00206"></a>00206 <span class="comment">// Create new entry index details based on source</span>
 <a name="l00207"></a>00207         {
 <a name="l00208"></a>00208         <span class="comment">// Get the destination path, and put it in the details </span>
@@ -268,9 +268,9 @@
 <a name="l00228"></a>00228         entry.SetUnread(ETrue);
 <a name="l00229"></a>00229     entry.SetNew(ETrue);
 <a name="l00230"></a>00230         <span class="comment">// If the move is to the service, make sure the entry is valid</span>
-<a name="l00231"></a>00231         <span class="keywordflow">if</span> (iActiveOperation-&gt;MoveIsToService())        
+<a name="l00231"></a>00231         <span class="keywordflow">if</span> (iActiveOperation->MoveIsToService())        
 <a name="l00232"></a>00232                 {
-<a name="l00233"></a>00233                 __ASSERT_DEBUG(name.Length()&gt;0,gPanic(ETxtsInvalidFileName));
+<a name="l00233"></a>00233                 __ASSERT_DEBUG(name.Length()>0,gPanic(ETxtsInvalidFileName));
 <a name="l00234"></a>00234                 
 <a name="l00235"></a>00235                 <span class="keywordflow">if</span> (name.Length()==0)
 <a name="l00236"></a>00236                         User::Leave(KErrArgument);
@@ -315,7 +315,7 @@
 <a name="l00275"></a>00275                         <span class="comment">// For copy/move ops, make a new entry on the other side.</span>
 <a name="l00276"></a>00276                         TMsvId newSourceMsgId=iSource[iMsgCounter];
 <a name="l00277"></a>00277                         TMsvId newDestMsvId=KMsvNullIndexEntryId;
-<a name="l00278"></a>00278                         <span class="keywordflow">if</span> (iActiveOperation-&gt;CopiedHeader()) SetupNewEntryL(newSourceMsgId,newDestMsvId);
+<a name="l00278"></a>00278                         <span class="keywordflow">if</span> (iActiveOperation->CopiedHeader()) SetupNewEntryL(newSourceMsgId,newDestMsvId);
 <a name="l00279"></a>00279                         
 <a name="l00280"></a>00280                         iProgress.iMsgsProcessed++;     <span class="comment">// Update progress info</span>
 <a name="l00281"></a>00281                         <span class="comment">// Check if finished</span>
@@ -324,7 +324,7 @@
 <a name="l00284"></a>00284                                 iTxtCopyMoveState = ETxtFinished;
 <a name="l00285"></a>00285                                 }
 <a name="l00286"></a>00286                         <span class="comment">// Do the operation-specific part</span>
-<a name="l00287"></a>00287                         iActiveOperation-&gt;Start(newSourceMsgId,newDestMsvId,iStatus);
+<a name="l00287"></a>00287                         iActiveOperation->Start(newSourceMsgId,newDestMsvId,iStatus);
 <a name="l00288"></a>00288                         SetActive();
 <a name="l00289"></a>00289                         }
 <a name="l00290"></a>00290                         <span class="keywordflow">break</span>;
@@ -337,7 +337,7 @@
 <a name="l00297"></a>00297         }
 <a name="l00298"></a>00298 
 <a name="l00299"></a>00299 
-<a name="l00300"></a>00300 <a class="code" href="class_t_txt_progress.html">TTxtProgress</a>&amp; CTxtCopyMoveBase::Progress()
+<a name="l00300"></a>00300 <a class="code" href="class_t_txt_progress.html">TTxtProgress</a>& CTxtCopyMoveBase::Progress()
 <a name="l00301"></a>00301 <span class="comment">//</span>
 <a name="l00302"></a>00302 <span class="comment">// Report the refreshing news back to the UI</span>
 <a name="l00303"></a>00303 <span class="comment">//</span>
@@ -384,11 +384,11 @@
 <a name="l00344"></a>00344         CleanupStack::PushL(charLayer);
 <a name="l00345"></a>00345         CRichText* body = CRichText::NewL(paraLayer,charLayer, CEditableText::EFlatStorage, 70 );
 <a name="l00346"></a>00346         CleanupStack::PushL(body);
-<a name="l00347"></a>00347         body-&gt;ImportTextFileL(0,iFileName,CPlainText::EOrganiseByLine);
+<a name="l00347"></a>00347         body->ImportTextFileL(0,iFileName,CPlainText::EOrganiseByLine);
 <a name="l00348"></a>00348 
 <a name="l00349"></a>00349         <span class="comment">// Store in body </span>
-<a name="l00350"></a>00350         wstore-&gt;StoreBodyTextL(*body);
-<a name="l00351"></a>00351         wstore-&gt;CommitL();
+<a name="l00350"></a>00350         wstore->StoreBodyTextL(*body);
+<a name="l00351"></a>00351         wstore->CommitL();
 <a name="l00352"></a>00352 
 <a name="l00353"></a>00353         <span class="comment">// Clean up</span>
 <a name="l00354"></a>00354         CleanupStack::PopAndDestroy(4); <span class="comment">//body, charLayer, paraLayer, wstore</span>
@@ -435,13 +435,13 @@
 <a name="l00395"></a>00395         }
 <a name="l00396"></a>00396 
 <a name="l00397"></a>00397 
-<a name="l00398"></a>00398 <span class="keywordtype">void</span> CTxtCopyFromLocalOp::DoMessageCopyFromLocalL(<span class="keyword">const</span> TMsvEntry&amp; aEntry)
+<a name="l00398"></a>00398 <span class="keywordtype">void</span> CTxtCopyFromLocalOp::DoMessageCopyFromLocalL(<span class="keyword">const</span> TMsvEntry& aEntry)
 <a name="l00399"></a>00399 <span class="comment">// Copy local message to remote service: i.e. create a file</span>
 <a name="l00400"></a>00400         {
 <a name="l00401"></a>00401         CMsvStore* rstore=iServerEntry.ReadStoreL();
 <a name="l00402"></a>00402         CleanupStack::PushL(rstore);
 <a name="l00403"></a>00403 
-<a name="l00404"></a>00404         <span class="keywordflow">if</span> (rstore-&gt;HasBodyTextL())
+<a name="l00404"></a>00404         <span class="keywordflow">if</span> (rstore->HasBodyTextL())
 <a name="l00405"></a>00405                 {
 <a name="l00406"></a>00406                 <span class="comment">// Get message text and write it to file</span>
 <a name="l00407"></a>00407                 CParaFormatLayer* paraLayer = CParaFormatLayer::NewL();
@@ -450,11 +450,11 @@
 <a name="l00410"></a>00410                 CleanupStack::PushL(charLayer);
 <a name="l00411"></a>00411                 CRichText* body = CRichText::NewL(paraLayer,charLayer, CEditableText::EFlatStorage, 70);
 <a name="l00412"></a>00412                 CleanupStack::PushL(body);
-<a name="l00413"></a>00413                 rstore-&gt;RestoreBodyTextL(*body);
+<a name="l00413"></a>00413                 rstore->RestoreBodyTextL(*body);
 <a name="l00414"></a>00414                 <span class="comment">//User::LeaveIfError(iFs.MkDir(iFileName)); </span>
-<a name="l00415"></a>00415                 body-&gt;ExportAsTextL(iFileName,CPlainText::EOrganiseByLine,70);
+<a name="l00415"></a>00415                 body->ExportAsTextL(iFileName,CPlainText::EOrganiseByLine,70);
 <a name="l00416"></a>00416 
-<a name="l00417"></a>00417                 <span class="comment">// Change date modified to reflect what&#39;s in the TMsvEntry</span>
+<a name="l00417"></a>00417                 <span class="comment">// Change date modified to reflect what's in the TMsvEntry</span>
 <a name="l00418"></a>00418                 RFile outFile;
 <a name="l00419"></a>00419                 <span class="keywordflow">if</span> (outFile.Open(iFs, iFileName, EFileWrite) == KErrNone)
 <a name="l00420"></a>00420                         {
@@ -537,16 +537,16 @@
 <a name="l00497"></a>00497         TFileText outTextFile;
 <a name="l00498"></a>00498         inTextFile.Set(inFile);
 <a name="l00499"></a>00499         outTextFile.Set(outFile);
-<a name="l00500"></a>00500         TBuf&lt;201&gt; buf;
+<a name="l00500"></a>00500         TBuf<201> buf;
 <a name="l00501"></a>00501         TInt len = 200;
-<a name="l00502"></a>00502         <span class="keywordflow">while</span> (len&gt;0)
+<a name="l00502"></a>00502         <span class="keywordflow">while</span> (len>0)
 <a name="l00503"></a>00503                 {
 <a name="l00504"></a>00504                 buf.FillZ();
 <a name="l00505"></a>00505                 inTextFile.Read(buf);
 <a name="l00506"></a>00506                 len=buf.Length();
 <a name="l00507"></a>00507                 outTextFile.Write(buf);
 <a name="l00508"></a>00508                 }
-<a name="l00509"></a>00509         <span class="comment">// Change date modified to reflect what&#39;s in the TMsvEntry</span>
+<a name="l00509"></a>00509         <span class="comment">// Change date modified to reflect what's in the TMsvEntry</span>
 <a name="l00510"></a>00510         outFile.SetModified(destEntry.iDate);
 <a name="l00511"></a>00511 
 <a name="l00512"></a>00512         <span class="comment">// Clean up</span>
@@ -705,10 +705,10 @@
 <a name="l00665"></a>00665 
 <a name="l00666"></a>00666 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

@@ -3,31 +3,31 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="(C) Copyright 2010" />
-  <meta name="DC.rights.owner" content="(C) Copyright 2010" />
-  <meta name="DC.Type" content="concept" />
-  <meta name="DC.Title" content="How the Target Client is Resolved using CSIPResolvedClient" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-A3D1684D-1DF1-5CAF-A0BB-A32685528596.html" />
-  <meta name="DC.Relation" scheme="URI" content="index.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-6425B722-4095-56E3-9198-70BA3E06C617.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-057F1F82-56AF-5696-853E-79196A3D567E.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-A3D1684D-1DF1-5CAF-A0BB-A32685528596.html" />
-  <meta name="DC.Format" content="XHTML" />
-  <meta name="DC.Identifier" content="GUID-5C215C64-5D3D-5B65-A11F-BE6F8C306CF4" />
-  <meta name="DC.Language" content="en" />
-  <link rel="stylesheet" type="text/css" href="commonltr.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta name="copyright" content="(C) Copyright 2010"></meta>
+  <meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+  <meta name="DC.Type" content="concept"></meta>
+  <meta name="DC.Title" content="How the Target Client is Resolved using CSIPResolvedClient"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-A3D1684D-1DF1-5CAF-A0BB-A32685528596.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-6425B722-4095-56E3-9198-70BA3E06C617.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-057F1F82-56AF-5696-853E-79196A3D567E.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-A3D1684D-1DF1-5CAF-A0BB-A32685528596.html"></meta>
+  <meta name="DC.Format" content="XHTML"></meta>
+  <meta name="DC.Identifier" content="GUID-5C215C64-5D3D-5B65-A11F-BE6F8C306CF4"></meta>
+  <meta name="DC.Language" content="en"></meta>
+  <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
   <title>
    How the Target Client is Resolved using CSIPResolvedClient
   </title>
-  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="nokiacxxref.css" />
+  <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link>
  </head>
  <body id="GUID-5C215C64-5D3D-5B65-A11F-BE6F8C306CF4">
   <a name="GUID-5C215C64-5D3D-5B65-A11F-BE6F8C306CF4">
@@ -46,7 +46,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0; window.name="id2470542 id2386636 id2386727 id2386930 ";
@@ -58,23 +58,23 @@
      <a href="index.html" title="Symbian^3 Application Developer Library">
       Symbian^3 Application Developer Library
      </a>
-     &gt;
+     >
      <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">
       Symbian Guide
      </a>
-     &gt;
+     >
      <a href="GUID-6425B722-4095-56E3-9198-70BA3E06C617.html">
       Multimedia Protocols Guide
      </a>
-     &gt;
+     >
      <a href="GUID-057F1F82-56AF-5696-853E-79196A3D567E.html">
       SIP
      </a>
-     &gt;
+     >
      <a href="GUID-A3D1684D-1DF1-5CAF-A0BB-A32685528596.html">
       SIP Client Resolver API
      </a>
-     &gt;
+     >
     </div>
     <h1 class="topictitle1">
      How the Target Client is Resolved using CSIPResolvedClient
@@ -93,46 +93,46 @@
       <a name="GUID-5C215C64-5D3D-5B65-A11F-BE6F8C306CF4__GUID-68B0C530-A5DA-5230-870E-49649C242F08">
        <!-- -->
       </a>
-      &lt;!-- SIP_CLIENT --&gt;
-&lt;!ELEMENT SIP_CLIENT (SIP_HEADERS, SDP_LINES?)&gt;
+      <!-- SIP_CLIENT -->
+<!ELEMENT SIP_CLIENT (SIP_HEADERS, SDP_LINES?)>
 
-&lt;!-- ALLOW_STARTING determines if a client can be started by the SIP stack. --&gt;
-&lt;!ATTLIST SIP_CLIENT ALLOW_STARTING (YES|NO) #REQUIRED&gt;
+<!-- ALLOW_STARTING determines if a client can be started by the SIP stack. -->
+<!ATTLIST SIP_CLIENT ALLOW_STARTING (YES|NO) #REQUIRED>
 
-&lt;!-- SIP_HEADERS --&gt;
-&lt;!ELEMENT SIP_HEADERS (ACCEPT+, ALLOW_EVENTS*, ACCEPT_CONTACT*)&gt;
+<!-- SIP_HEADERS -->
+<!ELEMENT SIP_HEADERS (ACCEPT+, ALLOW_EVENTS*, ACCEPT_CONTACT*)>
 
-&lt;!-- ACCEPT: Accept-header as specified in RFC 3261.
+<!-- ACCEPT: Accept-header as specified in RFC 3261.
   Indicates Content-Types supported by the client.
   Note that support for application/sdp must be announced as well,
   especially when the application aims to indicate capabilities based 
   on SDP. Otherwise the SDP-based rules will not be taken into account.
   An empty value means that the application is willing
   to receive SIP requests without content. 
---&gt;
-&lt;!ELEMENT ACCEPT EMPTY&gt;
-&lt;!ATTLIST ACCEPT value CDATA #REQUIRED&gt;
+-->
+<!ELEMENT ACCEPT EMPTY>
+<!ATTLIST ACCEPT value CDATA #REQUIRED>
 
-&lt;!-- ALLOW_EVENTS: Allow-Events-header as specified in RFC 3265
+<!-- ALLOW_EVENTS: Allow-Events-header as specified in RFC 3265
   Indicates events supported by the client.
   Compared to the event-package part of a Event-header
   in an incoming SIP request if present. 
---&gt;
-&lt;!ELEMENT ALLOW_EVENTS EMPTY&gt;
-&lt;!ATTLIST ALLOW_EVENTS value CDATA #REQUIRED&gt;
+-->
+<!ELEMENT ALLOW_EVENTS EMPTY>
+<!ATTLIST ALLOW_EVENTS value CDATA #REQUIRED>
 
-&lt;!-- ACCEPT_CONTACT: Accept-Contact-header as specified in RFC 3841
+<!-- ACCEPT_CONTACT: Accept-Contact-header as specified in RFC 3841
   Indicates caller preferences supported by the client.
   All the parameters must match to a Accept-Contact header 
   in an incoming SIP request if present.
---&gt;
-&lt;!ELEMENT ACCEPT_CONTACT EMPTY&gt;
-&lt;!ATTLIST ACCEPT_CONTACT value CDATA #REQUIRED&gt;
+-->
+<!ELEMENT ACCEPT_CONTACT EMPTY>
+<!ATTLIST ACCEPT_CONTACT value CDATA #REQUIRED>
 
-&lt;!-- SDP_LINES --&gt;
-&lt;!ELEMENT SDP_LINES (LINE+)&gt;
+<!-- SDP_LINES -->
+<!ELEMENT SDP_LINES (LINE+)>
 
-&lt;!-- SDP Lines 
+<!-- SDP Lines 
   Can be used to indicate supported media by the client.
   If defined the application must announce the capability of 
   receiving content of type application/sdp.
@@ -156,10 +156,10 @@
                 "H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|" Q"|"R"|
                 "S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"
     DIGIT = "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"
---&gt;
-&lt;!ELEMENT LINE EMPTY&gt;
-&lt;!ATTLIST LINE name CDATA #REQUIRED&gt;
-&lt;!ATTLIST LINE value CDATA #REQUIRED&gt;
+-->
+<!ELEMENT LINE EMPTY>
+<!ATTLIST LINE name CDATA #REQUIRED>
+<!ATTLIST LINE value CDATA #REQUIRED>
      </pre>
      <p>
       The resource (
@@ -182,7 +182,7 @@
          implementation_uid
         </samp>
         : These UIDs are supplied on request to
-        <a href="http://www.symbiansigned.com" target="_blank">
+        <a href="https://web.archive.org/web/20110000000000*/http://www.symbiansigned.com" target="_blank">
          Symbian Signed
         </a>
         .
@@ -248,7 +248,7 @@
              Call flow of resolving a target client implementation using
              CSIPResolvedClient
        </span>
-       <img src="GUID-8E8F1999-4DE0-5CA0-9656-C54127FDB3D4_d0e344217_href.png" />
+       <img src="GUID-8E8F1999-4DE0-5CA0-9656-C54127FDB3D4_d0e344217_href.png"></img>
       </div>
       <p>
        The following list describes how the target client is resolved using
@@ -318,7 +318,7 @@
       </div>
      </div>
     </div>
-    <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+    <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

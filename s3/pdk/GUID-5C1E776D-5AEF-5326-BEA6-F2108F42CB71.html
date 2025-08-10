@@ -3,29 +3,29 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="copyright" content="(C) Copyright 2010"/>
-<meta name="DC.rights.owner" content="(C) Copyright 2010"/>
-<meta name="DC.Type" content="concept"/>
-<meta name="DC.Title" content="condvar: Using Condition Variables"/>
-<meta name="abstract" content="Examples that explains how to use condition variables."/>
-<meta name="description" content="Examples that explains how to use condition variables."/>
-<meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"/>
-<meta name="DC.Relation" scheme="URI" content="index.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"/>
-<meta name="DC.Format" content="XHTML"/>
-<meta name="DC.Identifier" content="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71"/>
-<meta name="DC.Language" content="en"/>
-<link rel="stylesheet" type="text/css" href="commonltr.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<meta name="copyright" content="(C) Copyright 2010"></meta>
+<meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+<meta name="DC.Type" content="concept"></meta>
+<meta name="DC.Title" content="condvar: Using Condition Variables"></meta>
+<meta name="abstract" content="Examples that explains how to use condition variables."></meta>
+<meta name="description" content="Examples that explains how to use condition variables."></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"></meta>
+<meta name="DC.Format" content="XHTML"></meta>
+<meta name="DC.Identifier" content="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71"></meta>
+<meta name="DC.Language" content="en"></meta>
+<link rel="stylesheet" type="text/css" href="commonltr.css"></link>
 <title>condvar: Using Condition Variables</title>
 
      
-<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -33,7 +33,7 @@
 
 
 
-     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"/></head>
+     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link></head>
 <body id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71"><a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71"><!-- --></a>
 
 
@@ -45,7 +45,7 @@
     <a id="index" href="index.html">Symbian^3 Product Developer Library</a>        
 </div>
      <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
-<div id="treeDiv1">&#160;</div>
+<div id="treeDiv1"> </div>
      <script type="text/javascript">
 	var currentIconMode = 0; window.name="id2563754 id2387835 id2392072 id2392081 id2398849 ";
 	YAHOO.util.Event.onDOMReady(buildTree, this,true);
@@ -56,11 +56,11 @@
 <div id="sdl_content">
 
 
-<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> &gt; <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> &gt; <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> &gt; <a href="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html" title="Provides a framework for accessing file systems.">User Library and File Server</a> &gt; <a href="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html" title="The User Library allows the applications and services that run on a phone to access the functionality provided by the Symbian platform Kernel.">User Library</a> &gt; <a href="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html" title="This describes the example code for the User Library component.">User Library Example Code</a> &gt; </div>
+<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> > <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> > <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> > <a href="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html" title="Provides a framework for accessing file systems.">User Library and File Server</a> > <a href="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html" title="The User Library allows the applications and services that run on a phone to access the functionality provided by the Symbian platform Kernel.">User Library</a> > <a href="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html" title="This describes the example code for the User Library component.">User Library Example Code</a> > </div>
 <h1 class="topictitle1">condvar: Using Condition Variables</h1>
 <div><p>Examples that explains how to use condition variables. </p>
 
-<p/>
+<p></p>
 
 <ul>
 <li id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-7CD8220E-2844-5FCB-A9B4-9B188F95C6EE"><a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-7CD8220E-2844-5FCB-A9B4-9B188F95C6EE"><!-- --></a><p><a href="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71.html#GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-8209AA7E-0DFB-512D-9BEB-9063BA617BC5">condvarglobal</a>  </p>
@@ -103,12 +103,12 @@ chunk is less than <samp class="codeph">KLowerThreshold</samp>, it waits for
 a signal from the condition variable before subtracting another value. </p>
  <p><strong>Design and implementation</strong> </p>
  <div class="fignone" id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-1FAFB189-D2E4-5A05-8D8B-B3F7D28467FC"><a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-1FAFB189-D2E4-5A05-8D8B-B3F7D28467FC"><!-- --></a>
-<img src="GUID-857A523E-E660-5AFA-98B1-3A5440A8372F_d0e355615_href.jpg"/>
+<img src="GUID-857A523E-E660-5AFA-98B1-3A5440A8372F_d0e355615_href.jpg"></img>
 </div>
  <p><strong>Build</strong> </p>
  <p>The ConditionVariable example builds
 the following binary files in the standard location (<span class="filepath">\epoc32\release\winscw\
-             &lt;build_variant&gt;</span>) for Carbide.c++. </p>
+             <build_variant></span>) for Carbide.c++. </p>
  <ul>
 <li id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-A699F4AF-3A5F-5C24-83CB-1762348AA1D2"><a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-A699F4AF-3A5F-5C24-83CB-1762348AA1D2"><!-- --></a><p> <strong>adder.exe:</strong> Demonstrates the use of the global condition variable. It creates
 a global shared memory chunk and periodically adds random values to
@@ -173,19 +173,19 @@ the <samp class="codeph">CQueue::Insert()</samp> function on the shared <samp cl
  <p>An object of the <samp class="codeph">CConsumer</samp> class creates and calls the consumer thread. The consumer thread
 is called once a second using an object of the <a href="GUID-3CECC9FC-58C1-3117-AAF2-FDF88341F56F.html"><span class="apiname">CPeriodic</span></a> class. This thread removes a token from the queue when it is called.
 It calls the <samp class="codeph">CQueue::Remove()</samp> function on the shared <samp class="codeph">CQueue</samp> object. </p>
- <p>For more information, refer to <a href="http://support.entegrity.com/private/doclib/docs/osfhtm/develop/appdev/Appde179.htm" target="_blank">Condition Variables</a>. </p>
+ <p>For more information, refer to <a href="https://web.archive.org/web/20110000000000*/http://support.entegrity.com/private/doclib/docs/osfhtm/develop/appdev/Appde179.htm" target="_blank">Condition Variables</a>. </p>
  <div class="p"> <div class="note"><span class="notetitle">Note:</span>  Symbian
 is not responsible for the content of external websites.</div>
   </div>
  <p><strong>Design and implementation</strong> </p>
  <div class="fignone" id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-CA344322-0982-59C3-B93A-7A1F175728F3"><a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-CA344322-0982-59C3-B93A-7A1F175728F3"><!-- --></a>
-<img src="GUID-CAB30473-7829-5F2E-9F45-A2344DEDFC35_d0e355814_href.jpg"/>
+<img src="GUID-CAB30473-7829-5F2E-9F45-A2344DEDFC35_d0e355814_href.jpg"></img>
 </div>
  <p><strong>Build</strong> </p>
  <p>The Symbian build process describes
 how to build this example. The ConditionVariable example builds the
 following binary files in the standard location (<span class="filepath">\epoc32\release\winscw\
-             &lt;build_variant&gt;</span>) for Carbide.c++. </p>
+             <build_variant></span>) for Carbide.c++. </p>
  <p> <span class="filepath">condvarlocal.exe</span>: Demonstrates the use of the
 local condition variable. </p>
  <p><strong>How to run the Example</strong> </p>
@@ -216,7 +216,7 @@ to stop the program. </p>
 </div>
 </div>
    
-<p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
 </div>

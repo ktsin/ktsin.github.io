@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/SerialComms/ServerClientSide/GlassTerm/GlassTerm.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/SerialComms/ServerClientSide/GlassTerm/GlassTerm.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -62,7 +62,7 @@
 <a name="l00024"></a>00024 <span class="comment">// on any 25 or 9 way serial connector will do exactly the same thing.  This last suggestion</span>
 <a name="l00025"></a>00025 <span class="comment">// is something that is carried out entirely at your own risk, and you should be very careful</span>
 <a name="l00026"></a>00026 <span class="comment">// neither to connect any other pins nor to push the paper clip in too far !</span>
-<a name="l00027"></a>00027 <span class="comment">// If using the bent paper clip, you&#39;ll find that in order for the hardware handshaking option</span>
+<a name="l00027"></a>00027 <span class="comment">// If using the bent paper clip, you'll find that in order for the hardware handshaking option</span>
 <a name="l00028"></a>00028 <span class="comment">// to work, a second bent paper clip connecting pins 4 and 5 on a 25-way connector or pin 7 and 8</span>
 <a name="l00029"></a>00029 <span class="comment">// on a 9-way connector will also be needed - this second paper clip is needed to connect RTS to CTS</span>
 <a name="l00030"></a>00030 <span class="comment">// Note: this sample program now shows how to support infra-red as well</span>
@@ -70,22 +70,22 @@
 <a name="l00032"></a>00032 <span class="comment">// possible CSYs.</span>
 <a name="l00033"></a>00033 <span class="comment">//</span>
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;e32base.h&gt;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;e32test.h&gt;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;e32svr.h&gt;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;c32comm.h&gt;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;f32file.h&gt;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include <e32base.h></span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include <e32test.h></span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include <e32svr.h></span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include <c32comm.h></span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include <f32file.h></span>
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;CommonFiles.h&quot;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include "CommonFiles.h"</span>
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="comment">// first define our device driver names</span>
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(LDD_NAME,<span class="stringliteral">&quot;ECOMM&quot;</span>);
+<a name="l00045"></a>00045 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(LDD_NAME,<span class="stringliteral">"ECOMM"</span>);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="preprocessor">#if defined (__WINS__)</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span><a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(PDD_NAME,<span class="stringliteral">&quot;ECDRV&quot;</span>);
+<a name="l00048"></a>00048 <span class="preprocessor"></span><a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(PDD_NAME,<span class="stringliteral">"ECDRV"</span>);
 <a name="l00049"></a>00049 <span class="preprocessor">#else</span>
-<a name="l00050"></a>00050 <span class="preprocessor"></span><a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(PDD_NAME,<span class="stringliteral">&quot;EUART&quot;</span>);
+<a name="l00050"></a>00050 <span class="preprocessor"></span><a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(PDD_NAME,<span class="stringliteral">"EUART"</span>);
 <a name="l00051"></a>00051 <span class="preprocessor">#endif</span>
 <a name="l00052"></a>00052 <span class="preprocessor"></span>
 <a name="l00053"></a>00053 <span class="comment">// next define an arbitrary buffer size and Hundred seconds in microseconds</span>
@@ -94,50 +94,50 @@
 <a name="l00056"></a>00056 <span class="keyword">const</span> TInt KOneHundredSecond (100000000);
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058 <span class="comment">// short literals for use in doExampleL() declared at file scope</span>
-<a name="l00059"></a>00059 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage2,<span class="stringliteral">&quot;%c\n&quot;</span>);
-<a name="l00060"></a>00060 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage14,<span class="stringliteral">&quot;^%c&quot;</span>);
-<a name="l00061"></a>00061 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage15,<span class="stringliteral">&quot;%c&quot;</span>);
-<a name="l00062"></a>00062 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KColons,<span class="stringliteral">&quot;::&quot;</span>);
+<a name="l00059"></a>00059 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage2,<span class="stringliteral">"%c\n"</span>);
+<a name="l00060"></a>00060 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage14,<span class="stringliteral">"^%c"</span>);
+<a name="l00061"></a>00061 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage15,<span class="stringliteral">"%c"</span>);
+<a name="l00062"></a>00062 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KColons,<span class="stringliteral">"::"</span>);
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="comment">// utility function to print received text</span>
-<a name="l00065"></a>00065 <span class="keywordtype">void</span> printReceivedText(TDes8&amp; localInputBuffer,TInt numberRead);
+<a name="l00065"></a>00065 <span class="keywordtype">void</span> printReceivedText(TDes8& localInputBuffer,TInt numberRead);
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 LOCAL_C <span class="keywordtype">void</span> doExampleL ()
 <a name="l00068"></a>00068         {
-<a name="l00069"></a>00069         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage0,<span class="stringliteral">&quot;Select S for RS232 Serial or R for InfraRed port : &quot;</span>);
-<a name="l00070"></a>00070         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage1,<span class="stringliteral">&quot;Select 0 for no handshaking, 1 for CTS/RTS and 2 for XON/XOFF :&quot;</span>);
-<a name="l00071"></a>00071         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage4,<span class="stringliteral">&quot;Loading device drivers\n&quot;</span>);
-<a name="l00072"></a>00072         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage5,<span class="stringliteral">&quot;Starting comms server\n&quot;</span>);
-<a name="l00073"></a>00073         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage6,<span class="stringliteral">&quot;Connecting to comms server\n&quot;</span>);
-<a name="l00074"></a>00074         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage7,<span class="stringliteral">&quot;Loading %S.CSY module\n&quot;</span>);
-<a name="l00075"></a>00075         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage8,<span class="stringliteral">&quot;%S has %S available as %S::%u to %S::%u\n&quot;</span>);
-<a name="l00076"></a>00076         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage9,<span class="stringliteral">&quot;Opened %S\n&quot;</span>);
-<a name="l00077"></a>00077         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage10,<span class="stringliteral">&quot;Configuring Serial port for 115200 bps 8 bits no parity 1 stop\n&quot;</span>);
-<a name="l00078"></a>00078         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage11,<span class="stringliteral">&quot;Powering up port\n&quot;</span>);
-<a name="l00079"></a>00079         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage12,<span class="stringliteral">&quot;\nDisconnecting\n&quot;</span>);
-<a name="l00080"></a>00080         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage13,<span class="stringliteral">&quot;\nWrite Failed %d\n&quot;</span>);
-<a name="l00081"></a>00081         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage16,<span class="stringliteral">&quot;\nRead failed %d\n&quot;</span>);
-<a name="l00082"></a>00082         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage17,<span class="stringliteral">&quot;Closed %S\n&quot;</span>);
-<a name="l00083"></a>00083         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage18,<span class="stringliteral">&quot;Closing server connection\n&quot;</span>);
-<a name="l00084"></a>00084         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage19,<span class="stringliteral">&quot;Comms server reports we have %u comms modules loaded\n&quot;</span>);
-<a name="l00085"></a>00085         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage20,<span class="stringliteral">&quot;Using the lowest %S out of %S::%u to %S::%u\n&quot;</span>);
+<a name="l00069"></a>00069         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage0,<span class="stringliteral">"Select S for RS232 Serial or R for InfraRed port : "</span>);
+<a name="l00070"></a>00070         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage1,<span class="stringliteral">"Select 0 for no handshaking, 1 for CTS/RTS and 2 for XON/XOFF :"</span>);
+<a name="l00071"></a>00071         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage4,<span class="stringliteral">"Loading device drivers\n"</span>);
+<a name="l00072"></a>00072         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage5,<span class="stringliteral">"Starting comms server\n"</span>);
+<a name="l00073"></a>00073         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage6,<span class="stringliteral">"Connecting to comms server\n"</span>);
+<a name="l00074"></a>00074         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage7,<span class="stringliteral">"Loading %S.CSY module\n"</span>);
+<a name="l00075"></a>00075         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage8,<span class="stringliteral">"%S has %S available as %S::%u to %S::%u\n"</span>);
+<a name="l00076"></a>00076         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage9,<span class="stringliteral">"Opened %S\n"</span>);
+<a name="l00077"></a>00077         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage10,<span class="stringliteral">"Configuring Serial port for 115200 bps 8 bits no parity 1 stop\n"</span>);
+<a name="l00078"></a>00078         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage11,<span class="stringliteral">"Powering up port\n"</span>);
+<a name="l00079"></a>00079         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage12,<span class="stringliteral">"\nDisconnecting\n"</span>);
+<a name="l00080"></a>00080         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage13,<span class="stringliteral">"\nWrite Failed %d\n"</span>);
+<a name="l00081"></a>00081         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage16,<span class="stringliteral">"\nRead failed %d\n"</span>);
+<a name="l00082"></a>00082         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage17,<span class="stringliteral">"Closed %S\n"</span>);
+<a name="l00083"></a>00083         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage18,<span class="stringliteral">"Closing server connection\n"</span>);
+<a name="l00084"></a>00084         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage19,<span class="stringliteral">"Comms server reports we have %u comms modules loaded\n"</span>);
+<a name="l00085"></a>00085         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage20,<span class="stringliteral">"Using the lowest %S out of %S::%u to %S::%u\n"</span>);
 <a name="l00086"></a>00086         
-<a name="l00087"></a>00087         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPanic,<span class="stringliteral">&quot;StraySignal&quot;</span>);
-<a name="l00088"></a>00088         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(RS232,<span class="stringliteral">&quot;ECUART&quot;</span>);
-<a name="l00089"></a>00089         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(IRCOMM,<span class="stringliteral">&quot;IRCOMM&quot;</span>);
+<a name="l00087"></a>00087         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPanic,<span class="stringliteral">"StraySignal"</span>);
+<a name="l00088"></a>00088         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(RS232,<span class="stringliteral">"ECUART"</span>);
+<a name="l00089"></a>00089         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(IRCOMM,<span class="stringliteral">"IRCOMM"</span>);
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091         TBuf16 &lt; 6 &gt; csyName;
+<a name="l00091"></a>00091         TBuf16 < 6 > csyName;
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093         TUint8 csyMode;
 <a name="l00094"></a>00094         <span class="keyword">const</span> TUint8 mask=0xdf; <span class="comment">// this mask 0xdf turns lower to upper case</span>
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096         console-&gt;Printf (KMessage0);
+<a name="l00096"></a>00096         console->Printf (KMessage0);
 <a name="l00097"></a>00097         <span class="keywordflow">do</span>
-<a name="l00098"></a>00098                 csyMode = STATIC_CAST(TUint8,console-&gt;Getch () &amp; mask); 
-<a name="l00099"></a>00099         <span class="keywordflow">while</span> ((csyMode &lt; <span class="charliteral">&#39;R&#39;</span>) || (csyMode &gt; <span class="charliteral">&#39;S&#39;</span>));
-<a name="l00100"></a>00100         console-&gt;Printf (KMessage2, csyMode);
+<a name="l00098"></a>00098                 csyMode = STATIC_CAST(TUint8,console->Getch () & mask); 
+<a name="l00099"></a>00099         <span class="keywordflow">while</span> ((csyMode < <span class="charliteral">'R'</span>) || (csyMode > <span class="charliteral">'S'</span>));
+<a name="l00100"></a>00100         console->Printf (KMessage2, csyMode);
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102         <span class="keywordflow">if</span> (csyMode==<span class="charliteral">&#39;S&#39;</span>)
+<a name="l00102"></a>00102         <span class="keywordflow">if</span> (csyMode==<span class="charliteral">'S'</span>)
 <a name="l00103"></a>00103                 csyName.Copy(RS232);
 <a name="l00104"></a>00104         <span class="keywordflow">else</span>
 <a name="l00105"></a>00105                 csyName.Copy(IRCOMM);
@@ -145,22 +145,22 @@
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109         TKeyCode handshakingMode;
-<a name="l00110"></a>00110         console-&gt;Printf (KMessage1);
+<a name="l00110"></a>00110         console->Printf (KMessage1);
 <a name="l00111"></a>00111         <span class="keywordflow">do</span>
-<a name="l00112"></a>00112                 handshakingMode = console-&gt;Getch ();
-<a name="l00113"></a>00113         <span class="keywordflow">while</span> ((handshakingMode &lt; <span class="charliteral">&#39;0&#39;</span>) || (handshakingMode &gt; <span class="charliteral">&#39;2&#39;</span>));
-<a name="l00114"></a>00114         console-&gt;Printf (KMessage2, handshakingMode);
+<a name="l00112"></a>00112                 handshakingMode = console->Getch ();
+<a name="l00113"></a>00113         <span class="keywordflow">while</span> ((handshakingMode < <span class="charliteral">'0'</span>) || (handshakingMode > <span class="charliteral">'2'</span>));
+<a name="l00114"></a>00114         console->Printf (KMessage2, handshakingMode);
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117         <span class="comment">// Under WINS we must force a link to the file server</span>
-<a name="l00118"></a>00118         <span class="comment">// so that we&#39;re sure we&#39;ll be able to load the device drivers.</span>
+<a name="l00118"></a>00118         <span class="comment">// so that we're sure we'll be able to load the device drivers.</span>
 <a name="l00119"></a>00119         <span class="comment">// On a MARM implementation, this code would not</span>
 <a name="l00120"></a>00120         <span class="comment">// be required because higher level components</span>
 <a name="l00121"></a>00121         <span class="comment">// will automatically have started the services.</span>
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123 <span class="preprocessor">#if defined (__WINS__)</span>
-<a name="l00124"></a>00124 <span class="preprocessor"></span>        <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage3,<span class="stringliteral">&quot;Connect to file server\n&quot;</span>);
-<a name="l00125"></a>00125         console-&gt;Printf (KMessage3);
+<a name="l00124"></a>00124 <span class="preprocessor"></span>        <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMessage3,<span class="stringliteral">"Connect to file server\n"</span>);
+<a name="l00125"></a>00125         console->Printf (KMessage3);
 <a name="l00126"></a>00126         RFs fileServer;
 <a name="l00127"></a>00127         User::LeaveIfError (fileServer.Connect ());
 <a name="l00128"></a>00128         fileServer.Close ();
@@ -170,30 +170,30 @@
 <a name="l00132"></a>00132         <span class="comment">// Load the physical and logical device drivers</span>
 <a name="l00133"></a>00133         <span class="comment">// The Symbian platform will automatically append .PDD and .LDD and</span>
 <a name="l00134"></a>00134         <span class="comment">// search /System/Libs on all drives starting from C:</span>
-<a name="l00135"></a>00135         <span class="comment">// If EIKON has done this, they&#39;ll already exist -</span>
+<a name="l00135"></a>00135         <span class="comment">// If EIKON has done this, they'll already exist -</span>
 <a name="l00136"></a>00136         <span class="comment">// no harm will have been done</span>
 <a name="l00137"></a>00137 
-<a name="l00138"></a>00138         console-&gt;Printf (KMessage4);
+<a name="l00138"></a>00138         console->Printf (KMessage4);
 <a name="l00139"></a>00139         TInt r = User::LoadPhysicalDevice (PDD_NAME);
-<a name="l00140"></a>00140         <span class="keywordflow">if</span> (r != KErrNone &amp;&amp; r != KErrAlreadyExists)
+<a name="l00140"></a>00140         <span class="keywordflow">if</span> (r != KErrNone && r != KErrAlreadyExists)
 <a name="l00141"></a>00141                 User::Leave (r);
 <a name="l00142"></a>00142         r = User::LoadLogicalDevice (LDD_NAME);
-<a name="l00143"></a>00143         <span class="keywordflow">if</span> (r != KErrNone &amp;&amp; r != KErrAlreadyExists)
+<a name="l00143"></a>00143         <span class="keywordflow">if</span> (r != KErrNone && r != KErrAlreadyExists)
 <a name="l00144"></a>00144                 User::Leave (r);
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146         <span class="comment">// Both WINS and EIKON will have started the comms server process.</span>
 <a name="l00147"></a>00147         <span class="comment">// (this is only really needed for ARM hardware development racks)</span>
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149 <span class="preprocessor">#if !defined (__WINS__)</span>
-<a name="l00150"></a>00150 <span class="preprocessor"></span>        console-&gt;Printf (KMessage5);
+<a name="l00150"></a>00150 <span class="preprocessor"></span>        console->Printf (KMessage5);
 <a name="l00151"></a>00151         r = StartC32 ();
-<a name="l00152"></a>00152         <span class="keywordflow">if</span> (r != KErrNone &amp;&amp; r != KErrAlreadyExists)
+<a name="l00152"></a>00152         <span class="keywordflow">if</span> (r != KErrNone && r != KErrAlreadyExists)
 <a name="l00153"></a>00153                 User::Leave (r);
 <a name="l00154"></a>00154 <span class="preprocessor">#endif</span>
 <a name="l00155"></a>00155 <span class="preprocessor"></span>
 <a name="l00156"></a>00156         <span class="comment">// Now (at last) we can actually connect to the comm server</span>
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158         console-&gt;Printf (KMessage6);
+<a name="l00158"></a>00158         console->Printf (KMessage6);
 <a name="l00159"></a>00159         RCommServ server;
 <a name="l00160"></a>00160         User::LeaveIfError (server.Connect ());
 <a name="l00161"></a>00161 
@@ -201,7 +201,7 @@
 <a name="l00163"></a>00163         <span class="comment">// The Symbian platform will automatically search \System\Libs</span>
 <a name="l00164"></a>00164         <span class="comment">// on all drives starting from C:</span>
 <a name="l00165"></a>00165 
-<a name="l00166"></a>00166         console-&gt;Printf (KMessage7,&amp;csyName);
+<a name="l00166"></a>00166         console->Printf (KMessage7,&csyName);
 <a name="l00167"></a>00167         r = server.LoadCommModule (csyName);
 <a name="l00168"></a>00168         User::LeaveIfError (r);
 <a name="l00169"></a>00169 
@@ -209,58 +209,58 @@
 <a name="l00171"></a>00171         <span class="comment">// however, for machine independence we are better off looking up that information</span>
 <a name="l00172"></a>00172 
 <a name="l00173"></a>00173         <span class="comment">// the oddly-named NumPorts function actually tells us how many CSYs are loaded</span>
-<a name="l00174"></a>00174         <span class="comment">// this isn&#39;t 0 since we&#39;ve just loaded one ...</span>
+<a name="l00174"></a>00174         <span class="comment">// this isn't 0 since we've just loaded one ...</span>
 <a name="l00175"></a>00175 
 <a name="l00176"></a>00176         TInt numPorts;
 <a name="l00177"></a>00177         r = server.NumPorts (numPorts);
 <a name="l00178"></a>00178         User::LeaveIfError (r);
-<a name="l00179"></a>00179         console-&gt;Printf (KMessage19,numPorts);
+<a name="l00179"></a>00179         console->Printf (KMessage19,numPorts);
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181         <span class="comment">// we can get port information for each loaded CSY in turn (note we</span>
 <a name="l00182"></a>00182         <span class="comment">// index them from 0) - we can find out the number of ports supported</span>
 <a name="l00183"></a>00183         <span class="comment">// together with their names, and their description. The information is</span>
 <a name="l00184"></a>00184         <span class="comment">// returned in a TSerialInfo structure together with the name of the</span>
-<a name="l00185"></a>00185         <span class="comment">// CSY that we&#39;ve indexed</span>
+<a name="l00185"></a>00185         <span class="comment">// CSY that we've indexed</span>
 <a name="l00186"></a>00186 
 <a name="l00187"></a>00187         TSerialInfo portInfo;
-<a name="l00188"></a>00188         TBuf16 &lt; 12 &gt; moduleName;
+<a name="l00188"></a>00188         TBuf16 < 12 > moduleName;
 <a name="l00189"></a>00189 
-<a name="l00190"></a>00190         <span class="keywordflow">for</span> (TInt index=0 ; index &lt; numPorts ; index++)
+<a name="l00190"></a>00190         <span class="keywordflow">for</span> (TInt index=0 ; index < numPorts ; index++)
 <a name="l00191"></a>00191                 {
 <a name="l00192"></a>00192                 r = server.GetPortInfo (index, moduleName, portInfo);
 <a name="l00193"></a>00193                 User::LeaveIfError (r);
-<a name="l00194"></a>00194                 console-&gt;Printf (KMessage8,
-<a name="l00195"></a>00195                                                           &amp;moduleName,
-<a name="l00196"></a>00196                                                           &amp;portInfo.iDescription,
-<a name="l00197"></a>00197                                                           &amp;portInfo.iName,
+<a name="l00194"></a>00194                 console->Printf (KMessage8,
+<a name="l00195"></a>00195                                                           &moduleName,
+<a name="l00196"></a>00196                                                           &portInfo.iDescription,
+<a name="l00197"></a>00197                                                           &portInfo.iName,
 <a name="l00198"></a>00198                                                           portInfo.iLowUnit,
-<a name="l00199"></a>00199                                                           &amp;portInfo.iName,
+<a name="l00199"></a>00199                                                           &portInfo.iName,
 <a name="l00200"></a>00200                                                           portInfo.iHighUnit);
 <a name="l00201"></a>00201                 }
 <a name="l00202"></a>00202 
-<a name="l00203"></a>00203         <span class="comment">// However, we are really only interested in using the CSY that we&#39;ve</span>
+<a name="l00203"></a>00203         <span class="comment">// However, we are really only interested in using the CSY that we've</span>
 <a name="l00204"></a>00204         <span class="comment">// just loaded up ourselves.  We could find out its portInfo by</span>
 <a name="l00205"></a>00205         <span class="comment">// comparing the moduleName returned by the version of GetPortInfo we</span>
-<a name="l00206"></a>00206         <span class="comment">// just used to the name of the CSY we loaded, but there&#39;s a better</span>
+<a name="l00206"></a>00206         <span class="comment">// just used to the name of the CSY we loaded, but there's a better</span>
 <a name="l00207"></a>00207         <span class="comment">// version of GetPortInfo we can use, which just takes the name of a CSY</span>
-<a name="l00208"></a>00208         <span class="comment">// as a parameter. We&#39;d expect to find this informtion is an exact </span>
+<a name="l00208"></a>00208         <span class="comment">// as a parameter. We'd expect to find this informtion is an exact </span>
 <a name="l00209"></a>00209         <span class="comment">// duplicate of the indexed portInfo for the last loaded CSY</span>
 <a name="l00210"></a>00210         <span class="comment">// Our example code will use the lowest possible port (why not?)</span>
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212         r = server.GetPortInfo (csyName, portInfo);
-<a name="l00213"></a>00213         console-&gt;Printf (KMessage20,
-<a name="l00214"></a>00214                                                   &amp;portInfo.iDescription,
-<a name="l00215"></a>00215                                                   &amp;portInfo.iName,
+<a name="l00213"></a>00213         console->Printf (KMessage20,
+<a name="l00214"></a>00214                                                   &portInfo.iDescription,
+<a name="l00215"></a>00215                                                   &portInfo.iName,
 <a name="l00216"></a>00216                                                   portInfo.iLowUnit,
-<a name="l00217"></a>00217                                                   &amp;portInfo.iName,
+<a name="l00217"></a>00217                                                   &portInfo.iName,
 <a name="l00218"></a>00218                                                   portInfo.iHighUnit);
 <a name="l00219"></a>00219 
-<a name="l00220"></a>00220         <span class="comment">// Now let&#39;s use a few Symbian platform functions to construct a descriptor for the</span>
+<a name="l00220"></a>00220         <span class="comment">// Now let's use a few Symbian platform functions to construct a descriptor for the</span>
 <a name="l00221"></a>00221         <span class="comment">// name of the lowest port our CSY supports -</span>
 <a name="l00222"></a>00222         <span class="comment">// The name can  be as long as a TSerialInfo.iName plus a</span>
 <a name="l00223"></a>00223         <span class="comment">// couple of colons and digits</span>
 <a name="l00224"></a>00224 
-<a name="l00225"></a>00225         TBuf16 &lt; KMaxPortName + 4 &gt; portName; <span class="comment">// declare an empty descriptor buffer</span>
+<a name="l00225"></a>00225         TBuf16 < KMaxPortName + 4 > portName; <span class="comment">// declare an empty descriptor buffer</span>
 <a name="l00226"></a>00226         portName.Num (portInfo.iLowUnit);        <span class="comment">// put in the port number in ASCII</span>
 <a name="l00227"></a>00227         portName.Insert (0, KColons);     <span class="comment">// stick in a couple of colons</span>
 <a name="l00228"></a>00228         portName.Insert (0, portInfo.iName); <span class="comment">// and lead off with the iName</span>
@@ -268,7 +268,7 @@
 <a name="l00230"></a>00230         <span class="comment">// and at last we can open the first serial port,which we do here in exclusive mode</span>
 <a name="l00231"></a>00231 
 <a name="l00232"></a>00232         RComm commPort;
-<a name="l00233"></a>00233         console-&gt;Printf (KMessage9, &amp;portName);
+<a name="l00233"></a>00233         console->Printf (KMessage9, &portName);
 <a name="l00234"></a>00234         r = commPort.Open (server, portName, ECommExclusive);
 <a name="l00235"></a>00235         User::LeaveIfError (r);
 <a name="l00236"></a>00236 
@@ -280,13 +280,13 @@
 <a name="l00242"></a>00242         TCommCaps ourCapabilities;
 <a name="l00243"></a>00243         commPort.Caps (ourCapabilities);
 <a name="l00244"></a>00244 
-<a name="l00245"></a>00245         <span class="keywordflow">if</span> (((ourCapabilities ().iRate &amp; KCapsBps115200) == 0) ||
-<a name="l00246"></a>00246                  ((ourCapabilities ().iDataBits &amp; KCapsData8) == 0) ||
-<a name="l00247"></a>00247                  ((ourCapabilities ().iStopBits &amp; KCapsStop1) == 0) ||
-<a name="l00248"></a>00248                  ((ourCapabilities ().iParity &amp; KCapsParityNone) == 0))
+<a name="l00245"></a>00245         <span class="keywordflow">if</span> (((ourCapabilities ().iRate & KCapsBps115200) == 0) ||
+<a name="l00246"></a>00246                  ((ourCapabilities ().iDataBits & KCapsData8) == 0) ||
+<a name="l00247"></a>00247                  ((ourCapabilities ().iStopBits & KCapsStop1) == 0) ||
+<a name="l00248"></a>00248                  ((ourCapabilities ().iParity & KCapsParityNone) == 0))
 <a name="l00249"></a>00249                 User::Leave (KErrNotSupported);
 <a name="l00250"></a>00250 
-<a name="l00251"></a>00251         console-&gt;Printf (KMessage10);
+<a name="l00251"></a>00251         console->Printf (KMessage10);
 <a name="l00252"></a>00252 
 <a name="l00253"></a>00253         TCommConfig portSettings;
 <a name="l00254"></a>00254         commPort.Config (portSettings);
@@ -299,9 +299,9 @@
 <a name="l00261"></a>00261         <span class="comment">// to do with handshaking, behaviour of reads and writes and so so</span>
 <a name="l00262"></a>00262 
 <a name="l00263"></a>00263         portSettings ().iFifo = EFifoEnable;
-<a name="l00264"></a>00264         <span class="keywordflow">if</span> (handshakingMode == <span class="charliteral">&#39;2&#39;</span>)
+<a name="l00264"></a>00264         <span class="keywordflow">if</span> (handshakingMode == <span class="charliteral">'2'</span>)
 <a name="l00265"></a>00265                 portSettings ().iHandshake = (KConfigObeyXoff | KConfigSendXoff); <span class="comment">// for xon/xoff</span>
-<a name="l00266"></a>00266         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (handshakingMode == <span class="charliteral">&#39;1&#39;</span>)
+<a name="l00266"></a>00266         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (handshakingMode == <span class="charliteral">'1'</span>)
 <a name="l00267"></a>00267                 portSettings ().iHandshake = (KConfigObeyCTS | KConfigFreeRTS); <span class="comment">// for cts/rts</span>
 <a name="l00268"></a>00268         <span class="keywordflow">else</span>
 <a name="l00269"></a>00269                 portSettings ().iHandshake = KConfigFailDSR;    <span class="comment">// for no handshaking</span>
@@ -323,13 +323,13 @@
 <a name="l00285"></a>00285         <span class="comment">// now we can start using the port</span>
 <a name="l00286"></a>00286 
 <a name="l00287"></a>00287         TKeyCode key;
-<a name="l00288"></a>00288         TPtrC8 outputByte ((TUint8 *) &amp; key, 1);
-<a name="l00289"></a>00289         TBuf8 &lt; KBufSize &gt; localInputBuffer;
+<a name="l00288"></a>00288         TPtrC8 outputByte ((TUint8 *) & key, 1);
+<a name="l00289"></a>00289         TBuf8 < KBufSize > localInputBuffer;
 <a name="l00290"></a>00290         TRequestStatus readStat, keyStat;
 <a name="l00291"></a>00291 
 <a name="l00292"></a>00292         <span class="comment">// a null read or write powers up the port</span>
 <a name="l00293"></a>00293 
-<a name="l00294"></a>00294         console-&gt;Printf (KMessage11);
+<a name="l00294"></a>00294         console->Printf (KMessage11);
 <a name="l00295"></a>00295         commPort.Read (readStat, localInputBuffer, 0);
 <a name="l00296"></a>00296         User::WaitForRequest(readStat);
 <a name="l00297"></a>00297         r = readStat.Int ();
@@ -342,13 +342,13 @@
 <a name="l00304"></a>00304         <span class="comment">// note that we use Read() with a timeout - we have configured the port so that</span>
 <a name="l00305"></a>00305         <span class="comment">// line feeds trigger early completion of reads, which optimizes text based reception.</span>
 <a name="l00306"></a>00306 
-<a name="l00307"></a>00307         <span class="comment">// if we&#39;d used the request commPort.ReadOneOrMore (readStat, localInputBuffer) we</span>
+<a name="l00307"></a>00307         <span class="comment">// if we'd used the request commPort.ReadOneOrMore (readStat, localInputBuffer) we</span>
 <a name="l00308"></a>00308         <span class="comment">// could well have ended up calling the server once per character (up to 2000 times</span>
 <a name="l00309"></a>00309         <span class="comment">// per second!) so a regular re-issuing of the read request once in every 100 second is no</span>
 <a name="l00310"></a>00310         <span class="comment">// big deal (to retain echoing of keyboard characters)</span>
 <a name="l00311"></a>00311 
 <a name="l00312"></a>00312 
-<a name="l00313"></a>00313         console-&gt;Read (keyStat);
+<a name="l00313"></a>00313         console->Read (keyStat);
 <a name="l00314"></a>00314         commPort.Read (readStat, KOneHundredSecond, localInputBuffer);
 <a name="l00315"></a>00315         <span class="keywordflow">for</span> (;;)
 <a name="l00316"></a>00316                 {
@@ -358,27 +358,27 @@
 <a name="l00320"></a>00320 
 <a name="l00321"></a>00321                 <span class="keywordflow">if</span> (keyStat != KRequestPending)
 <a name="l00322"></a>00322                         {
-<a name="l00323"></a>00323                         key = console-&gt;KeyCode ();
+<a name="l00323"></a>00323                         key = console->KeyCode ();
 <a name="l00324"></a>00324 
 <a name="l00325"></a>00325                         <span class="keywordflow">if</span> (key == 0x1b)                 <span class="comment">// ESCAPE - Disconnect</span>
 <a name="l00326"></a>00326                                 {
-<a name="l00327"></a>00327                                 console-&gt;Printf (KMessage12);
+<a name="l00327"></a>00327                                 console->Printf (KMessage12);
 <a name="l00328"></a>00328                                 commPort.ReadCancel ();   <span class="comment">// Cancel Read</span>
 <a name="l00329"></a>00329                                 User::WaitForRequest (readStat);
 <a name="l00330"></a>00330                                 <span class="keywordflow">break</span>;
 <a name="l00331"></a>00331                                 }
 <a name="l00332"></a>00332 
-<a name="l00333"></a>00333                         <span class="keywordflow">if</span> (key &lt; 256)                  <span class="comment">// ASCII - Write to serial port</span>
+<a name="l00333"></a>00333                         <span class="keywordflow">if</span> (key < 256)                  <span class="comment">// ASCII - Write to serial port</span>
 <a name="l00334"></a>00334                                 {
 <a name="l00335"></a>00335                                 TRequestStatus stat;
 <a name="l00336"></a>00336                                 commPort.Write (stat, outputByte);
 <a name="l00337"></a>00337                                 User::WaitForRequest (stat);
 <a name="l00338"></a>00338                                 r = stat.Int ();
 <a name="l00339"></a>00339                                 <span class="keywordflow">if</span> (r != KErrNone)  <span class="comment">// Write has failed for some reason</span>
-<a name="l00340"></a>00340                                         console-&gt;Printf (KMessage13, r);
+<a name="l00340"></a>00340                                         console->Printf (KMessage13, r);
 <a name="l00341"></a>00341                                 }
 <a name="l00342"></a>00342 
-<a name="l00343"></a>00343                         console-&gt;Read (keyStat);                 <span class="comment">// When complete, read again</span>
+<a name="l00343"></a>00343                         console->Read (keyStat);                 <span class="comment">// When complete, read again</span>
 <a name="l00344"></a>00344                         }
 <a name="l00345"></a>00345 
 <a name="l00346"></a>00346                 <span class="comment">// From serial port - we display printable characters, line feeds and carriage returns</span>
@@ -408,11 +408,11 @@
 <a name="l00370"></a>00370                                         }
 <a name="l00371"></a>00371                                 }
 <a name="l00372"></a>00372                         <span class="keywordflow">else</span>     <span class="comment">// An error occured on reading</span>
-<a name="l00373"></a>00373                                 console-&gt;Printf (KMessage16, readStat.Int ());
+<a name="l00373"></a>00373                                 console->Printf (KMessage16, readStat.Int ());
 <a name="l00374"></a>00374                         commPort.Read (readStat, KOneHundredSecond, localInputBuffer);
 <a name="l00375"></a>00375                         }
 <a name="l00376"></a>00376 
-<a name="l00377"></a>00377                 <span class="comment">// help !! a request we can&#39;t cater for</span>
+<a name="l00377"></a>00377                 <span class="comment">// help !! a request we can't cater for</span>
 <a name="l00378"></a>00378 
 <a name="l00379"></a>00379                 <span class="keywordflow">else</span>
 <a name="l00380"></a>00380                         {
@@ -424,27 +424,27 @@
 <a name="l00386"></a>00386         <span class="comment">// Close port</span>
 <a name="l00387"></a>00387 
 <a name="l00388"></a>00388         commPort.Close ();
-<a name="l00389"></a>00389         console-&gt;Printf (KMessage17, &amp;portName);
-<a name="l00390"></a>00390         console-&gt;Printf (KMessage18);
+<a name="l00389"></a>00389         console->Printf (KMessage17, &portName);
+<a name="l00390"></a>00390         console->Printf (KMessage18);
 <a name="l00391"></a>00391         server.Close ();
 <a name="l00392"></a>00392         }
 <a name="l00393"></a>00393 
-<a name="l00394"></a>00394 <span class="keywordtype">void</span> printReceivedText(TDes8&amp; localInputBuffer,TInt numberRead)
+<a name="l00394"></a>00394 <span class="keywordtype">void</span> printReceivedText(TDes8& localInputBuffer,TInt numberRead)
 <a name="l00395"></a>00395         {
-<a name="l00396"></a>00396         TUint8 *nextByte = &amp;localInputBuffer[0];
-<a name="l00397"></a>00397         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numberRead; i++, nextByte++)
+<a name="l00396"></a>00396         TUint8 *nextByte = &localInputBuffer[0];
+<a name="l00397"></a>00397         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i < numberRead; i++, nextByte++)
 <a name="l00398"></a>00398                 {
-<a name="l00399"></a>00399                 <span class="keywordflow">if</span> ((*nextByte &lt; 32) &amp;&amp; (*nextByte != 10) &amp;&amp; (*nextByte != 13))
-<a name="l00400"></a>00400                         console-&gt;Printf (KMessage14, (*nextByte) + 64);
+<a name="l00399"></a>00399                 <span class="keywordflow">if</span> ((*nextByte < 32) && (*nextByte != 10) && (*nextByte != 13))
+<a name="l00400"></a>00400                         console->Printf (KMessage14, (*nextByte) + 64);
 <a name="l00401"></a>00401                 <span class="keywordflow">else</span>
-<a name="l00402"></a>00402                         console-&gt;Printf (KMessage15, *nextByte);
+<a name="l00402"></a>00402                         console->Printf (KMessage15, *nextByte);
 <a name="l00403"></a>00403                 }
 <a name="l00404"></a>00404         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

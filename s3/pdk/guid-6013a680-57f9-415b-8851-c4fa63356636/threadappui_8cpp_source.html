@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/ThreadExample/src/threadappui.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -49,14 +49,14 @@
 <a name="l00009"></a>00009 <span class="comment">*/</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// INCLUDES</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;avkon.hrh&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;aknnotewrappers.h&gt;</span> 
+<a name="l00012"></a>00012 <span class="preprocessor">#include <avkon.hrh></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include <aknnotewrappers.h></span> 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Thread.pan&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;ThreadAppUi.h&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;ThreadAppView.h&quot;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;Thread.hrh&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;ThreadEngine.h&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "Thread.pan"</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "ThreadAppUi.h"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "ThreadAppView.h"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "Thread.hrh"</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "ThreadEngine.h"</span>
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00022"></a>00022 <span class="comment">// CThreadAppUi::ConstructL()</span>
@@ -67,7 +67,7 @@
 <a name="l00027"></a>00027     {
 <a name="l00028"></a>00028     BaseConstructL(CAknAppUi::EAknEnableSkin);
 <a name="l00029"></a>00029     iAppView = <a class="code" href="class_c_thread_app_view.html#a2b5032ce6ad4f4571c5d3a57742bb4ef">CThreadAppView::NewL</a>(ClientRect());
-<a name="l00030"></a>00030     iAppView-&gt;SetMopParent(<span class="keyword">this</span>);
+<a name="l00030"></a>00030     iAppView->SetMopParent(<span class="keyword">this</span>);
 <a name="l00031"></a>00031     <span class="comment">// add view to control stack</span>
 <a name="l00032"></a>00032     AddToStackL(iAppView);
 <a name="l00033"></a>00033         
@@ -99,7 +99,7 @@
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060     <span class="keywordflow">if</span> ( iAppView )
 <a name="l00061"></a>00061         {
-<a name="l00062"></a>00062         iEikonEnv-&gt;RemoveFromStack(iAppView);
+<a name="l00062"></a>00062         iEikonEnv->RemoveFromStack(iAppView);
 <a name="l00063"></a>00063         <span class="keyword">delete</span> iAppView;
 <a name="l00064"></a>00064         }
 <a name="l00065"></a>00065     }
@@ -121,28 +121,28 @@
 <a name="l00081"></a>00081         <span class="keywordflow">case</span> EThreadKillCommand1:
 <a name="l00082"></a>00082             {
 <a name="l00083"></a>00083             <span class="comment">// kill thread1</span>
-<a name="l00084"></a>00084             iThreadEngine-&gt;<a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(1);
+<a name="l00084"></a>00084             iThreadEngine-><a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(1);
 <a name="l00085"></a>00085             }
 <a name="l00086"></a>00086             <span class="keywordflow">break</span>;
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088         <span class="keywordflow">case</span> EThreadKillCommand2:
 <a name="l00089"></a>00089             {
 <a name="l00090"></a>00090             <span class="comment">// kill thread2</span>
-<a name="l00091"></a>00091             iThreadEngine-&gt;<a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(2);       
+<a name="l00091"></a>00091             iThreadEngine-><a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(2);       
 <a name="l00092"></a>00092             }
 <a name="l00093"></a>00093             <span class="keywordflow">break</span>;
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095         <span class="keywordflow">case</span> EThreadKillCommand3:
 <a name="l00096"></a>00096             {
 <a name="l00097"></a>00097             <span class="comment">// kill  thread3</span>
-<a name="l00098"></a>00098             iThreadEngine-&gt;<a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(3);
+<a name="l00098"></a>00098             iThreadEngine-><a class="code" href="class_c_thread_engine.html#a222c982a5bc397dfa3fd17ea37ce4dda">KillThread</a>(3);
 <a name="l00099"></a>00099             }
 <a name="l00100"></a>00100             <span class="keywordflow">break</span>;
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102         <span class="keywordflow">case</span> EThreadStartCommand:
 <a name="l00103"></a>00103             {
 <a name="l00104"></a>00104             <span class="comment">// start all threads</span>
-<a name="l00105"></a>00105             iThreadEngine-&gt;<a class="code" href="class_c_thread_engine.html#a0bfcabc0c045354d389f61d355ca0490">StartL</a>();
+<a name="l00105"></a>00105             iThreadEngine-><a class="code" href="class_c_thread_engine.html#a0bfcabc0c045354d389f61d355ca0490">StartL</a>();
 <a name="l00106"></a>00106             }
 <a name="l00107"></a>00107             <span class="keywordflow">break</span>;
 <a name="l00108"></a>00108 
@@ -153,10 +153,10 @@
 <a name="l00113"></a>00113     }
 <a name="l00114"></a>00114 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

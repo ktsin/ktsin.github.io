@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/SysLibs/TaskSchedulerExample/taskscheduler.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/SysLibs/TaskSchedulerExample/taskscheduler.cpp</h1><a href="taskscheduler_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -65,40 +65,40 @@
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="taskscheduler_8h.html">taskscheduler.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;e32std.h&gt;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;schinfo.h&gt;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;e32base.h&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include "<a class="code" href="taskscheduler_8h.html">taskscheduler.h</a>"</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include <e32std.h></span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include <schinfo.h></span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include <e32base.h></span>
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTaskName,<span class="stringliteral">&quot;MyTaskName\n&quot;</span>);
+<a name="l00036"></a>00036 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTaskName,<span class="stringliteral">"MyTaskName\n"</span>);
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTitle, <span class="stringliteral">&quot;Task Scheduler example&quot;</span>);
-<a name="l00039"></a>00039 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPressAKey, <span class="stringliteral">&quot;\nPress any key to step through the example\n&quot;</span>);
-<a name="l00040"></a>00040 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExit,<span class="stringliteral">&quot;\nPress any key to exit the application&quot;</span>);
-<a name="l00041"></a>00041 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPressAKey,<span class="stringliteral">&quot;\nPress any key to continue\n&quot;</span>);
+<a name="l00038"></a>00038 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTitle, <span class="stringliteral">"Task Scheduler example"</span>);
+<a name="l00039"></a>00039 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPressAKey, <span class="stringliteral">"\nPress any key to step through the example\n"</span>);
+<a name="l00040"></a>00040 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExit,<span class="stringliteral">"\nPress any key to exit the application"</span>);
+<a name="l00041"></a>00041 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPressAKey,<span class="stringliteral">"\nPress any key to continue\n"</span>);
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KConnect, <span class="stringliteral">&quot;\nConnecting the client to the task scheduler server&quot;</span>);
-<a name="l00044"></a>00044 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KRegisterClient,<span class="stringliteral">&quot;\nRegistering the client\n&quot;</span>);
-<a name="l00045"></a>00045 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateSchedule,<span class="stringliteral">&quot;Creating a persistent schedule\n&quot;</span>);
-<a name="l00046"></a>00046 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateTask,<span class="stringliteral">&quot;Creating task for the schedule\n&quot;</span>);
+<a name="l00043"></a>00043 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KConnect, <span class="stringliteral">"\nConnecting the client to the task scheduler server"</span>);
+<a name="l00044"></a>00044 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KRegisterClient,<span class="stringliteral">"\nRegistering the client\n"</span>);
+<a name="l00045"></a>00045 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateSchedule,<span class="stringliteral">"Creating a persistent schedule\n"</span>);
+<a name="l00046"></a>00046 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateTask,<span class="stringliteral">"Creating task for the schedule\n"</span>);
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPersistentWait,<span class="stringliteral">&quot;Waiting for the persistent task to complete. This will take 20 seconds\n&quot;</span>);
-<a name="l00049"></a>00049 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDone,<span class="stringliteral">&quot;Task complete \n&quot;</span>);
-<a name="l00050"></a>00050 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTransientSchedule,<span class="stringliteral">&quot;A transient schedule&quot;</span>);
-<a name="l00051"></a>00051 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTransientWait,<span class="stringliteral">&quot;Waiting for the transient task to complete. This will take 20 seconds\n&quot;</span>);
+<a name="l00048"></a>00048 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPersistentWait,<span class="stringliteral">"Waiting for the persistent task to complete. This will take 20 seconds\n"</span>);
+<a name="l00049"></a>00049 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDone,<span class="stringliteral">"Task complete \n"</span>);
+<a name="l00050"></a>00050 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTransientSchedule,<span class="stringliteral">"A transient schedule"</span>);
+<a name="l00051"></a>00051 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTransientWait,<span class="stringliteral">"Waiting for the transient task to complete. This will take 20 seconds\n"</span>);
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateTransient,<span class="stringliteral">&quot;\nCreating a transient schedule with non-repeating task\n&quot;</span>);
-<a name="l00054"></a>00054 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDeleteAllTasks,<span class="stringliteral">&quot;\nDeleting all the persistent tasks scheduled by this exe&quot;</span>);
-<a name="l00055"></a>00055 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDeleteAllSchedules,<span class="stringliteral">&quot;\nDeleting all schedules created by this exe\n&quot;</span>);
-<a name="l00056"></a>00056 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTask, <span class="stringliteral">&quot;Number of task(s) scheduled by us is(are) %d\n&quot;</span>);
-<a name="l00057"></a>00057 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExists, <span class="stringliteral">&quot;The tasks scheduled exist\n&quot;</span>);
-<a name="l00058"></a>00058 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KOtherTask,<span class="stringliteral">&quot;Error! Unexpected schedules not scheduled by this exe exist\n&quot;</span>);
+<a name="l00053"></a>00053 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCreateTransient,<span class="stringliteral">"\nCreating a transient schedule with non-repeating task\n"</span>);
+<a name="l00054"></a>00054 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDeleteAllTasks,<span class="stringliteral">"\nDeleting all the persistent tasks scheduled by this exe"</span>);
+<a name="l00055"></a>00055 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDeleteAllSchedules,<span class="stringliteral">"\nDeleting all schedules created by this exe\n"</span>);
+<a name="l00056"></a>00056 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTask, <span class="stringliteral">"Number of task(s) scheduled by us is(are) %d\n"</span>);
+<a name="l00057"></a>00057 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExists, <span class="stringliteral">"The tasks scheduled exist\n"</span>);
+<a name="l00058"></a>00058 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KOtherTask,<span class="stringliteral">"Error! Unexpected schedules not scheduled by this exe exist\n"</span>);
 <a name="l00059"></a>00059 
 <a name="l00064"></a><a class="code" href="class_c_task_schedule.html#ad152b61017146041468ce89a4312ddf9">00064</a> <a class="code" href="class_c_task_schedule.html">CTaskSchedule</a>* <a class="code" href="class_c_task_schedule.html#ad152b61017146041468ce89a4312ddf9">CTaskSchedule::NewLC</a>()
 <a name="l00065"></a>00065         {
 <a name="l00066"></a>00066         <a class="code" href="class_c_task_schedule.html">CTaskSchedule</a>* schedule = <span class="keyword">new</span>(ELeave) <a class="code" href="class_c_task_schedule.html">CTaskSchedule</a>();
 <a name="l00067"></a>00067         CleanupStack::PushL(schedule);
-<a name="l00068"></a>00068         schedule-&gt;ConstructL();
+<a name="l00068"></a>00068         schedule->ConstructL();
 <a name="l00069"></a>00069         <span class="keywordflow">return</span> schedule;
 <a name="l00070"></a>00070         }
 <a name="l00071"></a>00071         
@@ -109,15 +109,15 @@
 <a name="l00079"></a>00079 <span class="keywordtype">void</span> CTaskSchedule::ConstructL()
 <a name="l00080"></a>00080         {       
 <a name="l00081"></a>00081         iConsole = Console::NewL(KTitle,TSize(KConsFullScreen,KConsFullScreen));
-<a name="l00082"></a>00082         iConsole-&gt;Printf (KTextPressAKey);
-<a name="l00083"></a>00083         iConsole-&gt;Getch ();
+<a name="l00082"></a>00082         iConsole->Printf (KTextPressAKey);
+<a name="l00083"></a>00083         iConsole->Getch ();
 <a name="l00084"></a>00084         }
 <a name="l00085"></a>00085 
 <a name="l00089"></a><a class="code" href="class_c_task_schedule.html#a739ccbea3ef8f1dc76440e829f206fb6">00089</a> <a class="code" href="class_c_task_schedule.html#a739ccbea3ef8f1dc76440e829f206fb6">CTaskSchedule::~CTaskSchedule</a>()
 <a name="l00090"></a>00090         {
 <a name="l00091"></a>00091         iScheduler.Close();
-<a name="l00092"></a>00092         iConsole-&gt;Printf(KExit);
-<a name="l00093"></a>00093         iConsole-&gt;Getch();
+<a name="l00092"></a>00092         iConsole->Printf(KExit);
+<a name="l00093"></a>00093         iConsole->Getch();
 <a name="l00094"></a>00094         
 <a name="l00095"></a>00095         <span class="keyword">delete</span> iConsole;
 <a name="l00096"></a>00096         }
@@ -126,15 +126,15 @@
 <a name="l00105"></a>00105         {
 <a name="l00106"></a>00106         
 <a name="l00107"></a>00107         <span class="comment">// Connect to the scheduler server</span>
-<a name="l00108"></a>00108         iConsole-&gt;Printf(KConnect);
+<a name="l00108"></a>00108         iConsole->Printf(KConnect);
 <a name="l00109"></a>00109         User::LeaveIfError(iScheduler.Connect());
 <a name="l00110"></a>00110         
-<a name="l00111"></a>00111         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTaskExec,<span class="stringliteral">&quot;Taskexecutor&quot;</span>);
+<a name="l00111"></a>00111         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTaskExec,<span class="stringliteral">"Taskexecutor"</span>);
 <a name="l00112"></a>00112         TFileName filename;
 <a name="l00113"></a>00113         filename.Append(KTaskExec);
 <a name="l00114"></a>00114         
 <a name="l00115"></a>00115         <span class="comment">// Register with the scheduler</span>
-<a name="l00116"></a>00116         iConsole-&gt;Printf(KRegisterClient);
+<a name="l00116"></a>00116         iConsole->Printf(KRegisterClient);
 <a name="l00117"></a>00117         
 <a name="l00118"></a>00118         <span class="comment">// A priority value</span>
 <a name="l00119"></a>00119         <span class="keyword">const</span> TInt priority = 3;
@@ -145,7 +145,7 @@
 <a name="l00130"></a><a class="code" href="class_c_task_schedule.html#a5b7869136d2a8f1c625531ab1c12ef98">00130</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#a5b7869136d2a8f1c625531ab1c12ef98">CTaskSchedule::PersistentScheduleL</a>()
 <a name="l00131"></a>00131         {
 <a name="l00132"></a>00132         
-<a name="l00133"></a>00133         iConsole-&gt;Printf(KCreateSchedule);              
+<a name="l00133"></a>00133         iConsole->Printf(KCreateSchedule);              
 <a name="l00134"></a>00134         TSchedulerItemRef scheduleHandle;
 <a name="l00135"></a>00135         TTime time;
 <a name="l00136"></a>00136         time.UniversalTime();
@@ -156,7 +156,7 @@
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142         TTsTime time2 (time, ETrue);
 <a name="l00143"></a>00143 
-<a name="l00144"></a>00144         iConsole-&gt;Printf(KCreateTask);
+<a name="l00144"></a>00144         iConsole->Printf(KCreateTask);
 <a name="l00145"></a>00145         <a class="code" href="class_c_task_schedule.html#ac2ed627ab19ecc8d397b63ceacd6aaa4">CreatePersistentScheduleL</a>(scheduleHandle,time2);
 <a name="l00146"></a>00146 
 <a name="l00147"></a>00147         <span class="comment">// Create the task to be scheduled</span>
@@ -175,15 +175,15 @@
 <a name="l00160"></a>00160         <span class="comment">// Task repeats twice</span>
 <a name="l00161"></a>00161         taskInfo.iRepeat = numberOfRepeats;
 <a name="l00162"></a>00162         
-<a name="l00163"></a>00163         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KScheduleType,<span class="stringliteral">&quot; persistent schedule&quot;</span>);
-<a name="l00164"></a>00164         <span class="keyword">const</span> TDesC* persistent = &amp;KScheduleType;
-<a name="l00165"></a>00165         HBufC* data = persistent-&gt;AllocLC();
+<a name="l00163"></a>00163         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KScheduleType,<span class="stringliteral">" persistent schedule"</span>);
+<a name="l00164"></a>00164         <span class="keyword">const</span> TDesC* persistent = &KScheduleType;
+<a name="l00165"></a>00165         HBufC* data = persistent->AllocLC();
 <a name="l00166"></a>00166         
 <a name="l00167"></a>00167         <span class="comment">// Add the task</span>
 <a name="l00168"></a>00168         User::LeaveIfError(iScheduler.ScheduleTask(taskInfo, *data, scheduleHandle.iHandle));
 <a name="l00169"></a>00169                                 
 <a name="l00170"></a>00170         <span class="comment">// Wait for the entry to fire</span>
-<a name="l00171"></a>00171         iConsole-&gt;Printf(KPersistentWait);
+<a name="l00171"></a>00171         iConsole->Printf(KPersistentWait);
 <a name="l00172"></a>00172         <span class="keyword">const</span> TInt twentySecs = 20000000;
 <a name="l00173"></a>00173         User::After(twentySecs); <span class="comment">// pause for 20 seconds</span>
 <a name="l00174"></a>00174         
@@ -195,10 +195,10 @@
 <a name="l00180"></a>00180         }
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182         
-<a name="l00197"></a><a class="code" href="class_c_task_schedule.html#ac2ed627ab19ecc8d397b63ceacd6aaa4">00197</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#ac2ed627ab19ecc8d397b63ceacd6aaa4">CTaskSchedule::CreatePersistentScheduleL</a>(TSchedulerItemRef&amp; aRef, <span class="keyword">const</span> TTsTime&amp; aStartTime)
+<a name="l00197"></a><a class="code" href="class_c_task_schedule.html#ac2ed627ab19ecc8d397b63ceacd6aaa4">00197</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#ac2ed627ab19ecc8d397b63ceacd6aaa4">CTaskSchedule::CreatePersistentScheduleL</a>(TSchedulerItemRef& aRef, <span class="keyword">const</span> TTsTime& aStartTime)
 <a name="l00198"></a>00198         {
-<a name="l00199"></a>00199         CArrayFixFlat&lt;TScheduleEntryInfo2&gt;* cSchEntryInfoArray; 
-<a name="l00200"></a>00200         cSchEntryInfoArray = <span class="keyword">new</span> CArrayFixFlat&lt;TScheduleEntryInfo2&gt;(1);
+<a name="l00199"></a>00199         CArrayFixFlat<TScheduleEntryInfo2>* cSchEntryInfoArray; 
+<a name="l00200"></a>00200         cSchEntryInfoArray = <span class="keyword">new</span> CArrayFixFlat<TScheduleEntryInfo2>(1);
 <a name="l00201"></a>00201         CleanupStack::PushL(cSchEntryInfoArray);
 <a name="l00202"></a>00202 
 <a name="l00203"></a>00203         <span class="comment">// Create an hourly schedule with StartTime of aStartTime</span>
@@ -222,7 +222,7 @@
 <a name="l00221"></a>00221         <span class="keyword">const</span> TInt interval = 1;
 <a name="l00222"></a>00222         entry1.SetInterval(interval);
 <a name="l00223"></a>00223 
-<a name="l00224"></a>00224         cSchEntryInfoArray-&gt;AppendL(entry1);
+<a name="l00224"></a>00224         cSchEntryInfoArray->AppendL(entry1);
 <a name="l00225"></a>00225         
 <a name="l00226"></a>00226         User::LeaveIfError(iScheduler.CreatePersistentSchedule(aRef, *cSchEntryInfoArray));
 <a name="l00227"></a>00227         CleanupStack::PopAndDestroy(cSchEntryInfoArray);
@@ -232,15 +232,15 @@
 <a name="l00231"></a>00231 
 <a name="l00240"></a><a class="code" href="class_c_task_schedule.html#aabfef5ace0331f83eb8cd4de511d3d7f">00240</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#aabfef5ace0331f83eb8cd4de511d3d7f">CTaskSchedule::CreateTransientScheduleL</a>()
 <a name="l00241"></a>00241         {
-<a name="l00242"></a>00242         iConsole-&gt;ClearScreen();
+<a name="l00242"></a>00242         iConsole->ClearScreen();
 <a name="l00243"></a>00243 
 <a name="l00244"></a>00244         TSchedulerItemRef ref;
-<a name="l00245"></a>00245         CArrayFixFlat&lt;TScheduleEntryInfo2&gt;* cSchEntryInfoArray;
-<a name="l00246"></a>00246         cSchEntryInfoArray = <span class="keyword">new</span> CArrayFixFlat&lt;TScheduleEntryInfo2&gt;(1);
+<a name="l00245"></a>00245         CArrayFixFlat<TScheduleEntryInfo2>* cSchEntryInfoArray;
+<a name="l00246"></a>00246         cSchEntryInfoArray = <span class="keyword">new</span> CArrayFixFlat<TScheduleEntryInfo2>(1);
 <a name="l00247"></a>00247         
 <a name="l00248"></a>00248         CleanupStack::PushL(cSchEntryInfoArray);
 <a name="l00249"></a>00249         ref.iName = KTransientSchedule;
-<a name="l00250"></a>00250         iConsole-&gt;Printf(KCreateTransient);
+<a name="l00250"></a>00250         iConsole->Printf(KCreateTransient);
 <a name="l00251"></a>00251         
 <a name="l00252"></a>00252         <span class="comment">// Create a schedule entry</span>
 <a name="l00253"></a>00253         TScheduleEntryInfo2 entry;      
@@ -273,7 +273,7 @@
 <a name="l00280"></a>00280         <span class="comment">// Set the interval between execution of tasks</span>
 <a name="l00281"></a>00281         <span class="comment">// Here the interval is 1 hour because the interval type is hourly.</span>
 <a name="l00282"></a>00282         entry.SetInterval(1);
-<a name="l00283"></a>00283         cSchEntryInfoArray-&gt;AppendL(entry);
+<a name="l00283"></a>00283         cSchEntryInfoArray->AppendL(entry);
 <a name="l00284"></a>00284         
 <a name="l00285"></a>00285         <span class="comment">// Create a transient task to be scheduled</span>
 <a name="l00286"></a>00286         TTaskInfo taskInfo;
@@ -293,9 +293,9 @@
 <a name="l00300"></a>00300         <span class="keyword">const</span> TInt priority = 2; 
 <a name="l00301"></a>00301         taskInfo.iPriority = priority;
 <a name="l00302"></a>00302         
-<a name="l00303"></a>00303         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KScheduleType,<span class="stringliteral">&quot; transient schedule&quot;</span>);
-<a name="l00304"></a>00304         <span class="keyword">const</span> TDesC* <span class="keyword">transient</span> = &amp;KScheduleType;
-<a name="l00305"></a>00305         HBufC* data = <span class="keyword">transient</span>-&gt;AllocLC();
+<a name="l00303"></a>00303         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KScheduleType,<span class="stringliteral">" transient schedule"</span>);
+<a name="l00304"></a>00304         <span class="keyword">const</span> TDesC* <span class="keyword">transient</span> = &KScheduleType;
+<a name="l00305"></a>00305         HBufC* data = <span class="keyword">transient</span>->AllocLC();
 <a name="l00306"></a>00306                 
 <a name="l00307"></a>00307         <span class="comment">// Schedule the item</span>
 <a name="l00308"></a>00308         User::LeaveIfError(iScheduler.ScheduleTask(taskInfo, *data, ref, *cSchEntryInfoArray));
@@ -307,7 +307,7 @@
 <a name="l00314"></a>00314         entry.SetStartTime(newTime);
 <a name="l00315"></a>00315         validity = 300;
 <a name="l00316"></a>00316         entry.SetValidityPeriod(TTimeIntervalMinutes (validity));
-<a name="l00317"></a>00317         cSchEntryInfoArray-&gt;AppendL(entry);
+<a name="l00317"></a>00317         cSchEntryInfoArray->AppendL(entry);
 <a name="l00318"></a>00318         
 <a name="l00319"></a>00319         <span class="comment">// Change the transient time based schedule</span>
 <a name="l00320"></a>00320     User::LeaveIfError(iScheduler.EditSchedule(ref.iHandle, *cSchEntryInfoArray));
@@ -322,11 +322,11 @@
 <a name="l00329"></a>00329                 User::Leave(KErrNotFound);
 <a name="l00330"></a>00330                 }
 <a name="l00331"></a>00331         <span class="comment">// Wait for the task to fire and complete</span>
-<a name="l00332"></a>00332         iConsole-&gt;Printf(KTransientWait);
+<a name="l00332"></a>00332         iConsole->Printf(KTransientWait);
 <a name="l00333"></a>00333         <span class="keyword">const</span> TInt twentySecs = 20000000;
 <a name="l00334"></a>00334         User::After(twentySecs); <span class="comment">// pause for 20 seconds</span>
 <a name="l00335"></a>00335         
-<a name="l00336"></a>00336         iConsole-&gt;Printf(KDone);        
+<a name="l00336"></a>00336         iConsole->Printf(KDone);        
 <a name="l00337"></a>00337 
 <a name="l00338"></a>00338         <span class="comment">// Transient schedules are deleted automatically once they are executed</span>
 <a name="l00339"></a>00339         <span class="comment">// i.e check for count to be zero in the function being called</span>
@@ -337,30 +337,30 @@
 <a name="l00344"></a>00344                 }
 <a name="l00345"></a>00345         }
 <a name="l00346"></a>00346 
-<a name="l00353"></a><a class="code" href="class_c_task_schedule.html#a3b047bd6e178cbc4964d69adb56e1945">00353</a>  <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#a3b047bd6e178cbc4964d69adb56e1945">CTaskSchedule::DoesScheduledItemExistL</a>(TSchedulerItemRef &amp;aRef, TBool&amp; aExists)
+<a name="l00353"></a><a class="code" href="class_c_task_schedule.html#a3b047bd6e178cbc4964d69adb56e1945">00353</a>  <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#a3b047bd6e178cbc4964d69adb56e1945">CTaskSchedule::DoesScheduledItemExistL</a>(TSchedulerItemRef &aRef, TBool& aExists)
 <a name="l00354"></a>00354         <span class="comment">// Extract schedule references from the schedule server based on a filter.</span>
 <a name="l00355"></a>00355         {
 <a name="l00356"></a>00356         aExists = EFalse;
-<a name="l00357"></a>00357         CArrayFixFlat&lt;TSchedulerItemRef&gt;* CSchItemRefArray;
+<a name="l00357"></a>00357         CArrayFixFlat<TSchedulerItemRef>* CSchItemRefArray;
 <a name="l00358"></a>00358         
-<a name="l00359"></a>00359         CSchItemRefArray = <span class="keyword">new</span> CArrayFixFlat&lt;TSchedulerItemRef&gt;(3);
+<a name="l00359"></a>00359         CSchItemRefArray = <span class="keyword">new</span> CArrayFixFlat<TSchedulerItemRef>(3);
 <a name="l00360"></a>00360         CleanupStack::PushL(CSchItemRefArray);
 <a name="l00361"></a>00361         
 <a name="l00362"></a>00362         User::LeaveIfError(iScheduler.GetScheduleRefsL(*CSchItemRefArray, EAllSchedules));
 <a name="l00363"></a>00363         
-<a name="l00364"></a>00364         TInt count = CSchItemRefArray-&gt;Count();
-<a name="l00365"></a>00365         <span class="keywordflow">for</span>(TInt i = 0; i &lt; count; i++)
+<a name="l00364"></a>00364         TInt count = CSchItemRefArray->Count();
+<a name="l00365"></a>00365         <span class="keywordflow">for</span>(TInt i = 0; i < count; i++)
 <a name="l00366"></a>00366                 {
 <a name="l00367"></a>00367                 <span class="comment">// Get a list of schedules created by this executable</span>
 <a name="l00368"></a>00368                 <span class="keywordflow">if</span>(aRef.iHandle == (*CSchItemRefArray)[i].iHandle)
 <a name="l00369"></a>00369                         {
 <a name="l00370"></a>00370                         aExists = ETrue;
-<a name="l00371"></a>00371                         iConsole-&gt;Printf(KExists);
-<a name="l00372"></a>00372                         iConsole-&gt;Printf(KTask, count);
+<a name="l00371"></a>00371                         iConsole->Printf(KExists);
+<a name="l00372"></a>00372                         iConsole->Printf(KTask, count);
 <a name="l00373"></a>00373                         }
 <a name="l00374"></a>00374                 <span class="keywordflow">else</span>
 <a name="l00375"></a>00375                         {
-<a name="l00376"></a>00376                         iConsole-&gt;Printf(KOtherTask);
+<a name="l00376"></a>00376                         iConsole->Printf(KOtherTask);
 <a name="l00377"></a>00377                         }
 <a name="l00378"></a>00378                 }
 <a name="l00379"></a>00379 
@@ -368,40 +368,40 @@
 <a name="l00381"></a>00381 
 <a name="l00382"></a>00382         }
 <a name="l00383"></a>00383 
-<a name="l00395"></a><a class="code" href="class_c_task_schedule.html#a0c3db205409436a0b47b3e11c9d3190f">00395</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#a0c3db205409436a0b47b3e11c9d3190f">CTaskSchedule::DeleteSchedulesL</a>(TSchedulerItemRef &amp;aRef, TScheduleFilter aFilter)
+<a name="l00395"></a><a class="code" href="class_c_task_schedule.html#a0c3db205409436a0b47b3e11c9d3190f">00395</a> <span class="keywordtype">void</span> <a class="code" href="class_c_task_schedule.html#a0c3db205409436a0b47b3e11c9d3190f">CTaskSchedule::DeleteSchedulesL</a>(TSchedulerItemRef &aRef, TScheduleFilter aFilter)
 <a name="l00396"></a>00396         {
-<a name="l00397"></a>00397         CArrayFixFlat&lt;TSchedulerItemRef&gt;* CSchItemRefArray;
+<a name="l00397"></a>00397         CArrayFixFlat<TSchedulerItemRef>* CSchItemRefArray;
 <a name="l00398"></a>00398         
-<a name="l00399"></a>00399         CSchItemRefArray = <span class="keyword">new</span> CArrayFixFlat&lt;TSchedulerItemRef&gt;(3);
+<a name="l00399"></a>00399         CSchItemRefArray = <span class="keyword">new</span> CArrayFixFlat<TSchedulerItemRef>(3);
 <a name="l00400"></a>00400         CleanupStack::PushL(CSchItemRefArray);
 <a name="l00401"></a>00401         
 <a name="l00402"></a>00402         User::LeaveIfError(iScheduler.GetScheduleRefsL(*CSchItemRefArray, aFilter));
 <a name="l00403"></a>00403         
-<a name="l00404"></a>00404         TInt count = CSchItemRefArray-&gt;Count();
-<a name="l00405"></a>00405         iConsole-&gt;Printf(KTask, count);
+<a name="l00404"></a>00404         TInt count = CSchItemRefArray->Count();
+<a name="l00405"></a>00405         iConsole->Printf(KTask, count);
 <a name="l00406"></a>00406         
-<a name="l00407"></a>00407         <span class="keywordflow">for</span>(TInt i = 0; i &lt; count; i++)
+<a name="l00407"></a>00407         <span class="keywordflow">for</span>(TInt i = 0; i < count; i++)
 <a name="l00408"></a>00408                 {
 <a name="l00409"></a>00409                 <span class="comment">// Check if the schedules are created by this exe or</span>
 <a name="l00410"></a>00410                 <span class="comment">// some other exe</span>
 <a name="l00411"></a>00411                 <span class="keywordflow">if</span>(aRef.iHandle == (*CSchItemRefArray)[i].iHandle)
 <a name="l00412"></a>00412                         {       
 <a name="l00413"></a>00413                         <span class="comment">// Delete the tasks scheduled by us (this exe)</span>
-<a name="l00414"></a>00414                         iConsole-&gt;Printf(KDeleteAllTasks);
+<a name="l00414"></a>00414                         iConsole->Printf(KDeleteAllTasks);
 <a name="l00415"></a>00415                         User::LeaveIfError(iScheduler.DeleteTask(aRef.iHandle));
 <a name="l00416"></a>00416                         <span class="comment">// Delete the schedules created by us (this exe)</span>
-<a name="l00417"></a>00417                         iConsole-&gt;Printf(KDeleteAllSchedules);
+<a name="l00417"></a>00417                         iConsole->Printf(KDeleteAllSchedules);
 <a name="l00418"></a>00418                         User::LeaveIfError(iScheduler.DeleteSchedule(aRef.iHandle));
 <a name="l00419"></a>00419                         
-<a name="l00420"></a>00420                         iConsole-&gt;Printf(KPressAKey);
-<a name="l00421"></a>00421                         iConsole-&gt;Getch();
+<a name="l00420"></a>00420                         iConsole->Printf(KPressAKey);
+<a name="l00421"></a>00421                         iConsole->Getch();
 <a name="l00422"></a>00422                                         
 <a name="l00423"></a>00423                         }
 <a name="l00424"></a>00424                 <span class="keywordflow">else</span>
 <a name="l00425"></a>00425                         {
 <a name="l00426"></a>00426                         <span class="comment">// Not deleting the tasks or schedules as,</span>
 <a name="l00427"></a>00427                         <span class="comment">// they are not created by this exe</span>
-<a name="l00428"></a>00428                         iConsole-&gt;Printf(KOtherTask);
+<a name="l00428"></a>00428                         iConsole->Printf(KOtherTask);
 <a name="l00429"></a>00429                         }
 <a name="l00430"></a>00430                 }
 <a name="l00431"></a>00431         CleanupStack::PopAndDestroy(); <span class="comment">// CSchItemRefArray</span>
@@ -419,13 +419,13 @@
 <a name="l00443"></a>00443         <a class="code" href="class_c_task_schedule.html">CTaskSchedule</a>* app = <a class="code" href="class_c_task_schedule.html#ad152b61017146041468ce89a4312ddf9">CTaskSchedule::NewLC</a>();
 <a name="l00444"></a>00444         
 <a name="l00445"></a>00445         <span class="comment">// Connect and register with the task scheduler</span>
-<a name="l00446"></a>00446         app-&gt;<a class="code" href="class_c_task_schedule.html#ac957da1838fe31cb3f7fe9f6a533f6c5">ConnectAndRegisterL</a>();
+<a name="l00446"></a>00446         app-><a class="code" href="class_c_task_schedule.html#ac957da1838fe31cb3f7fe9f6a533f6c5">ConnectAndRegisterL</a>();
 <a name="l00447"></a>00447         
 <a name="l00448"></a>00448         <span class="comment">// Create a persistent schedule and add tasks to it</span>
-<a name="l00449"></a>00449         app-&gt;<a class="code" href="class_c_task_schedule.html#a5b7869136d2a8f1c625531ab1c12ef98">PersistentScheduleL</a>();
+<a name="l00449"></a>00449         app-><a class="code" href="class_c_task_schedule.html#a5b7869136d2a8f1c625531ab1c12ef98">PersistentScheduleL</a>();
 <a name="l00450"></a>00450                 
 <a name="l00451"></a>00451         <span class="comment">// Create a transient schedule and add tasks to it</span>
-<a name="l00452"></a>00452         app-&gt;<a class="code" href="class_c_task_schedule.html#aabfef5ace0331f83eb8cd4de511d3d7f">CreateTransientScheduleL</a>();
+<a name="l00452"></a>00452         app-><a class="code" href="class_c_task_schedule.html#aabfef5ace0331f83eb8cd4de511d3d7f">CreateTransientScheduleL</a>();
 <a name="l00453"></a>00453         
 <a name="l00454"></a>00454         CleanupStack::PopAndDestroy(2); <span class="comment">// app, scheduler</span>
 <a name="l00455"></a>00455 
@@ -443,7 +443,7 @@
 <a name="l00467"></a>00467     TRAPD(err, MainL());
 <a name="l00468"></a>00468         <span class="keywordflow">if</span>(err != KErrNone)
 <a name="l00469"></a>00469                 {
-<a name="l00470"></a>00470                 User::Panic(_L(<span class="stringliteral">&quot;Failed to complete&quot;</span>),err);
+<a name="l00470"></a>00470                 User::Panic(_L(<span class="stringliteral">"Failed to complete"</span>),err);
 <a name="l00471"></a>00471                 }
 <a name="l00472"></a>00472     <span class="keyword">delete</span> cleanup;
 <a name="l00473"></a>00473   
@@ -451,10 +451,10 @@
 <a name="l00475"></a>00475     <span class="keywordflow">return</span> KErrNone;
 <a name="l00476"></a>00476         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

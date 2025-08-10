@@ -3,34 +3,34 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="(C) Copyright 2010" />
-  <meta name="DC.rights.owner" content="(C) Copyright 2010" />
-  <meta name="DC.Type" content="concept" />
-  <meta name="DC.Title" content="condvar: Using Condition Variables" />
-  <meta name="abstract" content="Examples that explains how to use condition variables." />
-  <meta name="description" content="Examples that explains how to use condition variables." />
-  <meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html" />
-  <meta name="DC.Relation" scheme="URI" content="index.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-E3D2A6ED-8192-563D-8966-DD96B3AF1783.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html" />
-  <meta name="DC.Format" content="XHTML" />
-  <meta name="DC.Identifier" content="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71" />
-  <meta name="DC.Language" content="en" />
-  <link rel="stylesheet" type="text/css" href="commonltr.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta name="copyright" content="(C) Copyright 2010"></meta>
+  <meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+  <meta name="DC.Type" content="concept"></meta>
+  <meta name="DC.Title" content="condvar: Using Condition Variables"></meta>
+  <meta name="abstract" content="Examples that explains how to use condition variables."></meta>
+  <meta name="description" content="Examples that explains how to use condition variables."></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-E3D2A6ED-8192-563D-8966-DD96B3AF1783.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html"></meta>
+  <meta name="DC.Format" content="XHTML"></meta>
+  <meta name="DC.Identifier" content="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71"></meta>
+  <meta name="DC.Language" content="en"></meta>
+  <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
   <title>
    condvar: Using Condition Variables
   </title>
-  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="nokiacxxref.css" />
+  <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link>
  </head>
  <body id="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71">
   <a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71">
@@ -49,7 +49,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0; window.name="id2470542 id2404579 id2404588 id2404596 id2402632 ";
@@ -61,27 +61,27 @@
      <a href="index.html" title="Symbian^3 Application Developer Library">
       Symbian^3 Application Developer Library
      </a>
-     &gt;
+     >
      <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">
       Symbian Guide
      </a>
-     &gt;
+     >
      <a href="GUID-E3D2A6ED-8192-563D-8966-DD96B3AF1783.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">
       Kernel and Hardware Services Guide
      </a>
-     &gt;
+     >
      <a href="GUID-0DF9E318-BE97-531E-AB39-A7B5E8787C87.html" title="Provides a framework for accessing file systems.">
       User Library and File Server
      </a>
-     &gt;
+     >
      <a href="GUID-A63025D1-7FD4-5120-8A1F-537D6B70103D.html" title="The User Library allows the applications and services that run on a phone to access the functionality provided by the Symbian platform Kernel.">
       User Library
      </a>
-     &gt;
+     >
      <a href="GUID-0D61EBFF-F513-5911-B234-09F36E5E3DC8.html" title="This describes the example code for the User Library component.">
       User Library Example Code
      </a>
-     &gt;
+     >
     </div>
     <h1 class="topictitle1">
      condvar: Using Condition Variables
@@ -231,7 +231,7 @@ a signal from the condition variable before subtracting another value.
         <a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-1FAFB189-D2E4-5A05-8D8B-B3F7D28467FC">
          <!-- -->
         </a>
-        <img src="GUID-857A523E-E660-5AFA-98B1-3A5440A8372F_d0e255233_href.jpg" />
+        <img src="GUID-857A523E-E660-5AFA-98B1-3A5440A8372F_d0e255233_href.jpg"></img>
        </div>
        <p>
         <strong>
@@ -243,7 +243,7 @@ a signal from the condition variable before subtracting another value.
 the following binary files in the standard location (
         <span class="filepath">
          \epoc32\release\winscw\
-             &lt;build_variant&gt;
+             <build_variant>
         </span>
         ) for Carbide.c++.
        </p>
@@ -491,7 +491,7 @@ It calls the
        </p>
        <p>
         For more information, refer to
-        <a href="http://support.entegrity.com/private/doclib/docs/osfhtm/develop/appdev/Appde179.htm" target="_blank">
+        <a href="https://web.archive.org/web/20110000000000*/http://support.entegrity.com/private/doclib/docs/osfhtm/develop/appdev/Appde179.htm" target="_blank">
          Condition Variables
         </a>
         .
@@ -514,7 +514,7 @@ is not responsible for the content of external websites.
         <a name="GUID-5C1E776D-5AEF-5326-BEA6-F2108F42CB71__GUID-CA344322-0982-59C3-B93A-7A1F175728F3">
          <!-- -->
         </a>
-        <img src="GUID-CAB30473-7829-5F2E-9F45-A2344DEDFC35_d0e255432_href.jpg" />
+        <img src="GUID-CAB30473-7829-5F2E-9F45-A2344DEDFC35_d0e255432_href.jpg"></img>
        </div>
        <p>
         <strong>
@@ -527,7 +527,7 @@ how to build this example. The ConditionVariable example builds the
 following binary files in the standard location (
         <span class="filepath">
          \epoc32\release\winscw\
-             &lt;build_variant&gt;
+             <build_variant>
         </span>
         ) for Carbide.c++.
        </p>
@@ -613,7 +613,7 @@ to stop the program.
       </div>
      </div>
     </div>
-    <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+    <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

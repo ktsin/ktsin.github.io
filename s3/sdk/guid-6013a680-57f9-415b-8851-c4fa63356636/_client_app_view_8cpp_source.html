@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/HTTPClientExample/src/ClientAppView.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -40,16 +40,16 @@
 <a name="l00002"></a>00002 <span class="comment"> * Copyright (c) 2009 Nokia Corporation.</span>
 <a name="l00003"></a>00003 <span class="comment"> */</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;aknnotewrappers.h&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;coemain.h&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;eikedwin.h&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;gdi.h&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;txtrich.h&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Client.pan&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;ClientAppView.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;ClientApplication.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;ClientEngine.h&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;HTTPClientExample_sc.hlp.hrh&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include <aknnotewrappers.h></span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include <coemain.h></span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include <eikedwin.h></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include <gdi.h></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include <txtrich.h></span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "Client.pan"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include "ClientAppView.h"</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "ClientApplication.h"</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "ClientEngine.h"</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "HTTPClientExample_sc.hlp.hrh"</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="comment">// Constants for CEikRichTextEditors</span>
 <a name="l00017"></a>00017 <span class="keyword">const</span> TInt KNumberOfControls = 2;
@@ -68,7 +68,7 @@
 <a name="l00030"></a>00030 <span class="comment">//</span>
 <a name="l00031"></a>00031 <span class="comment">// Creates instance of CClientAppView.</span>
 <a name="l00032"></a>00032 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00033"></a>00033 <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* CClientAppView::NewL(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00033"></a>00033 <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* CClientAppView::NewL(<span class="keyword">const</span> TRect& aRect)
 <a name="l00034"></a>00034   {
 <a name="l00035"></a>00035     <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* <span class="keyword">self</span> = CClientAppView::NewLC(aRect);
 <a name="l00036"></a>00036     CleanupStack::Pop(<span class="keyword">self</span>);
@@ -80,11 +80,11 @@
 <a name="l00042"></a>00042 <span class="comment">//</span>
 <a name="l00043"></a>00043 <span class="comment">// Creates instance of CClientAppView.</span>
 <a name="l00044"></a>00044 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00045"></a>00045 <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* CClientAppView::NewLC(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00045"></a>00045 <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* CClientAppView::NewLC(<span class="keyword">const</span> TRect& aRect)
 <a name="l00046"></a>00046   {
 <a name="l00047"></a>00047     <a class="code" href="class_c_client_app_view.html">CClientAppView</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_client_app_view.html">CClientAppView</a>;
 <a name="l00048"></a>00048     CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00049"></a>00049     <span class="keyword">self</span>-&gt;ConstructL(aRect);
+<a name="l00049"></a>00049     <span class="keyword">self</span>->ConstructL(aRect);
 <a name="l00050"></a>00050     <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00051"></a>00051   }
 <a name="l00052"></a>00052 
@@ -113,30 +113,30 @@
 <a name="l00075"></a>00075 <span class="comment">//</span>
 <a name="l00076"></a>00076 <span class="comment">// Second phase construction.</span>
 <a name="l00077"></a>00077 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00078"></a>00078 <span class="keywordtype">void</span> CClientAppView::ConstructL(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00078"></a>00078 <span class="keywordtype">void</span> CClientAppView::ConstructL(<span class="keyword">const</span> TRect& aRect)
 <a name="l00079"></a>00079   {
 <a name="l00080"></a>00080   <span class="comment">// Create a window for this application view</span>
 <a name="l00081"></a>00081   CreateWindowL();
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083   <span class="comment">// Create output window</span>
 <a name="l00084"></a>00084   iOutputWindow = <span class="keyword">new</span> (ELeave) CEikRichTextEditor();
-<a name="l00085"></a>00085   iOutputWindow-&gt;SetContainerWindowL(*<span class="keyword">this</span>);
-<a name="l00086"></a>00086   iOutputWindow-&gt;ConstructL(<span class="keyword">this</span>, KNumberOfLines, KTextLimit,
+<a name="l00085"></a>00085   iOutputWindow->SetContainerWindowL(*<span class="keyword">this</span>);
+<a name="l00086"></a>00086   iOutputWindow->ConstructL(<span class="keyword">this</span>, KNumberOfLines, KTextLimit,
 <a name="l00087"></a>00087     CEikEdwin::EReadOnly | CEikEdwin::EAvkonDisableCursor,
 <a name="l00088"></a>00088     EGulFontControlAll, EGulNoSymbolFonts);
-<a name="l00089"></a>00089   iOutputWindow-&gt;CreateScrollBarFrameL()-&gt;SetScrollBarVisibilityL(
+<a name="l00089"></a>00089   iOutputWindow->CreateScrollBarFrameL()->SetScrollBarVisibilityL(
 <a name="l00090"></a>00090       CEikScrollBarFrame::EOff, CEikScrollBarFrame::EOn);
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092   <span class="comment">// Create status window</span>
 <a name="l00093"></a>00093   iStatusWindow = <span class="keyword">new</span> (ELeave) CEikRichTextEditor();
-<a name="l00094"></a>00094   iStatusWindow-&gt;SetContainerWindowL(*<span class="keyword">this</span>);
-<a name="l00095"></a>00095   iStatusWindow-&gt;ConstructL(<span class="keyword">this</span>, KNumberOfLines, KTextLimit,
+<a name="l00094"></a>00094   iStatusWindow->SetContainerWindowL(*<span class="keyword">this</span>);
+<a name="l00095"></a>00095   iStatusWindow->ConstructL(<span class="keyword">this</span>, KNumberOfLines, KTextLimit,
 <a name="l00096"></a>00096     CEikEdwin::EReadOnly | CEikEdwin::EAvkonDisableCursor,
 <a name="l00097"></a>00097     EGulFontControlAll, EGulNoSymbolFonts);
-<a name="l00098"></a>00098   iStatusWindow-&gt;CreateScrollBarFrameL()-&gt;SetScrollBarVisibilityL(
+<a name="l00098"></a>00098   iStatusWindow->CreateScrollBarFrameL()->SetScrollBarVisibilityL(
 <a name="l00099"></a>00099       CEikScrollBarFrame::EOff, CEikScrollBarFrame::EOn);
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101   iStatusWindow-&gt;SetFocus(ETrue);
+<a name="l00101"></a>00101   iStatusWindow->SetFocus(ETrue);
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103   <span class="comment">// Activate the window, which makes it ready to be drawn</span>
 <a name="l00104"></a>00104   ActivateL();
@@ -161,21 +161,21 @@
 <a name="l00123"></a>00123     
 <a name="l00124"></a>00124     TPoint upperEditPosition = TPoint(KBorderThickness, KBorderThickness);
 <a name="l00125"></a>00125     TInt upperEditHeight = r.Height()*3/4 - KSizeOffset;
-<a name="l00126"></a>00126     iOutputWindow-&gt;SetExtent(upperEditPosition, TSize(editorWidth,
+<a name="l00126"></a>00126     iOutputWindow->SetExtent(upperEditPosition, TSize(editorWidth,
 <a name="l00127"></a>00127         upperEditHeight));
 <a name="l00128"></a>00128     
 <a name="l00129"></a>00129     upperEditPosition.iY += upperEditHeight + KBorderThickness;
 <a name="l00130"></a>00130     upperEditHeight = r.Height()/4 - KBorderThickness;
-<a name="l00131"></a>00131     iStatusWindow-&gt;SetExtent(upperEditPosition, TSize(editorWidth,
+<a name="l00131"></a>00131     iStatusWindow->SetExtent(upperEditPosition, TSize(editorWidth,
 <a name="l00132"></a>00132         upperEditHeight));
 <a name="l00133"></a>00133     }
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 <span class="comment">// -----------------------------------------------------------------------------</span>
 <a name="l00136"></a>00136 <span class="comment">// CClientAppView::GetHelpContext()</span>
-<a name="l00137"></a>00137 <span class="comment">// Gets the control&#39;s help context. Returns a NULL context by default.</span>
+<a name="l00137"></a>00137 <span class="comment">// Gets the control's help context. Returns a NULL context by default.</span>
 <a name="l00138"></a>00138 <span class="comment">// -----------------------------------------------------------------------------</span>
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="keywordtype">void</span> CClientAppView::GetHelpContext(TCoeHelpContext&amp; aContext)<span class="keyword"> const</span>
+<a name="l00140"></a>00140 <span class="keywordtype">void</span> CClientAppView::GetHelpContext(TCoeHelpContext& aContext)<span class="keyword"> const</span>
 <a name="l00141"></a>00141 <span class="keyword">    </span>{
 <a name="l00142"></a>00142     <span class="comment">// Get the help context for the application</span>
 <a name="l00143"></a>00143     aContext.iMajor = KUidHelpFile;
@@ -205,11 +205,11 @@
 <a name="l00167"></a>00167 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00168"></a>00168 <span class="comment">// CClientAppView::Draw()</span>
 <a name="l00169"></a>00169 <span class="comment">//</span>
-<a name="l00170"></a>00170 <span class="comment">// Draw this application&#39;s view to the screen</span>
+<a name="l00170"></a>00170 <span class="comment">// Draw this application's view to the screen</span>
 <a name="l00171"></a>00171 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00172"></a>00172 <span class="keywordtype">void</span> CClientAppView::Draw(<span class="keyword">const</span> TRect&amp; aRect)<span class="keyword"> const</span>
+<a name="l00172"></a>00172 <span class="keywordtype">void</span> CClientAppView::Draw(<span class="keyword">const</span> TRect& aRect)<span class="keyword"> const</span>
 <a name="l00173"></a>00173 <span class="keyword">  </span>{
-<a name="l00174"></a>00174     CWindowGc&amp; gc = SystemGc();
+<a name="l00174"></a>00174     CWindowGc& gc = SystemGc();
 <a name="l00175"></a>00175 
 <a name="l00176"></a>00176     gc.SetPenStyle( CGraphicsContext::ENullPen );
 <a name="l00177"></a>00177     gc.SetBrushColor( KBackgroundColor );
@@ -218,19 +218,19 @@
 <a name="l00180"></a>00180     
 <a name="l00181"></a>00181     <span class="comment">// Draw a custom border around the focused rich text editor</span>
 <a name="l00182"></a>00182     gc.SetBrushColor(KBorderColor);
-<a name="l00183"></a>00183     <span class="keywordflow">if</span> (iOutputWindow-&gt;IsFocused())
+<a name="l00183"></a>00183     <span class="keywordflow">if</span> (iOutputWindow->IsFocused())
 <a name="l00184"></a>00184         {
 <a name="l00185"></a>00185         TInt scrollbarWidth = GetScrollbarWidth(iOutputWindow);
-<a name="l00186"></a>00186         TRect editorRect = iOutputWindow-&gt;Rect();
+<a name="l00186"></a>00186         TRect editorRect = iOutputWindow->Rect();
 <a name="l00187"></a>00187         editorRect.Grow(KBorderThickness + scrollbarWidth, KBorderThickness);
 <a name="l00188"></a>00188         editorRect.Move(scrollbarWidth, 0);
 <a name="l00189"></a>00189         gc.DrawRect(editorRect);
 <a name="l00190"></a>00190         }
 <a name="l00191"></a>00191         
-<a name="l00192"></a>00192     <span class="keywordflow">if</span> (iStatusWindow-&gt;IsFocused())
+<a name="l00192"></a>00192     <span class="keywordflow">if</span> (iStatusWindow->IsFocused())
 <a name="l00193"></a>00193         {
 <a name="l00194"></a>00194         TInt scrollbarWidth = GetScrollbarWidth(iStatusWindow);
-<a name="l00195"></a>00195         TRect editorRect = iStatusWindow-&gt;Rect();
+<a name="l00195"></a>00195         TRect editorRect = iStatusWindow->Rect();
 <a name="l00196"></a>00196         editorRect.Grow(KBorderThickness + scrollbarWidth, KBorderThickness);
 <a name="l00197"></a>00197         editorRect.Move(scrollbarWidth, 0);
 <a name="l00198"></a>00198         gc.DrawRect(editorRect);
@@ -242,7 +242,7 @@
 <a name="l00204"></a>00204 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00205"></a>00205 TInt CClientAppView::GetScrollbarWidth(CEikRichTextEditor* anEditor)<span class="keyword"> const</span>
 <a name="l00206"></a>00206 <span class="keyword">    </span>{
-<a name="l00207"></a>00207     TInt scrollbarWidth = anEditor-&gt;ScrollBarFrame()-&gt;
+<a name="l00207"></a>00207     TInt scrollbarWidth = anEditor->ScrollBarFrame()->
 <a name="l00208"></a>00208         ScrollBarBreadth(CEikScrollBar::EVertical);
 <a name="l00209"></a>00209     <span class="comment">// TODO: If scrollbars are not drawn yet, the width remains zero. In this</span>
 <a name="l00210"></a>00210     <span class="comment">// case, an intentionally magical number is returned.</span>
@@ -299,13 +299,13 @@
 <a name="l00261"></a>00261 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00262"></a>00262 <span class="keywordtype">void</span> CClientAppView::ResetL()
 <a name="l00263"></a>00263   {
-<a name="l00264"></a>00264     iOutputWindow-&gt;Text()-&gt;Reset();
-<a name="l00265"></a>00265     iOutputWindow-&gt;HandleTextChangedL();
-<a name="l00266"></a>00266     iOutputWindow-&gt;SetCursorPosL(0, EFalse);
+<a name="l00264"></a>00264     iOutputWindow->Text()->Reset();
+<a name="l00265"></a>00265     iOutputWindow->HandleTextChangedL();
+<a name="l00266"></a>00266     iOutputWindow->SetCursorPosL(0, EFalse);
 <a name="l00267"></a>00267 
-<a name="l00268"></a>00268     iStatusWindow-&gt;Text()-&gt;Reset();
-<a name="l00269"></a>00269     iStatusWindow-&gt;HandleTextChangedL();
-<a name="l00270"></a>00270     iStatusWindow-&gt;SetCursorPosL(0, EFalse);
+<a name="l00268"></a>00268     iStatusWindow->Text()->Reset();
+<a name="l00269"></a>00269     iStatusWindow->HandleTextChangedL();
+<a name="l00270"></a>00270     iStatusWindow->SetCursorPosL(0, EFalse);
 <a name="l00271"></a>00271   }
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273 <span class="comment">// ----------------------------------------------------------------------------</span>
@@ -313,7 +313,7 @@
 <a name="l00275"></a>00275 <span class="comment">//</span>
 <a name="l00276"></a>00276 <span class="comment">// Handles key events.</span>
 <a name="l00277"></a>00277 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00278"></a>00278 TKeyResponse CClientAppView::OfferKeyEventL(<span class="keyword">const</span> TKeyEvent&amp; aKeyEvent,
+<a name="l00278"></a>00278 TKeyResponse CClientAppView::OfferKeyEventL(<span class="keyword">const</span> TKeyEvent& aKeyEvent,
 <a name="l00279"></a>00279                         TEventCode aType)
 <a name="l00280"></a>00280   {
 <a name="l00281"></a>00281   <span class="comment">// Catch EStdKeyNkp5 and EStdKeyDevice3; they are used here to switch</span>
@@ -332,14 +332,14 @@
 <a name="l00294"></a>00294   <span class="comment">// Redirect keyevents to controls</span>
 <a name="l00295"></a>00295     <span class="keywordflow">if</span> (iOutputWindow)
 <a name="l00296"></a>00296     {
-<a name="l00297"></a>00297       <span class="keywordflow">if</span> (iOutputWindow-&gt;IsFocused())
-<a name="l00298"></a>00298       <span class="keywordflow">return</span> iOutputWindow-&gt;OfferKeyEventL(aKeyEvent, aType);
+<a name="l00297"></a>00297       <span class="keywordflow">if</span> (iOutputWindow->IsFocused())
+<a name="l00298"></a>00298       <span class="keywordflow">return</span> iOutputWindow->OfferKeyEventL(aKeyEvent, aType);
 <a name="l00299"></a>00299     }
 <a name="l00300"></a>00300 
 <a name="l00301"></a>00301     <span class="keywordflow">if</span> (iStatusWindow)
 <a name="l00302"></a>00302     {
-<a name="l00303"></a>00303       <span class="keywordflow">if</span> (iStatusWindow-&gt;IsFocused())
-<a name="l00304"></a>00304       <span class="keywordflow">return</span> iStatusWindow-&gt;OfferKeyEventL(aKeyEvent, aType);
+<a name="l00303"></a>00303       <span class="keywordflow">if</span> (iStatusWindow->IsFocused())
+<a name="l00304"></a>00304       <span class="keywordflow">return</span> iStatusWindow->OfferKeyEventL(aKeyEvent, aType);
 <a name="l00305"></a>00305     }
 <a name="l00306"></a>00306 
 <a name="l00307"></a>00307     <span class="keywordflow">return</span> EKeyWasNotConsumed;
@@ -352,15 +352,15 @@
 <a name="l00314"></a>00314 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00315"></a>00315 <span class="keywordtype">void</span> CClientAppView::SwitchFocus()
 <a name="l00316"></a>00316   {
-<a name="l00317"></a>00317   <span class="keywordflow">if</span> (iOutputWindow-&gt;IsFocused())
+<a name="l00317"></a>00317   <span class="keywordflow">if</span> (iOutputWindow->IsFocused())
 <a name="l00318"></a>00318     {
-<a name="l00319"></a>00319     iOutputWindow-&gt;SetFocus(EFalse);
-<a name="l00320"></a>00320     iStatusWindow-&gt;SetFocus(ETrue);
+<a name="l00319"></a>00319     iOutputWindow->SetFocus(EFalse);
+<a name="l00320"></a>00320     iStatusWindow->SetFocus(ETrue);
 <a name="l00321"></a>00321     }
 <a name="l00322"></a>00322   <span class="keywordflow">else</span>
 <a name="l00323"></a>00323     {
-<a name="l00324"></a>00324     iStatusWindow-&gt;SetFocus(EFalse);
-<a name="l00325"></a>00325     iOutputWindow-&gt;SetFocus(ETrue);
+<a name="l00324"></a>00324     iStatusWindow->SetFocus(EFalse);
+<a name="l00325"></a>00325     iOutputWindow->SetFocus(ETrue);
 <a name="l00326"></a>00326     }
 <a name="l00327"></a>00327   <span class="comment">// Update the borders</span>
 <a name="l00328"></a>00328   DrawNow();
@@ -371,14 +371,14 @@
 <a name="l00333"></a>00333 <span class="comment">//</span>
 <a name="l00334"></a>00334 <span class="comment">// Add a single line of text to the status window.</span>
 <a name="l00335"></a>00335 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00336"></a>00336 <span class="keywordtype">void</span> CClientAppView::AddToStatusWindowL(<span class="keyword">const</span> TDesC&amp; aText)
+<a name="l00336"></a>00336 <span class="keywordtype">void</span> CClientAppView::AddToStatusWindowL(<span class="keyword">const</span> TDesC& aText)
 <a name="l00337"></a>00337   {
 <a name="l00338"></a>00338   <span class="comment">// Append aText to status window with line break</span>
-<a name="l00339"></a>00339   CRichText* text = iStatusWindow-&gt;RichText();
-<a name="l00340"></a>00340   text-&gt;InsertL(text-&gt;DocumentLength(), aText);
-<a name="l00341"></a>00341   text-&gt;InsertL(text-&gt;DocumentLength(), CEditableText::ELineBreak);
-<a name="l00342"></a>00342   iStatusWindow-&gt;HandleTextChangedL();
-<a name="l00343"></a>00343   iStatusWindow-&gt;MoveCursorL(TCursorPosition::EFLineDown, EFalse);
+<a name="l00339"></a>00339   CRichText* text = iStatusWindow->RichText();
+<a name="l00340"></a>00340   text->InsertL(text->DocumentLength(), aText);
+<a name="l00341"></a>00341   text->InsertL(text->DocumentLength(), CEditableText::ELineBreak);
+<a name="l00342"></a>00342   iStatusWindow->HandleTextChangedL();
+<a name="l00343"></a>00343   iStatusWindow->MoveCursorL(TCursorPosition::EFLineDown, EFalse);
 <a name="l00344"></a>00344   }
 <a name="l00345"></a>00345 
 <a name="l00346"></a>00346 <span class="comment">// ----------------------------------------------------------------------------</span>
@@ -386,15 +386,15 @@
 <a name="l00348"></a>00348 <span class="comment">//</span>
 <a name="l00349"></a>00349 <span class="comment">// Add text to outputwindow. No formatting is provided.</span>
 <a name="l00350"></a>00350 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00351"></a>00351 <span class="keywordtype">void</span> CClientAppView::AddToOutputWindowL(<span class="keyword">const</span> TDesC8&amp; aText)
+<a name="l00351"></a>00351 <span class="keywordtype">void</span> CClientAppView::AddToOutputWindowL(<span class="keyword">const</span> TDesC8& aText)
 <a name="l00352"></a>00352   {
 <a name="l00353"></a>00353   <span class="comment">// Convert 8-bit aText to 16-bit and append it to end of output window</span>
 <a name="l00354"></a>00354   HBufC* tempBuf = HBufC::NewL(aText.Length());
 <a name="l00355"></a>00355   CleanupStack::PushL(tempBuf);
-<a name="l00356"></a>00356   tempBuf-&gt;Des().Copy(aText);
-<a name="l00357"></a>00357   CRichText* text = iOutputWindow-&gt;RichText();
-<a name="l00358"></a>00358   text-&gt;InsertL(text-&gt;DocumentLength(), *tempBuf);
-<a name="l00359"></a>00359   iOutputWindow-&gt;HandleTextChangedL();
+<a name="l00356"></a>00356   tempBuf->Des().Copy(aText);
+<a name="l00357"></a>00357   CRichText* text = iOutputWindow->RichText();
+<a name="l00358"></a>00358   text->InsertL(text->DocumentLength(), *tempBuf);
+<a name="l00359"></a>00359   iOutputWindow->HandleTextChangedL();
 <a name="l00360"></a>00360 
 <a name="l00361"></a>00361   CleanupStack::PopAndDestroy(tempBuf);
 <a name="l00362"></a>00362   }
@@ -404,7 +404,7 @@
 <a name="l00366"></a>00366 <span class="comment">//</span>
 <a name="l00367"></a>00367 <span class="comment">// Called by CClientEngine to notify events to user</span>
 <a name="l00368"></a>00368 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00369"></a>00369 <span class="keywordtype">void</span> CClientAppView::ClientEvent(<span class="keyword">const</span> TDesC&amp; aEventDescription)
+<a name="l00369"></a>00369 <span class="keywordtype">void</span> CClientAppView::ClientEvent(<span class="keyword">const</span> TDesC& aEventDescription)
 <a name="l00370"></a>00370   {
 <a name="l00371"></a>00371   TRAPD(err, AddToStatusWindowL(aEventDescription));
 <a name="l00372"></a>00372   <span class="keywordflow">if</span>(err)
@@ -416,7 +416,7 @@
 <a name="l00378"></a>00378 <span class="comment">//</span>
 <a name="l00379"></a>00379 <span class="comment">// Called by CClientEngine when part of response body received</span>
 <a name="l00380"></a>00380 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00381"></a>00381 <span class="keywordtype">void</span> CClientAppView::ClientBodyReceived(<span class="keyword">const</span> TDesC8&amp; aBodyData)
+<a name="l00381"></a>00381 <span class="keywordtype">void</span> CClientAppView::ClientBodyReceived(<span class="keyword">const</span> TDesC8& aBodyData)
 <a name="l00382"></a>00382   {
 <a name="l00383"></a>00383   TRAPD(err, AddToOutputWindowL(aBodyData));
 <a name="l00384"></a>00384   <span class="keywordflow">if</span>(err)
@@ -425,10 +425,10 @@
 <a name="l00387"></a>00387 
 <a name="l00388"></a>00388 <span class="comment">// end of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

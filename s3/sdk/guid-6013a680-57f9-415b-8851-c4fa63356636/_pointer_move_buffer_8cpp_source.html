@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Graphics/WS/PtBuffer/PointerMoveBuffer.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/Graphics/WS/PtBuffer/PointerMoveBuffer.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -53,9 +53,9 @@
 <a name="l00015"></a>00015 <span class="comment">// for freehand drawing.</span>
 <a name="l00016"></a>00016 <span class="comment">//</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;w32std.h&gt;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;Base.h&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;PointerMoveBuffer.h&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include <w32std.h></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "Base.h"</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include "PointerMoveBuffer.h"</span>
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 
@@ -85,11 +85,11 @@
 <a name="l00049"></a>00049 <span class="comment">|       Output:         None</span>
 <a name="l00050"></a>00050 <span class="comment">\****************************************************************************/</span>
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keywordtype">void</span> CMainWindow::Draw(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00052"></a>00052 <span class="keywordtype">void</span> CMainWindow::Draw(<span class="keyword">const</span> TRect& aRect)
 <a name="l00053"></a>00053         {
 <a name="l00054"></a>00054         CWindowGc* gc=SystemGc(); <span class="comment">// get a gc</span>
-<a name="l00055"></a>00055         gc-&gt;SetClippingRect(aRect); <span class="comment">// clip outside this rect</span>
-<a name="l00056"></a>00056         gc-&gt;Clear(aRect); <span class="comment">// clear</span>
+<a name="l00055"></a>00055         gc->SetClippingRect(aRect); <span class="comment">// clip outside this rect</span>
+<a name="l00056"></a>00056         gc->Clear(aRect); <span class="comment">// clear</span>
 <a name="l00057"></a>00057 }
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="comment">/****************************************************************************\</span>
@@ -99,19 +99,19 @@
 <a name="l00063"></a>00063 <span class="keywordtype">void</span> CMainWindow::HandlePointerMoveBufferReady ()
 <a name="l00064"></a>00064         {               
 <a name="l00065"></a>00065         TPoint pnts[KPointerMoveBufferSize];
-<a name="l00066"></a>00066         TPtr8 ptr((TUint8 *)&amp;pnts,<span class="keyword">sizeof</span>(pnts));
+<a name="l00066"></a>00066         TPtr8 ptr((TUint8 *)&pnts,<span class="keyword">sizeof</span>(pnts));
 <a name="l00067"></a>00067         TInt numPnts=Window().RetrievePointerMoveBuffer(ptr);
 <a name="l00068"></a>00068         TSize size = Window().Size();
 <a name="l00069"></a>00069         TPoint position = Window().Position();
 <a name="l00070"></a>00070         TRect redrawRect (position, size);
 <a name="l00071"></a>00071         CWindowGc* gc=SystemGc();
-<a name="l00072"></a>00072         gc-&gt;Activate(Window());
+<a name="l00072"></a>00072         gc->Activate(Window());
 <a name="l00073"></a>00073         Window().Invalidate();
 <a name="l00074"></a>00074         Window().BeginRedraw(redrawRect); <span class="comment">// N.B. Redrawer::RunL() gets called with this </span>
 <a name="l00075"></a>00075                                                                           <span class="comment">// rectangle - must give it a non-zero value</span>
-<a name="l00076"></a>00076         <span class="keywordflow">for</span>(TInt index=0;index&lt;numPnts;index++) gc-&gt;DrawLineTo(pnts[index]);
+<a name="l00076"></a>00076         <span class="keywordflow">for</span>(TInt index=0;index<numPnts;index++) gc->DrawLineTo(pnts[index]);
 <a name="l00077"></a>00077         Window().EndRedraw();
-<a name="l00078"></a>00078         gc-&gt;Deactivate();
+<a name="l00078"></a>00078         gc->Deactivate();
 <a name="l00079"></a>00079         }
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 <span class="comment">/****************************************************************************\</span>
@@ -121,19 +121,19 @@
 <a name="l00085"></a>00085 <span class="comment">|       Output:         None</span>
 <a name="l00086"></a>00086 <span class="comment">\****************************************************************************/</span>
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="keywordtype">void</span> CMainWindow::HandlePointerEvent (TPointerEvent&amp; aPointerEvent)
+<a name="l00088"></a>00088 <span class="keywordtype">void</span> CMainWindow::HandlePointerEvent (TPointerEvent& aPointerEvent)
 <a name="l00089"></a>00089         {       
 <a name="l00090"></a>00090         <span class="keywordflow">switch</span> (aPointerEvent.iType)
 <a name="l00091"></a>00091                 {
 <a name="l00092"></a>00092                 <span class="keywordflow">case</span> TPointerEvent::EButton1Down:
 <a name="l00093"></a>00093                         {
-<a name="l00094"></a>00094                         <span class="keywordflow">if</span> (aPointerEvent.iModifiers&amp;EModifierShift)
+<a name="l00094"></a>00094                         <span class="keywordflow">if</span> (aPointerEvent.iModifiers&EModifierShift)
 <a name="l00095"></a>00095                                 {
 <a name="l00096"></a>00096                                 Window().EnablePointerMoveBuffer();
 <a name="l00097"></a>00097                                 CWindowGc* gc = SystemGc();
-<a name="l00098"></a>00098                                 gc-&gt;Activate(Window());
-<a name="l00099"></a>00099                                 gc-&gt;MoveTo(aPointerEvent.iPosition);
-<a name="l00100"></a>00100                                 gc-&gt;Deactivate();
+<a name="l00098"></a>00098                                 gc->Activate(Window());
+<a name="l00099"></a>00099                                 gc->MoveTo(aPointerEvent.iPosition);
+<a name="l00100"></a>00100                                 gc->Deactivate();
 <a name="l00101"></a>00101                                 }
 <a name="l00102"></a>00102                         <span class="keywordflow">break</span>;
 <a name="l00103"></a>00103                         }
@@ -150,12 +150,12 @@
 <a name="l00114"></a>00114 
 <a name="l00116"></a>00116 <span class="comment">//                                       CExampleWsClient implementation</span>
 <a name="l00118"></a>00118 <span class="comment"></span>
-<a name="l00119"></a>00119 CExampleWsClient* CExampleWsClient::NewL(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00119"></a>00119 CExampleWsClient* CExampleWsClient::NewL(<span class="keyword">const</span> TRect& aRect)
 <a name="l00120"></a>00120         {
 <a name="l00121"></a>00121         <span class="comment">// make new client</span>
 <a name="l00122"></a>00122         CExampleWsClient* client=<span class="keyword">new</span> (ELeave) CExampleWsClient(aRect); 
 <a name="l00123"></a>00123         CleanupStack::PushL(client); <span class="comment">// push, just in case</span>
-<a name="l00124"></a>00124         client-&gt;ConstructL(); <span class="comment">// construct and run</span>
+<a name="l00124"></a>00124         client->ConstructL(); <span class="comment">// construct and run</span>
 <a name="l00125"></a>00125         CleanupStack::Pop();
 <a name="l00126"></a>00126         <span class="keywordflow">return</span> client;
 <a name="l00127"></a>00127         }
@@ -166,7 +166,7 @@
 <a name="l00132"></a>00132 <span class="comment">|                               ConstructMainWindowL()</span>
 <a name="l00133"></a>00133 <span class="comment">\****************************************************************************/</span>
 <a name="l00134"></a>00134 
-<a name="l00135"></a>00135 CExampleWsClient::CExampleWsClient(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00135"></a>00135 CExampleWsClient::CExampleWsClient(<span class="keyword">const</span> TRect& aRect)
 <a name="l00136"></a>00136 :iRect(aRect)
 <a name="l00137"></a>00137         {
 <a name="l00138"></a>00138         }
@@ -179,7 +179,7 @@
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146 <span class="comment">/****************************************************************************\</span>
 <a name="l00147"></a>00147 <span class="comment">|       Function:       CExampleWsClient::ConstructMainWindowL()</span>
-<a name="l00148"></a>00148 <span class="comment">|                               Called by base class&#39;s ConstructL</span>
+<a name="l00148"></a>00148 <span class="comment">|                               Called by base class's ConstructL</span>
 <a name="l00149"></a>00149 <span class="comment">|       Purpose:        Allocates and creates all the windows owned by this client</span>
 <a name="l00150"></a>00150 <span class="comment">|                               (See list of windows in CExampleWsCLient declaration).</span>
 <a name="l00151"></a>00151 <span class="comment">\****************************************************************************/</span>
@@ -188,14 +188,14 @@
 <a name="l00154"></a>00154         {
 <a name="l00155"></a>00155         <span class="comment">// Resources allocated in this function are freed in the CExampleWsClient destructor            </span>
 <a name="l00156"></a>00156         iMainWindow=<span class="keyword">new</span> (ELeave) CMainWindow(<span class="keyword">this</span>);
-<a name="l00157"></a>00157         iMainWindow-&gt;ConstructL(iRect, TRgb (255,255,255));
+<a name="l00157"></a>00157         iMainWindow->ConstructL(iRect, TRgb (255,255,255));
 <a name="l00158"></a>00158         }
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160 <span class="comment">/****************************************************************************\</span>
 <a name="l00161"></a>00161 <span class="comment">|       Function:       CExampleWsClient::HandleKeyEventL()</span>
 <a name="l00162"></a>00162 <span class="comment">|       Purpose:        Processes key events for CExampleWsClient</span>
 <a name="l00163"></a>00163 <span class="comment">\****************************************************************************/</span>
-<a name="l00164"></a>00164 <span class="keywordtype">void</span> CExampleWsClient::HandleKeyEventL (TKeyEvent&amp; <span class="comment">/*aKeyEvent*/</span>)
+<a name="l00164"></a>00164 <span class="keywordtype">void</span> CExampleWsClient::HandleKeyEventL (TKeyEvent& <span class="comment">/*aKeyEvent*/</span>)
 <a name="l00165"></a>00165         {
 <a name="l00166"></a>00166         }
 <a name="l00167"></a>00167 
@@ -233,8 +233,8 @@
 <a name="l00199"></a>00199         <span class="keywordflow">case</span> EEventPointer:
 <a name="l00200"></a>00200                 {
 <a name="l00201"></a>00201                 CWindow* window=(CWindow*)(iWsEvent.Handle()); <span class="comment">// get window</span>
-<a name="l00202"></a>00202                 TPointerEvent&amp; pointerEvent=*iWsEvent.Pointer();
-<a name="l00203"></a>00203                 window-&gt;HandlePointerEvent (pointerEvent);
+<a name="l00202"></a>00202                 TPointerEvent& pointerEvent=*iWsEvent.Pointer();
+<a name="l00203"></a>00203                 window->HandlePointerEvent (pointerEvent);
 <a name="l00204"></a>00204                 <span class="keywordflow">break</span>;
 <a name="l00205"></a>00205                 }
 <a name="l00206"></a>00206         <span class="keywordflow">case</span> EEventPointerExit:
@@ -243,7 +243,7 @@
 <a name="l00209"></a>00209         <span class="keywordflow">case</span> EEventPointerBufferReady:
 <a name="l00210"></a>00210                 {
 <a name="l00211"></a>00211                 CWindow* window=(CWindow*)(iWsEvent.Handle()); <span class="comment">// get window</span>
-<a name="l00212"></a>00212                 window-&gt;HandlePointerMoveBufferReady ();
+<a name="l00212"></a>00212                 window->HandlePointerMoveBufferReady ();
 <a name="l00213"></a>00213                 <span class="keywordflow">break</span>;
 <a name="l00214"></a>00214                 }
 <a name="l00215"></a>00215         <span class="keywordflow">case</span> EEventDragDrop:
@@ -254,10 +254,10 @@
 <a name="l00220"></a>00220         IssueRequest(); <span class="comment">// maintain outstanding request</span>
 <a name="l00221"></a>00221         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

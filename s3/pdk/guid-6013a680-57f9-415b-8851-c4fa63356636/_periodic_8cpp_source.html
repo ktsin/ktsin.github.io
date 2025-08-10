@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/Timers/Periodic/Periodic.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/Timers/Periodic/Periodic.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -61,7 +61,7 @@
 <a name="l00021"></a>00021 <span class="comment">// requests complete in synchronization with the beating</span>
 <a name="l00022"></a>00022 <span class="comment">// of the system clock.</span>
 <a name="l00023"></a>00023 <span class="comment">// As a nuance of CHeartbeat, it takes an MBeating* mixin:</span>
-<a name="l00024"></a>00024 <span class="comment">// the MBeating&#39;s Beat() function is called when completion</span>
+<a name="l00024"></a>00024 <span class="comment">// the MBeating's Beat() function is called when completion</span>
 <a name="l00025"></a>00025 <span class="comment">// occurs in sync, and Synchronize() is called when</span>
 <a name="l00026"></a>00026 <span class="comment">// synchronization has been lost.</span>
 <a name="l00027"></a>00027 <span class="comment">//</span>
@@ -69,13 +69,13 @@
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="comment">// standard example header</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;CommonFramework.h&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include "CommonFramework.h"</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="comment">// beginning of real example</span>
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;e32math.h&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include <e32math.h></span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keywordtype">void</span> RandomDelay(TInt64&amp; aSeed, TInt <span class="comment">/*aTimerNumber*/</span>)
+<a name="l00038"></a>00038 <span class="keywordtype">void</span> RandomDelay(TInt64& aSeed, TInt <span class="comment">/*aTimerNumber*/</span>)
 <a name="l00039"></a>00039         {
 <a name="l00040"></a>00040         <span class="comment">// initialize seed first time through</span>
 <a name="l00041"></a>00041         <span class="keywordflow">if</span> (aSeed==0)
@@ -101,11 +101,11 @@
 <a name="l00061"></a>00061 <span class="comment">// experiment with. </span>
 <a name="l00062"></a>00062 <span class="comment">//</span>
 <a name="l00063"></a>00063 <span class="comment">//</span>
-<a name="l00064"></a>00064 <span class="comment">//void RandomDelay(TInt64&amp; /* aSeed */, TInt aTimerNumber)</span>
+<a name="l00064"></a>00064 <span class="comment">//void RandomDelay(TInt64& /* aSeed */, TInt aTimerNumber)</span>
 <a name="l00065"></a>00065 <span class="comment">//      {</span>
 <a name="l00066"></a>00066 <span class="comment">//      User::After(1000000);</span>
-<a name="l00067"></a>00067 <span class="comment">//  _LIT(KFormatMisc,&quot;Delay for timer %d: 1000000us\n&quot;);</span>
-<a name="l00068"></a>00068 <span class="comment">//      console-&gt;Printf(KFormatMisc, aTimerNumber);</span>
+<a name="l00067"></a>00067 <span class="comment">//  _LIT(KFormatMisc,"Delay for timer %d: 1000000us\n");</span>
+<a name="l00068"></a>00068 <span class="comment">//      console->Printf(KFormatMisc, aTimerNumber);</span>
 <a name="l00069"></a>00069 <span class="comment">//      }</span>
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 
@@ -145,17 +145,17 @@
 <a name="l00105"></a>00105 <span class="comment"></span>
 <a name="l00106"></a>00106 <span class="comment">        Processing gets behind: when the ticks left have counted down to zero,</span>
 <a name="l00107"></a>00107 <span class="comment">        it should be behind by a second or two.  The destructor indicates how many</span>
-<a name="l00108"></a>00108 <span class="comment">        seconds since the object&#39;s creation.</span>
+<a name="l00108"></a>00108 <span class="comment">        seconds since the object's creation.</span>
 <a name="l00109"></a>00109 <span class="comment">*/</span>
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111 <span class="keyword">class </span>CPeriodicRunner : <span class="keyword">public</span> CBase
 <a name="l00112"></a>00112         {
 <a name="l00113"></a>00113 <span class="keyword">public</span>:
 <a name="l00114"></a>00114         <span class="comment">// construct, add CPeriodic to active scheduler, and start it</span>
-<a name="l00115"></a>00115         <span class="keyword">static</span> CPeriodicRunner* NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner);
+<a name="l00115"></a>00115         <span class="keyword">static</span> CPeriodicRunner* NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner);
 <a name="l00116"></a>00116         ~CPeriodicRunner(); <span class="comment">// destruct and give statistics</span>
 <a name="l00117"></a>00117 <span class="keyword">protected</span>:
-<a name="l00118"></a>00118         CPeriodicRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner);
+<a name="l00118"></a>00118         CPeriodicRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner);
 <a name="l00119"></a>00119 <span class="keyword">private</span>:
 <a name="l00120"></a>00120         <span class="keywordtype">void</span> ConstructL(); <span class="comment">// second construction phase</span>
 <a name="l00121"></a>00121         <span class="comment">// functions for TCallBack protocol</span>
@@ -163,7 +163,7 @@
 <a name="l00123"></a>00123         <span class="keywordtype">void</span> DoTick(); <span class="comment">// indirectly called</span>
 <a name="l00124"></a>00124 <span class="keyword">private</span>:
 <a name="l00125"></a>00125       <span class="comment">// constructor parameters</span>
-<a name="l00126"></a>00126         TAppRunner&amp; iAppRunner; <span class="comment">// notify when started and finished</span>
+<a name="l00126"></a>00126         TAppRunner& iAppRunner; <span class="comment">// notify when started and finished</span>
 <a name="l00127"></a>00127         TInt iTotalTicks;       <span class="comment">// total number of ticks requested</span>
 <a name="l00128"></a>00128         TInt iTickInterval;     <span class="comment">// the tick interval in microseconds</span>
 <a name="l00129"></a>00129         
@@ -180,7 +180,7 @@
 <a name="l00140"></a>00140         };
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 <span class="comment">// protected C++ constructor</span>
-<a name="l00143"></a>00143 CPeriodicRunner::CPeriodicRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner)
+<a name="l00143"></a>00143 CPeriodicRunner::CPeriodicRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner)
 <a name="l00144"></a>00144         : iAppRunner(aAppRunner), iTotalTicks(aTotalTicks), iTickInterval(aTickInterval)
 <a name="l00145"></a>00145         {}
 <a name="l00146"></a>00146 
@@ -193,15 +193,15 @@
 <a name="l00153"></a>00153         iTimerNumber = iAppRunner.iActiveObjects; <span class="comment">// set idenfifying number for timer</span>
 <a name="l00154"></a>00154         iTicksLeft = iTotalTicks;
 <a name="l00155"></a>00155         <span class="comment">// variable (actually 1 second) delay and interval </span>
-<a name="l00156"></a>00156         iPeriodic-&gt;Start(iTickInterval,iTickInterval,TCallBack(Tick, <span class="keyword">this</span>));
+<a name="l00156"></a>00156         iPeriodic->Start(iTickInterval,iTickInterval,TCallBack(Tick, <span class="keyword">this</span>));
 <a name="l00157"></a>00157         }
 <a name="l00158"></a>00158 
 <a name="l00159"></a>00159 <span class="comment">// construct, add CPeriodic to active scheduler, and start it</span>
-<a name="l00160"></a>00160 CPeriodicRunner* CPeriodicRunner::NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner)
+<a name="l00160"></a>00160 CPeriodicRunner* CPeriodicRunner::NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner)
 <a name="l00161"></a>00161         {
 <a name="l00162"></a>00162         CPeriodicRunner* <span class="keyword">self</span>=<span class="keyword">new</span> (ELeave) CPeriodicRunner(aTickInterval, aTotalTicks, aAppRunner);
 <a name="l00163"></a>00163         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00164"></a>00164     <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00164"></a>00164     <span class="keyword">self</span>->ConstructL();
 <a name="l00165"></a>00165         CleanupStack::Pop();
 <a name="l00166"></a>00166     <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00167"></a>00167         }
@@ -213,25 +213,25 @@
 <a name="l00173"></a>00173         TTime currentTime;
 <a name="l00174"></a>00174         <span class="comment">// set current time</span>
 <a name="l00175"></a>00175         currentTime.HomeTime(); <span class="comment">// set currentTime to now</span>
-<a name="l00176"></a>00176         <span class="comment">// find and show elapsed time &amp; ticks </span>
+<a name="l00176"></a>00176         <span class="comment">// find and show elapsed time & ticks </span>
 <a name="l00177"></a>00177         elapsedTime = currentTime.MicroSecondsFrom(iStartTime);
 <a name="l00178"></a>00178         
-<a name="l00179"></a>00179         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">&quot;Periodic timer %d finished after: %Ld microseconds for %d %dus ticks\n&quot;</span>);
-<a name="l00180"></a>00180         console-&gt;Printf(KFormat1,iTimerNumber,elapsedTime.Int64(),iTotalTicks,iTickInterval);
+<a name="l00179"></a>00179         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">"Periodic timer %d finished after: %Ld microseconds for %d %dus ticks\n"</span>);
+<a name="l00180"></a>00180         console->Printf(KFormat1,iTimerNumber,elapsedTime.Int64(),iTotalTicks,iTickInterval);
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182         
 <a name="l00183"></a>00183         
 <a name="l00184"></a>00184         <span class="comment">//  cancel any outstanding request; delete owned CPeriodic object </span>
-<a name="l00185"></a>00185         iPeriodic-&gt;Cancel();
+<a name="l00185"></a>00185         iPeriodic->Cancel();
 <a name="l00186"></a>00186     <span class="keyword">delete</span> iPeriodic;
-<a name="l00187"></a>00187         <span class="comment">// tell app runner we&#39;ve finished (if we&#39;re last, scheduler will stop)</span>
+<a name="l00187"></a>00187         <span class="comment">// tell app runner we've finished (if we're last, scheduler will stop)</span>
 <a name="l00188"></a>00188         iAppRunner.NotifyFinished();
 <a name="l00189"></a>00189         }
 <a name="l00190"></a>00190 
 <a name="l00191"></a>00191 <span class="comment">// private</span>
 <a name="l00192"></a>00192 TInt CPeriodicRunner::Tick(TAny* aObject)
 <a name="l00193"></a>00193         {
-<a name="l00194"></a>00194         ((CPeriodicRunner*)aObject)-&gt;DoTick(); <span class="comment">// cast, and call non-static function</span>
+<a name="l00194"></a>00194         ((CPeriodicRunner*)aObject)->DoTick(); <span class="comment">// cast, and call non-static function</span>
 <a name="l00195"></a>00195         <span class="keywordflow">return</span> 1;
 <a name="l00196"></a>00196         }
 <a name="l00197"></a>00197 
@@ -239,8 +239,8 @@
 <a name="l00199"></a>00199 <span class="keywordtype">void</span> CPeriodicRunner::DoTick()
 <a name="l00200"></a>00200         {
 <a name="l00201"></a>00201         iTicksLeft--;
-<a name="l00202"></a>00202         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">&quot;Periodic timer %d: %d ticks done\n&quot;</span>);
-<a name="l00203"></a>00203         console-&gt;Printf(KFormat2, iTimerNumber, iTotalTicks - iTicksLeft);
+<a name="l00202"></a>00202         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">"Periodic timer %d: %d ticks done\n"</span>);
+<a name="l00203"></a>00203         console->Printf(KFormat2, iTimerNumber, iTotalTicks - iTicksLeft);
 <a name="l00204"></a>00204         <span class="keywordflow">if</span>(iTicksLeft==0)
 <a name="l00205"></a>00205                 {
 <a name="l00206"></a>00206                 <span class="keyword">delete</span> <span class="keyword">this</span>;
@@ -260,7 +260,7 @@
 <a name="l00220"></a>00220 <span class="comment">        is called instead: this must find out from the system time how many ticks should</span>
 <a name="l00221"></a>00221 <span class="comment">        have been counted, and update things accordingly.</span>
 <a name="l00222"></a>00222 <span class="comment"></span>
-<a name="l00223"></a>00223 <span class="comment">        The destructor gives the same comparisons as the CPeriodic&#39;s.  The discrepancy</span>
+<a name="l00223"></a>00223 <span class="comment">        The destructor gives the same comparisons as the CPeriodic's.  The discrepancy</span>
 <a name="l00224"></a>00224 <span class="comment">        between the number of ticks and the number of seconds since construction should</span>
 <a name="l00225"></a>00225 <span class="comment">        never be more than is accounted for by the last heartbeat.</span>
 <a name="l00226"></a>00226 <span class="comment">*/</span>
@@ -269,10 +269,10 @@
 <a name="l00229"></a>00229         {
 <a name="l00230"></a>00230 <span class="keyword">public</span>:
 <a name="l00231"></a>00231         <span class="comment">// construct, add CHeartbeat to active scheduler, and start it</span>
-<a name="l00232"></a>00232         <span class="keyword">static</span> CHeartbeatRunner* NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner);
+<a name="l00232"></a>00232         <span class="keyword">static</span> CHeartbeatRunner* NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner);
 <a name="l00233"></a>00233         ~CHeartbeatRunner(); <span class="comment">// destruct and give statistics</span>
 <a name="l00234"></a>00234 <span class="keyword">protected</span>:
-<a name="l00235"></a>00235         CHeartbeatRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner);
+<a name="l00235"></a>00235         CHeartbeatRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner);
 <a name="l00236"></a>00236 <span class="keyword">private</span>:
 <a name="l00237"></a>00237         <span class="keywordtype">void</span> ConstructL();
 <a name="l00238"></a>00238         <span class="comment">// functions for MBeating protocol</span>
@@ -280,7 +280,7 @@
 <a name="l00240"></a>00240         <span class="keywordtype">void</span> Synchronize(); <span class="comment">// called when we need to synchronize</span>
 <a name="l00241"></a>00241 <span class="keyword">private</span>:
 <a name="l00242"></a>00242         <span class="comment">// constructor parameters</span>
-<a name="l00243"></a>00243         TAppRunner&amp; iAppRunner; <span class="comment">// notify when started and finished</span>
+<a name="l00243"></a>00243         TAppRunner& iAppRunner; <span class="comment">// notify when started and finished</span>
 <a name="l00244"></a>00244         TInt iTotalTicks; <span class="comment">// number of ticks requested</span>
 <a name="l00245"></a>00245         TInt iTickInterval; <span class="comment">// tick length in microseconds</span>
 <a name="l00246"></a>00246         <span class="comment">// things set up by ConstructL</span>
@@ -294,7 +294,7 @@
 <a name="l00254"></a>00254         };
 <a name="l00255"></a>00255 
 <a name="l00256"></a>00256 <span class="comment">// protected C++ constructor</span>
-<a name="l00257"></a>00257 CHeartbeatRunner::CHeartbeatRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner)
+<a name="l00257"></a>00257 CHeartbeatRunner::CHeartbeatRunner(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner)
 <a name="l00258"></a>00258         :iAppRunner(aAppRunner), iTotalTicks(aTotalTicks), iTickInterval(aTickInterval)
 <a name="l00259"></a>00259         {}
 <a name="l00260"></a>00260 
@@ -307,15 +307,15 @@
 <a name="l00267"></a>00267         iTimerNumber = iAppRunner.iActiveObjects; <span class="comment">// set idenfifying number for timer</span>
 <a name="l00268"></a>00268         iTicksLeft = iTotalTicks;
 <a name="l00269"></a>00269         <span class="comment">// start the heartbeat timer, beating exactly on the second</span>
-<a name="l00270"></a>00270         iHeartbeat-&gt;Start(ETwelveOClock,<span class="keyword">this</span>);
+<a name="l00270"></a>00270         iHeartbeat->Start(ETwelveOClock,<span class="keyword">this</span>);
 <a name="l00271"></a>00271         }
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273 <span class="comment">// construct, add CHeartbeat to active scheduler, and start it</span>
-<a name="l00274"></a>00274 CHeartbeatRunner* CHeartbeatRunner::NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner&amp; aAppRunner)
+<a name="l00274"></a>00274 CHeartbeatRunner* CHeartbeatRunner::NewL(TInt aTickInterval, TInt aTotalTicks, TAppRunner& aAppRunner)
 <a name="l00275"></a>00275         {
 <a name="l00276"></a>00276         CHeartbeatRunner* <span class="keyword">self</span>=<span class="keyword">new</span> (ELeave) CHeartbeatRunner(aTickInterval, aTotalTicks, aAppRunner);
 <a name="l00277"></a>00277         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00278"></a>00278     <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00278"></a>00278     <span class="keyword">self</span>->ConstructL();
 <a name="l00279"></a>00279         CleanupStack::Pop();
 <a name="l00280"></a>00280     <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00281"></a>00281         }
@@ -326,16 +326,16 @@
 <a name="l00286"></a>00286         TTimeIntervalMicroSeconds elapsedTime;
 <a name="l00287"></a>00287         TTime currentTime;
 <a name="l00288"></a>00288         currentTime.HomeTime(); <span class="comment">// set current time to now</span>
-<a name="l00289"></a>00289         <span class="comment">// find and show elapsed time &amp; ticks </span>
+<a name="l00289"></a>00289         <span class="comment">// find and show elapsed time & ticks </span>
 <a name="l00290"></a>00290         elapsedTime = currentTime.MicroSecondsFrom(iStartTime); 
 <a name="l00291"></a>00291         
-<a name="l00292"></a>00292         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat3,<span class="stringliteral">&quot;Heartbeat timer %d finished after: %Ld microseonds for %d %dus ticks\n&quot;</span>);
-<a name="l00293"></a>00293         console-&gt;Printf(KFormat3,iTimerNumber,elapsedTime.Int64(),iTotalTicks,iTickInterval);
+<a name="l00292"></a>00292         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat3,<span class="stringliteral">"Heartbeat timer %d finished after: %Ld microseonds for %d %dus ticks\n"</span>);
+<a name="l00293"></a>00293         console->Printf(KFormat3,iTimerNumber,elapsedTime.Int64(),iTotalTicks,iTickInterval);
 <a name="l00294"></a>00294         
 <a name="l00295"></a>00295         <span class="comment">//  cancel any outstanding request; delete owned CPeriodic object </span>
-<a name="l00296"></a>00296         iHeartbeat-&gt;Cancel();
+<a name="l00296"></a>00296         iHeartbeat->Cancel();
 <a name="l00297"></a>00297     <span class="keyword">delete</span> iHeartbeat;
-<a name="l00298"></a>00298         <span class="comment">// tell app runner we&#39;ve finished (if last, scheduler will stop)</span>
+<a name="l00298"></a>00298         <span class="comment">// tell app runner we've finished (if last, scheduler will stop)</span>
 <a name="l00299"></a>00299         iAppRunner.NotifyFinished();
 <a name="l00300"></a>00300         }
 <a name="l00301"></a>00301 
@@ -343,7 +343,7 @@
 <a name="l00303"></a>00303 <span class="keywordtype">void</span> CHeartbeatRunner::Beat()
 <a name="l00304"></a>00304         {
 <a name="l00305"></a>00305         iTicksLeft--;
-<a name="l00306"></a>00306         <span class="keywordflow">if</span>(iTicksLeft&lt;=0)
+<a name="l00306"></a>00306         <span class="keywordflow">if</span>(iTicksLeft<=0)
 <a name="l00307"></a>00307                 <span class="keyword">delete</span> <span class="keyword">this</span>;
 <a name="l00308"></a>00308         <span class="keywordflow">else</span>
 <a name="l00309"></a>00309                 RandomDelay(iDelaySeed,iTimerNumber); <span class="comment">// a random delay to mess up the timing</span>
@@ -366,29 +366,29 @@
 <a name="l00326"></a>00326         
 <a name="l00327"></a>00327         
 <a name="l00328"></a>00328         <span class="comment">// The following loop increments the ticks missed by the same amount, but takes much longer</span>
-<a name="l00329"></a>00329         <span class="comment">// while (desiredTime &lt; currentTime)</span>
+<a name="l00329"></a>00329         <span class="comment">// while (desiredTime < currentTime)</span>
 <a name="l00330"></a>00330         <span class="comment">//      {</span>
 <a name="l00331"></a>00331         <span class="comment">//      desiredTime = desiredTime - TTimeIntervalMicroSeconds(iTickInterval);</span>
 <a name="l00332"></a>00332         <span class="comment">//      ticksMissed++;</span>
 <a name="l00333"></a>00333         <span class="comment">//      }</span>
-<a name="l00334"></a>00334         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat4,<span class="stringliteral">&quot;Ticks done %d\n&quot;</span>);
-<a name="l00335"></a>00335         console-&gt;Printf(KFormat4, (iTotalTicks -iTicksLeft));
+<a name="l00334"></a>00334         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat4,<span class="stringliteral">"Ticks done %d\n"</span>);
+<a name="l00335"></a>00335         console->Printf(KFormat4, (iTotalTicks -iTicksLeft));
 <a name="l00336"></a>00336         
 <a name="l00337"></a>00337         iTicksLeft = iTicksLeft - ticksMissed;
 <a name="l00338"></a>00338         TTimeIntervalMicroSeconds elapsedTime;
-<a name="l00339"></a>00339         elapsedTime = currentTime.MicroSecondsFrom(iStartTime); <span class="comment">// find and show elapsed time &amp; ticks </span>
-<a name="l00340"></a>00340         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat5,<span class="stringliteral">&quot;Elapsed time: %Ld microseconds\n&quot;</span>);
-<a name="l00341"></a>00341         console-&gt;Printf(KFormat5, elapsedTime.Int64());
+<a name="l00339"></a>00339         elapsedTime = currentTime.MicroSecondsFrom(iStartTime); <span class="comment">// find and show elapsed time & ticks </span>
+<a name="l00340"></a>00340         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat5,<span class="stringliteral">"Elapsed time: %Ld microseconds\n"</span>);
+<a name="l00341"></a>00341         console->Printf(KFormat5, elapsedTime.Int64());
 <a name="l00342"></a>00342         
-<a name="l00343"></a>00343         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat6,<span class="stringliteral">&quot;Synchronize heartbeat timer %d: ticks missed %d: left %d: done now %d\n&quot;</span>);
-<a name="l00344"></a>00344         console-&gt;Printf(KFormat6,
+<a name="l00343"></a>00343         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat6,<span class="stringliteral">"Synchronize heartbeat timer %d: ticks missed %d: left %d: done now %d\n"</span>);
+<a name="l00344"></a>00344         console->Printf(KFormat6,
 <a name="l00345"></a>00345                             iTimerNumber,
 <a name="l00346"></a>00346                                         ticksMissed,
 <a name="l00347"></a>00347                                         iTicksLeft,
-<a name="l00348"></a>00348                                         ((iTotalTicks - iTicksLeft) &lt;= iTotalTicks) ? iTotalTicks - iTicksLeft : iTotalTicks
+<a name="l00348"></a>00348                                         ((iTotalTicks - iTicksLeft) <= iTotalTicks) ? iTotalTicks - iTicksLeft : iTotalTicks
 <a name="l00349"></a>00349                                    );
 <a name="l00350"></a>00350         <span class="comment">// iTicksLeft can be less than zero</span>
-<a name="l00351"></a>00351         <span class="keywordflow">if</span>(iTicksLeft&lt;=0)
+<a name="l00351"></a>00351         <span class="keywordflow">if</span>(iTicksLeft<=0)
 <a name="l00352"></a>00352                 {
 <a name="l00353"></a>00353                 <span class="keyword">delete</span> <span class="keyword">this</span>;
 <a name="l00354"></a>00354                 }
@@ -423,7 +423,7 @@
 <a name="l00383"></a>00383           <span class="comment">// run each kind of timer for increasing numbers of ticks</span>
 <a name="l00384"></a>00384           <span class="comment">// was 10/40/10</span>
 <a name="l00385"></a>00385                 
-<a name="l00386"></a>00386         <span class="keywordflow">for</span> (TInt total_ticks=4; total_ticks&lt;=6; total_ticks+=2)
+<a name="l00386"></a>00386         <span class="keywordflow">for</span> (TInt total_ticks=4; total_ticks<=6; total_ticks+=2)
 <a name="l00387"></a>00387                 {               
 <a name="l00388"></a>00388                   <span class="comment">// Create periodic timer</span>
 <a name="l00389"></a>00389                   <span class="comment">//</span>
@@ -441,10 +441,10 @@
 <a name="l00401"></a>00401         }
 <a name="l00402"></a>00402 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

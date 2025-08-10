@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/S60_3rd_Edition_TextMTM_Example/modules/Server/src/TXTMBOX.CPP Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -42,23 +42,23 @@
 <a name="l00004"></a>00004 <span class="comment">//</span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 <span class="preprocessor">#if !defined(__TXTSPAN_H__)</span>
-<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#include &quot;TXTSPAN.H&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#include "TXTSPAN.H"</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#endif</span>
 <a name="l00009"></a>00009 <span class="preprocessor"></span>
 <a name="l00010"></a>00010 <span class="preprocessor">#if !defined(__MSVUIDS_H__)</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#include &lt;MSVUIDS.H&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#include <MSVUIDS.H></span>
 <a name="l00012"></a>00012 <span class="preprocessor">#endif</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
 <a name="l00014"></a>00014 <span class="preprocessor">#if !defined(__MSVIDS_H__)</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#include &lt;MSVIDS.H&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#include <MSVIDS.H></span>
 <a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
 <a name="l00017"></a>00017 <span class="preprocessor"></span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;txtmbox.h&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;badesca.h&quot;</span>
-<a name="l00020"></a>00020 <span class="comment">//#include &lt;mncnnotification.h&gt; </span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "txtmbox.h"</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "badesca.h"</span>
+<a name="l00020"></a>00020 <span class="comment">//#include <mncnnotification.h> </span>
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;TXTRICH.H&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;S32FILE.H&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <TXTRICH.H></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <S32FILE.H></span>
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="comment">//</span>
 <a name="l00026"></a>00026 <span class="comment">//      CTxtRefreshMBox: refresher class to synchronise real file system and service</span>
@@ -66,9 +66,9 @@
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <a class="code" href="class_c_txt_refresh_m_box.html">CTxtRefreshMBox</a>* CTxtRefreshMBox::NewL(RFs&amp; aFs, TFileName&amp; aRelativePath, TMsvId aCurrentRootEntryId, 
+<a name="l00031"></a>00031 <a class="code" href="class_c_txt_refresh_m_box.html">CTxtRefreshMBox</a>* CTxtRefreshMBox::NewL(RFs& aFs, TFileName& aRelativePath, TMsvId aCurrentRootEntryId, 
 <a name="l00032"></a>00032                                                                            CMsvServerEntry *aEntry, TMsvId aServiceEntryId,
-<a name="l00033"></a>00033                                                                            <span class="keyword">const</span> <a class="code" href="class_t_m_t_m_txt_settings.html">TMTMTxtSettings</a>&amp; aTxtSettings)
+<a name="l00033"></a>00033                                                                            <span class="keyword">const</span> <a class="code" href="class_t_m_t_m_txt_settings.html">TMTMTxtSettings</a>& aTxtSettings)
 <a name="l00034"></a>00034 <span class="comment">//</span>
 <a name="l00035"></a>00035 <span class="comment">//  1. sort files and entries by description.</span>
 <a name="l00036"></a>00036 <span class="comment">//</span>
@@ -76,7 +76,7 @@
 <a name="l00038"></a>00038         <a class="code" href="class_c_txt_refresh_m_box.html">CTxtRefreshMBox</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave)<a class="code" href="class_c_txt_refresh_m_box.html">CTxtRefreshMBox</a>(aFs, aRelativePath, 
 <a name="l00039"></a>00039                 aCurrentRootEntryId, aEntry, aServiceEntryId, aTxtSettings);
 <a name="l00040"></a>00040         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00041"></a>00041         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00041"></a>00041         <span class="keyword">self</span>->ConstructL();
 <a name="l00042"></a>00042         CleanupStack::Pop(); <span class="comment">// self</span>
 <a name="l00043"></a>00043         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00044"></a>00044         }       
@@ -94,9 +94,9 @@
 <a name="l00056"></a>00056         <span class="comment">// Get sorted list of current entries</span>
 <a name="l00057"></a>00057         iExistingEntries = <span class="keyword">new</span> (ELeave) CMsvEntrySelection;
 <a name="l00058"></a>00058         TMsvSelectionOrdering order(KMsvNoGrouping, EMsvSortByDescription);    
-<a name="l00059"></a>00059     User::LeaveIfError(iEntry-&gt;SetEntry(iCurrentRootEntryId));
-<a name="l00060"></a>00060         iEntry-&gt;SetSort( order );
-<a name="l00061"></a>00061         iEntry-&gt;GetChildren(*iExistingEntries);
+<a name="l00059"></a>00059     User::LeaveIfError(iEntry->SetEntry(iCurrentRootEntryId));
+<a name="l00060"></a>00060         iEntry->SetSort( order );
+<a name="l00061"></a>00061         iEntry->GetChildren(*iExistingEntries);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063         iCurrentFile  = 0;
 <a name="l00064"></a>00064         iCurrentEntry = 0;
@@ -113,10 +113,10 @@
 <a name="l00075"></a>00075 <span class="comment">// Delete current entry</span>
 <a name="l00076"></a>00076         {
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078         __ASSERT_DEBUG(iCurrentEntry &lt; iExistingEntries-&gt;Count(), gPanic(ETxtsInvalidEntryIndex));
+<a name="l00078"></a>00078         __ASSERT_DEBUG(iCurrentEntry < iExistingEntries->Count(), gPanic(ETxtsInvalidEntryIndex));
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080         User::LeaveIfError(iEntry-&gt;SetEntry(iCurrentRootEntryId));
-<a name="l00081"></a>00081         iEntry-&gt;DeleteEntry((*iExistingEntries)[iCurrentEntry]); <span class="comment">// deletes recursively</span>
+<a name="l00080"></a>00080         User::LeaveIfError(iEntry->SetEntry(iCurrentRootEntryId));
+<a name="l00081"></a>00081         iEntry->DeleteEntry((*iExistingEntries)[iCurrentEntry]); <span class="comment">// deletes recursively</span>
 <a name="l00082"></a>00082         }
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 
@@ -135,7 +135,7 @@
 <a name="l00097"></a>00097 <span class="comment"></span>
 <a name="l00098"></a>00098 <span class="comment">    if ( notification )</span>
 <a name="l00099"></a>00099 <span class="comment">        {</span>
-<a name="l00100"></a>00100 <span class="comment">        TInt result = notification-&gt;NewMessages(</span>
+<a name="l00100"></a>00100 <span class="comment">        TInt result = notification->NewMessages(</span>
 <a name="l00101"></a>00101 <span class="comment">            iServiceEntryId,  MNcnNotification::EIndicationToneAndIcon , *dummyArray );</span>
 <a name="l00102"></a>00102 <span class="comment">        }</span>
 <a name="l00103"></a>00103 <span class="comment">  </span>
@@ -145,8 +145,8 @@
 <a name="l00107"></a>00107 <span class="comment">    notification = NULL;        </span>
 <a name="l00108"></a>00108 <span class="comment">        }</span>
 <a name="l00109"></a>00109 <span class="comment">*/</span>      
-<a name="l00110"></a>00110 TInt CTxtRefreshMBox::CreateChild(<span class="keyword">const</span> TDesC&amp; aDescription, <span class="keyword">const</span> TDesC&amp; aDetails, TUid aMessageType, 
-<a name="l00111"></a>00111                                                                   <span class="keyword">const</span> TTime&amp; aDate, <span class="keyword">const</span> TInt aSize)
+<a name="l00110"></a>00110 TInt CTxtRefreshMBox::CreateChild(<span class="keyword">const</span> TDesC& aDescription, <span class="keyword">const</span> TDesC& aDetails, TUid aMessageType, 
+<a name="l00111"></a>00111                                                                   <span class="keyword">const</span> TTime& aDate, <span class="keyword">const</span> TInt aSize)
 <a name="l00112"></a>00112 <span class="comment">//</span>
 <a name="l00113"></a>00113 <span class="comment">// Create a child. return its Id.</span>
 <a name="l00114"></a>00114 <span class="comment">//</span>
@@ -165,7 +165,7 @@
 <a name="l00127"></a>00127     newChildEntry.SetInPreparation( EFalse );
 <a name="l00128"></a>00128     newChildEntry.SetVisible( ETrue ); <span class="comment">// create invisible entry first.</span>
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130     iEntry-&gt;CreateEntry(newChildEntry);
+<a name="l00130"></a>00130     iEntry->CreateEntry(newChildEntry);
 <a name="l00131"></a>00131         <span class="comment">// Notification</span>
 <a name="l00132"></a>00132 <span class="comment">//      CallNewMessagesL();</span>
 <a name="l00133"></a>00133         
@@ -177,11 +177,11 @@
 <a name="l00139"></a>00139 TMsvId CTxtRefreshMBox::InsertFileL()
 <a name="l00140"></a>00140 <span class="comment">// Insert file in entries list</span>
 <a name="l00141"></a>00141 <span class="comment">//</span>
-<a name="l00142"></a>00142 <span class="comment">// Return the new id if this is a folder entry, or KMsvNullIndexEntryId if it isn&#39;t</span>
+<a name="l00142"></a>00142 <span class="comment">// Return the new id if this is a folder entry, or KMsvNullIndexEntryId if it isn't</span>
 <a name="l00143"></a>00143 <span class="comment">//</span>
 <a name="l00144"></a>00144         {
-<a name="l00145"></a>00145         __ASSERT_DEBUG(iCurrentFile &lt; iFilelist-&gt;Count(), gPanic(ETxtsInvalidEntryIndex));
-<a name="l00146"></a>00146         User::LeaveIfError(iEntry-&gt;SetEntry( iCurrentRootEntryId ));
+<a name="l00145"></a>00145         __ASSERT_DEBUG(iCurrentFile < iFilelist->Count(), gPanic(ETxtsInvalidEntryIndex));
+<a name="l00146"></a>00146         User::LeaveIfError(iEntry->SetEntry( iCurrentRootEntryId ));
 <a name="l00147"></a>00147         TEntry fileEntry = (*iFilelist)[iCurrentFile];
 <a name="l00148"></a>00148         TTime date;
 <a name="l00149"></a>00149         TInt size;
@@ -221,7 +221,7 @@
 <a name="l00183"></a>00183 <span class="comment">//</span>
 <a name="l00184"></a>00184 <span class="comment">//  2. walk over the list: </span>
 <a name="l00185"></a>00185 <span class="comment">//  3.   if file name smaller than that in current pos in list:</span>
-<a name="l00186"></a>00186 <span class="comment">//  4.     if file doesn&#39;t exist in list, insert it in list, and move to next file.</span>
+<a name="l00186"></a>00186 <span class="comment">//  4.     if file doesn't exist in list, insert it in list, and move to next file.</span>
 <a name="l00187"></a>00187 <span class="comment">//  5.   else if file equals description</span>
 <a name="l00188"></a>00188 <span class="comment">//  6.     skip both</span>
 <a name="l00189"></a>00189 <span class="comment">//  7.   else delete TMsvEntry on the other side, and go to next in list.</span>
@@ -232,9 +232,9 @@
 <a name="l00194"></a>00194 <span class="comment">//</span>
 <a name="l00195"></a>00195         {
 <a name="l00196"></a>00196         <span class="comment">// If both file list and entry list are done, task is done.</span>
-<a name="l00197"></a>00197     TInt nrFiles = iFilelist-&gt;Count();
-<a name="l00198"></a>00198     TInt existingEntries = iExistingEntries-&gt;Count();
-<a name="l00199"></a>00199     <span class="keywordflow">if</span> (iCurrentFile  == nrFiles &amp;&amp; iCurrentEntry == existingEntries)
+<a name="l00197"></a>00197     TInt nrFiles = iFilelist->Count();
+<a name="l00198"></a>00198     TInt existingEntries = iExistingEntries->Count();
+<a name="l00199"></a>00199     <span class="keywordflow">if</span> (iCurrentFile  == nrFiles && iCurrentEntry == existingEntries)
 <a name="l00200"></a>00200         {
 <a name="l00201"></a>00201                 <span class="keywordflow">return</span> ETrue;
 <a name="l00202"></a>00202         }
@@ -261,13 +261,13 @@
 <a name="l00223"></a>00223         <span class="keywordflow">else</span>
 <a name="l00224"></a>00224                 {
 <a name="l00225"></a>00225                 <span class="comment">// Continue walking</span>
-<a name="l00226"></a>00226                 User::LeaveIfError(iEntry-&gt;SetEntry( (*iExistingEntries)[iCurrentEntry] ));
+<a name="l00226"></a>00226                 User::LeaveIfError(iEntry->SetEntry( (*iExistingEntries)[iCurrentEntry] ));
 <a name="l00227"></a>00227 
-<a name="l00228"></a>00228                 TInt compare = (*iFilelist)[iCurrentFile].iName.CompareF(iEntry-&gt;Entry().iDescription);
+<a name="l00228"></a>00228                 TInt compare = (*iFilelist)[iCurrentFile].iName.CompareF(iEntry->Entry().iDescription);
 <a name="l00229"></a>00229 
-<a name="l00230"></a>00230                 <span class="comment">// If current file name smaller than name of current entry, then the file doesn&#39;t yet</span>
+<a name="l00230"></a>00230                 <span class="comment">// If current file name smaller than name of current entry, then the file doesn't yet</span>
 <a name="l00231"></a>00231                 <span class="comment">// exist in the list, and needs to be added.</span>
-<a name="l00232"></a>00232                 <span class="keywordflow">if</span> ( compare &lt; 0 )
+<a name="l00232"></a>00232                 <span class="keywordflow">if</span> ( compare < 0 )
 <a name="l00233"></a>00233                         {
 <a name="l00234"></a>00234                         <span class="comment">// Insert file in entries list.</span>
 <a name="l00235"></a>00235                         <span class="comment">// if file is folder, do the folder recursively</span>
@@ -279,14 +279,14 @@
 <a name="l00241"></a>00241                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (compare == 0)
 <a name="l00242"></a>00242                         {
 <a name="l00243"></a>00243                         <span class="comment">// if file is folder, do the folder recursively</span>
-<a name="l00244"></a>00244                         <span class="keywordflow">if</span> (iEntry-&gt;Entry().iType == KUidMsvFolderEntry)
+<a name="l00244"></a>00244                         <span class="keywordflow">if</span> (iEntry->Entry().iType == KUidMsvFolderEntry)
 <a name="l00245"></a>00245                                 folderId = (*iExistingEntries)[iCurrentEntry];
 <a name="l00246"></a>00246                         <span class="comment">// Skip both file and entry</span>
 <a name="l00247"></a>00247                         iCurrentFile++;
 <a name="l00248"></a>00248                         iCurrentEntry++;
 <a name="l00249"></a>00249                         }
 <a name="l00250"></a>00250                 <span class="comment">// File name is greater than name of current entry, so the current entry </span>
-<a name="l00251"></a>00251                 <span class="comment">// shouldn&#39;t be there.</span>
+<a name="l00251"></a>00251                 <span class="comment">// shouldn't be there.</span>
 <a name="l00252"></a>00252                 <span class="keywordflow">else</span>
 <a name="l00253"></a>00253                         {
 <a name="l00254"></a>00254                         <span class="comment">// Delete entry.</span>
@@ -299,16 +299,16 @@
 <a name="l00261"></a>00261         <span class="comment">// If just passing folder, do the folder recursively.</span>
 <a name="l00262"></a>00262         <span class="keywordflow">if</span> (folderId != KMsvNullIndexEntryId)
 <a name="l00263"></a>00263                 {
-<a name="l00264"></a>00264                 User::LeaveIfError(iEntry-&gt;SetEntry(folderId));
+<a name="l00264"></a>00264                 User::LeaveIfError(iEntry->SetEntry(folderId));
 <a name="l00265"></a>00265                 
 <a name="l00266"></a>00266                 <span class="comment">// Set absolute name</span>
 <a name="l00267"></a>00267                 TFileName subDir = iRelativePath;
-<a name="l00268"></a>00268                 subDir.Append(iEntry-&gt;Entry().iDescription);
+<a name="l00268"></a>00268                 subDir.Append(iEntry->Entry().iDescription);
 <a name="l00269"></a>00269                 subDir.Append(KPathDelimiter);
 <a name="l00270"></a>00270 
 <a name="l00271"></a>00271                 <a class="code" href="class_c_txt_refresh_m_box.html">CTxtRefreshMBox</a> *folderSynchroniser = CTxtRefreshMBox::NewL(iFs, subDir, folderId, iEntry, iServiceEntryId, iTxtSettings);
 <a name="l00272"></a>00272                 CleanupStack::PushL(folderSynchroniser);
-<a name="l00273"></a>00273                 <span class="keywordflow">while</span> (!folderSynchroniser-&gt;DoStepL()) ;
+<a name="l00273"></a>00273                 <span class="keywordflow">while</span> (!folderSynchroniser->DoStepL()) ;
 <a name="l00274"></a>00274                 CleanupStack::PopAndDestroy(); <span class="comment">//folderSynchroniser</span>
 <a name="l00275"></a>00275                 }
 <a name="l00276"></a>00276 
@@ -316,9 +316,9 @@
 <a name="l00278"></a>00278         <span class="keywordflow">return</span> EFalse;
 <a name="l00279"></a>00279         }
 <a name="l00280"></a>00280 
-<a name="l00281"></a>00281 <span class="keywordtype">void</span> CTxtRefreshMBox::SetBodyFromFileL( <span class="keyword">const</span> TMsvId&amp; aId,  RFile&amp; afile  )
+<a name="l00281"></a>00281 <span class="keywordtype">void</span> CTxtRefreshMBox::SetBodyFromFileL( <span class="keyword">const</span> TMsvId& aId,  RFile& afile  )
 <a name="l00282"></a>00282     {
-<a name="l00283"></a>00283     iEntry-&gt;SetEntry( aId );
+<a name="l00283"></a>00283     iEntry->SetEntry( aId );
 <a name="l00284"></a>00284 
 <a name="l00285"></a>00285     CParaFormatLayer* paraLayer = CParaFormatLayer::NewL();
 <a name="l00286"></a>00286     CleanupStack::PushL(paraLayer);
@@ -327,7 +327,7 @@
 <a name="l00289"></a>00289     CRichText* body = CRichText::NewL(paraLayer, charLayer);
 <a name="l00290"></a>00290     CleanupStack::PushL(body);
 <a name="l00291"></a>00291  
-<a name="l00292"></a>00292     CMsvStore* writeStore = iEntry-&gt;EditStoreL();
+<a name="l00292"></a>00292     CMsvStore* writeStore = iEntry->EditStoreL();
 <a name="l00293"></a>00293     CleanupStack::PushL(writeStore);
 <a name="l00294"></a>00294 
 <a name="l00295"></a>00295     RFileReadStream myReadStream;
@@ -336,15 +336,15 @@
 <a name="l00298"></a>00298 
 <a name="l00299"></a>00299     myReadStream.PushL();
 <a name="l00300"></a>00300 
-<a name="l00301"></a>00301     TRAPD( err, body-&gt;InternalizePlainTextL( myReadStream ) );
+<a name="l00301"></a>00301     TRAPD( err, body->InternalizePlainTextL( myReadStream ) );
 <a name="l00302"></a>00302 
 <a name="l00303"></a>00303     myReadStream.Close();
 <a name="l00304"></a>00304 
 <a name="l00305"></a>00305     myReadStream.Pop();
 <a name="l00306"></a>00306 
 <a name="l00307"></a>00307     <span class="comment">// this method performs a commit for us</span>
-<a name="l00308"></a>00308     writeStore-&gt;StoreBodyTextL(*body);
-<a name="l00309"></a>00309     writeStore-&gt;CommitL();
+<a name="l00308"></a>00308     writeStore->StoreBodyTextL(*body);
+<a name="l00309"></a>00309     writeStore->CommitL();
 <a name="l00310"></a>00310 
 <a name="l00311"></a>00311     CleanupStack::PopAndDestroy( 4 ); 
 <a name="l00312"></a>00312     }   
@@ -352,10 +352,10 @@
 <a name="l00314"></a>00314 
 <a name="l00315"></a>00315 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

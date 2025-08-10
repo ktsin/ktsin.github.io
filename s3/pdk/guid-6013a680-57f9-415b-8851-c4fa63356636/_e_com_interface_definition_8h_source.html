@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/EComCalculator/interface/EComInterfaceDefinition.h Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -51,9 +51,9 @@
 <a name="l00011"></a>00011 <span class="preprocessor">#ifndef __CCALCULATE_INTERFACEDEFINITION__</span>
 <a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __CCALCULATE_INTERFACEDEFINITION__</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;e32base.h&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;ECom.h&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;badesca.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include <e32base.h></span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include <ECom.h></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include <badesca.h></span>
 <a name="l00017"></a>00017 
 <a name="l00028"></a>00028 <span class="preprocessor">#ifdef __SERIES60_3X__</span>
 <a name="l00029"></a>00029 <span class="preprocessor"></span>    <span class="keyword">const</span> TUid KCalculateInterfaceDefinitionUid = {0xE0009DC1};
@@ -63,10 +63,10 @@
 <a name="l00033"></a>00033 <span class="preprocessor"></span>
 <a name="l00042"></a><a class="code" href="class_c_calculation_interface_definition.html">00042</a> <span class="keyword">class </span><a class="code" href="class_c_calculation_interface_definition.html">CCalculationInterfaceDefinition</a> : <span class="keyword">public</span> CBase
 <a name="l00043"></a>00043     {
-<a name="l00044"></a>00044 <span class="keyword">public</span>: <span class="comment">// Wrapper functions to handle ECOM &quot;connectivity&quot;.</span>
+<a name="l00044"></a>00044 <span class="keyword">public</span>: <span class="comment">// Wrapper functions to handle ECOM "connectivity".</span>
 <a name="l00045"></a>00045         <span class="comment">// These are implemented in EComInterfaceDefinition.inl.</span>
 <a name="l00046"></a>00046         <span class="comment">// These functions are used only by the client.</span>
-<a name="l00068"></a>00068 <span class="comment"></span>    <span class="keyword">static</span> <a class="code" href="class_c_calculation_interface_definition.html">CCalculationInterfaceDefinition</a>* <a class="code" href="class_c_calculation_interface_definition.html#a0c188739edb316bd3a93843f6d997593">NewL</a>(<span class="keyword">const</span> TDesC8&amp; aOperationName);
+<a name="l00068"></a>00068 <span class="comment"></span>    <span class="keyword">static</span> <a class="code" href="class_c_calculation_interface_definition.html">CCalculationInterfaceDefinition</a>* <a class="code" href="class_c_calculation_interface_definition.html#a0c188739edb316bd3a93843f6d997593">NewL</a>(<span class="keyword">const</span> TDesC8& aOperationName);
 <a name="l00069"></a>00069 
 <a name="l00077"></a>00077     <span class="keyword">virtual</span> <a class="code" href="class_c_calculation_interface_definition.html#a7c76e2d8ad48a27b54c8ed32f3e86791">~CCalculationInterfaceDefinition</a>();
 <a name="l00078"></a>00078 
@@ -80,14 +80,14 @@
 <a name="l00105"></a>00105     TUid iDtor_ID_Key;
 <a name="l00106"></a>00106     };
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#include &quot;EcomInterfaceDefinition.inl&quot;</span> <span class="comment">// Our own base implementations for ECOM</span>
+<a name="l00108"></a>00108 <span class="preprocessor">#include "EcomInterfaceDefinition.inl"</span> <span class="comment">// Our own base implementations for ECOM</span>
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 <span class="preprocessor">#endif // __CCALCULATE_INTERFACEDEFINITION__</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

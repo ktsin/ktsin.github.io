@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/MessageQueueExample/src/CCollector.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/MessageQueueExample/src/CCollector.cpp</h1><a href="_c_collector_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -57,12 +57,12 @@
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;CCollector.h&quot;</span>
-<a name="l00025"></a>00025 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTitle,<span class="stringliteral">&quot;InputMessage&quot;</span>);
-<a name="l00026"></a>00026 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KWelcome,<span class="stringliteral">&quot; Welcome to Message Queue Example application for the global queues\n&quot;</span>);
-<a name="l00027"></a>00027 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KEnterWords, <span class="stringliteral">&quot;\n Enter some words and press enter key to send to inverter or Press Esc to exit.\n&quot;</span>);
-<a name="l00028"></a>00028 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KGlobalInverterInQ, <span class="stringliteral">&quot;InverterInQ&quot;</span>);
-<a name="l00029"></a>00029 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KGlobalInverterOutQ, <span class="stringliteral">&quot;InverterOutQ&quot;</span>);
+<a name="l00024"></a>00024 <span class="preprocessor">#include "CCollector.h"</span>
+<a name="l00025"></a>00025 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTitle,<span class="stringliteral">"InputMessage"</span>);
+<a name="l00026"></a>00026 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KWelcome,<span class="stringliteral">" Welcome to Message Queue Example application for the global queues\n"</span>);
+<a name="l00027"></a>00027 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KEnterWords, <span class="stringliteral">"\n Enter some words and press enter key to send to inverter or Press Esc to exit.\n"</span>);
+<a name="l00028"></a>00028 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KGlobalInverterInQ, <span class="stringliteral">"InverterInQ"</span>);
+<a name="l00029"></a>00029 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KGlobalInverterOutQ, <span class="stringliteral">"InverterOutQ"</span>);
 <a name="l00030"></a>00030 <span class="keyword">const</span> TInt KNumberOfMsgs = 10;
 <a name="l00031"></a>00031 
 <a name="l00035"></a><a class="code" href="class_c_collector.html#a62eb0d5618f19c12f0e2fde477ce6e33">00035</a> <a class="code" href="class_c_collector.html#a62eb0d5618f19c12f0e2fde477ce6e33">CCollector::CCollector</a>(TInt aPriority):CActive( aPriority )
@@ -82,8 +82,8 @@
 <a name="l00054"></a><a class="code" href="class_c_collector.html#a7324ad866c1c03594465d5549aec5546">00054</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#a7324ad866c1c03594465d5549aec5546">CCollector::ConstructL</a>()
 <a name="l00055"></a>00055         {
 <a name="l00056"></a>00056         iConsole = Console::NewL(KTitle, TSize(KConsFullScreen, KConsFullScreen));
-<a name="l00057"></a>00057         iConsole-&gt;Printf(KWelcome);
-<a name="l00058"></a>00058         iConsole-&gt;Printf(KEnterWords);
+<a name="l00057"></a>00057         iConsole->Printf(KWelcome);
+<a name="l00058"></a>00058         iConsole->Printf(KEnterWords);
 <a name="l00059"></a>00059         
 <a name="l00060"></a>00060         <span class="comment">//Create global message queue , which is used as input to the inverter and output to the collector.</span>
 <a name="l00061"></a>00061         User::LeaveIfError(iInverterInQ.CreateGlobal(KGlobalInverterInQ, KNumberOfMsgs, EOwnerProcess));
@@ -92,7 +92,7 @@
 <a name="l00064"></a>00064         User::LeaveIfError(iInverterOutQ.CreateGlobal(KGlobalInverterOutQ, KNumberOfMsgs, EOwnerProcess));
 <a name="l00065"></a>00065         
 <a name="l00066"></a>00066         <span class="comment">//Start Inverter process.</span>
-<a name="l00067"></a>00067         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KProcessName, <span class="stringliteral">&quot;inverter.exe&quot;</span>);
+<a name="l00067"></a>00067         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KProcessName, <span class="stringliteral">"inverter.exe"</span>);
 <a name="l00068"></a>00068         User::LeaveIfError(process.Create(KProcessName, KNullDesC));
 <a name="l00069"></a>00069         process.Resume();
 <a name="l00070"></a>00070         
@@ -103,55 +103,55 @@
 <a name="l00075"></a>00075         {
 <a name="l00076"></a>00076         <a class="code" href="class_c_collector.html">CCollector</a>* <span class="keyword">self</span>=<span class="keyword">new</span>(ELeave)<a class="code" href="class_c_collector.html">CCollector</a>(aPriority);
 <a name="l00077"></a>00077         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00078"></a>00078         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00078"></a>00078         <span class="keyword">self</span>->ConstructL();
 <a name="l00079"></a>00079         CleanupStack::Pop(<span class="keyword">self</span>);
 <a name="l00080"></a>00080         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00081"></a>00081         }
 <a name="l00082"></a>00082 
 <a name="l00086"></a><a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">00086</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">CCollector::RequestFunction</a>()
 <a name="l00087"></a>00087         {
-<a name="l00088"></a>00088         iConsole-&gt;Read(iStatus);
+<a name="l00088"></a>00088         iConsole->Read(iStatus);
 <a name="l00089"></a>00089         SetActive();
 <a name="l00090"></a>00090         }
 <a name="l00091"></a>00091 
 <a name="l00095"></a><a class="code" href="class_c_collector.html#afeea3cfdbcd23f07b9c02ac93e87cf81">00095</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#afeea3cfdbcd23f07b9c02ac93e87cf81">CCollector::RunL</a>()
 <a name="l00096"></a>00096         {
 <a name="l00097"></a>00097         <span class="comment">//Store the words input by the user in a buffer.</span>
-<a name="l00098"></a>00098         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KChar,<span class="stringliteral">&quot;%c&quot;</span>);
-<a name="l00099"></a>00099         iConsole-&gt;Printf(KChar,(TUint8)(iConsole-&gt;KeyCode()));
-<a name="l00100"></a>00100         iBuf.Append(iConsole-&gt;KeyCode());       
-<a name="l00101"></a>00101         <a class="code" href="class_c_collector.html#ad2b71e3272b298ba8ca40dc4049cca07">ProcessKeyPress</a>(TChar(iConsole-&gt;KeyCode()));
+<a name="l00098"></a>00098         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KChar,<span class="stringliteral">"%c"</span>);
+<a name="l00099"></a>00099         iConsole->Printf(KChar,(TUint8)(iConsole->KeyCode()));
+<a name="l00100"></a>00100         iBuf.Append(iConsole->KeyCode());       
+<a name="l00101"></a>00101         <a class="code" href="class_c_collector.html#ad2b71e3272b298ba8ca40dc4049cca07">ProcessKeyPress</a>(TChar(iConsole->KeyCode()));
 <a name="l00102"></a>00102         }
 <a name="l00103"></a>00103 
 <a name="l00108"></a><a class="code" href="class_c_collector.html#ad2b71e3272b298ba8ca40dc4049cca07">00108</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#ad2b71e3272b298ba8ca40dc4049cca07">CCollector::ProcessKeyPress</a>(TChar aChar)
 <a name="l00109"></a>00109     {    
 <a name="l00110"></a>00110     <span class="keywordflow">if</span> (aChar == EKeyEscape)
 <a name="l00111"></a>00111         {
-<a name="l00112"></a>00112         this-&gt;<a class="code" href="class_c_collector.html#ad038923135df997b7c8d121c63a4cf29">Stop</a>();
+<a name="l00112"></a>00112         this-><a class="code" href="class_c_collector.html#ad038923135df997b7c8d121c63a4cf29">Stop</a>();
 <a name="l00113"></a>00113         }
 <a name="l00114"></a>00114     <span class="keywordflow">else</span> <span class="keywordflow">if</span>(aChar == EKeyEnter)
 <a name="l00115"></a>00115         {
-<a name="l00116"></a>00116         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KNextLine , <span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00117"></a>00117         iConsole-&gt;Printf(KNextLine);
-<a name="l00118"></a>00118         this-&gt;<a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">SendMsgInQ</a>(iBuf); 
+<a name="l00116"></a>00116         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KNextLine , <span class="stringliteral">"\n"</span>);
+<a name="l00117"></a>00117         iConsole->Printf(KNextLine);
+<a name="l00118"></a>00118         this-><a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">SendMsgInQ</a>(iBuf); 
 <a name="l00119"></a>00119         iBuf.Zero();
-<a name="l00120"></a>00120         this-&gt;<a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();        
+<a name="l00120"></a>00120         this-><a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();        
 <a name="l00121"></a>00121         }
 <a name="l00122"></a>00122     <span class="keywordflow">else</span>
 <a name="l00123"></a>00123         {
-<a name="l00124"></a>00124         this-&gt;<a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();  
+<a name="l00124"></a>00124         this-><a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();  
 <a name="l00125"></a>00125         }       
 <a name="l00126"></a>00126     }
 <a name="l00127"></a>00127 
 <a name="l00131"></a><a class="code" href="class_c_collector.html#ad038923135df997b7c8d121c63a4cf29">00131</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#ad038923135df997b7c8d121c63a4cf29">CCollector::Stop</a>()
 <a name="l00132"></a>00132         {
-<a name="l00133"></a>00133     TBuf&lt;1&gt; escape;
+<a name="l00133"></a>00133     TBuf<1> escape;
 <a name="l00134"></a>00134     escape.Append(EKeyEscape); 
 <a name="l00135"></a>00135     <span class="comment">//Sends stop message to the inverter.</span>
-<a name="l00136"></a>00136     this-&gt;<a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">SendMsgInQ</a>(escape); 
+<a name="l00136"></a>00136     this-><a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">SendMsgInQ</a>(escape); 
 <a name="l00137"></a>00137     
 <a name="l00138"></a>00138     <span class="comment">//Cancel any outstanding request.</span>
-<a name="l00139"></a>00139     iRcvInverterInQ-&gt;Cancel();
+<a name="l00139"></a>00139     iRcvInverterInQ->Cancel();
 <a name="l00140"></a>00140     <span class="keyword">delete</span> iRcvInverterInQ;
 <a name="l00141"></a>00141     <span class="keyword">delete</span> iConsole;
 <a name="l00142"></a>00142     <a class="code" href="class_c_collector.html#ad038923135df997b7c8d121c63a4cf29">CActiveScheduler::Stop</a>();   
@@ -160,10 +160,10 @@
 <a name="l00145"></a>00145 
 <a name="l00150"></a><a class="code" href="class_c_collector.html#ac93385f6f18c9e3a6d0fb92a989acb67">00150</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#ac93385f6f18c9e3a6d0fb92a989acb67">CCollector::StartRecieving</a>()
 <a name="l00151"></a>00151         {
-<a name="l00152"></a>00152         iRcvInverterInQ-&gt;<a class="code" href="class_c_msg_q_active.html#a5753cfd0f59382c0811757825e0462f5">StartRecieving</a>();
+<a name="l00152"></a>00152         iRcvInverterInQ-><a class="code" href="class_c_msg_q_active.html#a5753cfd0f59382c0811757825e0462f5">StartRecieving</a>();
 <a name="l00153"></a>00153         }
 <a name="l00154"></a>00154 
-<a name="l00158"></a><a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">CCollector::SendMsgInQ</a>(TBuf&lt;100&gt; buf)
+<a name="l00158"></a><a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_c_collector.html#ad22077e2d9c23fb39e4073ccacd1ee89">CCollector::SendMsgInQ</a>(TBuf<100> buf)
 <a name="l00159"></a>00159         {
 <a name="l00160"></a>00160         TInt ret = iInverterInQ.OpenGlobal(KGlobalInverterInQ); 
 <a name="l00161"></a>00161         <span class="keywordflow">if</span> (ret == KErrNone)
@@ -183,10 +183,10 @@
 <a name="l00175"></a>00175         CleanupStack::PushL(iCollect);
 <a name="l00176"></a>00176         
 <a name="l00177"></a>00177          <span class="comment">//Start getting the user input.</span>
-<a name="l00178"></a>00178         iCollect-&gt;<a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();
+<a name="l00178"></a>00178         iCollect-><a class="code" href="class_c_collector.html#a3ed2cf3df9b76aa36ff1052f9144f94a">RequestFunction</a>();
 <a name="l00179"></a>00179         
 <a name="l00180"></a>00180         <span class="comment">//Recieve data from the inverter in another console.</span>
-<a name="l00181"></a>00181         iCollect-&gt;<a class="code" href="class_c_collector.html#ac93385f6f18c9e3a6d0fb92a989acb67">StartRecieving</a>();
+<a name="l00181"></a>00181         iCollect-><a class="code" href="class_c_collector.html#ac93385f6f18c9e3a6d0fb92a989acb67">StartRecieving</a>();
 <a name="l00182"></a>00182         CActiveScheduler::Start();
 <a name="l00183"></a>00183         
 <a name="l00184"></a>00184         CleanupStack::PopAndDestroy(iCollect);
@@ -204,7 +204,7 @@
 <a name="l00196"></a>00196         TRAPD(mainError, DoStartL());
 <a name="l00197"></a>00197         <span class="keywordflow">if</span>(mainError != KErrNone)
 <a name="l00198"></a>00198                 {
-<a name="l00199"></a>00199                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KUserPanic,<span class="stringliteral">&quot;Failed to complete&quot;</span>);  
+<a name="l00199"></a>00199                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KUserPanic,<span class="stringliteral">"Failed to complete"</span>);  
 <a name="l00200"></a>00200                 User::Panic(KUserPanic, mainError);
 <a name="l00201"></a>00201                 }
 <a name="l00202"></a>00202                 <span class="keyword">delete</span> cleanup;
@@ -213,10 +213,10 @@
 <a name="l00205"></a>00205         }
 <a name="l00206"></a>00206 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

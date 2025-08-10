@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/IPC/AdvancedClientServerExample/driver/driver1_pdd.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/IPC/AdvancedClientServerExample/driver/driver1_pdd.cpp</h1><a href="driver1__pdd_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -56,9 +56,9 @@
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;kern_priv.h&gt;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="driver1_8h.html">driver1.h</a>&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="driver1__dev_8h.html">driver1_dev.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <kern_priv.h></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include "<a class="code" href="driver1_8h.html">driver1.h</a>"</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include "<a class="code" href="driver1__dev_8h.html">driver1_dev.h</a>"</span>
 <a name="l00026"></a>00026 
 <a name="l00030"></a>00030 <span class="keyword">class </span>DDevice1PddFactory : <span class="keyword">public</span> DPhysicalDevice
 <a name="l00031"></a>00031         {
@@ -67,9 +67,9 @@
 <a name="l00034"></a>00034         
 <a name="l00035"></a>00035         <span class="comment">// Inherited from DPhysicalDevice</span>
 <a name="l00036"></a>00036         <span class="keyword">virtual</span> TInt Install();
-<a name="l00037"></a>00037         <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetCaps(TDes8&amp; aDes) <span class="keyword">const</span>;
-<a name="l00038"></a>00038         <span class="keyword">virtual</span> TInt Create(DBase*&amp; aChannel, TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion&amp; aVer);
-<a name="l00039"></a>00039         <span class="keyword">virtual</span> TInt Validate(TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion&amp; aVer);
+<a name="l00037"></a>00037         <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetCaps(TDes8& aDes) <span class="keyword">const</span>;
+<a name="l00038"></a>00038         <span class="keyword">virtual</span> TInt Create(DBase*& aChannel, TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion& aVer);
+<a name="l00039"></a>00039         <span class="keyword">virtual</span> TInt Validate(TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion& aVer);
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
 <a name="l00041"></a>00041         TInt iHardwareInUse;
 <a name="l00042"></a>00042 <span class="keyword">private</span>:
@@ -81,8 +81,8 @@
 <a name="l00051"></a>00051                 };
 <a name="l00052"></a>00052         };
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="comment">// Name for PDD, must match LDD name with a &#39;.&#39; and distinguishing name appended</span>
-<a name="l00055"></a>00055 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDriver1PddName,<span class="stringliteral">&quot;DRIVER1.template&quot;</span>);
+<a name="l00054"></a>00054 <span class="comment">// Name for PDD, must match LDD name with a '.' and distinguishing name appended</span>
+<a name="l00055"></a>00055 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDriver1PddName,<span class="stringliteral">"DRIVER1.template"</span>);
 <a name="l00056"></a>00056 
 <a name="l00060"></a>00060 <span class="keyword">class </span>DDriver1Device : <span class="keyword">public</span> <a class="code" href="class_d_driver1.html">DDriver1</a>
 <a name="l00061"></a>00061         {
@@ -95,9 +95,9 @@
 <a name="l00068"></a>00068         <span class="keyword">virtual</span> TInt BufferSize() <span class="keyword">const</span>;
 <a name="l00069"></a>00069         <span class="keyword">virtual</span> TInt Speed() <span class="keyword">const</span>;
 <a name="l00070"></a>00070         <span class="keyword">virtual</span> TInt SetSpeed(TInt aSpeed);
-<a name="l00071"></a>00071         <span class="keyword">virtual</span> TInt SendData(<span class="keyword">const</span> TDesC8&amp; aData);
+<a name="l00071"></a>00071         <span class="keyword">virtual</span> TInt SendData(<span class="keyword">const</span> TDesC8& aData);
 <a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">void</span> SendDataCancel();
-<a name="l00073"></a>00073         <span class="keyword">virtual</span> TInt ReceiveData(TDes8&amp; aBuffer);
+<a name="l00073"></a>00073         <span class="keyword">virtual</span> TInt ReceiveData(TDes8& aBuffer);
 <a name="l00074"></a>00074         <span class="keyword">virtual</span> <span class="keywordtype">void</span> ReceiveDataCancel();
 <a name="l00075"></a>00075 <span class="keyword">private</span>:
 <a name="l00076"></a>00076         <span class="keyword">static</span> <span class="keywordtype">void</span> SendDataTimerCallback(TAny* aPtr);
@@ -109,7 +109,7 @@
 <a name="l00082"></a>00082         TInt iSpeed;
 <a name="l00083"></a>00083         NTimer iSendDataTimer;
 <a name="l00084"></a>00084         NTimer iReceiveDataTimer;
-<a name="l00085"></a>00085         TBuf8&lt;256&gt; iBuffer;
+<a name="l00085"></a>00085         TBuf8<256> iBuffer;
 <a name="l00086"></a>00086         TDes8* iReceiveBuffer;
 <a name="l00087"></a>00087         };
 <a name="l00088"></a>00088 <span class="comment">//</span>
@@ -129,10 +129,10 @@
 <a name="l00106"></a>00106 
 <a name="l00112"></a>00112 TInt DDevice1PddFactory::Install()
 <a name="l00113"></a>00113         {
-<a name="l00114"></a>00114         <span class="keywordflow">return</span> SetName(&amp;KDriver1PddName);
+<a name="l00114"></a>00114         <span class="keywordflow">return</span> SetName(&KDriver1PddName);
 <a name="l00115"></a>00115         }
 <a name="l00116"></a>00116 
-<a name="l00122"></a>00122 <span class="keywordtype">void</span> DDevice1PddFactory::GetCaps(TDes8&amp; aDes)<span class="keyword"> const</span>
+<a name="l00122"></a>00122 <span class="keywordtype">void</span> DDevice1PddFactory::GetCaps(TDes8& aDes)<span class="keyword"> const</span>
 <a name="l00123"></a>00123 <span class="keyword">        </span>{
 <a name="l00124"></a>00124         <span class="comment">// Create a capabilities object</span>
 <a name="l00125"></a>00125         <a class="code" href="class_d_driver1_1_1_t_caps.html">DDriver1::TCaps</a> caps;
@@ -142,14 +142,14 @@
 <a name="l00129"></a>00129         aDes.FillZ(maxLen);
 <a name="l00130"></a>00130         <span class="comment">// Copy capabilities</span>
 <a name="l00131"></a>00131         TInt size=<span class="keyword">sizeof</span>(caps);
-<a name="l00132"></a>00132         <span class="keywordflow">if</span>(size&gt;maxLen)
+<a name="l00132"></a>00132         <span class="keywordflow">if</span>(size>maxLen)
 <a name="l00133"></a>00133                 size=maxLen;
-<a name="l00134"></a>00134         aDes.Copy((TUint8*)&amp;caps,size);
+<a name="l00134"></a>00134         aDes.Copy((TUint8*)&caps,size);
 <a name="l00135"></a>00135         }
 <a name="l00136"></a>00136 
-<a name="l00148"></a>00148 TInt DDevice1PddFactory::Create(DBase*&amp; aChannel, TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion&amp; aVer)
+<a name="l00148"></a>00148 TInt DDevice1PddFactory::Create(DBase*& aChannel, TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion& aVer)
 <a name="l00149"></a>00149         {
-<a name="l00150"></a>00150         <span class="comment">// Ignore the parameters we aren&#39;t interested in...</span>
+<a name="l00150"></a>00150         <span class="comment">// Ignore the parameters we aren't interested in...</span>
 <a name="l00151"></a>00151         (void)aUnit;
 <a name="l00152"></a>00152         (void)aInfo;
 <a name="l00153"></a>00153         (void)aVer;
@@ -159,16 +159,16 @@
 <a name="l00157"></a>00157         aChannel=device;
 <a name="l00158"></a>00158         <span class="keywordflow">if</span> (!device)
 <a name="l00159"></a>00159                 <span class="keywordflow">return</span> KErrNoMemory;
-<a name="l00160"></a>00160         <span class="keywordflow">return</span> device-&gt;DoCreate();
+<a name="l00160"></a>00160         <span class="keywordflow">return</span> device->DoCreate();
 <a name="l00161"></a>00161         }
 <a name="l00162"></a>00162 
-<a name="l00173"></a>00173 TInt DDevice1PddFactory::Validate(TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion&amp; aVer)
+<a name="l00173"></a>00173 TInt DDevice1PddFactory::Validate(TInt aUnit, <span class="keyword">const</span> TDesC8* aInfo, <span class="keyword">const</span> TVersion& aVer)
 <a name="l00174"></a>00174         {
 <a name="l00175"></a>00175         <span class="comment">// Check version numbers</span>
 <a name="l00176"></a>00176         <span class="keywordflow">if</span> ((!Kern::QueryVersionSupported(iVersion,aVer)) || (!Kern::QueryVersionSupported(aVer,TVersion(EMinimumLddMajorVersion,EMinimumLddMinorVersion,EMinimumLddBuild))))
 <a name="l00177"></a>00177                 <span class="keywordflow">return</span> KErrNotSupported;
 <a name="l00178"></a>00178 
-<a name="l00179"></a>00179         <span class="comment">// We don&#39;t support units</span>
+<a name="l00179"></a>00179         <span class="comment">// We don't support units</span>
 <a name="l00180"></a>00180     <span class="keywordflow">if</span> (aUnit != -1)
 <a name="l00181"></a>00181         <span class="keywordflow">return</span> KErrNotSupported;
 <a name="l00182"></a>00182 
@@ -192,7 +192,7 @@
 <a name="l00206"></a>00206 DDriver1Device::~DDriver1Device()
 <a name="l00207"></a>00207         {
 <a name="l00208"></a>00208         <span class="comment">// Driver no longer using hardware resources</span>
-<a name="l00209"></a>00209         NKern::LockedDec(iFactory-&gt;iHardwareInUse);
+<a name="l00209"></a>00209         NKern::LockedDec(iFactory->iHardwareInUse);
 <a name="l00210"></a>00210         }
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212 TInt DDriver1Device::DoCreate()
@@ -202,9 +202,9 @@
 <a name="l00216"></a>00216         <span class="comment">// the destructor can safely decrement iHardwareInUse.</span>
 <a name="l00217"></a>00217         <span class="comment">//</span>
 <a name="l00218"></a>00218         <span class="comment">// This method of ensuring hardware is only in use by one driver at a time</span>
-<a name="l00219"></a>00219         <span class="comment">// wouldn&#39;t be needed if the driver claimed real hardware resources which</span>
+<a name="l00219"></a>00219         <span class="comment">// wouldn't be needed if the driver claimed real hardware resources which</span>
 <a name="l00220"></a>00220         <span class="comment">// could only be used once. E.g. binding to an interrupt.</span>
-<a name="l00221"></a>00221         <span class="keywordflow">if</span>(NKern::LockedInc(iFactory-&gt;iHardwareInUse))
+<a name="l00221"></a>00221         <span class="keywordflow">if</span>(NKern::LockedInc(iFactory->iHardwareInUse))
 <a name="l00222"></a>00222                 <span class="keywordflow">return</span> KErrInUse;
 <a name="l00223"></a>00223 
 <a name="l00224"></a>00224         <span class="comment">// Other setup goes here</span>
@@ -222,17 +222,17 @@
 <a name="l00242"></a>00242 
 <a name="l00247"></a>00247 TInt DDriver1Device::SetSpeed(TInt aSpeed)
 <a name="l00248"></a>00248         {
-<a name="l00249"></a>00249         <span class="keywordflow">if</span>(aSpeed&lt;=0)
+<a name="l00249"></a>00249         <span class="keywordflow">if</span>(aSpeed<=0)
 <a name="l00250"></a>00250                 <span class="keywordflow">return</span> KErrArgument;
 <a name="l00251"></a>00251         iSpeed = aSpeed;
 <a name="l00252"></a>00252         <span class="keywordflow">return</span> KErrNone;
 <a name="l00253"></a>00253         }
 <a name="l00254"></a>00254 
-<a name="l00255"></a>00255 <span class="comment">// Methods for processing &#39;SendData&#39;</span>
+<a name="l00255"></a>00255 <span class="comment">// Methods for processing 'SendData'</span>
 <a name="l00256"></a>00256 <span class="comment">//</span>
-<a name="l00260"></a>00260 <span class="comment"></span>TInt DDriver1Device::SendData(<span class="keyword">const</span> TDesC8&amp; aData)
+<a name="l00260"></a>00260 <span class="comment"></span>TInt DDriver1Device::SendData(<span class="keyword">const</span> TDesC8& aData)
 <a name="l00261"></a>00261         {
-<a name="l00262"></a>00262         <span class="comment">// Save the last part of the data to &#39;send&#39;, we will pretend to &#39;receive&#39; this later</span>
+<a name="l00262"></a>00262         <span class="comment">// Save the last part of the data to 'send', we will pretend to 'receive' this later</span>
 <a name="l00263"></a>00263         iBuffer=aData.Right(iBuffer.MaxSize());
 <a name="l00264"></a>00264         <span class="comment">// Pretend to send the data by waiting for iSpeed micro-seconds per byte...</span>
 <a name="l00265"></a>00265         iSendDataTimer.OneShot(aData.Size()*iSpeed/NKern::TickPeriod());
@@ -248,22 +248,22 @@
 <a name="l00282"></a>00282 <span class="keywordtype">void</span> DDriver1Device::SendDataTimerCallback(TAny* aPtr)
 <a name="l00283"></a>00283         {
 <a name="l00284"></a>00284         <span class="comment">// Just forward callback to non-static callback function</span>
-<a name="l00285"></a>00285         ((DDriver1Device*)aPtr)-&gt;SendDataCallback();
+<a name="l00285"></a>00285         ((DDriver1Device*)aPtr)->SendDataCallback();
 <a name="l00286"></a>00286         }
 <a name="l00287"></a>00287 
 <a name="l00291"></a>00291 <span class="keywordtype">void</span> DDriver1Device::SendDataCallback()
 <a name="l00292"></a>00292         {
-<a name="l00293"></a>00293         <span class="comment">// Tell LDD we&#39;ve finished</span>
-<a name="l00294"></a>00294         iLdd-&gt;SendDataComplete(KErrNone);
+<a name="l00293"></a>00293         <span class="comment">// Tell LDD we've finished</span>
+<a name="l00294"></a>00294         iLdd->SendDataComplete(KErrNone);
 <a name="l00295"></a>00295         }
 <a name="l00296"></a>00296         
 <a name="l00297"></a>00297 <span class="comment">//</span>
-<a name="l00298"></a>00298 <span class="comment">// Methods for processing &#39;ReceiveData&#39;</span>
+<a name="l00298"></a>00298 <span class="comment">// Methods for processing 'ReceiveData'</span>
 <a name="l00299"></a>00299 <span class="comment">//</span>
-<a name="l00303"></a>00303 <span class="comment"></span>TInt DDriver1Device::ReceiveData(TDes8&amp; aBuffer)
+<a name="l00303"></a>00303 <span class="comment"></span>TInt DDriver1Device::ReceiveData(TDes8& aBuffer)
 <a name="l00304"></a>00304         {
-<a name="l00305"></a>00305         <span class="comment">// Save a pointer to the buffer we need to put the &#39;received&#39; data in</span>
-<a name="l00306"></a>00306         iReceiveBuffer=&amp;aBuffer;
+<a name="l00305"></a>00305         <span class="comment">// Save a pointer to the buffer we need to put the 'received' data in</span>
+<a name="l00306"></a>00306         iReceiveBuffer=&aBuffer;
 <a name="l00307"></a>00307         <span class="comment">// Pretend to receive the data by waiting for iSpeed micro-seconds per byte...</span>
 <a name="l00308"></a>00308         iReceiveDataTimer.OneShot(iBuffer.Size()*iSpeed/NKern::TickPeriod());
 <a name="l00309"></a>00309         <span class="keywordflow">return</span> KErrNone;
@@ -276,20 +276,20 @@
 <a name="l00323"></a>00323 <span class="keywordtype">void</span> DDriver1Device::ReceiveDataTimerCallback(TAny* aPtr)
 <a name="l00324"></a>00324         {
 <a name="l00325"></a>00325         <span class="comment">// Just forward callback to non-static callback function</span>
-<a name="l00326"></a>00326         ((DDriver1Device*)aPtr)-&gt;ReceiveDataCallback();
+<a name="l00326"></a>00326         ((DDriver1Device*)aPtr)->ReceiveDataCallback();
 <a name="l00327"></a>00327         }
 <a name="l00331"></a>00331 <span class="keywordtype">void</span> DDriver1Device::ReceiveDataCallback()
 <a name="l00332"></a>00332         {
 <a name="l00333"></a>00333         <span class="comment">// Pretend the data we have received is that saved in iBuffer when we last did a send</span>
 <a name="l00334"></a>00334         *iReceiveBuffer=iBuffer;
-<a name="l00335"></a>00335         <span class="comment">// Tell LDD we&#39;ve finished</span>
-<a name="l00336"></a>00336         iLdd-&gt;ReceiveDataComplete(KErrNone);
+<a name="l00335"></a>00335         <span class="comment">// Tell LDD we've finished</span>
+<a name="l00336"></a>00336         iLdd->ReceiveDataComplete(KErrNone);
 <a name="l00337"></a>00337         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

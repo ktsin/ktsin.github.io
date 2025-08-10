@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Graphics/GraphicsShell/GraphicsShell.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Graphics/GraphicsShell/GraphicsShell.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -53,19 +53,19 @@
 <a name="l00013"></a>00013 <span class="comment">// Description:</span>
 <a name="l00014"></a>00014 <span class="comment">//</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;e32keys.h&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include <e32keys.h></span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;coemain.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include <coemain.h></span>
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;eikenv.h&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;eikdef.h&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;eikon.hrh&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;eiklabel.h&gt;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;eikstart.h&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include <eikenv.h></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include <eikdef.h></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <eikon.hrh></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <eiklabel.h></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include <eikstart.h></span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;graphicsshell.rsg&gt;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;GraphicsShell.hrh&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;GraphicsShell.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include <graphicsshell.rsg></span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include "GraphicsShell.hrh"</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "GraphicsShell.h"</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="comment">//</span>
@@ -86,7 +86,7 @@
 <a name="l00046"></a>00046 <span class="comment">// class CExampleShellContainer</span>
 <a name="l00047"></a>00047 <span class="comment">//</span>
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keywordtype">void</span> CExampleShellContainer::ConstructL(<span class="keyword">const</span> TRect&amp; aRect, <a class="code" href="class_t_example_shell_model.html">TExampleShellModel</a>* aModel)
+<a name="l00049"></a>00049 <span class="keywordtype">void</span> CExampleShellContainer::ConstructL(<span class="keyword">const</span> TRect& aRect, <a class="code" href="class_t_example_shell_model.html">TExampleShellModel</a>* aModel)
 <a name="l00050"></a>00050     {
 <a name="l00051"></a>00051         iModel=aModel;
 <a name="l00052"></a>00052     CreateWindowL();
@@ -127,12 +127,12 @@
 <a name="l00087"></a>00087         iLabel=<span class="keyword">new</span> (ELeave) CEikLabel;
 <a name="l00088"></a>00088         TRect rect=Rect();
 <a name="l00089"></a>00089         rect.iTl.iY=rect.iBr.iY-KLabelHeight; <span class="comment">// make it bottom 20 pixels</span>
-<a name="l00090"></a>00090         iLabel-&gt;SetContainerWindowL(*<span class="keyword">this</span>);
-<a name="l00091"></a>00091         iLabel-&gt;SetRect(rect);
-<a name="l00092"></a>00092         iLabel-&gt;SetAlignment(EHCenterVCenter); <span class="comment">// center text</span>
-<a name="l00093"></a>00093         iLabel-&gt;SetBufferReserveLengthL(200); <span class="comment">// nice long buffer</span>
-<a name="l00094"></a>00094         iLabel-&gt;SetFont(iEikonEnv-&gt;AnnotationFont());
-<a name="l00095"></a>00095         iLabel-&gt;ActivateL(); <span class="comment">// now ready</span>
+<a name="l00090"></a>00090         iLabel->SetContainerWindowL(*<span class="keyword">this</span>);
+<a name="l00091"></a>00091         iLabel->SetRect(rect);
+<a name="l00092"></a>00092         iLabel->SetAlignment(EHCenterVCenter); <span class="comment">// center text</span>
+<a name="l00093"></a>00093         iLabel->SetBufferReserveLengthL(200); <span class="comment">// nice long buffer</span>
+<a name="l00094"></a>00094         iLabel->SetFont(iEikonEnv->AnnotationFont());
+<a name="l00095"></a>00095         iLabel->ActivateL(); <span class="comment">// now ready</span>
 <a name="l00096"></a>00096         }
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098 <span class="keywordtype">void</span> CExampleShellContainer::ResetExampleL(<a class="code" href="class_c_graphic_example_control.html">CGraphicExampleControl</a>* aExample)
@@ -146,36 +146,36 @@
 <a name="l00106"></a>00106         TRect rect=Rect(); <span class="comment">// get our rect</span>
 <a name="l00107"></a>00107         rect.iBr.iY-=KLabelHeight; <span class="comment">// make way for label</span>
 <a name="l00108"></a>00108         rect.Shrink(2,2); <span class="comment">// shrink it a bit</span>
-<a name="l00109"></a>00109         iExampleControl-&gt;ConstructL(rect,<span class="keyword">this</span>,*<span class="keyword">this</span>); <span class="comment">// construct, giving rect, observer, and parent</span>
+<a name="l00109"></a>00109         iExampleControl->ConstructL(rect,<span class="keyword">this</span>,*<span class="keyword">this</span>); <span class="comment">// construct, giving rect, observer, and parent</span>
 <a name="l00110"></a>00110         }
 <a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFinished,<span class="stringliteral">&quot;example finished&quot;</span>);
+<a name="l00112"></a>00112 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFinished,<span class="stringliteral">"example finished"</span>);
 <a name="l00113"></a>00113 <span class="keywordtype">void</span> CExampleShellContainer::NotifyGraphicExampleFinished()
 <a name="l00114"></a>00114         {
 <a name="l00115"></a>00115         NotifyStatus(KTxtFinished);
 <a name="l00116"></a>00116         }
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keywordtype">void</span> CExampleShellContainer::NotifyStatus(<span class="keyword">const</span> TDesC&amp; aMessage)
+<a name="l00118"></a>00118 <span class="keywordtype">void</span> CExampleShellContainer::NotifyStatus(<span class="keyword">const</span> TDesC& aMessage)
 <a name="l00119"></a>00119         {
-<a name="l00120"></a>00120         TRAPD(err,iLabel-&gt;SetTextL(aMessage));
+<a name="l00120"></a>00120         TRAPD(err,iLabel->SetTextL(aMessage));
 <a name="l00121"></a>00121         <span class="keywordflow">if</span>(err)
 <a name="l00122"></a>00122                 {
 <a name="l00123"></a>00123                 <span class="keywordflow">return</span>;
 <a name="l00124"></a>00124                 }
-<a name="l00125"></a>00125         <span class="keywordflow">if</span> (IsActivated()) iLabel-&gt;DrawNow();
+<a name="l00125"></a>00125         <span class="keywordflow">if</span> (IsActivated()) iLabel->DrawNow();
 <a name="l00126"></a>00126         }
 <a name="l00127"></a>00127 
-<a name="l00128"></a>00128 TKeyResponse CExampleShellContainer::OfferKeyEventL(<span class="keyword">const</span> TKeyEvent&amp; aKeyEvent,TEventCode aType)
+<a name="l00128"></a>00128 TKeyResponse CExampleShellContainer::OfferKeyEventL(<span class="keyword">const</span> TKeyEvent& aKeyEvent,TEventCode aType)
 <a name="l00129"></a>00129     {
 <a name="l00130"></a>00130         <span class="keywordflow">if</span>      (iExampleControl)
-<a name="l00131"></a>00131                 <span class="keywordflow">return</span> iExampleControl-&gt;OfferKeyEventL(aKeyEvent,aType);
+<a name="l00131"></a>00131                 <span class="keywordflow">return</span> iExampleControl->OfferKeyEventL(aKeyEvent,aType);
 <a name="l00132"></a>00132         <span class="keywordflow">else</span>
 <a name="l00133"></a>00133                 <span class="keywordflow">return</span> EKeyWasNotConsumed;
 <a name="l00134"></a>00134     }
 <a name="l00135"></a>00135 
-<a name="l00136"></a>00136 <span class="keywordtype">void</span> CExampleShellContainer::Draw(<span class="keyword">const</span> TRect&amp; <span class="comment">/*aRect*/</span>)<span class="keyword"> const</span>
+<a name="l00136"></a>00136 <span class="keywordtype">void</span> CExampleShellContainer::Draw(<span class="keyword">const</span> TRect& <span class="comment">/*aRect*/</span>)<span class="keyword"> const</span>
 <a name="l00137"></a>00137 <span class="keyword">        </span>{
-<a name="l00138"></a>00138         CWindowGc&amp; gc = SystemGc();
+<a name="l00138"></a>00138         CWindowGc& gc = SystemGc();
 <a name="l00139"></a>00139         gc.SetPenStyle(CGraphicsContext::ENullPen);
 <a name="l00140"></a>00140         gc.SetBrushStyle(CGraphicsContext::ESolidBrush);
 <a name="l00141"></a>00141         gc.DrawRect(Rect());
@@ -185,14 +185,14 @@
 <a name="l00145"></a>00145 <span class="comment">// CExampleShellAppUi</span>
 <a name="l00146"></a>00146 <span class="comment">//</span>
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtInitialized,<span class="stringliteral">&quot;initialized&quot;</span>);
+<a name="l00148"></a>00148 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtInitialized,<span class="stringliteral">"initialized"</span>);
 <a name="l00149"></a>00149 <span class="keywordtype">void</span> CExampleShellAppUi::ConstructL()
 <a name="l00150"></a>00150     {
 <a name="l00151"></a>00151     BaseConstructL();
-<a name="l00152"></a>00152         iModel=((<a class="code" href="class_c_example_shell_document.html">CExampleShellDocument</a>*)iDocument)-&gt;Model();
+<a name="l00152"></a>00152         iModel=((<a class="code" href="class_c_example_shell_document.html">CExampleShellDocument</a>*)iDocument)->Model();
 <a name="l00153"></a>00153     iContainer=<span class="keyword">new</span>(ELeave) <a class="code" href="class_c_example_shell_container.html">CExampleShellContainer</a>;
-<a name="l00154"></a>00154     iContainer-&gt;ConstructL(ClientRect(),iModel);
-<a name="l00155"></a>00155         iContainer-&gt;NotifyStatus(KTxtInitialized);
+<a name="l00154"></a>00154     iContainer->ConstructL(ClientRect(),iModel);
+<a name="l00155"></a>00155         iContainer->NotifyStatus(KTxtInitialized);
 <a name="l00156"></a>00156         <span class="comment">// add container to stack; enables key event handling.</span>
 <a name="l00157"></a>00157         AddToStackL(iContainer);
 <a name="l00158"></a>00158     }
@@ -202,10 +202,10 @@
 <a name="l00162"></a>00162         <span class="keywordflow">switch</span> (aCommand)
 <a name="l00163"></a>00163                 {
 <a name="l00164"></a>00164         <span class="keywordflow">case</span> EExampleShellSelectDraw:
-<a name="l00165"></a>00165                 iContainer-&gt;ResetExampleL(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_draw_control.html">CDrawControl</a>);
+<a name="l00165"></a>00165                 iContainer->ResetExampleL(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_draw_control.html">CDrawControl</a>);
 <a name="l00166"></a>00166                 <span class="keywordflow">return</span>;
 <a name="l00167"></a>00167         <span class="keywordflow">case</span> EExampleShellSelectZoom:
-<a name="l00168"></a>00168                 iContainer-&gt;ResetExampleL(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_zoom_control.html">CZoomControl</a>);
+<a name="l00168"></a>00168                 iContainer->ResetExampleL(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_zoom_control.html">CZoomControl</a>);
 <a name="l00169"></a>00169                 <span class="keywordflow">return</span>;
 <a name="l00170"></a>00170         <span class="keywordflow">case</span> EEikCmdExit:
 <a name="l00171"></a>00171                 Exit();
@@ -257,10 +257,10 @@
 <a name="l00217"></a>00217         <span class="keywordflow">return</span> EikStart::RunApplication(NewApplication);
 <a name="l00218"></a>00218         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

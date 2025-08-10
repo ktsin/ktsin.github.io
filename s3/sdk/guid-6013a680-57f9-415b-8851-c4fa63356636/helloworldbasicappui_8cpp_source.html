@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/S60CppExamples/helloworldbasic/src/helloworldbasicappui.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -52,20 +52,20 @@
 <a name="l00014"></a>00014 <span class="comment">*/</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="comment">// INCLUDE FILES</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;avkon.hrh&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;aknnotewrappers.h&gt;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;stringloader.h&gt;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;HelloWorldBasic.rsg&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;f32file.h&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;s32file.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include <avkon.hrh></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include <aknnotewrappers.h></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include <stringloader.h></span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include <HelloWorldBasic.rsg></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include <f32file.h></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <s32file.h></span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;HelloWorldBasic.pan&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;HelloWorldBasicAppUi.h&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;HelloWorldBasicAppView.h&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;HelloWorldBasic.hrh&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;HelloWorldBasicQueryDialog.h&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include "HelloWorldBasic.pan"</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include "HelloWorldBasicAppUi.h"</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include "HelloWorldBasicAppView.h"</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include "HelloWorldBasic.hrh"</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "HelloWorldBasicQueryDialog.h"</span>
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>( KHelloFileName, <span class="stringliteral">&quot;Hello.txt&quot;</span> );
+<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>( KHelloFileName, <span class="stringliteral">"Hello.txt"</span> );
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 <span class="comment">// ============================ MEMBER FUNCTIONS ===============================</span>
 <a name="l00033"></a>00033 
@@ -112,19 +112,19 @@
 <a name="l00074"></a>00074         HBufC* textResource = StringLoader::LoadLC( R_HEWB_FILE_TEXT );
 <a name="l00075"></a>00075         objectsInStack += 3; <span class="comment">// file, outputFileStream, testResource</span>
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077         outputFileStream &lt;&lt; *textResource;
+<a name="l00077"></a>00077         outputFileStream << *textResource;
 <a name="l00078"></a>00078         }
 <a name="l00079"></a>00079     <span class="keywordflow">else</span>
 <a name="l00080"></a>00080         {
-<a name="l00081"></a>00081         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFileWriteFailed,<span class="stringliteral">&quot;Writing file %S failed: error %d&quot;</span>);
+<a name="l00081"></a>00081         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFileWriteFailed,<span class="stringliteral">"Writing file %S failed: error %d"</span>);
 <a name="l00082"></a>00082         CAknWarningNote* note = <span class="keyword">new</span> ( ELeave ) CAknWarningNote(ETrue);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084         TBuf&lt;64&gt; text;
-<a name="l00085"></a>00085         text.Format(KFileWriteFailed, &amp;KHelloFileName, err);
-<a name="l00086"></a>00086         note-&gt;ExecuteLD( text );
+<a name="l00084"></a>00084         TBuf<64> text;
+<a name="l00085"></a>00085         text.Format(KFileWriteFailed, &KHelloFileName, err);
+<a name="l00086"></a>00086         note->ExecuteLD( text );
 <a name="l00087"></a>00087         }
 <a name="l00088"></a>00088 
-<a name="l00089"></a>00089     CleanupStack::PopAndDestroy(objectsInStack, &amp;fsSession);
+<a name="l00089"></a>00089     CleanupStack::PopAndDestroy(objectsInStack, &fsSession);
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091     <span class="comment">// Create view object</span>
 <a name="l00092"></a>00092     iAppView = <a class="code" href="class_c_hello_world_basic_app_view.html#af938676f7eee65925c90b654b5a5034f">CHelloWorldBasicAppView::NewL</a>( ClientRect() );
@@ -162,10 +162,10 @@
 <a name="l00124"></a>00124 <span class="keywordtype">void</span> CHelloWorldBasicAppUi::HandleCommandL( TInt aCommand )
 <a name="l00125"></a>00125     {
 <a name="l00126"></a>00126     <span class="comment">// clear possible old user-given text</span>
-<a name="l00127"></a>00127     <span class="keywordflow">if</span> (iAppView-&gt;<a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>().Size() &gt; 0)
+<a name="l00127"></a>00127     <span class="keywordflow">if</span> (iAppView-><a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>().Size() > 0)
 <a name="l00128"></a>00128         {
-<a name="l00129"></a>00129         iAppView-&gt;<a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>().Zero();
-<a name="l00130"></a>00130         iAppView-&gt;DrawNow();
+<a name="l00129"></a>00129         iAppView-><a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>().Zero();
+<a name="l00130"></a>00130         iAppView->DrawNow();
 <a name="l00131"></a>00131         }
 <a name="l00132"></a>00132 
 <a name="l00133"></a>00133     <span class="keywordflow">switch</span>( aCommand )
@@ -183,7 +183,7 @@
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146             <span class="comment">// Show the information Note with</span>
 <a name="l00147"></a>00147             <span class="comment">// textResource loaded with StringLoader.</span>
-<a name="l00148"></a>00148             note-&gt;ExecuteLD( *textResource );
+<a name="l00148"></a>00148             note->ExecuteLD( *textResource );
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150             <span class="comment">// Pop HBuf from CleanUpStack and Destroy it.</span>
 <a name="l00151"></a>00151             CleanupStack::PopAndDestroy( textResource );
@@ -213,11 +213,11 @@
 <a name="l00175"></a>00175             CAknInformationNote* note = <span class="keyword">new</span> ( ELeave ) CAknInformationNote;
 <a name="l00176"></a>00176 
 <a name="l00177"></a>00177             <span class="comment">// Show the information Note</span>
-<a name="l00178"></a>00178             note-&gt;ExecuteLD( *fileData );
+<a name="l00178"></a>00178             note->ExecuteLD( *fileData );
 <a name="l00179"></a>00179 
 <a name="l00180"></a>00180             <span class="comment">// Pop loaded resources from the cleanup stack:</span>
 <a name="l00181"></a>00181             <span class="comment">// filedata, inputFileStream, rFile, fsSession</span>
-<a name="l00182"></a>00182             CleanupStack::PopAndDestroy(4, &amp;fsSession);
+<a name="l00182"></a>00182             CleanupStack::PopAndDestroy(4, &fsSession);
 <a name="l00183"></a>00183             }
 <a name="l00184"></a>00184             <span class="keywordflow">break</span>;
 <a name="l00185"></a>00185 
@@ -227,10 +227,10 @@
 <a name="l00189"></a>00189             HBufC* defaultText = StringLoader::LoadLC( R_HEWB_FILE_TEXT );
 <a name="l00190"></a>00190 
 <a name="l00191"></a>00191             <a class="code" href="class_c_hello_world_query_dialog.html">CHelloWorldQueryDialog</a> *dlg = <span class="keyword">new</span> (ELeave)
-<a name="l00192"></a>00192                 <a class="code" href="class_c_hello_world_query_dialog.html">CHelloWorldQueryDialog</a>( iAppView-&gt;<a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>(), defaultText );
+<a name="l00192"></a>00192                 <a class="code" href="class_c_hello_world_query_dialog.html">CHelloWorldQueryDialog</a>( iAppView-><a class="code" href="class_c_hello_world_basic_app_view.html#a06d9ceabab68ab2e9935b1af116b654c">GetText</a>(), defaultText );
 <a name="l00193"></a>00193 
-<a name="l00194"></a>00194             dlg-&gt;ExecuteLD( R_DIALOG_TEXT_EDIT_QUERY );
-<a name="l00195"></a>00195             iAppView-&gt;DrawNow();
+<a name="l00194"></a>00194             dlg->ExecuteLD( R_DIALOG_TEXT_EDIT_QUERY );
+<a name="l00195"></a>00195             iAppView->DrawNow();
 <a name="l00196"></a>00196 
 <a name="l00197"></a>00197             <span class="comment">// Pop HBuf from CleanUpStack and Destroy it.</span>
 <a name="l00198"></a>00198             CleanupStack::PopAndDestroy( defaultText );
@@ -253,17 +253,17 @@
 <a name="l00215"></a>00215     <span class="keywordflow">if</span> (aType == KEikDynamicLayoutVariantSwitch)
 <a name="l00216"></a>00216         {
 <a name="l00217"></a>00217         <span class="keywordflow">if</span> (iAppView)
-<a name="l00218"></a>00218             iAppView-&gt;SetRect( ClientRect() );
+<a name="l00218"></a>00218             iAppView->SetRect( ClientRect() );
 <a name="l00219"></a>00219         }
 <a name="l00220"></a>00220 }
 <a name="l00221"></a>00221 
 <a name="l00222"></a>00222 <span class="comment">// End of File</span>
 <a name="l00223"></a>00223 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

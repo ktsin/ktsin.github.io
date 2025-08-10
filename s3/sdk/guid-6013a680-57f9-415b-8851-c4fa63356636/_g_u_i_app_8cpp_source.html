@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Stdlib/GUIApp/GUIApp.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/Stdlib/GUIApp/GUIApp.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -57,9 +57,9 @@
 <a name="l00019"></a>00019 <span class="comment">// b. Displays the list of all checksums calculated </span>
 <a name="l00020"></a>00020 <span class="comment">//</span>
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;GUIApp.h&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;stdlib.h&gt;</span> 
-<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;eikstart.h&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include "GUIApp.h"</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <stdlib.h></span> 
+<a name="l00024"></a>00024 <span class="preprocessor">#include <eikstart.h></span>
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 CExampleChecksumDialog::CExampleChecksumDialog(TDes* aFileName,TInt aTitleId)
 <a name="l00027"></a>00027         : iFileName(aFileName),iTitleId(aTitleId)
@@ -73,48 +73,48 @@
 <a name="l00035"></a>00035                 (Control(EEikCidFolderNameSel));
 <a name="l00036"></a>00036     CEikDriveNameSelector* driveNameSelector = (CEikDriveNameSelector*) 
 <a name="l00037"></a>00037                 (Control(EEikCidDriveNameSel));
-<a name="l00038"></a>00038         folderNameSelector-&gt;SetFileSelectionObserver(fileNameSelector);
-<a name="l00039"></a>00039         driveNameSelector-&gt;SetFileSelectionObserver(folderNameSelector);
+<a name="l00038"></a>00038         folderNameSelector->SetFileSelectionObserver(fileNameSelector);
+<a name="l00039"></a>00039         driveNameSelector->SetFileSelectionObserver(folderNameSelector);
 <a name="l00040"></a>00040     User::LeaveIfError(EikFileUtils::Parse(*iFileName));
 <a name="l00041"></a>00041         TParsePtr parse(*iFileName);
-<a name="l00042"></a>00042         driveNameSelector-&gt;SetFullNameL(parse.FullName());
+<a name="l00042"></a>00042         driveNameSelector->SetFullNameL(parse.FullName());
 <a name="l00043"></a>00043     <span class="keywordflow">if</span> (iTitleId)
 <a name="l00044"></a>00044         SetTitleL(iTitleId);
 <a name="l00045"></a>00045         }
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 TBool CExampleChecksumDialog::OkToExitL(TInt <span class="comment">/*aKeycode*/</span>)
 <a name="l00048"></a>00048         {
-<a name="l00049"></a>00049         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSpace,<span class="stringliteral">&quot; &quot;</span>);
+<a name="l00049"></a>00049         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSpace,<span class="stringliteral">" "</span>);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051         CEikFileNameSelector* fileNameSelector = (CEikFileNameSelector*) 
 <a name="l00052"></a>00052                 (Control(EEikCidFileNameSel));
-<a name="l00053"></a>00053         fileNameSelector-&gt;ValidateStateL();
+<a name="l00053"></a>00053         fileNameSelector->ValidateStateL();
 <a name="l00054"></a>00054         <span class="comment">// get the selected filename</span>
-<a name="l00055"></a>00055         *iFileName = fileNameSelector-&gt;FullName();
+<a name="l00055"></a>00055         *iFileName = fileNameSelector->FullName();
 <a name="l00056"></a>00056         <span class="comment">// Calculate the checksum</span>
 <a name="l00057"></a>00057         TUint32 checksum, filesize;
-<a name="l00058"></a>00058         <span class="keyword">const</span> TUint16* fn=iFileName-&gt;PtrZ();
+<a name="l00058"></a>00058         <span class="keyword">const</span> TUint16* fn=iFileName->PtrZ();
 <a name="l00059"></a>00059         <span class="keywordtype">int</span> fd = wopen((<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*)fn, O_RDONLY, 0); <span class="comment">// Open file for reading</span>
-<a name="l00060"></a>00060         <span class="keywordflow">if</span> (fd &lt; 0)
-<a name="l00061"></a>00061                 <span class="comment">// Can&#39;t open file</span>
+<a name="l00060"></a>00060         <span class="keywordflow">if</span> (fd < 0)
+<a name="l00061"></a>00061                 <span class="comment">// Can't open file</span>
 <a name="l00062"></a>00062                 {
-<a name="l00063"></a>00063                 iEikonEnv-&gt;InfoMsg(R_EXAMPLE_TEXT_ERROR,iFileName);
+<a name="l00063"></a>00063                 iEikonEnv->InfoMsg(R_EXAMPLE_TEXT_ERROR,iFileName);
 <a name="l00064"></a>00064                 <span class="keywordflow">return</span> EFalse;
 <a name="l00065"></a>00065                 }
-<a name="l00066"></a>00066         TInt err=crc(fd, &amp;checksum, &amp;filesize); <span class="comment">// (filesize not used)</span>
+<a name="l00066"></a>00066         TInt err=crc(fd, &checksum, &filesize); <span class="comment">// (filesize not used)</span>
 <a name="l00067"></a>00067         <span class="keywordflow">if</span> (err==0)
 <a name="l00068"></a>00068                 {
 <a name="l00069"></a>00069                 <span class="comment">// display the checksum in an infomessage</span>
-<a name="l00070"></a>00070                 iEikonEnv-&gt;InfoMsg(R_EXAMPLE_TEXT_CKSUM,checksum);
-<a name="l00071"></a>00071                 <span class="comment">// Append the filename and checksum to the container&#39;s descriptor array</span>
+<a name="l00070"></a>00070                 iEikonEnv->InfoMsg(R_EXAMPLE_TEXT_CKSUM,checksum);
+<a name="l00071"></a>00071                 <span class="comment">// Append the filename and checksum to the container's descriptor array</span>
 <a name="l00072"></a>00072                 TDes* fileNameAndCksum=iFileName;
 <a name="l00073"></a>00073                 <span class="comment">// Append a space to separate filename from checksum</span>
-<a name="l00074"></a>00074                 fileNameAndCksum-&gt;Append(KSpace);
+<a name="l00074"></a>00074                 fileNameAndCksum->Append(KSpace);
 <a name="l00075"></a>00075                 <span class="comment">// Convert the checksum to text then append to the descriptor.</span>
-<a name="l00076"></a>00076                 fileNameAndCksum-&gt;AppendNum(checksum,EDecimal);
+<a name="l00076"></a>00076                 fileNameAndCksum->AppendNum(checksum,EDecimal);
 <a name="l00077"></a>00077                 }
-<a name="l00078"></a>00078         <span class="keywordflow">else</span> iEikonEnv-&gt;InfoMsg(R_EXAMPLE_TEXT_CKSUM_ERROR); 
-<a name="l00079"></a>00079                         <span class="comment">// can&#39;t calculate checksum</span>
+<a name="l00078"></a>00078         <span class="keywordflow">else</span> iEikonEnv->InfoMsg(R_EXAMPLE_TEXT_CKSUM_ERROR); 
+<a name="l00079"></a>00079                         <span class="comment">// can't calculate checksum</span>
 <a name="l00080"></a>00080         close(fd); <span class="comment">// close file</span>
 <a name="l00081"></a>00081         <span class="keywordflow">return</span> ETrue;
 <a name="l00082"></a>00082         }
@@ -127,22 +127,22 @@
 <a name="l00089"></a>00089 <span class="keywordtype">void</span> CExampleListBoxDialog::PreLayoutDynInitL()
 <a name="l00090"></a>00090     {
 <a name="l00091"></a>00091         CEikTextListBox* listbox=(CEikTextListBox*)Control(EExampleChecksumListBox);
-<a name="l00092"></a>00092         CDesCArray* listboxArray=((CDesCArray*)listbox-&gt;Model()-&gt;ItemTextArray());
+<a name="l00092"></a>00092         CDesCArray* listboxArray=((CDesCArray*)listbox->Model()->ItemTextArray());
 <a name="l00093"></a>00093         <span class="keywordflow">if</span> (iCksumArray!=NULL)
 <a name="l00094"></a>00094                 {
-<a name="l00095"></a>00095                 <span class="comment">// append contents of the model&#39;s checksum array to listbox for display</span>
-<a name="l00096"></a>00096                 <span class="keywordflow">for</span> (TInt i=0; i&lt;iCksumArray-&gt;Count(); i++)
-<a name="l00097"></a>00097                         listboxArray-&gt;AppendL(iCksumArray-&gt;operator[](i));
+<a name="l00095"></a>00095                 <span class="comment">// append contents of the model's checksum array to listbox for display</span>
+<a name="l00096"></a>00096                 <span class="keywordflow">for</span> (TInt i=0; i<iCksumArray->Count(); i++)
+<a name="l00097"></a>00097                         listboxArray->AppendL(iCksumArray->operator[](i));
 <a name="l00098"></a>00098                 }
-<a name="l00099"></a>00099         CEikScrollBarFrame* scrollbarFrame = listbox-&gt;CreateScrollBarFrameL();
+<a name="l00099"></a>00099         CEikScrollBarFrame* scrollbarFrame = listbox->CreateScrollBarFrameL();
 <a name="l00100"></a>00100         <span class="comment">// set horizontal and vertical scroll bars to appear when required</span>
-<a name="l00101"></a>00101         scrollbarFrame-&gt;SetScrollBarVisibilityL(CEikScrollBarFrame::EAuto,
+<a name="l00101"></a>00101         scrollbarFrame->SetScrollBarVisibilityL(CEikScrollBarFrame::EAuto,
 <a name="l00102"></a>00102                 CEikScrollBarFrame::EAuto);
 <a name="l00103"></a>00103         }
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="keywordtype">void</span> CExampleListBoxDialog::SetSizeAndPositionL(<span class="keyword">const</span> TSize&amp; aSize)
+<a name="l00105"></a>00105 <span class="keywordtype">void</span> CExampleListBoxDialog::SetSizeAndPositionL(<span class="keyword">const</span> TSize& aSize)
 <a name="l00106"></a>00106         {
-<a name="l00107"></a>00107         <span class="comment">// Resize the dialog - keep aSize&#39;s height, double its width</span>
+<a name="l00107"></a>00107         <span class="comment">// Resize the dialog - keep aSize's height, double its width</span>
 <a name="l00108"></a>00108         TSize dialogSize(((aSize.iWidth)*2), aSize.iHeight);
 <a name="l00109"></a>00109         SetCornerAndSize(EHCenterVCenter,dialogSize);
 <a name="l00110"></a>00110         }
@@ -154,7 +154,7 @@
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117 
 <a name="l00119"></a>00119 <span class="comment">//</span>
-<a name="l00120"></a>00120 <span class="comment">// -----&gt; CExampleContainer (definition)</span>
+<a name="l00120"></a>00120 <span class="comment">// -----> CExampleContainer (definition)</span>
 <a name="l00121"></a>00121 <span class="comment">//</span>
 <a name="l00123"></a>00123 <span class="comment"></span>CExampleContainer::CExampleContainer()
 <a name="l00124"></a>00124         {}
@@ -165,7 +165,7 @@
 <a name="l00129"></a>00129         <span class="keyword">delete</span> iChecksumArray;
 <a name="l00130"></a>00130         }
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132 <span class="keywordtype">void</span> CExampleContainer::ConstructL(<span class="keyword">const</span> TRect&amp; aRect)
+<a name="l00132"></a>00132 <span class="keywordtype">void</span> CExampleContainer::ConstructL(<span class="keyword">const</span> TRect& aRect)
 <a name="l00133"></a>00133         {
 <a name="l00134"></a>00134           <span class="comment">// Create the window</span>
 <a name="l00135"></a>00135         CreateWindowL();
@@ -182,10 +182,10 @@
 <a name="l00146"></a>00146         }
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148 
-<a name="l00149"></a>00149 <span class="keywordtype">void</span> CExampleContainer::Draw(<span class="keyword">const</span> TRect&amp;)<span class="keyword"> const</span>
+<a name="l00149"></a>00149 <span class="keywordtype">void</span> CExampleContainer::Draw(<span class="keyword">const</span> TRect&)<span class="keyword"> const</span>
 <a name="l00150"></a>00150 <span class="keyword">        </span>{
 <a name="l00151"></a>00151         <span class="comment">// Draw the container control </span>
-<a name="l00152"></a>00152         CWindowGc&amp; gc=SystemGc();
+<a name="l00152"></a>00152         CWindowGc& gc=SystemGc();
 <a name="l00153"></a>00153         gc.SetPenStyle(CGraphicsContext::ENullPen);
 <a name="l00154"></a>00154         gc.SetBrushStyle(CGraphicsContext::ESolidBrush);
 <a name="l00155"></a>00155         gc.SetBrushColor(KRgbWhite);
@@ -193,17 +193,17 @@
 <a name="l00157"></a>00157         }
 <a name="l00158"></a>00158 
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160 <span class="keywordtype">void</span> CExampleContainer::AppendChecksumL(<span class="keyword">const</span> TDesC&amp; aFilename)
+<a name="l00160"></a>00160 <span class="keywordtype">void</span> CExampleContainer::AppendChecksumL(<span class="keyword">const</span> TDesC& aFilename)
 <a name="l00161"></a>00161         {
-<a name="l00162"></a>00162         <span class="comment">// Check that the filename and cksum don&#39;t already exist in the array</span>
+<a name="l00162"></a>00162         <span class="comment">// Check that the filename and cksum don't already exist in the array</span>
 <a name="l00163"></a>00163         <span class="comment">// If already there, do nothing</span>
 <a name="l00164"></a>00164         TInt pos; <span class="comment">// not interested in value</span>
-<a name="l00165"></a>00165         <span class="keywordflow">if</span> (iChecksumArray-&gt;Find(aFilename,pos,ECmpNormal))
+<a name="l00165"></a>00165         <span class="keywordflow">if</span> (iChecksumArray->Find(aFilename,pos,ECmpNormal))
 <a name="l00166"></a>00166                 {
-<a name="l00167"></a>00167                 TRAPD(error,iChecksumArray-&gt;AppendL(aFilename));
+<a name="l00167"></a>00167                 TRAPD(error,iChecksumArray->AppendL(aFilename));
 <a name="l00168"></a>00168                 <span class="keywordflow">if</span> (error)
 <a name="l00169"></a>00169                         {
-<a name="l00170"></a>00170                         iChecksumArray-&gt;Reset();
+<a name="l00170"></a>00170                         iChecksumArray->Reset();
 <a name="l00171"></a>00171                         <span class="keyword">delete</span> iChecksumArray;
 <a name="l00172"></a>00172                         iChecksumArray=0;
 <a name="l00173"></a>00173                         User::Leave(error);
@@ -224,13 +224,13 @@
 <a name="l00188"></a>00188 
 <a name="l00189"></a>00189 
 <a name="l00191"></a>00191 <span class="comment">//</span>
-<a name="l00192"></a>00192 <span class="comment">// -----&gt; CExampleAppUi (implementation)</span>
+<a name="l00192"></a>00192 <span class="comment">// -----> CExampleAppUi (implementation)</span>
 <a name="l00193"></a>00193 <span class="comment">//</span>
 <a name="l00195"></a>00195 <span class="comment"></span><span class="keywordtype">void</span> CExampleAppUi::ConstructL()
 <a name="l00196"></a>00196         {
-<a name="l00197"></a>00197         <span class="comment">// Disable control environment&#39;s automatic resource checking</span>
-<a name="l00198"></a>00198         <span class="comment">// If we don&#39;t do this when using stdlib, we get a CONE 36 panic</span>
-<a name="l00199"></a>00199         iCoeEnv-&gt;DisableExitChecks(ETrue);
+<a name="l00197"></a>00197         <span class="comment">// Disable control environment's automatic resource checking</span>
+<a name="l00198"></a>00198         <span class="comment">// If we don't do this when using stdlib, we get a CONE 36 panic</span>
+<a name="l00199"></a>00199         iCoeEnv->DisableExitChecks(ETrue);
 <a name="l00200"></a>00200 
 <a name="l00201"></a>00201         <span class="comment">// Allow base class (CEikAppUi) to perform necessary construction</span>
 <a name="l00202"></a>00202         BaseConstructL();
@@ -239,7 +239,7 @@
 <a name="l00205"></a>00205           <span class="comment">// for this application. Construction requires the rectangle</span>
 <a name="l00206"></a>00206           <span class="comment">// available.</span>
 <a name="l00207"></a>00207         iContainer = <span class="keyword">new</span>(ELeave) CExampleContainer;
-<a name="l00208"></a>00208         iContainer-&gt;ConstructL(ClientRect());
+<a name="l00208"></a>00208         iContainer->ConstructL(ClientRect());
 <a name="l00209"></a>00209 
 <a name="l00210"></a>00210           <span class="comment">// The container is added to the control stack (for key event</span>
 <a name="l00211"></a>00211           <span class="comment">// handling).</span>
@@ -284,24 +284,24 @@
 <a name="l00250"></a>00250         
 <a name="l00251"></a>00251         TDriveUnit sysDrive (RFs::GetSystemDrive());
 <a name="l00252"></a>00252         TDriveName sysDriveName (sysDrive.Name());      
-<a name="l00253"></a>00253         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KM,<span class="stringliteral">&quot;\\Documents\\&quot;</span>);
-<a name="l00254"></a>00254         TBuf&lt;KMaxFileName+KMaxChecksumLength&gt; fileName(sysDriveName);
+<a name="l00253"></a>00253         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KM,<span class="stringliteral">"\\Documents\\"</span>);
+<a name="l00254"></a>00254         TBuf<KMaxFileName+KMaxChecksumLength> fileName(sysDriveName);
 <a name="l00255"></a>00255         fileName.Append(KM);
 <a name="l00256"></a>00256 
-<a name="l00257"></a>00257         CEikDialog* dialog = <span class="keyword">new</span> (ELeave) CExampleChecksumDialog(&amp;fileName);
-<a name="l00258"></a>00258         <span class="keywordflow">if</span> (dialog-&gt;ExecuteLD(R_EXAMPLE_CHECKSUM_DIALOG))
+<a name="l00257"></a>00257         CEikDialog* dialog = <span class="keyword">new</span> (ELeave) CExampleChecksumDialog(&fileName);
+<a name="l00258"></a>00258         <span class="keywordflow">if</span> (dialog->ExecuteLD(R_EXAMPLE_CHECKSUM_DIALOG))
 <a name="l00259"></a>00259                 {
 <a name="l00260"></a>00260                 <span class="comment">// A checksum was calculated, so append the descriptor containing it and </span>
-<a name="l00261"></a>00261                 <span class="comment">// the filename to the container&#39;s array</span>
-<a name="l00262"></a>00262                 iContainer-&gt;AppendChecksumL(fileName);
+<a name="l00261"></a>00261                 <span class="comment">// the filename to the container's array</span>
+<a name="l00262"></a>00262                 iContainer->AppendChecksumL(fileName);
 <a name="l00263"></a>00263                 }
 <a name="l00264"></a>00264         }
 <a name="l00265"></a>00265 
 <a name="l00266"></a>00266 <span class="keywordtype">void</span> CExampleAppUi::OnCmdViewChecksumsL()
 <a name="l00267"></a>00267         {
 <a name="l00268"></a>00268     CEikDialog* dialog = <span class="keyword">new</span>(ELeave) CExampleListBoxDialog
-<a name="l00269"></a>00269                 (iContainer-&gt;GetChecksumArray());
-<a name="l00270"></a>00270     dialog-&gt;ExecuteLD(R_EXAMPLE_CHECKSUM_INFO_DIALOG);
+<a name="l00269"></a>00269                 (iContainer->GetChecksumArray());
+<a name="l00270"></a>00270     dialog->ExecuteLD(R_EXAMPLE_CHECKSUM_INFO_DIALOG);
 <a name="l00271"></a>00271         }
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273 <span class="keywordtype">void</span> CExampleAppUi::OnCmdExit()
@@ -311,14 +311,14 @@
 <a name="l00277"></a>00277 
 <a name="l00278"></a>00278 <span class="keywordtype">void</span> CExampleAppUi::DrawViewL()
 <a name="l00279"></a>00279         {
-<a name="l00280"></a>00280         iContainer-&gt;SetRect(ClientRect());
-<a name="l00281"></a>00281         iContainer-&gt;DrawNow();
+<a name="l00280"></a>00280         iContainer->SetRect(ClientRect());
+<a name="l00281"></a>00281         iContainer->DrawNow();
 <a name="l00282"></a>00282         }
 <a name="l00283"></a>00283 
 <a name="l00285"></a>00285 <span class="comment">//</span>
-<a name="l00286"></a>00286 <span class="comment">// -----&gt; CExampleDocument (implementation)</span>
+<a name="l00286"></a>00286 <span class="comment">// -----> CExampleDocument (implementation)</span>
 <a name="l00287"></a>00287 <span class="comment">//</span>
-<a name="l00289"></a>00289 <span class="comment"></span>CExampleDocument::CExampleDocument(CEikApplication&amp; aApp)
+<a name="l00289"></a>00289 <span class="comment"></span>CExampleDocument::CExampleDocument(CEikApplication& aApp)
 <a name="l00290"></a>00290          : CEikDocument(aApp)
 <a name="l00291"></a>00291         {}
 <a name="l00292"></a>00292 
@@ -330,7 +330,7 @@
 <a name="l00298"></a>00298         CloseSTDLIB();
 <a name="l00299"></a>00299         }
 <a name="l00300"></a>00300 
-<a name="l00301"></a>00301 <a class="code" href="class_c_example_document.html">CExampleDocument</a>* CExampleDocument::NewL(CEikApplication&amp; aApp)
+<a name="l00301"></a>00301 <a class="code" href="class_c_example_document.html">CExampleDocument</a>* CExampleDocument::NewL(CEikApplication& aApp)
 <a name="l00302"></a>00302         {
 <a name="l00303"></a>00303         <a class="code" href="class_c_example_document.html">CExampleDocument</a>* <span class="keyword">self</span>=<span class="keyword">new</span>(ELeave) <a class="code" href="class_c_example_document.html">CExampleDocument</a>(aApp);
 <a name="l00304"></a>00304         <span class="keywordflow">return</span> <span class="keyword">self</span>;
@@ -344,7 +344,7 @@
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313 
 <a name="l00315"></a>00315 <span class="comment">//</span>
-<a name="l00316"></a>00316 <span class="comment">// -----&gt; CExampleApplication (implementation)</span>
+<a name="l00316"></a>00316 <span class="comment">// -----> CExampleApplication (implementation)</span>
 <a name="l00317"></a>00317 <span class="comment">//</span>
 <a name="l00319"></a>00319 <span class="comment"></span>TUid CExampleApplication::AppDllUid()<span class="keyword"> const</span>
 <a name="l00320"></a>00320 <span class="keyword">        </span>{
@@ -373,10 +373,10 @@
 <a name="l00343"></a>00343         }
 <a name="l00344"></a>00344         
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

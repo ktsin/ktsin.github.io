@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/IPC/condvar/condvarlocal/src/condvarlocal.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/Base/IPC/condvar/condvarlocal/src/condvarlocal.cpp</h1><a href="condvarlocal_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -62,11 +62,11 @@
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="globals_8h.html">globals.h</a>&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">queue.h</a>&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="producer_8h.html">producer.h</a>&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="consumer_8h.html">consumer.h</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="_i_p_c_2condvar_2condvarlocal_2inc_2userinterface_8h.html">userinterface.h</a>&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include "<a class="code" href="globals_8h.html">globals.h</a>"</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include "<a class="code" href="queue_8h.html">queue.h</a>"</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include "<a class="code" href="producer_8h.html">producer.h</a>"</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include "<a class="code" href="consumer_8h.html">consumer.h</a>"</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include "<a class="code" href="_i_p_c_2condvar_2condvarlocal_2inc_2userinterface_8h.html">userinterface.h</a>"</span>
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 LOCAL_D CConsoleBase* console;
 <a name="l00042"></a>00042 LOCAL_C <span class="keywordtype">void</span> DoExampleL();
@@ -83,20 +83,20 @@
 <a name="l00053"></a>00053         CleanupStack::PushL(tokens);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055         <span class="comment">// Print the KTextInvokeProducer string and wait for a key press.</span>
-<a name="l00056"></a>00056         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextInvokeProducer,<span class="stringliteral">&quot;Creating and starting the Producer Thread...[This produces a token every two seconds]\n&quot;</span>);
-<a name="l00057"></a>00057         console-&gt;Printf(KTextInvokeProducer);
-<a name="l00058"></a>00058         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToContinue,<span class="stringliteral">&quot;[press any key to continue]\n&quot;</span>);
-<a name="l00059"></a>00059         console-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00060"></a>00060         console-&gt;Getch();
+<a name="l00056"></a>00056         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextInvokeProducer,<span class="stringliteral">"Creating and starting the Producer Thread...[This produces a token every two seconds]\n"</span>);
+<a name="l00057"></a>00057         console->Printf(KTextInvokeProducer);
+<a name="l00058"></a>00058         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToContinue,<span class="stringliteral">"[press any key to continue]\n"</span>);
+<a name="l00059"></a>00059         console->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00060"></a>00060         console->Getch();
 <a name="l00061"></a>00061         <span class="comment">// Create an object of the CProducer class.</span>
 <a name="l00062"></a>00062         <a class="code" href="class_c_producer.html">CProducer</a>* prod = <a class="code" href="class_c_producer.html#a3897c9436f1aae1654b3ae1c5a4b6673">CProducer::NewL</a>(console,tokens);
 <a name="l00063"></a>00063         CleanupStack::PushL(prod);
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065         <span class="comment">// Print the KTextInvokeConsumer string and wait for a key press.</span>
-<a name="l00066"></a>00066         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextInvokeConsumer,<span class="stringliteral">&quot;Creating and starting the Consumer Thread...[This consumes a token every second]\n&quot;</span>);
-<a name="l00067"></a>00067         console-&gt;Printf(KTextInvokeConsumer);
-<a name="l00068"></a>00068         console-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00069"></a>00069         console-&gt;Getch();
+<a name="l00066"></a>00066         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextInvokeConsumer,<span class="stringliteral">"Creating and starting the Consumer Thread...[This consumes a token every second]\n"</span>);
+<a name="l00067"></a>00067         console->Printf(KTextInvokeConsumer);
+<a name="l00068"></a>00068         console->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00069"></a>00069         console->Getch();
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071         <span class="comment">// Create an object of the CConsumer class.</span>
 <a name="l00072"></a>00072         <a class="code" href="class_c_consumer.html">CConsumer</a>* cons = <a class="code" href="class_c_consumer.html#a7ba476d5a42cbd16448b540867bd141b">CConsumer::NewL</a>(console,tokens);
@@ -107,10 +107,10 @@
 <a name="l00077"></a>00077         <a class="code" href="class_c_user_interface.html">CUserInterface</a>* ui = <a class="code" href="class_c_user_interface.html#acb29c660858994d24137bb413fee4af8">CUserInterface::NewL</a>(console,prod);
 <a name="l00078"></a>00078         CleanupStack::PushL(ui);
 <a name="l00079"></a>00079         
-<a name="l00080"></a>00080         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextStartAS,<span class="stringliteral">&quot;Starting the active scheduler...\n&quot;</span>);
-<a name="l00081"></a>00081         console-&gt;Printf(KTextStartAS);
+<a name="l00080"></a>00080         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextStartAS,<span class="stringliteral">"Starting the active scheduler...\n"</span>);
+<a name="l00081"></a>00081         console->Printf(KTextStartAS);
 <a name="l00082"></a>00082         <span class="comment">// Issue an asynchronous read request.</span>
-<a name="l00083"></a>00083         ui-&gt;<a class="code" href="class_c_user_interface.html#a9f9158c56f74b7c8da6c527f346c9952">ReadFunc</a>();
+<a name="l00083"></a>00083         ui-><a class="code" href="class_c_user_interface.html#a9f9158c56f74b7c8da6c527f346c9952">ReadFunc</a>();
 <a name="l00084"></a>00084         <span class="comment">// Start the active scheduler.</span>
 <a name="l00085"></a>00085         CActiveScheduler::Start();
 <a name="l00086"></a>00086 
@@ -134,18 +134,18 @@
 <a name="l00104"></a>00104         CleanupStack::PushL(console);
 <a name="l00105"></a>00105         TRAPD(error,DoExampleL());
 <a name="l00106"></a>00106         <span class="keywordflow">if</span> (error)
-<a name="l00107"></a>00107                 console-&gt;Printf(KFormatFailed, error);
+<a name="l00107"></a>00107                 console->Printf(KFormatFailed, error);
 <a name="l00108"></a>00108         <span class="keywordflow">else</span>
-<a name="l00109"></a>00109                 console-&gt;Printf(KTxtOK);
-<a name="l00110"></a>00110         console-&gt;Printf(KTxtPressAnyKey);
-<a name="l00111"></a>00111         console-&gt;Getch();
+<a name="l00109"></a>00109                 console->Printf(KTxtOK);
+<a name="l00110"></a>00110         console->Printf(KTxtPressAnyKey);
+<a name="l00111"></a>00111         console->Getch();
 <a name="l00112"></a>00112         CleanupStack::PopAndDestroy();
 <a name="l00113"></a>00113     }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

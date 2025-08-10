@@ -3,25 +3,25 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="(C) Copyright 2010" />
-  <meta name="DC.rights.owner" content="(C) Copyright 2010" />
-  <meta name="DC.Type" content="concept" />
-  <meta name="DC.Title" content="Handling key events in your application" />
-  <meta name="DC.Format" content="XHTML" />
-  <meta name="DC.Identifier" content="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C" />
-  <meta name="DC.Language" content="en" />
-  <link rel="stylesheet" type="text/css" href="commonltr.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta name="copyright" content="(C) Copyright 2010"></meta>
+  <meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+  <meta name="DC.Type" content="concept"></meta>
+  <meta name="DC.Title" content="Handling key events in your application"></meta>
+  <meta name="DC.Format" content="XHTML"></meta>
+  <meta name="DC.Identifier" content="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C"></meta>
+  <meta name="DC.Language" content="en"></meta>
+  <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
   <title>
    Handling key events in your application
   </title>
-  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="nokiacxxref.css" />
+  <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link>
  </head>
  <body id="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C">
   <a name="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C">
@@ -40,7 +40,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -83,7 +83,7 @@ An example of an implementation is as follows:
        <a name="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C__GUID-D93EBAD0-6C04-4E97-ABE2-9999EAA6F442">
         <!-- -->
        </a>
-       KeyResponse CMyAppView::OfferKeyEventL(const TKeyEvent&amp; aKeyEvent, TEventCode aType)
+       KeyResponse CMyAppView::OfferKeyEventL(const TKeyEvent& aKeyEvent, TEventCode aType)
     {
     TKeyResponse response = EKeyWasNotConsumed;
     //Check first that event type is EEventKey. It could be also
@@ -93,19 +93,19 @@ An example of an implementation is as follows:
         {
         // Take out the code of the key
         TInt code = aKeyEvent.iCode;
-        TBuf&lt; KMessageLength &gt; buf;
+        TBuf< KMessageLength > buf;
         buf.AppendNum( code );
         // Show the code
-        iEikonEnv-&gt;InfoMsg(buf);
+        iEikonEnv->InfoMsg(buf);
         // Forward the key event to the focused control
-        if( iListBox-&gt;IsFocused() )
+        if( iListBox->IsFocused() )
             {
-            response = iListBox-&gt;OfferKeyEventL( aKeyEvent, aType );
+            response = iListBox->OfferKeyEventL( aKeyEvent, aType );
             }
-        else if( iEditView-&gt;IsFocused() )
+        else if( iEditView->IsFocused() )
             {
             response =
-            iEditView-&gt;OfferKeyEventL( aKeyEvent, aType );
+            iEditView->OfferKeyEventL( aKeyEvent, aType );
             }
         }
         // Return the key consumption status
@@ -161,37 +161,37 @@ An example of an implementation is as follows:
        <a name="GUID-1614B24F-5DB2-43AA-9A18-723BD61B8B4C__GUID-3A2D3630-C28F-4165-8589-73AA4627D008">
         <!-- -->
        </a>
-       TKeyResponse CMyViewAppUi::HandleKeyEventL( const TKeyEvent&amp; aKeyEvent,TEventCode /*aType*/)
+       TKeyResponse CMyViewAppUi::HandleKeyEventL( const TKeyEvent& aKeyEvent,TEventCode /*aType*/)
     {
     if( iTabGroup == NULL )
         {
         return EKeyWasNotConsumed;
         }
 
-    TInt active = iTabGroup-&gt;ActiveTabIndex();
-    TInt count = iTabGroup-&gt;TabCount();
+    TInt active = iTabGroup->ActiveTabIndex();
+    TInt count = iTabGroup->TabCount();
 
     switch( aKeyEvent.iCode )
         {
         case EKeyLeftArrow:
-            if ( active &gt; 0 )
+            if ( active > 0 )
                 {
                 active--;
-                iTabGroup-&gt;SetActiveTabByIndex( active );
+                iTabGroup->SetActiveTabByIndex( active );
                 // ActivateLocalViewL() is used to change the view. 
                 // To change view from another application we would use ActivateViewL()
                 // Send an empty message
-                ActivateLocalViewL( TUid::Uid( iTabGroup-&gt;TabIdFromIndex( active ) ) );
+                ActivateLocalViewL( TUid::Uid( iTabGroup->TabIdFromIndex( active ) ) );
                 }
             break;
         case EKeyRightArrow:
-            if( ( active + 1 ) &lt; count )
+            if( ( active + 1 ) < count )
                 {
                 active++;
-                iTabGroup-&gt;SetActiveTabByIndex( active );
+                iTabGroup->SetActiveTabByIndex( active );
                 // ActivateLocalViewL() is used to change the view. 
                 // To change view from another application we would use ActivateViewL()
-                ActivateLocalViewL( TUid::Uid( iTabGroup-&gt;TabIdFromIndex( active ) ) );
+                ActivateLocalViewL( TUid::Uid( iTabGroup->TabIdFromIndex( active ) ) );
                 }
             break;
         default:
@@ -249,7 +249,7 @@ provided in the
         </span>
         package available
 from
-        <a href="http://www.forum.nokia.com/info/sw.nokia.com/id/226649f9-4118-4c8a-92e6-6d72fb251ae1/S60_Platform_Application_Views_v2_1_en.zip.html" target="_blank">
+        <a href="https://web.archive.org/web/20110000000000*/http://www.forum.nokia.com/info/sw.nokia.com/id/226649f9-4118-4c8a-92e6-6d72fb251ae1/S60_Platform_Application_Views_v2_1_en.zip.html" target="_blank">
          Forum Nokia
         </a>
         .
@@ -261,7 +261,7 @@ from
        for more information.
       </p>
      </div>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
     </div>

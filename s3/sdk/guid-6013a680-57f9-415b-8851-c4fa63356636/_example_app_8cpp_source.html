@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/MultimediaProtocols/RTPExample/src/ExampleApp.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -39,9 +39,9 @@
 <h1>examples/MultimediaProtocols/RTPExample/src/ExampleApp.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -52,12 +52,12 @@
 <a name="l00014"></a>00014 <span class="comment">//</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;RTPFileStreamer.h&quot;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;ExampleApp.h&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "RTPFileStreamer.h"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "ExampleApp.h"</span>
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 <span class="comment">//CActiveConsole</span>
-<a name="l00022"></a>00022 CActiveConsole::CActiveConsole(<a class="code" href="class_m_active_console_notify.html">MActiveConsoleNotify</a>&amp; aNotify):CActive(EPriorityStandard), iNotify(aNotify)
+<a name="l00022"></a>00022 CActiveConsole::CActiveConsole(<a class="code" href="class_m_active_console_notify.html">MActiveConsoleNotify</a>& aNotify):CActive(EPriorityStandard), iNotify(aNotify)
 <a name="l00023"></a>00023         {
 <a name="l00024"></a>00024         CActiveScheduler::Add(<span class="keyword">this</span>);
 <a name="l00025"></a>00025         }
@@ -68,40 +68,40 @@
 <a name="l00030"></a>00030         Cancel();
 <a name="l00031"></a>00031         }
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 CActiveConsole* CActiveConsole::NewL(<a class="code" href="class_m_active_console_notify.html">MActiveConsoleNotify</a>&amp; aNotify,<span class="keyword">const</span> TDesC&amp; aTitle,<span class="keyword">const</span> TSize&amp; aSize)
+<a name="l00033"></a>00033 CActiveConsole* CActiveConsole::NewL(<a class="code" href="class_m_active_console_notify.html">MActiveConsoleNotify</a>& aNotify,<span class="keyword">const</span> TDesC& aTitle,<span class="keyword">const</span> TSize& aSize)
 <a name="l00034"></a>00034         {
 <a name="l00035"></a>00035         CActiveConsole* console = <span class="keyword">new</span> (ELeave) CActiveConsole(aNotify);
 <a name="l00036"></a>00036         CleanupStack::PushL(console);
-<a name="l00037"></a>00037         console-&gt;ConstructL(aTitle,aSize);
+<a name="l00037"></a>00037         console->ConstructL(aTitle,aSize);
 <a name="l00038"></a>00038         CleanupStack::Pop();
 <a name="l00039"></a>00039         <span class="keywordflow">return</span> console;
 <a name="l00040"></a>00040         }
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keywordtype">void</span> CActiveConsole::ConstructL(<span class="keyword">const</span> TDesC&amp; aTitle,<span class="keyword">const</span> TSize&amp; aSize)
+<a name="l00042"></a>00042 <span class="keywordtype">void</span> CActiveConsole::ConstructL(<span class="keyword">const</span> TDesC& aTitle,<span class="keyword">const</span> TSize& aSize)
 <a name="l00043"></a>00043         {
 <a name="l00044"></a>00044         iConsole = Console::NewL(aTitle,aSize);
 <a name="l00045"></a>00045         }
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keywordtype">void</span> CActiveConsole::DoCancel()
 <a name="l00048"></a>00048         {
-<a name="l00049"></a>00049         iConsole-&gt;ReadCancel();
+<a name="l00049"></a>00049         iConsole->ReadCancel();
 <a name="l00050"></a>00050         }
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keywordtype">void</span> CActiveConsole::RequestKey()
 <a name="l00053"></a>00053         {
 <a name="l00054"></a>00054         DrawCursor();
-<a name="l00055"></a>00055         iConsole-&gt;Read(iStatus);
+<a name="l00055"></a>00055         iConsole->Read(iStatus);
 <a name="l00056"></a>00056         SetActive();
 <a name="l00057"></a>00057         }
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keywordtype">void</span> CActiveConsole::DrawCursor()
 <a name="l00060"></a>00060         {
-<a name="l00061"></a>00061         iConsole-&gt;Printf(_L(<span class="stringliteral">&quot;&gt;&gt;&quot;</span>));
+<a name="l00061"></a>00061         iConsole->Printf(_L(<span class="stringliteral">">>"</span>));
 <a name="l00062"></a>00062         }
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keywordtype">void</span> CActiveConsole::RunL()
 <a name="l00065"></a>00065         {
-<a name="l00066"></a>00066         TChar ch = iConsole-&gt;KeyCode();
+<a name="l00066"></a>00066         TChar ch = iConsole->KeyCode();
 <a name="l00067"></a>00067         iNotify.KeyPressed(ch);
 <a name="l00068"></a>00068         }
 <a name="l00069"></a>00069 
@@ -121,7 +121,7 @@
 <a name="l00083"></a>00083         {
 <a name="l00084"></a>00084         <a class="code" href="class_c_example_app.html">CExampleApp</a>* thisapp = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_example_app.html">CExampleApp</a>();
 <a name="l00085"></a>00085         CleanupStack::PushL(thisapp);
-<a name="l00086"></a>00086         thisapp-&gt;ConstructL();
+<a name="l00086"></a>00086         thisapp->ConstructL();
 <a name="l00087"></a>00087         CleanupStack::Pop();
 <a name="l00088"></a>00088         <span class="keywordflow">return</span> thisapp;
 <a name="l00089"></a>00089         }
@@ -131,47 +131,47 @@
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 <span class="keywordtype">void</span> CExampleApp::ConstructL()
 <a name="l00095"></a>00095         {
-<a name="l00096"></a>00096         iActiveConsole = CActiveConsole::NewL(*<span class="keyword">this</span>,_L(<span class="stringliteral">&quot;Status&quot;</span>),gMainConsole);
-<a name="l00097"></a>00097         iMonitorConsole = CActiveConsole::NewL(*<span class="keyword">this</span>,_L(<span class="stringliteral">&quot;RtpExample&quot;</span>),gTinyConsole);
+<a name="l00096"></a>00096         iActiveConsole = CActiveConsole::NewL(*<span class="keyword">this</span>,_L(<span class="stringliteral">"Status"</span>),gMainConsole);
+<a name="l00097"></a>00097         iMonitorConsole = CActiveConsole::NewL(*<span class="keyword">this</span>,_L(<span class="stringliteral">"RtpExample"</span>),gTinyConsole);
 <a name="l00098"></a>00098         User::LeaveIfError(iSockServ.Connect());
 <a name="l00099"></a>00099         }
 <a name="l00100"></a>00100         
 <a name="l00101"></a>00101 <span class="keywordtype">void</span> CExampleApp::StartL()
 <a name="l00102"></a>00102         {
-<a name="l00103"></a>00103         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextWelcome, <span class="stringliteral">&quot; ### RTP Example ### \n&quot;</span>);
-<a name="l00104"></a>00104         iMonitorConsole-&gt;Console().Printf(KTextWelcome);
+<a name="l00103"></a>00103         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextWelcome, <span class="stringliteral">" ### RTP Example ### \n"</span>);
+<a name="l00104"></a>00104         iMonitorConsole->Console().Printf(KTextWelcome);
 <a name="l00105"></a>00105         
-<a name="l00106"></a>00106         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextStartApp, <span class="stringliteral">&quot;\n\n Starting the RTP application&quot;</span>);
-<a name="l00107"></a>00107         iMonitorConsole-&gt;Console().Printf ( KTextStartApp );
+<a name="l00106"></a>00106         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextStartApp, <span class="stringliteral">"\n\n Starting the RTP application"</span>);
+<a name="l00107"></a>00107         iMonitorConsole->Console().Printf ( KTextStartApp );
 <a name="l00108"></a>00108         
-<a name="l00109"></a>00109         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPressAKey, <span class="stringliteral">&quot;\n\n Press any key to step through the example&quot;</span>);
-<a name="l00110"></a>00110         iMonitorConsole-&gt;Console().Printf ( KTextPressAKey );
-<a name="l00111"></a>00111         iMonitorConsole-&gt;Console().Getch ();    
+<a name="l00109"></a>00109         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPressAKey, <span class="stringliteral">"\n\n Press any key to step through the example"</span>);
+<a name="l00110"></a>00110         iMonitorConsole->Console().Printf ( KTextPressAKey );
+<a name="l00111"></a>00111         iMonitorConsole->Console().Getch ();    
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDAddr,<span class="stringliteral">&quot;\n\n Local address: &quot;</span>);
-<a name="l00114"></a>00114         iMonitorConsole-&gt;Console().Printf(KDAddr);
-<a name="l00115"></a>00115         iMonitorConsole-&gt;Console().Printf(KDestAddr);
-<a name="l00116"></a>00116         iMonitorConsole-&gt;Console().Getch ();
-<a name="l00117"></a>00117         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KLPort,<span class="stringliteral">&quot;\n\n Address family: &quot;</span>);
-<a name="l00118"></a>00118         iMonitorConsole-&gt;Console().Printf(KLPort);
-<a name="l00119"></a>00119         iMonitorConsole-&gt;Console().Printf(KLocalPort);
-<a name="l00120"></a>00120         iMonitorConsole-&gt;Console().Getch ();
-<a name="l00121"></a>00121         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDPort,<span class="stringliteral">&quot;\n\n RTP port number: &quot;</span>);
-<a name="l00122"></a>00122         iMonitorConsole-&gt;Console().Printf(KDPort);
-<a name="l00123"></a>00123         iMonitorConsole-&gt;Console().Printf(KDestPort);
-<a name="l00124"></a>00124         iMonitorConsole-&gt;Console().Getch ();
-<a name="l00125"></a>00125         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSFile,<span class="stringliteral">&quot;\n\n Source file name: &quot;</span>);
-<a name="l00126"></a>00126         iMonitorConsole-&gt;Console().Printf(KSFile);
-<a name="l00127"></a>00127         iMonitorConsole-&gt;Console().Printf(KsFileName);
-<a name="l00128"></a>00128         iMonitorConsole-&gt;Console().Getch ();
-<a name="l00129"></a>00129         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTFile,<span class="stringliteral">&quot;\n\n Target file name: &quot;</span>);
-<a name="l00130"></a>00130         iMonitorConsole-&gt;Console().Printf(KTFile);
-<a name="l00131"></a>00131         iMonitorConsole-&gt;Console().Printf(KdFileName);
-<a name="l00132"></a>00132         iMonitorConsole-&gt;Console().Getch ();
-<a name="l00133"></a>00133         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KBufSize,<span class="stringliteral">&quot;\n\n Buffer size: &quot;</span>);
-<a name="l00134"></a>00134         iMonitorConsole-&gt;Console().Printf(KBufSize);
-<a name="l00135"></a>00135         iMonitorConsole-&gt;Console().Printf(KSize);
-<a name="l00136"></a>00136         iMonitorConsole-&gt;Console().Getch ();
+<a name="l00113"></a>00113         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDAddr,<span class="stringliteral">"\n\n Local address: "</span>);
+<a name="l00114"></a>00114         iMonitorConsole->Console().Printf(KDAddr);
+<a name="l00115"></a>00115         iMonitorConsole->Console().Printf(KDestAddr);
+<a name="l00116"></a>00116         iMonitorConsole->Console().Getch ();
+<a name="l00117"></a>00117         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KLPort,<span class="stringliteral">"\n\n Address family: "</span>);
+<a name="l00118"></a>00118         iMonitorConsole->Console().Printf(KLPort);
+<a name="l00119"></a>00119         iMonitorConsole->Console().Printf(KLocalPort);
+<a name="l00120"></a>00120         iMonitorConsole->Console().Getch ();
+<a name="l00121"></a>00121         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KDPort,<span class="stringliteral">"\n\n RTP port number: "</span>);
+<a name="l00122"></a>00122         iMonitorConsole->Console().Printf(KDPort);
+<a name="l00123"></a>00123         iMonitorConsole->Console().Printf(KDestPort);
+<a name="l00124"></a>00124         iMonitorConsole->Console().Getch ();
+<a name="l00125"></a>00125         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSFile,<span class="stringliteral">"\n\n Source file name: "</span>);
+<a name="l00126"></a>00126         iMonitorConsole->Console().Printf(KSFile);
+<a name="l00127"></a>00127         iMonitorConsole->Console().Printf(KsFileName);
+<a name="l00128"></a>00128         iMonitorConsole->Console().Getch ();
+<a name="l00129"></a>00129         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTFile,<span class="stringliteral">"\n\n Target file name: "</span>);
+<a name="l00130"></a>00130         iMonitorConsole->Console().Printf(KTFile);
+<a name="l00131"></a>00131         iMonitorConsole->Console().Printf(KdFileName);
+<a name="l00132"></a>00132         iMonitorConsole->Console().Getch ();
+<a name="l00133"></a>00133         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KBufSize,<span class="stringliteral">"\n\n Buffer size: "</span>);
+<a name="l00134"></a>00134         iMonitorConsole->Console().Printf(KBufSize);
+<a name="l00135"></a>00135         iMonitorConsole->Console().Printf(KSize);
+<a name="l00136"></a>00136         iMonitorConsole->Console().Getch ();
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138         TInt dport;
 <a name="l00139"></a>00139         TInt lport;
@@ -199,11 +199,11 @@
 <a name="l00161"></a>00161         remote.SetPort(dport);
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163         TInt connId=KErrNotFound;
-<a name="l00164"></a>00164         iMonitorConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;\n\n Sending RTP packet from %S file to %S file.&quot;</span>),&amp;KsFileName,&amp;KdFileName);              
-<a name="l00165"></a>00165         iMonitorConsole-&gt;Console().Getch();
+<a name="l00164"></a>00164         iMonitorConsole->Console().Printf(_L(<span class="stringliteral">"\n\n Sending RTP packet from %S file to %S file."</span>),&KsFileName,&KdFileName);              
+<a name="l00165"></a>00165         iMonitorConsole->Console().Getch();
 <a name="l00166"></a>00166         iStreamer = CRtpFileStreamer::NewL(iSockServ,KsFileName,KdFileName,psize,remote,lport,connId);
-<a name="l00167"></a>00167         iStreamer-&gt;SetObserver(*<span class="keyword">this</span>);
-<a name="l00168"></a>00168         iStreamer-&gt;StartL();
+<a name="l00167"></a>00167         iStreamer->SetObserver(*<span class="keyword">this</span>);
+<a name="l00168"></a>00168         iStreamer->StartL();
 <a name="l00169"></a>00169         CActiveScheduler::Start();
 <a name="l00170"></a>00170         }
 <a name="l00171"></a>00171         
@@ -218,31 +218,31 @@
 <a name="l00180"></a>00180         
 <a name="l00181"></a>00181 <span class="keywordtype">void</span> CExampleApp::DrawMonitor()
 <a name="l00182"></a>00182         {
-<a name="l00183"></a>00183         iMonitorConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;\n Sent: %d\n Recv: %d&quot;</span>),iSent,iRecv);
+<a name="l00183"></a>00183         iMonitorConsole->Console().Printf(_L(<span class="stringliteral">"\n Sent: %d\n Recv: %d"</span>),iSent,iRecv);
 <a name="l00184"></a>00184         }
 <a name="l00185"></a>00185         
 <a name="l00186"></a>00186 <span class="keywordtype">void</span> CExampleApp::NotifyPacketSent()
 <a name="l00187"></a>00187         {
 <a name="l00188"></a>00188         iSent++;
 <a name="l00189"></a>00189         DrawMonitor();
-<a name="l00190"></a>00190         iActiveConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;s&quot;</span>));
+<a name="l00190"></a>00190         iActiveConsole->Console().Printf(_L(<span class="stringliteral">"s"</span>));
 <a name="l00191"></a>00191         }
 <a name="l00192"></a>00192         
 <a name="l00193"></a>00193 <span class="keywordtype">void</span> CExampleApp::NotifyPacketReceived()
 <a name="l00194"></a>00194         {
 <a name="l00195"></a>00195         iRecv++;
 <a name="l00196"></a>00196         DrawMonitor();
-<a name="l00197"></a>00197         iActiveConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;r&quot;</span>));
+<a name="l00197"></a>00197         iActiveConsole->Console().Printf(_L(<span class="stringliteral">"r"</span>));
 <a name="l00198"></a>00198         }
 <a name="l00199"></a>00199         
 <a name="l00200"></a>00200 <span class="keywordtype">void</span> CExampleApp::NotifyComplete()
 <a name="l00201"></a>00201         {
-<a name="l00202"></a>00202         iMonitorConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;\n\n Successfully sent %d RTP packet(s)&quot;</span>),iRecv);
-<a name="l00203"></a>00203         iMonitorConsole-&gt;Console().Getch();
+<a name="l00202"></a>00202         iMonitorConsole->Console().Printf(_L(<span class="stringliteral">"\n\n Successfully sent %d RTP packet(s)"</span>),iRecv);
+<a name="l00203"></a>00203         iMonitorConsole->Console().Getch();
 <a name="l00204"></a>00204         
-<a name="l00205"></a>00205         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExit,<span class="stringliteral">&quot;\n\n Press any key to exit the application &quot;</span>);
-<a name="l00206"></a>00206         iMonitorConsole-&gt;Console().Printf(KExit); 
-<a name="l00207"></a>00207         iMonitorConsole-&gt;Console().Getch();
+<a name="l00205"></a>00205         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KExit,<span class="stringliteral">"\n\n Press any key to exit the application "</span>);
+<a name="l00206"></a>00206         iMonitorConsole->Console().Printf(KExit); 
+<a name="l00207"></a>00207         iMonitorConsole->Console().Getch();
 <a name="l00208"></a>00208         
 <a name="l00209"></a>00209         <span class="keywordflow">if</span> (iStreamer)
 <a name="l00210"></a>00210                 {
@@ -253,9 +253,9 @@
 <a name="l00215"></a>00215         
 <a name="l00216"></a>00216 <span class="keywordtype">void</span> CExampleApp::NotifyError()
 <a name="l00217"></a>00217         {
-<a name="l00218"></a>00218         iMonitorConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;Error\n&quot;</span>));
-<a name="l00219"></a>00219         iMonitorConsole-&gt;Console().Getch();
-<a name="l00220"></a>00220         iActiveConsole-&gt;Console().Printf(_L(<span class="stringliteral">&quot;E&quot;</span>));
+<a name="l00218"></a>00218         iMonitorConsole->Console().Printf(_L(<span class="stringliteral">"Error\n"</span>));
+<a name="l00219"></a>00219         iMonitorConsole->Console().Getch();
+<a name="l00220"></a>00220         iActiveConsole->Console().Printf(_L(<span class="stringliteral">"E"</span>));
 <a name="l00221"></a>00221         }
 <a name="l00222"></a>00222         
 <a name="l00223"></a>00223 <span class="keywordtype">void</span> CExampleApp::KeyPressed(TChar <span class="comment">/*aKey*/</span>)
@@ -266,7 +266,7 @@
 <a name="l00228"></a>00228         {
 <a name="l00229"></a>00229         <a class="code" href="class_c_example_app.html">CExampleApp</a>* app = CExampleApp::NewL();
 <a name="l00230"></a>00230         CleanupStack::PushL(app);
-<a name="l00231"></a>00231         app-&gt;StartL();
+<a name="l00231"></a>00231         app->StartL();
 <a name="l00232"></a>00232         CleanupStack::PopAndDestroy(app);
 <a name="l00233"></a>00233         }
 <a name="l00234"></a>00234         
@@ -278,7 +278,7 @@
 <a name="l00240"></a>00240         CActiveScheduler::Install(activescheduler);
 <a name="l00241"></a>00241 
 <a name="l00242"></a>00242         TRAPD(err, MainL());
-<a name="l00243"></a>00243         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtEPOC32EX,<span class="stringliteral">&quot;EXAMPLES&quot;</span>);
+<a name="l00243"></a>00243         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtEPOC32EX,<span class="stringliteral">"EXAMPLES"</span>);
 <a name="l00244"></a>00244         __ASSERT_ALWAYS(!err,User::Panic(KTxtEPOC32EX,err));
 <a name="l00245"></a>00245         
 <a name="l00246"></a>00246         <span class="keyword">delete</span> activescheduler;
@@ -287,10 +287,10 @@
 <a name="l00249"></a>00249         <span class="keywordflow">return</span> KErrNone;
 <a name="l00250"></a>00250         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

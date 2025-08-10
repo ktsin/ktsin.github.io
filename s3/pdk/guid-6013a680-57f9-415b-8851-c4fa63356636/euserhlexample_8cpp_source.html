@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/SysLibs/EUserHLExample/src/euserhlexample.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+     Â 
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/SysLibs/EUserHLExample/src/euserhlexample.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -53,37 +53,37 @@
 <a name="l00013"></a>00013 <span class="comment">// Description:</span>
 <a name="l00014"></a>00014 <span class="comment">//</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;f32file.h&gt;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;e32cons.h&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;euserhl.h&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include <f32file.h></span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include <e32cons.h></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include <euserhl.h></span>
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtExample,<span class="stringliteral">&quot;EUsableExample\n&quot;</span>);
-<a name="l00022"></a>00022 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToContinue,<span class="stringliteral">&quot;Press any key to continue\n&quot;</span>);
+<a name="l00021"></a>00021 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtExample,<span class="stringliteral">"EUsableExample\n"</span>);
+<a name="l00022"></a>00022 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToContinue,<span class="stringliteral">"Press any key to continue\n"</span>);
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 CConsoleBase* gConsole;
 <a name="l00025"></a>00025 
-<a name="l00032"></a>00032 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPath, <span class="stringliteral">&quot;c:\\a\\b\\c&quot;</span>);
-<a name="l00033"></a>00033 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KOne, <span class="stringliteral">&quot;One &quot;</span>);
-<a name="l00034"></a>00034 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTwo, <span class="stringliteral">&quot;Two &quot;</span>);
-<a name="l00035"></a>00035 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTesting, <span class="stringliteral">&quot;Testing &quot;</span>);
+<a name="l00032"></a>00032 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPath, <span class="stringliteral">"c:\\a\\b\\c"</span>);
+<a name="l00033"></a>00033 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KOne, <span class="stringliteral">"One "</span>);
+<a name="l00034"></a>00034 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTwo, <span class="stringliteral">"Two "</span>);
+<a name="l00035"></a>00035 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTesting, <span class="stringliteral">"Testing "</span>);
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keywordtype">void</span> MaybeLeave()
 <a name="l00038"></a>00038         {
 <a name="l00039"></a>00039         <span class="comment">// Some code that may leave</span>
 <a name="l00040"></a>00040         }
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 HBufC* AllocateNameL(<span class="keyword">const</span> TDesC&amp; aDes)
+<a name="l00042"></a>00042 HBufC* AllocateNameL(<span class="keyword">const</span> TDesC& aDes)
 <a name="l00043"></a>00043         {
 <a name="l00044"></a>00044         <span class="keywordflow">return</span> aDes.AllocL();
 <a name="l00045"></a>00045         }
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keywordtype">void</span> GetCurrentPath(TDes&amp; aDes)
+<a name="l00047"></a>00047 <span class="keywordtype">void</span> GetCurrentPath(TDes& aDes)
 <a name="l00048"></a>00048         {
 <a name="l00049"></a>00049         aDes = KPath;
 <a name="l00050"></a>00050         }
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keywordtype">void</span> GetCurrentPathString(LString&amp; aString)
+<a name="l00052"></a>00052 <span class="keywordtype">void</span> GetCurrentPathString(LString& aString)
 <a name="l00053"></a>00053         {
 <a name="l00054"></a>00054         aString = KPath; <span class="comment">// Will auto-grow if necessary, may leave</span>
 <a name="l00055"></a>00055         }
@@ -122,13 +122,13 @@
 <a name="l00088"></a>00088 <span class="comment">                The general template/class scaffolding remains the same</span>
 <a name="l00089"></a>00089 <span class="comment">                for all custom cleanups, just this cleanup body varies</span>
 <a name="l00090"></a>00090 <span class="comment">                */</span>
-<a name="l00091"></a>00091                 aPtr-&gt;Zap();
-<a name="l00092"></a>00092                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintZapp, <span class="stringliteral">&quot;Zapped CTicker\n&quot;</span>);
-<a name="l00093"></a>00093                 gConsole-&gt;Printf(KTxtPrintZapp);
+<a name="l00091"></a>00091                 aPtr->Zap();
+<a name="l00092"></a>00092                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintZapp, <span class="stringliteral">"Zapped CTicker\n"</span>);
+<a name="l00093"></a>00093                 gConsole->Printf(KTxtPrintZapp);
 <a name="l00094"></a>00094                 }
 <a name="l00095"></a>00095         };
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="keywordtype">void</span> RegisterTicker(CTicker&amp; aTicker)
+<a name="l00097"></a>00097 <span class="keywordtype">void</span> RegisterTicker(CTicker& aTicker)
 <a name="l00098"></a>00098         {
 <a name="l00099"></a>00099         (void)aTicker;
 <a name="l00100"></a>00100         }
@@ -143,7 +143,7 @@
 <a name="l00109"></a>00109         <span class="keyword">delete</span> aTicker;
 <a name="l00110"></a>00110         }
 <a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="keywordtype">void</span> RegisterTimer(RTimer&amp; aTimer)
+<a name="l00112"></a>00112 <span class="keywordtype">void</span> RegisterTimer(RTimer& aTimer)
 <a name="l00113"></a>00113         {
 <a name="l00114"></a>00114         (void)aTimer;
 <a name="l00115"></a>00115         }
@@ -152,24 +152,24 @@
 <a name="l00118"></a>00118 <span class="keyword">class </span>TCancelClose
 <a name="l00119"></a>00119         {
 <a name="l00120"></a>00120 <span class="keyword">public</span>:
-<a name="l00121"></a>00121         <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00121"></a>00121         <span class="keyword">template</span> <<span class="keyword">class</span> T>
 <a name="l00122"></a>00122         <span class="keyword">static</span> <span class="keywordtype">void</span> Cleanup(T* aHandle)
 <a name="l00123"></a>00123                 {
 <a name="l00124"></a>00124                 <span class="comment">/*</span>
 <a name="l00125"></a>00125 <span class="comment">                The general template/class scaffolding remains the same</span>
 <a name="l00126"></a>00126 <span class="comment">                for all custom cleanups, just this cleanup body varies</span>
 <a name="l00127"></a>00127 <span class="comment">                */</span>
-<a name="l00128"></a>00128                 aHandle-&gt;Cancel();
-<a name="l00129"></a>00129                 aHandle-&gt;Close();
-<a name="l00130"></a>00130                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCancel,<span class="stringliteral">&quot;Cancel Closed RTimer\n&quot;</span>);
-<a name="l00131"></a>00131                 gConsole-&gt;Printf(KTxtCancel);
+<a name="l00128"></a>00128                 aHandle->Cancel();
+<a name="l00129"></a>00129                 aHandle->Close();
+<a name="l00130"></a>00130                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCancel,<span class="stringliteral">"Cancel Closed RTimer\n"</span>);
+<a name="l00131"></a>00131                 gConsole->Printf(KTxtCancel);
 <a name="l00132"></a>00132                 }
 <a name="l00133"></a>00133         };
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 <span class="keywordtype">void</span> BespokeCleanupFunction(TAny* <span class="comment">/*aData*/</span>)
 <a name="l00136"></a>00136         {
-<a name="l00137"></a>00137         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCleanup,<span class="stringliteral">&quot;BespokeCleanupFunction\n&quot;</span>);
-<a name="l00138"></a>00138         gConsole-&gt;Printf(KTxtCleanup);
+<a name="l00137"></a>00137         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCleanup,<span class="stringliteral">"BespokeCleanupFunction\n"</span>);
+<a name="l00138"></a>00138         gConsole->Printf(KTxtCleanup);
 <a name="l00139"></a>00139         }
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141 <span class="comment">// The walkthroughs themselves</span>
@@ -177,14 +177,14 @@
 <a name="l00149"></a>00149 <span class="keyword">class </span>CStringUserTwoPhase : <span class="keyword">public</span> CBase
 <a name="l00150"></a>00150         {
 <a name="l00151"></a>00151 <span class="keyword">public</span>:
-<a name="l00152"></a>00152         <span class="keyword">static</span> CStringUserTwoPhase* NewL(<span class="keyword">const</span> TDesC&amp; aName)
+<a name="l00152"></a>00152         <span class="keyword">static</span> CStringUserTwoPhase* NewL(<span class="keyword">const</span> TDesC& aName)
 <a name="l00153"></a>00153                 {
 <a name="l00154"></a>00154                 <span class="comment">/*</span>
 <a name="l00155"></a>00155 <span class="comment">                We can use the resource management utility classes in</span>
 <a name="l00156"></a>00156 <span class="comment">                two-phase if we want.</span>
 <a name="l00157"></a>00157 <span class="comment">                */</span>
-<a name="l00158"></a>00158                 LCleanedupPtr&lt;CStringUserTwoPhase&gt; <span class="keyword">self</span>(<span class="keyword">new</span>(ELeave) CStringUserTwoPhase);
-<a name="l00159"></a>00159                 <span class="keyword">self</span>-&gt;Construct(aName);
+<a name="l00158"></a>00158                 LCleanedupPtr<CStringUserTwoPhase> <span class="keyword">self</span>(<span class="keyword">new</span>(ELeave) CStringUserTwoPhase);
+<a name="l00159"></a>00159                 <span class="keyword">self</span>->Construct(aName);
 <a name="l00160"></a>00160                 <span class="comment">/*</span>
 <a name="l00161"></a>00161 <span class="comment">                Calling Unmanage() disables cleanup and yields the</span>
 <a name="l00162"></a>00162 <span class="comment">                previously managed pointer so that it can be safely</span>
@@ -193,7 +193,7 @@
 <a name="l00165"></a>00165                 <span class="keywordflow">return</span> <span class="keyword">self</span>.Unmanage(); 
 <a name="l00166"></a>00166                 }
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168         <span class="keyword">virtual</span> <span class="keywordtype">void</span> Construct(<span class="keyword">const</span> TDesC&amp; aName)
+<a name="l00168"></a>00168         <span class="keyword">virtual</span> <span class="keywordtype">void</span> Construct(<span class="keyword">const</span> TDesC& aName)
 <a name="l00169"></a>00169                 {
 <a name="l00170"></a>00170                 <span class="comment">/*</span>
 <a name="l00171"></a>00171 <span class="comment">                This assignment may leave if LString fails to allocate a</span>
@@ -207,7 +207,7 @@
 <a name="l00179"></a>00179                 <span class="comment">// The iName LString cleans up after itself automatically </span>
 <a name="l00180"></a>00180                 }
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182         <span class="keyword">const</span> TDesC&amp; Name() 
+<a name="l00182"></a>00182         <span class="keyword">const</span> TDesC& Name() 
 <a name="l00183"></a>00183                 {
 <a name="l00184"></a>00184                 <span class="comment">// We can just return an LString directly as a const TDesC</span>
 <a name="l00185"></a>00185                 <span class="keywordflow">return</span> iName; 
@@ -241,7 +241,7 @@
 <a name="l00224"></a>00224 <span class="comment">        */</span>
 <a name="l00225"></a>00225         CONSTRUCTORS_MAY_LEAVE
 <a name="l00226"></a>00226 
-<a name="l00227"></a>00227         <span class="keyword">static</span> CStringUserSinglePhase* NewL(<span class="keyword">const</span> TDesC&amp; aName)
+<a name="l00227"></a>00227         <span class="keyword">static</span> CStringUserSinglePhase* NewL(<span class="keyword">const</span> TDesC& aName)
 <a name="l00228"></a>00228                 {
 <a name="l00229"></a>00229                 <span class="keywordflow">return</span> <span class="keyword">new</span>(ELeave) CStringUserSinglePhase(aName);
 <a name="l00230"></a>00230                 }
@@ -251,14 +251,14 @@
 <a name="l00234"></a>00234                 <span class="comment">// The iName LString cleans up after itself automatically</span>
 <a name="l00235"></a>00235                 }
 <a name="l00236"></a>00236 
-<a name="l00237"></a>00237         <span class="keyword">const</span> TDesC&amp; Name() 
+<a name="l00237"></a>00237         <span class="keyword">const</span> TDesC& Name() 
 <a name="l00238"></a>00238                 {
 <a name="l00239"></a>00239                 <span class="comment">// We can just return an LString directly as a const TDesC</span>
 <a name="l00240"></a>00240                 <span class="keywordflow">return</span> iName;
 <a name="l00241"></a>00241                 }
 <a name="l00242"></a>00242 
 <a name="l00243"></a>00243 <span class="keyword">protected</span>:
-<a name="l00244"></a>00244         CStringUserSinglePhase(<span class="keyword">const</span> TDesC&amp; aName)
+<a name="l00244"></a>00244         CStringUserSinglePhase(<span class="keyword">const</span> TDesC& aName)
 <a name="l00245"></a>00245                 <span class="comment">/*</span>
 <a name="l00246"></a>00246 <span class="comment">                This initialization of iName may leave because LString</span>
 <a name="l00247"></a>00247 <span class="comment">                needs to allocate a heap buffer to copy the aName string</span>
@@ -282,29 +282,29 @@
 <a name="l00265"></a>00265 
 <a name="l00266"></a>00266 <span class="keywordtype">void</span> WalkthroughStringsL()
 <a name="l00267"></a>00267         {
-<a name="l00268"></a>00268         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption1,<span class="stringliteral">&quot;Option1: String handling using EUser high level library\n&quot;</span>);
-<a name="l00269"></a>00269     gConsole-&gt;Printf(KTxtOption1);
-<a name="l00270"></a>00270     <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatString,<span class="stringliteral">&quot;String %d&quot;</span>);
-<a name="l00271"></a>00271     <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintString,<span class="stringliteral">&quot;String %d = %S\n&quot;</span>);
+<a name="l00268"></a>00268         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption1,<span class="stringliteral">"Option1: String handling using EUser high level library\n"</span>);
+<a name="l00269"></a>00269     gConsole->Printf(KTxtOption1);
+<a name="l00270"></a>00270     <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatString,<span class="stringliteral">"String %d"</span>);
+<a name="l00271"></a>00271     <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintString,<span class="stringliteral">"String %d = %S\n"</span>);
 <a name="l00272"></a>00272        {
 <a name="l00273"></a>00273                 <span class="comment">// Trivially exercise the LString using classes defined above</span>
 <a name="l00274"></a>00274 
-<a name="l00275"></a>00275                 LCleanedupPtr&lt;CStringUserTwoPhase&gt; one(CStringUserTwoPhase::NewL(KOne));
-<a name="l00276"></a>00276                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSinglePhaseConstructor,<span class="stringliteral">&quot;Single phase name: %S\n&quot;</span>);
-<a name="l00277"></a>00277                 gConsole-&gt;Printf(KTxtSinglePhaseConstructor, &amp;one-&gt;Name());
+<a name="l00275"></a>00275                 LCleanedupPtr<CStringUserTwoPhase> one(CStringUserTwoPhase::NewL(KOne));
+<a name="l00276"></a>00276                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSinglePhaseConstructor,<span class="stringliteral">"Single phase name: %S\n"</span>);
+<a name="l00277"></a>00277                 gConsole->Printf(KTxtSinglePhaseConstructor, &one->Name());
 <a name="l00278"></a>00278 
-<a name="l00279"></a>00279                 LCleanedupPtr&lt;CStringUserSinglePhase&gt; two(CStringUserSinglePhase::NewL(KTwo));
-<a name="l00280"></a>00280                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTwoPhaseConstructor,<span class="stringliteral">&quot;Single phase name: %S\n&quot;</span>);
-<a name="l00281"></a>00281                 gConsole-&gt;Printf(KTxtTwoPhaseConstructor, &amp;two-&gt;Name());
+<a name="l00279"></a>00279                 LCleanedupPtr<CStringUserSinglePhase> two(CStringUserSinglePhase::NewL(KTwo));
+<a name="l00280"></a>00280                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTwoPhaseConstructor,<span class="stringliteral">"Single phase name: %S\n"</span>);
+<a name="l00281"></a>00281                 gConsole->Printf(KTxtTwoPhaseConstructor, &two->Name());
 <a name="l00282"></a>00282 
-<a name="l00283"></a>00283                 gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00284"></a>00284                 gConsole-&gt;Getch();
+<a name="l00283"></a>00283                 gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00284"></a>00284                 gConsole->Getch();
 <a name="l00285"></a>00285                 <span class="comment">// Both instances are automatically deleted as we go out of scope</span>
 <a name="l00286"></a>00286                 }
 <a name="l00287"></a>00287 
 <a name="l00288"></a>00288                 {
 <a name="l00289"></a>00289                 <span class="comment">/*</span>
-<a name="l00290"></a>00290 <span class="comment">                A default constructed LString starts empty, doesn&#39;t</span>
+<a name="l00290"></a>00290 <span class="comment">                A default constructed LString starts empty, doesn't</span>
 <a name="l00291"></a>00291 <span class="comment">                allocate any memory on the heap, and therefore the</span>
 <a name="l00292"></a>00292 <span class="comment">                following cannot leave</span>
 <a name="l00293"></a>00293 <span class="comment">                */</span>
@@ -324,7 +324,7 @@
 <a name="l00307"></a>00307                 s.AppendL(KTwo);
 <a name="l00308"></a>00308 
 <a name="l00309"></a>00309                 <span class="comment">// The += operator for LString also maps to AppendL()</span>
-<a name="l00310"></a>00310                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KThree, <span class="stringliteral">&quot;Three &quot;</span>);
+<a name="l00310"></a>00310                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KThree, <span class="stringliteral">"Three "</span>);
 <a name="l00311"></a>00311                 s += KThree;
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313                 <span class="comment">/*</span>
@@ -345,28 +345,28 @@
 <a name="l00328"></a>00328 <span class="comment">                */</span>
 <a name="l00329"></a>00329 
 <a name="l00330"></a>00330                 <span class="comment">// An LString can be printed the same way as any descriptor</span>
-<a name="l00331"></a>00331                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtValue,<span class="stringliteral">&quot;Value: %S\n&quot;</span>);
-<a name="l00332"></a>00332                 gConsole-&gt;Printf(KTxtValue, &amp;s);
+<a name="l00331"></a>00331                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtValue,<span class="stringliteral">"Value: %S\n"</span>);
+<a name="l00332"></a>00332                 gConsole->Printf(KTxtValue, &s);
 <a name="l00333"></a>00333 
 <a name="l00334"></a>00334                 <span class="comment">// An LString can be compared the same way as any descriptor</span>
-<a name="l00335"></a>00335                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringCompare,<span class="stringliteral">&quot; Comparing LString with a literal is successful\n&quot;</span>);
-<a name="l00336"></a>00336                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPhrase, <span class="stringliteral">&quot;One Two Three Testing &quot;</span>);
+<a name="l00335"></a>00335                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringCompare,<span class="stringliteral">" Comparing LString with a literal is successful\n"</span>);
+<a name="l00336"></a>00336                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KPhrase, <span class="stringliteral">"One Two Three Testing "</span>);
 <a name="l00337"></a>00337                 <span class="keywordflow">if</span>(s == KPhrase)
 <a name="l00338"></a>00338                         {
-<a name="l00339"></a>00339                         gConsole-&gt;Printf(KTxtLStringCompare);
+<a name="l00339"></a>00339                         gConsole->Printf(KTxtLStringCompare);
 <a name="l00340"></a>00340                         }
 <a name="l00341"></a>00341 
 <a name="l00342"></a>00342                 <span class="comment">// An LString supports all TDesC and TDes methods</span>
-<a name="l00343"></a>00343                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringSupportedAPI1,<span class="stringliteral">&quot;LString supports TDesC and TDes methods\n&quot;</span>);
+<a name="l00343"></a>00343                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringSupportedAPI1,<span class="stringliteral">"LString supports TDesC and TDes methods\n"</span>);
 <a name="l00344"></a>00344                 <span class="keywordflow">if</span>(s.Find(KTwo) == 4)
 <a name="l00345"></a>00345                         {
-<a name="l00346"></a>00346                         gConsole-&gt;Printf(KTxtLStringSupportedAPI1);     
+<a name="l00346"></a>00346                         gConsole->Printf(KTxtLStringSupportedAPI1);     
 <a name="l00347"></a>00347                         }
 <a name="l00348"></a>00348                 <span class="comment">// An LString supports all TDesC and TDes operators</span>
-<a name="l00349"></a>00349                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringSupportedAPI2,<span class="stringliteral">&quot;LString supports TDesC and TDes operators\n&quot;</span>);
-<a name="l00350"></a>00350                 <span class="keywordflow">if</span>(s[4] == TChar(<span class="charliteral">&#39;T&#39;</span>))
+<a name="l00349"></a>00349                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLStringSupportedAPI2,<span class="stringliteral">"LString supports TDesC and TDes operators\n"</span>);
+<a name="l00350"></a>00350                 <span class="keywordflow">if</span>(s[4] == TChar(<span class="charliteral">'T'</span>))
 <a name="l00351"></a>00351                         {
-<a name="l00352"></a>00352                         gConsole-&gt;Printf(KTxtLStringSupportedAPI2);
+<a name="l00352"></a>00352                         gConsole->Printf(KTxtLStringSupportedAPI2);
 <a name="l00353"></a>00353                         }
 <a name="l00354"></a>00354                 TInt untrimmed = s.Length();
 <a name="l00355"></a>00355                 s.Trim();
@@ -376,13 +376,13 @@
 <a name="l00359"></a>00359                         }
 <a name="l00360"></a>00360 
 <a name="l00361"></a>00361                 s.UpperCase();
-<a name="l00362"></a>00362                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintUpperCase,<span class="stringliteral">&quot;UpperCase: %S\n&quot;</span>);
-<a name="l00363"></a>00363                 gConsole-&gt;Printf(KTxtPrintUpperCase, &amp;s);
+<a name="l00362"></a>00362                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintUpperCase,<span class="stringliteral">"UpperCase: %S\n"</span>);
+<a name="l00363"></a>00363                 gConsole->Printf(KTxtPrintUpperCase, &s);
 <a name="l00364"></a>00364                 s.LowerCase();
-<a name="l00365"></a>00365                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintLowerCase,<span class="stringliteral">&quot;UpperCase: %S\n&quot;</span>);
-<a name="l00366"></a>00366                 gConsole-&gt;Printf(KTxtPrintLowerCase, &amp;s);
-<a name="l00367"></a>00367                 gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00368"></a>00368                 gConsole-&gt;Getch();
+<a name="l00365"></a>00365                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintLowerCase,<span class="stringliteral">"UpperCase: %S\n"</span>);
+<a name="l00366"></a>00366                 gConsole->Printf(KTxtPrintLowerCase, &s);
+<a name="l00367"></a>00367                 gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00368"></a>00368                 gConsole->Getch();
 <a name="l00369"></a>00369                 <span class="comment">/*</span>
 <a name="l00370"></a>00370 <span class="comment">                The underlying heap allocated buffer is released</span>
 <a name="l00371"></a>00371 <span class="comment">                automatically when the LString goes out of scope, either</span>
@@ -413,7 +413,7 @@
 <a name="l00396"></a>00396 
 <a name="l00397"></a>00397                 <span class="comment">/*</span>
 <a name="l00398"></a>00398 <span class="comment">                Pre-setting MaxLength is important when passing an LString</span>
-<a name="l00399"></a>00399 <span class="comment">                as a TDes to a library function, because the LString can&#39;t</span>
+<a name="l00399"></a>00399 <span class="comment">                as a TDes to a library function, because the LString can't</span>
 <a name="l00400"></a>00400 <span class="comment">                be auto-grown via the TDes API.</span>
 <a name="l00401"></a>00401 <span class="comment">                */</span>
 <a name="l00402"></a>00402 
@@ -427,16 +427,16 @@
 <a name="l00410"></a>00410                 LString s(KOne); <span class="comment">// From a literal</span>
 <a name="l00411"></a>00411                 s += KTwo;
 <a name="l00412"></a>00412                 LString half(s.Left(s.Length() / 2)); <span class="comment">// Left returns a TPtrC</span>
-<a name="l00413"></a>00413                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintAllandHalf,<span class="stringliteral">&quot;All: %S, Half: %S\n&quot;</span>);
-<a name="l00414"></a>00414                 gConsole-&gt;Printf(KTxtPrintAllandHalf, &amp;s, &amp;half);
+<a name="l00413"></a>00413                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintAllandHalf,<span class="stringliteral">"All: %S, Half: %S\n"</span>);
+<a name="l00414"></a>00414                 gConsole->Printf(KTxtPrintAllandHalf, &s, &half);
 <a name="l00415"></a>00415 
 <a name="l00416"></a>00416                 <span class="comment">/*</span>
 <a name="l00417"></a>00417 <span class="comment">                On the other hand, you can initialize from a returned</span>
 <a name="l00418"></a>00418 <span class="comment">                HBufC* and the LString automatically takes ownership</span>
 <a name="l00419"></a>00419 <span class="comment">                */</span>
 <a name="l00420"></a>00420                 LString own(AllocateNameL(KTesting));
-<a name="l00421"></a>00421                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOwnedString,<span class="stringliteral">&quot;What I own: %S\n&quot;</span>);
-<a name="l00422"></a>00422                 gConsole-&gt;Printf(KTxtOwnedString, &amp;own);
+<a name="l00421"></a>00421                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOwnedString,<span class="stringliteral">"What I own: %S\n"</span>);
+<a name="l00422"></a>00422                 gConsole->Printf(KTxtOwnedString, &own);
 <a name="l00423"></a>00423 
 <a name="l00424"></a>00424                 <span class="comment">/*</span>
 <a name="l00425"></a>00425 <span class="comment">                Following that you can re-assign an HBufC to an existing</span>
@@ -455,7 +455,7 @@
 <a name="l00438"></a>00438                 <span class="comment">/*</span>
 <a name="l00439"></a>00439 <span class="comment">                The content of one string can similarly be assigned</span>
 <a name="l00440"></a>00440 <span class="comment">                to another to avoid copying. In this example, the content </span>
-<a name="l00441"></a>00441 <span class="comment">                is detached from &#39;s&#39; and transfered to &#39;own&#39;.</span>
+<a name="l00441"></a>00441 <span class="comment">                is detached from 's' and transfered to 'own'.</span>
 <a name="l00442"></a>00442 <span class="comment">                */</span>  
 <a name="l00443"></a>00443                 own.Assign(s);
 <a name="l00444"></a>00444                 
@@ -479,8 +479,8 @@
 <a name="l00462"></a>00462 <span class="comment">                then you supply the length in this alternative Assign() method.</span>
 <a name="l00463"></a>00463 <span class="comment">                */</span>   
 <a name="l00464"></a>00464                 own.Assign((TText*)User::Alloc(24*(TInt)<span class="keyword">sizeof</span>(TText)), 12,24);
-<a name="l00465"></a>00465                 gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00466"></a>00466                 gConsole-&gt;Getch();
+<a name="l00465"></a>00465                 gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00466"></a>00466                 gConsole->Getch();
 <a name="l00467"></a>00467                 <span class="comment">/*</span>
 <a name="l00468"></a>00468 <span class="comment">                Each Assign() destroys the old content before assuming ownership</span>
 <a name="l00469"></a>00469 <span class="comment">                of the new.</span>
@@ -502,7 +502,7 @@
 <a name="l00485"></a>00485                         {
 <a name="l00486"></a>00486                         <span class="comment">//Length() API gives the current length of the string</span>
 <a name="l00487"></a>00487                         }
-<a name="l00488"></a>00488                 <span class="keywordflow">if</span>(s.MaxLength() &gt;= 8)
+<a name="l00488"></a>00488                 <span class="keywordflow">if</span>(s.MaxLength() >= 8)
 <a name="l00489"></a>00489                         {
 <a name="l00490"></a>00490                         <span class="comment">//MaxLength() gives the maximum length supported by the string</span>
 <a name="l00491"></a>00491                         }
@@ -521,7 +521,7 @@
 <a name="l00504"></a>00504 <span class="comment">                a more compact one using:</span>
 <a name="l00505"></a>00505 <span class="comment">                */</span>
 <a name="l00506"></a>00506                 s.Compress();
-<a name="l00507"></a>00507                 <span class="keywordflow">if</span>(s.MaxLength() &gt;= 4)
+<a name="l00507"></a>00507                 <span class="keywordflow">if</span>(s.MaxLength() >= 4)
 <a name="l00508"></a>00508                         {
 <a name="l00509"></a>00509                         <span class="comment">//Compress() API is used to compress the unused memory.</span>
 <a name="l00510"></a>00510                         }
@@ -551,20 +551,20 @@
 <a name="l00534"></a>00534                 {
 <a name="l00535"></a>00535                 <span class="comment">/*</span>
 <a name="l00536"></a>00536 <span class="comment">                An LString can be passed directly to any function requiring</span>
-<a name="l00537"></a>00537 <span class="comment">                a const TDesC&amp;</span>
+<a name="l00537"></a>00537 <span class="comment">                a const TDesC&</span>
 <a name="l00538"></a>00538 <span class="comment">                */</span>
 <a name="l00539"></a>00539                 TInt year = 2009;
 <a name="l00540"></a>00540 
 <a name="l00541"></a>00541                 LString s;
-<a name="l00542"></a>00542                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatYear1,<span class="stringliteral">&quot;Happy New Year %d&quot;</span>);
+<a name="l00542"></a>00542                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatYear1,<span class="stringliteral">"Happy New Year %d"</span>);
 <a name="l00543"></a>00543                 s.FormatL(KTxtFormatYear1, year);
-<a name="l00544"></a>00544                 <span class="comment">// InfoPrint() takes a const TDesC&amp;</span>
+<a name="l00544"></a>00544                 <span class="comment">// InfoPrint() takes a const TDesC&</span>
 <a name="l00545"></a>00545                 User::InfoPrint(s);
 <a name="l00546"></a>00546 
 <a name="l00547"></a>00547                 LString pattern;
-<a name="l00548"></a>00548                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatYear2,<span class="stringliteral">&quot;*Year %d&quot;</span>);
+<a name="l00548"></a>00548                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFormatYear2,<span class="stringliteral">"*Year %d"</span>);
 <a name="l00549"></a>00549                 pattern.FormatL(KTxtFormatYear2, year);
-<a name="l00550"></a>00550                 <span class="comment">// Match() takes a const TDesC&amp; as a pattern</span>
+<a name="l00550"></a>00550                 <span class="comment">// Match() takes a const TDesC& as a pattern</span>
 <a name="l00551"></a>00551                 TInt loc = s.Match(pattern);
 <a name="l00552"></a>00552                 <span class="keywordflow">if</span>(loc == 10)
 <a name="l00553"></a>00553                         {
@@ -575,8 +575,8 @@
 <a name="l00558"></a>00558                 {
 <a name="l00559"></a>00559                 <span class="comment">/*</span>
 <a name="l00560"></a>00560 <span class="comment">                An LString can be passed directly to any function requiring</span>
-<a name="l00561"></a>00561 <span class="comment">                a TDes&amp; but care must always be taken to pre-set MaxLength()</span>
-<a name="l00562"></a>00562 <span class="comment">                since LStrings can&#39;t be automatically grown via the TDes</span>
+<a name="l00561"></a>00561 <span class="comment">                a TDes& but care must always be taken to pre-set MaxLength()</span>
+<a name="l00562"></a>00562 <span class="comment">                since LStrings can't be automatically grown via the TDes</span>
 <a name="l00563"></a>00563 <span class="comment">                interface</span>
 <a name="l00564"></a>00564 <span class="comment">                */</span>
 <a name="l00565"></a>00565 
@@ -584,8 +584,8 @@
 <a name="l00567"></a>00567                 <span class="comment">/*</span>
 <a name="l00568"></a>00568 <span class="comment">                Calling GetCurrentPath(s) now would panic because LStrings</span>
 <a name="l00569"></a>00569 <span class="comment">                are initialized by default to MaxLength 0.  Although s is</span>
-<a name="l00570"></a>00570 <span class="comment">                an LString GetCurrentPath() takes a TDes&amp; and so inside the function</span>
-<a name="l00571"></a>00571 <span class="comment">                &#39;s&#39; behaves as a TDes and would panic with USER 11 if the resulting </span>
+<a name="l00570"></a>00570 <span class="comment">                an LString GetCurrentPath() takes a TDes& and so inside the function</span>
+<a name="l00571"></a>00571 <span class="comment">                's' behaves as a TDes and would panic with USER 11 if the resulting </span>
 <a name="l00572"></a>00572 <span class="comment">                new length of s is greater than its maximum length.</span>
 <a name="l00573"></a>00573 <span class="comment">                */</span>
 <a name="l00574"></a>00574                 <span class="keywordflow">if</span>(s.MaxLength() == 0)
@@ -600,8 +600,8 @@
 <a name="l00583"></a>00583 <span class="comment">                */</span>
 <a name="l00584"></a>00584                 s.SetMaxLengthL(KMaxFileName);
 <a name="l00585"></a>00585                 GetCurrentPath(s);
-<a name="l00586"></a>00586                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintPath,<span class="stringliteral">&quot;Path: %S\n&quot;</span>);
-<a name="l00587"></a>00587                 gConsole-&gt;Printf(KTxtPrintPath, &amp;s);
+<a name="l00586"></a>00586                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPrintPath,<span class="stringliteral">"Path: %S\n"</span>);
+<a name="l00587"></a>00587                 gConsole->Printf(KTxtPrintPath, &s);
 <a name="l00588"></a>00588                 <span class="keywordflow">if</span>(s == KPath)
 <a name="l00589"></a>00589                         {
 <a name="l00590"></a>00590                         <span class="comment">//String comparison is successful</span>
@@ -613,8 +613,8 @@
 <a name="l00596"></a>00596 <span class="comment">                Length() set to the new MaxLength().</span>
 <a name="l00597"></a>00597 <span class="comment">                */</span>
 <a name="l00598"></a>00598                 s.SetMaxLengthL(s.Length() / 2);
-<a name="l00599"></a>00599                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTruncatedPath,<span class="stringliteral">&quot;Truncated path: %S\n&quot;</span>);
-<a name="l00600"></a>00600                 gConsole-&gt;Printf(KTxtTruncatedPath, &amp;s);
+<a name="l00599"></a>00599                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTruncatedPath,<span class="stringliteral">"Truncated path: %S\n"</span>);
+<a name="l00600"></a>00600                 gConsole->Printf(KTxtTruncatedPath, &s);
 <a name="l00601"></a>00601                 <span class="keywordflow">if</span>(s.Length() == s.MaxLength())
 <a name="l00602"></a>00602                         {
 <a name="l00603"></a>00603                         <span class="comment">//String comparison is successful</span>
@@ -627,23 +627,23 @@
 <a name="l00610"></a>00610 <span class="comment">                */</span>
 <a name="l00611"></a>00611                 LString s2(KMaxFileName);
 <a name="l00612"></a>00612                 GetCurrentPath(s2);
-<a name="l00613"></a>00613                 gConsole-&gt;Printf(KTxtPrintPath, &amp;s2);
+<a name="l00613"></a>00613                 gConsole->Printf(KTxtPrintPath, &s2);
 <a name="l00614"></a>00614                 <span class="keywordflow">if</span>(s2 == KPath)
 <a name="l00615"></a>00615                         {
 <a name="l00616"></a>00616                         <span class="comment">//String comparison is successful</span>
 <a name="l00617"></a>00617                         }
 <a name="l00618"></a>00618 
 <a name="l00619"></a>00619                 <span class="comment">/*</span>
-<a name="l00620"></a>00620 <span class="comment">                Your code and APIs can benefit from LString&#39;s auto-growth</span>
+<a name="l00620"></a>00620 <span class="comment">                Your code and APIs can benefit from LString's auto-growth</span>
 <a name="l00621"></a>00621 <span class="comment">                behaviour by accepting an LString to fill in as an output</span>
 <a name="l00622"></a>00622 <span class="comment">                parameter. Using LString rather than TDes parameters means </span>
 <a name="l00623"></a>00623 <span class="comment">                that the function is able to safely increase the size of the </span>
 <a name="l00624"></a>00624 <span class="comment">                string as the LString will re-allocate as necessary</span>
 <a name="l00625"></a>00625 <span class="comment">                */</span>
 <a name="l00626"></a>00626                 LString s3;
-<a name="l00627"></a>00627                 <span class="comment">// GetCurrentPathString() takes an LString&amp;</span>
+<a name="l00627"></a>00627                 <span class="comment">// GetCurrentPathString() takes an LString&</span>
 <a name="l00628"></a>00628                 GetCurrentPathString(s3);
-<a name="l00629"></a>00629                 gConsole-&gt;Printf(KTxtPrintPath, &amp;s3);
+<a name="l00629"></a>00629                 gConsole->Printf(KTxtPrintPath, &s3);
 <a name="l00630"></a>00630                 <span class="keywordflow">if</span>(s3 == KPath)
 <a name="l00631"></a>00631                         {
 <a name="l00632"></a>00632                         <span class="comment">//String comparison is successful</span>
@@ -656,8 +656,8 @@
 <a name="l00639"></a>00639 <span class="comment">                reallocation involved. </span>
 <a name="l00640"></a>00640 <span class="comment">                */</span>
 <a name="l00641"></a>00641                 LString s4(AppendCurrentPathStringL(s3));
-<a name="l00642"></a>00642                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtAppendedPath,<span class="stringliteral">&quot;Appended path: %S\n&quot;</span>);
-<a name="l00643"></a>00643                 gConsole-&gt;Printf(KTxtAppendedPath, &amp;s4);
+<a name="l00642"></a>00642                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtAppendedPath,<span class="stringliteral">"Appended path: %S\n"</span>);
+<a name="l00643"></a>00643                 gConsole->Printf(KTxtAppendedPath, &s4);
 <a name="l00644"></a>00644                 <span class="keywordflow">if</span>(s4.Length() == s3.Length() * 2)
 <a name="l00645"></a>00645                         {
 <a name="l00646"></a>00646                         <span class="comment">//String comparison is successful</span>
@@ -670,16 +670,16 @@
 <a name="l00653"></a>00653 <span class="comment">                Then it can managed as part of an array of string pointers.</span>
 <a name="l00654"></a>00654 <span class="comment">                */</span>
 <a name="l00655"></a>00655                 TInt n = 5;
-<a name="l00656"></a>00656                 LCleanedupHandle&lt;RPointerArray&lt;LString&gt;, TResetAndDestroy&gt; sarray;
+<a name="l00656"></a>00656                 LCleanedupHandle<RPointerArray<LString>, TResetAndDestroy> sarray;
 <a name="l00657"></a>00657                 
-<a name="l00658"></a>00658                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; n; ++i) 
+<a name="l00658"></a>00658                 <span class="keywordflow">for</span> (TInt i = 0; i < n; ++i) 
 <a name="l00659"></a>00659                         {
 <a name="l00660"></a>00660                         LString* s = <span class="keyword">new</span>(ELeave) LString;
-<a name="l00661"></a>00661                         s-&gt;FormatL(KTxtFormatString, i);
-<a name="l00662"></a>00662                         sarray-&gt;Append(s);
+<a name="l00661"></a>00661                         s->FormatL(KTxtFormatString, i);
+<a name="l00662"></a>00662                         sarray->Append(s);
 <a name="l00663"></a>00663                         }
 <a name="l00664"></a>00664 
-<a name="l00665"></a>00665                 <span class="keywordflow">for</span> (TInt i = 0, n = sarray-&gt;Count(); i &lt; n; ++i) 
+<a name="l00665"></a>00665                 <span class="keywordflow">for</span> (TInt i = 0, n = sarray->Count(); i < n; ++i) 
 <a name="l00666"></a>00666                         {
 <a name="l00667"></a>00667                         LString tmp;
 <a name="l00668"></a>00668                         tmp.FormatL(KTxtFormatString, i);
@@ -687,7 +687,7 @@
 <a name="l00670"></a>00670                                 {
 <a name="l00671"></a>00671                                 
 <a name="l00672"></a>00672                                 }
-<a name="l00673"></a>00673                         gConsole-&gt;Printf(KTxtPrintString, i, (*sarray)[i]);
+<a name="l00673"></a>00673                         gConsole->Printf(KTxtPrintString, i, (*sarray)[i]);
 <a name="l00674"></a>00674                         }
 <a name="l00675"></a>00675 
 <a name="l00676"></a>00676                 }
@@ -714,14 +714,14 @@
 <a name="l00697"></a>00697 <span class="comment">                */</span>
 <a name="l00698"></a>00698 
 <a name="l00699"></a>00699                 TInt n = 5;
-<a name="l00700"></a>00700                 LCleanedupArray&lt;LString&gt; sarray(<span class="keyword">new</span>(ELeave) LString[n]);
+<a name="l00700"></a>00700                 LCleanedupArray<LString> sarray(<span class="keyword">new</span>(ELeave) LString[n]);
 <a name="l00701"></a>00701 
-<a name="l00702"></a>00702                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; n; ++i) 
+<a name="l00702"></a>00702                 <span class="keywordflow">for</span> (TInt i = 0; i < n; ++i) 
 <a name="l00703"></a>00703                         {
 <a name="l00704"></a>00704                         sarray[i].FormatL(KTxtFormatString, i);
 <a name="l00705"></a>00705                         }
 <a name="l00706"></a>00706 
-<a name="l00707"></a>00707                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; n; ++i) 
+<a name="l00707"></a>00707                 <span class="keywordflow">for</span> (TInt i = 0; i < n; ++i) 
 <a name="l00708"></a>00708                         {
 <a name="l00709"></a>00709                         LString tmp;
 <a name="l00710"></a>00710                         tmp.FormatL(KTxtFormatString, i);
@@ -729,7 +729,7 @@
 <a name="l00712"></a>00712                                 {
 <a name="l00713"></a>00713                                 <span class="comment">//comparison of strings is successful</span>
 <a name="l00714"></a>00714                                 }
-<a name="l00715"></a>00715                         gConsole-&gt;Printf(KTxtPrintString, i, &amp;sarray[i]);
+<a name="l00715"></a>00715                         gConsole->Printf(KTxtPrintString, i, &sarray[i]);
 <a name="l00716"></a>00716                         }
 <a name="l00717"></a>00717 
 <a name="l00718"></a>00718                 }
@@ -745,8 +745,8 @@
 <a name="l00733"></a>00733 <span class="comment">                We can use the resource management utility classes in</span>
 <a name="l00734"></a>00734 <span class="comment">                two-phase if we want to.</span>
 <a name="l00735"></a>00735 <span class="comment">                */</span>
-<a name="l00736"></a>00736                 LCleanedupPtr&lt;CManagedUserTwoPhase&gt; <span class="keyword">self</span>(<span class="keyword">new</span>(ELeave) CManagedUserTwoPhase);
-<a name="l00737"></a>00737                 <span class="keyword">self</span>-&gt;ConstructL(aTicker);
+<a name="l00736"></a>00736                 LCleanedupPtr<CManagedUserTwoPhase> <span class="keyword">self</span>(<span class="keyword">new</span>(ELeave) CManagedUserTwoPhase);
+<a name="l00737"></a>00737                 <span class="keyword">self</span>->ConstructL(aTicker);
 <a name="l00738"></a>00738                 <span class="comment">/*</span>
 <a name="l00739"></a>00739 <span class="comment">                Calling Unmanage() disables cleanup and yields the</span>
 <a name="l00740"></a>00740 <span class="comment">                previously managed pointer so that it can be safely</span>
@@ -763,15 +763,15 @@
 <a name="l00751"></a>00751 <span class="comment">                */</span>
 <a name="l00752"></a>00752                 }
 <a name="l00753"></a>00753 
-<a name="l00754"></a>00754         CTicker&amp; Ticker()
+<a name="l00754"></a>00754         CTicker& Ticker()
 <a name="l00755"></a>00755                 {
-<a name="l00756"></a>00756                 <span class="comment">// If we dereference the management object we get a CTicker&amp;.</span>
+<a name="l00756"></a>00756                 <span class="comment">// If we dereference the management object we get a CTicker&.</span>
 <a name="l00757"></a>00757                 <span class="keywordflow">return</span> *iTicker;
 <a name="l00758"></a>00758                 }
 <a name="l00759"></a>00759 
-<a name="l00760"></a>00760         RTimer&amp; Timer()
+<a name="l00760"></a>00760         RTimer& Timer()
 <a name="l00761"></a>00761                 {
-<a name="l00762"></a>00762                 <span class="comment">// If we dereference the management object we get an RTimer&amp;.</span>
+<a name="l00762"></a>00762                 <span class="comment">// If we dereference the management object we get an RTimer&.</span>
 <a name="l00763"></a>00763                 <span class="keywordflow">return</span> *iTimer;
 <a name="l00764"></a>00764                 }
 <a name="l00765"></a>00765 
@@ -782,8 +782,8 @@
 <a name="l00770"></a>00770                 <span class="comment">// Take ownership and manage aTicker.</span>
 <a name="l00771"></a>00771                 iTicker = aTicker; 
 <a name="l00772"></a>00772 
-<a name="l00773"></a>00773                 <span class="comment">// Note use of -&gt; to indirect through the management wrapper.</span>
-<a name="l00774"></a>00774                 iTimer-&gt;CreateLocal() OR_LEAVE; 
+<a name="l00773"></a>00773                 <span class="comment">// Note use of -> to indirect through the management wrapper.</span>
+<a name="l00774"></a>00774                 iTimer->CreateLocal() OR_LEAVE; 
 <a name="l00775"></a>00775                 }
 <a name="l00776"></a>00776         
 <a name="l00777"></a>00777         CManagedUserTwoPhase()
@@ -801,8 +801,8 @@
 <a name="l00789"></a>00789 
 <a name="l00790"></a>00790 <span class="keyword">private</span>:
 <a name="l00791"></a>00791         <span class="comment">// We have to use LManagedXxx for fields, not LCleanedupXxx</span>
-<a name="l00792"></a>00792         LManagedPtr&lt;CTicker&gt; iTicker;
-<a name="l00793"></a>00793         LManagedHandle&lt;RTimer&gt; iTimer;
+<a name="l00792"></a>00792         LManagedPtr<CTicker> iTicker;
+<a name="l00793"></a>00793         LManagedHandle<RTimer> iTimer;
 <a name="l00794"></a>00794         };
 <a name="l00795"></a>00795 
 <a name="l00808"></a>00808 <span class="keyword">class </span>CManagedUserSinglePhase : <span class="keyword">public</span> CBase
@@ -828,15 +828,15 @@
 <a name="l00828"></a>00828 <span class="comment">                */</span>
 <a name="l00829"></a>00829                 }
 <a name="l00830"></a>00830 
-<a name="l00831"></a>00831         CTicker&amp; Ticker()
+<a name="l00831"></a>00831         CTicker& Ticker()
 <a name="l00832"></a>00832                 {
-<a name="l00833"></a>00833                 <span class="comment">// If we dereference the management object we get a CTicker&amp;.</span>
+<a name="l00833"></a>00833                 <span class="comment">// If we dereference the management object we get a CTicker&.</span>
 <a name="l00834"></a>00834                 <span class="keywordflow">return</span> *iTicker;
 <a name="l00835"></a>00835                 }
 <a name="l00836"></a>00836 
-<a name="l00837"></a>00837         RTimer&amp; Timer()
+<a name="l00837"></a>00837         RTimer& Timer()
 <a name="l00838"></a>00838                 {
-<a name="l00839"></a>00839                 <span class="comment">// If we dereference the management object we get an RTimer&amp;.</span>
+<a name="l00839"></a>00839                 <span class="comment">// If we dereference the management object we get an RTimer&.</span>
 <a name="l00840"></a>00840                 <span class="keywordflow">return</span> *iTimer;
 <a name="l00841"></a>00841                 }
 <a name="l00842"></a>00842 
@@ -855,9 +855,9 @@
 <a name="l00855"></a>00855 <span class="comment">                constructed at the point of a leave in a constructor) will</span>
 <a name="l00856"></a>00856 <span class="comment">                be destructed, and the manager will cleanup the CTicker.</span>
 <a name="l00857"></a>00857 <span class="comment"></span>
-<a name="l00858"></a>00858 <span class="comment">                Note use of -&gt; to indirect through the management wrapper.</span>
+<a name="l00858"></a>00858 <span class="comment">                Note use of -> to indirect through the management wrapper.</span>
 <a name="l00859"></a>00859 <span class="comment">                */</span>
-<a name="l00860"></a>00860                 iTimer-&gt;CreateLocal(); 
+<a name="l00860"></a>00860                 iTimer->CreateLocal(); 
 <a name="l00861"></a>00861 
 <a name="l00862"></a>00862                 <span class="comment">// Likewise if we leave here, both iTicker and iTimer will</span>
 <a name="l00863"></a>00863                 <span class="comment">// undergo managed cleanup.</span>
@@ -866,8 +866,8 @@
 <a name="l00866"></a>00866 
 <a name="l00867"></a>00867 <span class="keyword">private</span>:
 <a name="l00868"></a>00868         <span class="comment">// We have to use LManagedXxx for fields, not LCleanedupXxx.</span>
-<a name="l00869"></a>00869         LManagedPtr&lt;CTicker, TTickerZapStrategy&gt; iTicker;
-<a name="l00870"></a>00870         LManagedHandle&lt;RTimer&gt; iTimer;
+<a name="l00869"></a>00869         LManagedPtr<CTicker, TTickerZapStrategy> iTicker;
+<a name="l00870"></a>00870         LManagedHandle<RTimer> iTimer;
 <a name="l00871"></a>00871         };
 <a name="l00872"></a>00872 
 <a name="l00873"></a>00873 <span class="comment">//Class definition of trivial R-Class</span>
@@ -883,31 +883,31 @@
 <a name="l00883"></a>00883                 iData = <span class="keyword">new</span>(ELeave) TInt(aValue);
 <a name="l00884"></a>00884                 }
 <a name="l00885"></a>00885         
-<a name="l00886"></a>00886         <span class="comment">//Cleanup function – frees resource</span>
+<a name="l00886"></a>00886         <span class="comment">//Cleanup function  frees resource</span>
 <a name="l00887"></a>00887         <span class="keywordtype">void</span> Close()
 <a name="l00888"></a>00888                 {
 <a name="l00889"></a>00889                 <span class="keyword">delete</span> iData;
 <a name="l00890"></a>00890                 iData = NULL;
 <a name="l00891"></a>00891                 }
 <a name="l00892"></a>00892 
-<a name="l00893"></a>00893         <span class="comment">//Cleanup function – frees resource</span>
+<a name="l00893"></a>00893         <span class="comment">//Cleanup function  frees resource</span>
 <a name="l00894"></a>00894         <span class="keywordtype">void</span> Free()
 <a name="l00895"></a>00895                 {
 <a name="l00896"></a>00896                 <span class="keyword">delete</span> iData;
 <a name="l00897"></a>00897                 iData = NULL;
 <a name="l00898"></a>00898                 }
 <a name="l00899"></a>00899 
-<a name="l00900"></a>00900         <span class="comment">//Cleanup function – frees resource</span>
+<a name="l00900"></a>00900         <span class="comment">//Cleanup function  frees resource</span>
 <a name="l00901"></a>00901         <span class="keywordtype">void</span> ReleaseData()
 <a name="l00902"></a>00902                 {
 <a name="l00903"></a>00903                 <span class="keyword">delete</span> iData;
 <a name="l00904"></a>00904                 iData = NULL;
 <a name="l00905"></a>00905                 }
 <a name="l00906"></a>00906         
-<a name="l00907"></a>00907         <span class="comment">//static cleanup function – frees aRSimple resources</span>
+<a name="l00907"></a>00907         <span class="comment">//static cleanup function  frees aRSimple resources</span>
 <a name="l00908"></a>00908         <span class="keyword">static</span> <span class="keywordtype">void</span> Cleanup(TAny* aRSimple)
 <a name="l00909"></a>00909                 {
-<a name="l00910"></a>00910                 <span class="keyword">static_cast&lt;</span>RSimple*<span class="keyword">&gt;</span>(aRSimple)-&gt;Close();
+<a name="l00910"></a>00910                 <span class="keyword">static_cast<</span>RSimple*<span class="keyword">></span>(aRSimple)->Close();
 <a name="l00911"></a>00911                 }
 <a name="l00912"></a>00912 
 <a name="l00913"></a>00913 
@@ -922,31 +922,31 @@
 <a name="l00928"></a>00928 
 <a name="l00929"></a>00929 <span class="keywordtype">void</span> WalkthroughManagedL()
 <a name="l00930"></a>00930         {
-<a name="l00931"></a>00931         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption2,<span class="stringliteral">&quot;Option2: Object creation and resource management using EUser high level library\n&quot;</span>);
-<a name="l00932"></a>00932         gConsole-&gt;Printf(KTxtOption2);
+<a name="l00931"></a>00931         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption2,<span class="stringliteral">"Option2: Object creation and resource management using EUser high level library\n"</span>);
+<a name="l00932"></a>00932         gConsole->Printf(KTxtOption2);
 <a name="l00933"></a>00933                 {
 <a name="l00934"></a>00934                 <span class="comment">// Trivially exercise the manager-using classes defined above.</span>
 <a name="l00935"></a>00935                 CTicker* ticker1 = <span class="keyword">new</span>(ELeave) CTicker;
-<a name="l00936"></a>00936                 LCleanedupPtr&lt;CManagedUserTwoPhase&gt; one(CManagedUserTwoPhase::NewL(ticker1));
-<a name="l00937"></a>00937                 <span class="keywordflow">if</span>(&amp;one-&gt;Ticker() == ticker1)
+<a name="l00936"></a>00936                 LCleanedupPtr<CManagedUserTwoPhase> one(CManagedUserTwoPhase::NewL(ticker1));
+<a name="l00937"></a>00937                 <span class="keywordflow">if</span>(&one->Ticker() == ticker1)
 <a name="l00938"></a>00938                         {
-<a name="l00939"></a>00939                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo1,<span class="stringliteral">&quot;Creating an instance of CTicker using LCleanedupPtr\n&quot;</span>);
-<a name="l00940"></a>00940                         gConsole-&gt;Printf(KTxtLCleanedupPtrDemo1);
+<a name="l00939"></a>00939                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo1,<span class="stringliteral">"Creating an instance of CTicker using LCleanedupPtr\n"</span>);
+<a name="l00940"></a>00940                         gConsole->Printf(KTxtLCleanedupPtrDemo1);
 <a name="l00941"></a>00941                         }
-<a name="l00942"></a>00942                 one-&gt;Timer().Cancel(); <span class="comment">// Just to check we can get at it</span>
+<a name="l00942"></a>00942                 one->Timer().Cancel(); <span class="comment">// Just to check we can get at it</span>
 <a name="l00943"></a>00943 
 <a name="l00944"></a>00944                 CTicker* ticker2 = <span class="keyword">new</span>(ELeave) CTicker;
-<a name="l00945"></a>00945                 LCleanedupPtr&lt;CManagedUserSinglePhase&gt; two(CManagedUserSinglePhase::NewL(ticker2));
-<a name="l00946"></a>00946                 <span class="keywordflow">if</span>(&amp;two-&gt;Ticker() == ticker2)
+<a name="l00945"></a>00945                 LCleanedupPtr<CManagedUserSinglePhase> two(CManagedUserSinglePhase::NewL(ticker2));
+<a name="l00946"></a>00946                 <span class="keywordflow">if</span>(&two->Ticker() == ticker2)
 <a name="l00947"></a>00947                         {
-<a name="l00948"></a>00948                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo2,<span class="stringliteral">&quot;Creating second instance of CTicker using LCleanedupPtr\n&quot;</span>);
-<a name="l00949"></a>00949                         gConsole-&gt;Printf(KTxtLCleanedupPtrDemo2);
+<a name="l00948"></a>00948                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo2,<span class="stringliteral">"Creating second instance of CTicker using LCleanedupPtr\n"</span>);
+<a name="l00949"></a>00949                         gConsole->Printf(KTxtLCleanedupPtrDemo2);
 <a name="l00950"></a>00950                         }
-<a name="l00951"></a>00951                 two-&gt;Timer().Cancel(); <span class="comment">// Just to check we can get at it</span>
-<a name="l00952"></a>00952         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtr,<span class="stringliteral">&quot;Both instances are automatically deleted as we go out of scope\n&quot;</span>);
-<a name="l00953"></a>00953         gConsole-&gt;Printf(KTxtLCleanedupPtr);
-<a name="l00954"></a>00954         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00955"></a>00955         gConsole-&gt;Getch();
+<a name="l00951"></a>00951                 two->Timer().Cancel(); <span class="comment">// Just to check we can get at it</span>
+<a name="l00952"></a>00952         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtr,<span class="stringliteral">"Both instances are automatically deleted as we go out of scope\n"</span>);
+<a name="l00953"></a>00953         gConsole->Printf(KTxtLCleanedupPtr);
+<a name="l00954"></a>00954         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00955"></a>00955         gConsole->Getch();
 <a name="l00956"></a>00956                 }
 <a name="l00957"></a>00957 
 <a name="l00958"></a>00958                 <span class="comment">// Always use LCleanedupXxx for locals, not LManagedXxx</span>
@@ -958,33 +958,33 @@
 <a name="l00964"></a>00964 <span class="comment">                there is a leave during construction, the supplied pointer</span>
 <a name="l00965"></a>00965 <span class="comment">                will still get cleaned up.</span>
 <a name="l00966"></a>00966 <span class="comment">                */</span>
-<a name="l00967"></a>00967                 LCleanedupPtr&lt;CTicker&gt; t(<span class="keyword">new</span>(ELeave) CTicker);
+<a name="l00967"></a>00967                 LCleanedupPtr<CTicker> t(<span class="keyword">new</span>(ELeave) CTicker);
 <a name="l00968"></a>00968 
 <a name="l00969"></a>00969                 <span class="comment">/*</span>
-<a name="l00970"></a>00970 <span class="comment">                We can access CTicker&#39;s members via the management object</span>
-<a name="l00971"></a>00971 <span class="comment">                using -&gt;</span>
+<a name="l00970"></a>00970 <span class="comment">                We can access CTicker's members via the management object</span>
+<a name="l00971"></a>00971 <span class="comment">                using -></span>
 <a name="l00972"></a>00972 <span class="comment">                */</span>
-<a name="l00973"></a>00973                 t-&gt;Tick();
-<a name="l00974"></a>00974                 t-&gt;Tock();
-<a name="l00975"></a>00975                 <span class="keywordflow">if</span>(t-&gt;iTicks == t-&gt;iTocks)
+<a name="l00973"></a>00973                 t->Tick();
+<a name="l00974"></a>00974                 t->Tock();
+<a name="l00975"></a>00975                 <span class="keywordflow">if</span>(t->iTicks == t->iTocks)
 <a name="l00976"></a>00976                         {
-<a name="l00977"></a>00977                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo3,<span class="stringliteral">&quot;CTicker members access using LCleanedupPtr is successful\n&quot;</span>);
-<a name="l00978"></a>00978                         gConsole-&gt;Printf(KTxtLCleanedupPtrDemo3);
-<a name="l00979"></a>00979                         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l00980"></a>00980                 gConsole-&gt;Getch();
+<a name="l00977"></a>00977                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtLCleanedupPtrDemo3,<span class="stringliteral">"CTicker members access using LCleanedupPtr is successful\n"</span>);
+<a name="l00978"></a>00978                         gConsole->Printf(KTxtLCleanedupPtrDemo3);
+<a name="l00979"></a>00979                         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l00980"></a>00980                 gConsole->Getch();
 <a name="l00981"></a>00981                         }
 <a name="l00982"></a>00982 
 <a name="l00983"></a>00983                 <span class="comment">/*</span>
 <a name="l00984"></a>00984 <span class="comment">                We can get at a reference to the managed object using *</span>
 <a name="l00985"></a>00985 <span class="comment">                when we need to, e.g. if we need to pass it to a function.</span>
 <a name="l00986"></a>00986 <span class="comment">                */</span>
-<a name="l00987"></a>00987                 RegisterTicker(*t); <span class="comment">// Takes a CTicker&amp;</span>
+<a name="l00987"></a>00987                 RegisterTicker(*t); <span class="comment">// Takes a CTicker&</span>
 <a name="l00988"></a>00988 
 <a name="l00989"></a>00989                 <span class="comment">/*</span>
 <a name="l00990"></a>00990 <span class="comment">                If some unfriendly interface needs a pointer rather than a</span>
 <a name="l00991"></a>00991 <span class="comment">                ref, we have a couple of options.</span>
 <a name="l00992"></a>00992 <span class="comment">                */</span>
-<a name="l00993"></a>00993                 RegisterTickerPtr(&amp;*t); <span class="comment">// Takes a CTicker*</span>
+<a name="l00993"></a>00993                 RegisterTickerPtr(&*t); <span class="comment">// Takes a CTicker*</span>
 <a name="l00994"></a>00994                 RegisterTickerPtr(t.Get()); <span class="comment">// Takes a CTicker*</span>
 <a name="l00995"></a>00995 
 <a name="l00996"></a>00996                 <span class="comment">/*</span>
@@ -1005,7 +1005,7 @@
 <a name="l01011"></a>01011 <span class="comment">                passing it to a function that takes ownership.</span>
 <a name="l01012"></a>01012 <span class="comment">                */</span>
 <a name="l01013"></a>01013 
-<a name="l01014"></a>01014                 LCleanedupPtr&lt;CTicker&gt; t(<span class="keyword">new</span>(ELeave) CTicker);
+<a name="l01014"></a>01014                 LCleanedupPtr<CTicker> t(<span class="keyword">new</span>(ELeave) CTicker);
 <a name="l01015"></a>01015 
 <a name="l01016"></a>01016                 <span class="comment">// Protected while we do this</span>
 <a name="l01017"></a>01017                 MaybeLeave(); 
@@ -1029,17 +1029,17 @@
 <a name="l01035"></a>01035 <span class="comment">                */</span>
 <a name="l01036"></a>01036 
 <a name="l01037"></a>01037                 <span class="comment">// Not managing anything to start with</span>
-<a name="l01038"></a>01038                 LCleanedupPtr&lt;CTicker&gt; t;
+<a name="l01038"></a>01038                 LCleanedupPtr<CTicker> t;
 <a name="l01039"></a>01039                 <span class="keywordflow">if</span>(t.Get() == NULL)
 <a name="l01040"></a>01040                         {
 <a name="l01041"></a>01041                         <span class="comment">//Successfully initialised to NULL</span>
 <a name="l01042"></a>01042                         }
-<a name="l01043"></a>01043                 <span class="keywordflow">if</span>(&amp;*t == NULL)
+<a name="l01043"></a>01043                 <span class="keywordflow">if</span>(&*t == NULL)
 <a name="l01044"></a>01044                         {
 <a name="l01045"></a>01045                         <span class="comment">//CTicker* value is also NULL</span>
 <a name="l01046"></a>01046                         }
 <a name="l01047"></a>01047 
-<a name="l01048"></a>01048                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; 10; ++i)
+<a name="l01048"></a>01048                 <span class="keywordflow">for</span> (TInt i = 0; i < 10; ++i)
 <a name="l01049"></a>01049                         {
 <a name="l01050"></a>01050                         <span class="comment">/*</span>
 <a name="l01051"></a>01051 <span class="comment">                        If an object is already being managed, it is cleaned up</span>
@@ -1048,20 +1048,20 @@
 <a name="l01054"></a>01054                         t = <span class="keyword">new</span>(ELeave) CTicker;
 <a name="l01055"></a>01055                         }
 <a name="l01056"></a>01056                 <span class="comment">/*</span>
-<a name="l01057"></a>01057 <span class="comment">                We&#39;re left owning the final ticker instance, all prior</span>
+<a name="l01057"></a>01057 <span class="comment">                We're left owning the final ticker instance, all prior</span>
 <a name="l01058"></a>01058 <span class="comment">                instances having been automatically deleted.</span>
 <a name="l01059"></a>01059 <span class="comment">                */</span>
 <a name="l01060"></a>01060                 }
 <a name="l01061"></a>01061 
 <a name="l01062"></a>01062                 {
 <a name="l01063"></a>01063                 <span class="comment">// If you have stateful code where a pointer can sometimes be NULL.</span>
-<a name="l01064"></a>01064                 LCleanedupPtr&lt;CTicker&gt; t(<span class="keyword">new</span>(ELeave) CTicker);
+<a name="l01064"></a>01064                 LCleanedupPtr<CTicker> t(<span class="keyword">new</span>(ELeave) CTicker);
 <a name="l01065"></a>01065 
 <a name="l01066"></a>01066                 <span class="comment">// Does t refer to NULL?</span>
 <a name="l01067"></a>01067                 <span class="keywordflow">if</span> (!t)
 <a name="l01068"></a>01068                         {
-<a name="l01069"></a>01069                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNull,<span class="stringliteral">&quot;LCleanedupPtr object refers to Null\n&quot;</span> );
-<a name="l01070"></a>01070                         gConsole-&gt;Printf(KTxtNull);
+<a name="l01069"></a>01069                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNull,<span class="stringliteral">"LCleanedupPtr object refers to Null\n"</span> );
+<a name="l01070"></a>01070                         gConsole->Printf(KTxtNull);
 <a name="l01071"></a>01071                         }
 <a name="l01072"></a>01072 
 <a name="l01073"></a>01073                 t = NULL; <span class="comment">// Also releases the currently managed CTicker </span>
@@ -1069,8 +1069,8 @@
 <a name="l01075"></a>01075                 <span class="comment">// Does t refer to a non-NULL pointer?</span>
 <a name="l01076"></a>01076                 <span class="keywordflow">if</span> (t)
 <a name="l01077"></a>01077                         {
-<a name="l01078"></a>01078                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNonNull,<span class="stringliteral">&quot;LCleanedupPtr object refers to Non Null pointer\n&quot;</span> );
-<a name="l01079"></a>01079                         gConsole-&gt;Printf(KTxtNonNull);
+<a name="l01078"></a>01078                         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNonNull,<span class="stringliteral">"LCleanedupPtr object refers to Non Null pointer\n"</span> );
+<a name="l01079"></a>01079                         gConsole->Printf(KTxtNonNull);
 <a name="l01080"></a>01080                         }
 <a name="l01081"></a>01081                 }
 <a name="l01082"></a>01082 
@@ -1078,7 +1078,7 @@
 <a name="l01084"></a>01084                 <span class="comment">// LCleanedupPtr uses delete to cleanup by default, but alternative cleanups can be specified</span>
 <a name="l01085"></a>01085 
 <a name="l01086"></a>01086                 <span class="comment">// We just want to free this one and not invoke the destructor</span>
-<a name="l01087"></a>01087                 LCleanedupPtr&lt;CTicker, TPointerFree&gt; t(static_cast&lt;CTicker*&gt;(User::AllocL(<span class="keyword">sizeof</span>(CTicker))));
+<a name="l01087"></a>01087                 LCleanedupPtr<CTicker, TPointerFree> t(static_cast<CTicker*>(User::AllocL(<span class="keyword">sizeof</span>(CTicker))));
 <a name="l01088"></a>01088 
 <a name="l01089"></a>01089                 <span class="comment">// Now User::Free() is called when t goes out of scope</span>
 <a name="l01090"></a>01090                 }
@@ -1089,7 +1089,7 @@
 <a name="l01095"></a>01095 <span class="comment">                also be defined. See above for the definition of</span>
 <a name="l01096"></a>01096 <span class="comment">                TTickerZap.</span>
 <a name="l01097"></a>01097 <span class="comment">                */</span>
-<a name="l01098"></a>01098                 LCleanedupPtr&lt;CTicker, TTickerZapStrategy&gt; t(<span class="keyword">new</span>(ELeave) CTicker);
+<a name="l01098"></a>01098                 LCleanedupPtr<CTicker, TTickerZapStrategy> t(<span class="keyword">new</span>(ELeave) CTicker);
 <a name="l01099"></a>01099 
 <a name="l01100"></a>01100                 <span class="comment">// Now Zap() is called on the CTicker instance when t goes out of scope</span>
 <a name="l01101"></a>01101                 }
@@ -1101,11 +1101,11 @@
 <a name="l01107"></a>01107 <span class="comment">                and contain its own instance of a handle rather than</span>
 <a name="l01108"></a>01108 <span class="comment">                being supplied one.</span>
 <a name="l01109"></a>01109 <span class="comment">                */</span>
-<a name="l01110"></a>01110                 LCleanedupHandle&lt;RTimer&gt; t;
+<a name="l01110"></a>01110                 LCleanedupHandle<RTimer> t;
 <a name="l01111"></a>01111 
-<a name="l01112"></a>01112                 <span class="comment">// Again, access to managed handle members is via -&gt;</span>
-<a name="l01113"></a>01113                 t-&gt;CreateLocal() OR_LEAVE;
-<a name="l01114"></a>01114                 t-&gt;Cancel();
+<a name="l01112"></a>01112                 <span class="comment">// Again, access to managed handle members is via -></span>
+<a name="l01113"></a>01113                 t->CreateLocal() OR_LEAVE;
+<a name="l01114"></a>01114                 t->Cancel();
 <a name="l01115"></a>01115 
 <a name="l01116"></a>01116                 <span class="comment">//We can get a reference to the handle for passing to functions using *</span>
 <a name="l01117"></a>01117                 RegisterTimer(*t);
@@ -1125,10 +1125,10 @@
 <a name="l01131"></a>01131 <span class="comment">                We want this RPointerArray cleanup with with</span>
 <a name="l01132"></a>01132 <span class="comment">                ResetAndDestroy instead of Close().</span>
 <a name="l01133"></a>01133 <span class="comment">                */</span>
-<a name="l01134"></a>01134                 LCleanedupHandle&lt;RPointerArray&lt;HBufC&gt;, TResetAndDestroy&gt; array;
-<a name="l01135"></a>01135                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; 10; ++i) 
+<a name="l01134"></a>01134                 LCleanedupHandle<RPointerArray<HBufC>, TResetAndDestroy> array;
+<a name="l01135"></a>01135                 <span class="keywordflow">for</span> (TInt i = 0; i < 10; ++i) 
 <a name="l01136"></a>01136                         {
-<a name="l01137"></a>01137                         array-&gt;AppendL(HBufC::NewL(5));
+<a name="l01137"></a>01137                         array->AppendL(HBufC::NewL(5));
 <a name="l01138"></a>01138                         }
 <a name="l01139"></a>01139 
 <a name="l01140"></a>01140                 <span class="comment">//Now when array goes out of scope, ResetAndDestroy is called to clean it up.</span>
@@ -1139,8 +1139,8 @@
 <a name="l01145"></a>01145 <span class="comment">                As well as the stock options, custom cleanup policies can</span>
 <a name="l01146"></a>01146 <span class="comment">                also be defined. See above for the definition of TCancelClose.</span>
 <a name="l01147"></a>01147 <span class="comment">                */</span>
-<a name="l01148"></a>01148                 LCleanedupHandle&lt;RTimer, TCancelClose&gt; t;
-<a name="l01149"></a>01149                 t-&gt;CreateLocal();
+<a name="l01148"></a>01148                 LCleanedupHandle<RTimer, TCancelClose> t;
+<a name="l01149"></a>01149                 t->CreateLocal();
 <a name="l01150"></a>01150 
 <a name="l01151"></a>01151                 <span class="comment">// Now Cancel() followed by Close() are called when t goes out of scope</span>
 <a name="l01152"></a>01152                 }
@@ -1154,17 +1154,17 @@
 <a name="l01160"></a>01160 <span class="comment">                We want this RPointerArray cleanup with</span>
 <a name="l01161"></a>01161 <span class="comment">                ResetAndDestroy instead of Close().</span>
 <a name="l01162"></a>01162 <span class="comment">                */</span>
-<a name="l01163"></a>01163                 RPointerArray&lt;HBufC&gt; rar;
+<a name="l01163"></a>01163                 RPointerArray<HBufC> rar;
 <a name="l01164"></a>01164                 <span class="comment">// calls to functions that cannot leave here</span>
 <a name="l01165"></a>01165                 rar.Append(HBufC::NewL(5));
 <a name="l01166"></a>01166                 rar.Append(HBufC::NewL(5));
 <a name="l01167"></a>01167 
 <a name="l01168"></a>01168 
-<a name="l01169"></a>01169                 LCleanedupRef&lt;RPointerArray&lt;HBufC&gt;, TResetAndDestroy&gt; array(rar);
+<a name="l01169"></a>01169                 LCleanedupRef<RPointerArray<HBufC>, TResetAndDestroy> array(rar);
 <a name="l01170"></a>01170                 <span class="comment">// calls to functions that could leave here</span>
-<a name="l01171"></a>01171                 <span class="keywordflow">for</span> (TInt i = 0; i &lt; 10; ++i) 
+<a name="l01171"></a>01171                 <span class="keywordflow">for</span> (TInt i = 0; i < 10; ++i) 
 <a name="l01172"></a>01172                         {
-<a name="l01173"></a>01173                         array-&gt;AppendL(HBufC::NewL(5));
+<a name="l01173"></a>01173                         array->AppendL(HBufC::NewL(5));
 <a name="l01174"></a>01174                         }
 <a name="l01175"></a>01175 
 <a name="l01176"></a>01176                 <span class="comment">// Now when array goes out of scope, ResetAndDestroy is called to clean it up</span>
@@ -1184,11 +1184,11 @@
 <a name="l01190"></a>01190                 HBufC* raw = HBufC::NewLC(5);
 <a name="l01191"></a>01191                 <span class="comment">// Must pop immediately to balance the cleanup stack, before instantiating the manager</span>
 <a name="l01192"></a>01192                 CleanupStack::Pop(); 
-<a name="l01193"></a>01193                 LCleanedupPtr&lt;HBufC&gt; wrapped(raw);
+<a name="l01193"></a>01193                 LCleanedupPtr<HBufC> wrapped(raw);
 <a name="l01194"></a>01194 
 <a name="l01195"></a>01195                 <span class="comment">/*</span>
 <a name="l01196"></a>01196 <span class="comment">                Never do this:</span>
-<a name="l01197"></a>01197 <span class="comment">                LCleanedupPtr&lt;HBufC&gt; buf(HBufC::NewLC(5));</span>
+<a name="l01197"></a>01197 <span class="comment">                LCleanedupPtr<HBufC> buf(HBufC::NewLC(5));</span>
 <a name="l01198"></a>01198 <span class="comment">                CleanupStack::Pop();</span>
 <a name="l01199"></a>01199 <span class="comment">                because the manager will be popped (having been pushed</span>
 <a name="l01200"></a>01200 <span class="comment">                last), not the raw buf pointer as you might have hoped</span>
@@ -1203,7 +1203,7 @@
 <a name="l01209"></a>01209 
 <a name="l01210"></a>01210                 {
 <a name="l01211"></a>01211                 <span class="comment">// Although rarely used on the Symbian platform, C++ arrays are supported with a custom management class</span>
-<a name="l01212"></a>01212                 LCleanedupArray&lt;CTicker&gt; array(<span class="keyword">new</span> CTicker[5]);
+<a name="l01212"></a>01212                 LCleanedupArray<CTicker> array(<span class="keyword">new</span> CTicker[5]);
 <a name="l01213"></a>01213 
 <a name="l01214"></a>01214                 <span class="comment">// The array is cleaned up with delete[] on scope exit</span>
 <a name="l01215"></a>01215                 }
@@ -1225,14 +1225,14 @@
 <a name="l01231"></a>01231                 }
 <a name="l01232"></a>01232                 
 <a name="l01233"></a>01233                 {
-<a name="l01234"></a>01234                 LCleanedupHandle&lt;RFs&gt; managedFs;
-<a name="l01235"></a>01235                 managedFs-&gt;Connect();
+<a name="l01234"></a>01234                 LCleanedupHandle<RFs> managedFs;
+<a name="l01235"></a>01235                 managedFs->Connect();
 <a name="l01236"></a>01236                 <span class="comment">//default cleanup strategy is to call RFs::Close() on scope exit;</span>
 <a name="l01237"></a>01237                 }
 <a name="l01238"></a>01238                 
 <a name="l01239"></a>01239                 {
-<a name="l01240"></a>01240                 LCleanedupHandle&lt;RSimple, TFree&gt; simple;
-<a name="l01241"></a>01241                 simple-&gt;OpenL(23);
+<a name="l01240"></a>01240                 LCleanedupHandle<RSimple, TFree> simple;
+<a name="l01241"></a>01241                 simple->OpenL(23);
 <a name="l01242"></a>01242                 <span class="comment">//Specified cleanup strategy is to call RSimple::Free() on scope exit;</span>
 <a name="l01243"></a>01243                 }
 <a name="l01244"></a>01244         
@@ -1242,8 +1242,8 @@
 <a name="l01248"></a>01248 <span class="comment">                RSimple::Close()</span>
 <a name="l01249"></a>01249 <span class="comment">                */</span>
 <a name="l01250"></a>01250                 {
-<a name="l01251"></a>01251                 LCleanedupHandle&lt;RSimple&gt; simple;
-<a name="l01252"></a>01252                 simple-&gt;OpenL(23);
+<a name="l01251"></a>01251                 LCleanedupHandle<RSimple> simple;
+<a name="l01252"></a>01252                 simple->OpenL(23);
 <a name="l01253"></a>01253                 <span class="comment">//Custom cleanup strategy is to call RSimple::ReleaseData() on scope exit</span>
 <a name="l01254"></a>01254                 }
 <a name="l01255"></a>01255                 
@@ -1252,66 +1252,66 @@
 <a name="l01258"></a>01258                 
 <a name="l01259"></a>01259                 <span class="comment">//The RSimple class above defines a static cleanup function</span>
 <a name="l01260"></a>01260                 <span class="comment">//RSimple::Cleanup().</span>
-<a name="l01261"></a>01261                 LCleanedupGuard guard(RSimple::Cleanup, &amp;simple);
+<a name="l01261"></a>01261                 LCleanedupGuard guard(RSimple::Cleanup, &simple);
 <a name="l01262"></a>01262 
 <a name="l01263"></a>01263                 simple.OpenL(10);
 <a name="l01264"></a>01264                 
-<a name="l01265"></a>01265                 <span class="comment">//On scope exit RSimple::Cleanup() is called passing &amp;simple.</span>
+<a name="l01265"></a>01265                 <span class="comment">//On scope exit RSimple::Cleanup() is called passing &simple.</span>
 <a name="l01266"></a>01266                 }
 <a name="l01267"></a>01267         }
 <a name="l01268"></a>01268 
 <a name="l01269"></a>01269 <span class="keywordtype">void</span> WalkthroughUsageL()
 <a name="l01270"></a>01270         {
-<a name="l01271"></a>01271         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption3,<span class="stringliteral">&quot;Option3: Memory used by EUser high level classes\n&quot;</span>);
-<a name="l01272"></a>01272         gConsole-&gt;Printf(KTxtOption3);
+<a name="l01271"></a>01271         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOption3,<span class="stringliteral">"Option3: Memory used by EUser high level classes\n"</span>);
+<a name="l01272"></a>01272         gConsole->Printf(KTxtOption3);
 <a name="l01273"></a>01273         RFile file;
 <a name="l01274"></a>01274         
-<a name="l01275"></a>01275         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofRFile,<span class="stringliteral">&quot;Size of RFile = %d\n&quot;</span>);
-<a name="l01276"></a>01276         gConsole-&gt;Printf(KTxtSizeofRFile, <span class="keyword">sizeof</span>(file));
+<a name="l01275"></a>01275         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofRFile,<span class="stringliteral">"Size of RFile = %d\n"</span>);
+<a name="l01276"></a>01276         gConsole->Printf(KTxtSizeofRFile, <span class="keyword">sizeof</span>(file));
 <a name="l01277"></a>01277         
-<a name="l01278"></a>01278         LCleanedupHandle&lt;RFile&gt; cFile;
+<a name="l01278"></a>01278         LCleanedupHandle<RFile> cFile;
 <a name="l01279"></a>01279         
-<a name="l01280"></a>01280         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupHandleRFile,<span class="stringliteral">&quot;Size of LCleanedupHandle&lt;RFile&gt; = %d\n&quot;</span>);
-<a name="l01281"></a>01281         gConsole-&gt;Printf(KTxtSizeofLCleanedupHandleRFile, <span class="keyword">sizeof</span>(cFile));
-<a name="l01282"></a>01282         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01283"></a>01283         gConsole-&gt;Getch();
+<a name="l01280"></a>01280         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupHandleRFile,<span class="stringliteral">"Size of LCleanedupHandle<RFile> = %d\n"</span>);
+<a name="l01281"></a>01281         gConsole->Printf(KTxtSizeofLCleanedupHandleRFile, <span class="keyword">sizeof</span>(cFile));
+<a name="l01282"></a>01282         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01283"></a>01283         gConsole->Getch();
 <a name="l01284"></a>01284         
-<a name="l01285"></a>01285         LCleanedupRef&lt;RFile&gt; crFile(file);      
-<a name="l01286"></a>01286         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupRefRFile,<span class="stringliteral">&quot;Size of LCleanedupRef&lt;RFile&gt; = %d\n&quot;</span>);
-<a name="l01287"></a>01287         gConsole-&gt;Printf(KTxtSizeofLCleanedupRefRFile, <span class="keyword">sizeof</span>(crFile));
-<a name="l01288"></a>01288         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01289"></a>01289         gConsole-&gt;Getch();
+<a name="l01285"></a>01285         LCleanedupRef<RFile> crFile(file);      
+<a name="l01286"></a>01286         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupRefRFile,<span class="stringliteral">"Size of LCleanedupRef<RFile> = %d\n"</span>);
+<a name="l01287"></a>01287         gConsole->Printf(KTxtSizeofLCleanedupRefRFile, <span class="keyword">sizeof</span>(crFile));
+<a name="l01288"></a>01288         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01289"></a>01289         gConsole->Getch();
 <a name="l01290"></a>01290 
 <a name="l01291"></a>01291         CTicker* tracker = <span class="keyword">new</span>(ELeave) CTicker;
-<a name="l01292"></a>01292         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofCTracker,<span class="stringliteral">&quot;Size of CTracker* = %d\n&quot;</span>);
-<a name="l01293"></a>01293         gConsole-&gt;Printf(KTxtSizeofCTracker, <span class="keyword">sizeof</span>(tracker));
-<a name="l01294"></a>01294         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01295"></a>01295         gConsole-&gt;Getch();
+<a name="l01292"></a>01292         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofCTracker,<span class="stringliteral">"Size of CTracker* = %d\n"</span>);
+<a name="l01293"></a>01293         gConsole->Printf(KTxtSizeofCTracker, <span class="keyword">sizeof</span>(tracker));
+<a name="l01294"></a>01294         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01295"></a>01295         gConsole->Getch();
 <a name="l01296"></a>01296         
-<a name="l01297"></a>01297         LCleanedupPtr&lt;CTicker&gt; cTracker(tracker);
-<a name="l01298"></a>01298         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupHandleCTicker,<span class="stringliteral">&quot;Size of LCleanedupPtr&lt;CTicker&gt; = %d\n&quot;</span>);
-<a name="l01299"></a>01299         gConsole-&gt;Printf(KTxtSizeofLCleanedupHandleCTicker, <span class="keyword">sizeof</span>(LCleanedupPtr&lt;CTicker&gt;));
-<a name="l01300"></a>01300         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01301"></a>01301         gConsole-&gt;Getch();
+<a name="l01297"></a>01297         LCleanedupPtr<CTicker> cTracker(tracker);
+<a name="l01298"></a>01298         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSizeofLCleanedupHandleCTicker,<span class="stringliteral">"Size of LCleanedupPtr<CTicker> = %d\n"</span>);
+<a name="l01299"></a>01299         gConsole->Printf(KTxtSizeofLCleanedupHandleCTicker, <span class="keyword">sizeof</span>(LCleanedupPtr<CTicker>));
+<a name="l01300"></a>01300         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01301"></a>01301         gConsole->Getch();
 <a name="l01302"></a>01302         }
 <a name="l01303"></a>01303 
 <a name="l01304"></a>01304 TInt TestL()
 <a name="l01305"></a>01305         {
 <a name="l01306"></a>01306         gConsole=Console::NewL(KTxtExample,TSize(KConsFullScreen,KConsFullScreen));
 <a name="l01307"></a>01307         CleanupStack::PushL(gConsole);
-<a name="l01308"></a>01308         gConsole-&gt;Printf(KTxtExample);
-<a name="l01309"></a>01309         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01310"></a>01310         gConsole-&gt;Getch();      
+<a name="l01308"></a>01308         gConsole->Printf(KTxtExample);
+<a name="l01309"></a>01309         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01310"></a>01310         gConsole->Getch();      
 <a name="l01311"></a>01311         WalkthroughStringsL();
-<a name="l01312"></a>01312         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01313"></a>01313         gConsole-&gt;Getch();
+<a name="l01312"></a>01312         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01313"></a>01313         gConsole->Getch();
 <a name="l01314"></a>01314         WalkthroughManagedL();
-<a name="l01315"></a>01315         gConsole-&gt;Printf(KTxtPressAnyKeyToContinue);
-<a name="l01316"></a>01316         gConsole-&gt;Getch();
+<a name="l01315"></a>01315         gConsole->Printf(KTxtPressAnyKeyToContinue);
+<a name="l01316"></a>01316         gConsole->Getch();
 <a name="l01317"></a>01317         WalkthroughUsageL();
-<a name="l01318"></a>01318         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToExit,<span class="stringliteral">&quot;\nPress any key to exit&quot;</span>);
-<a name="l01319"></a>01319         gConsole-&gt;Printf(KTxtPressAnyKeyToExit);
-<a name="l01320"></a>01320         gConsole-&gt;Getch();
+<a name="l01318"></a>01318         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKeyToExit,<span class="stringliteral">"\nPress any key to exit"</span>);
+<a name="l01319"></a>01319         gConsole->Printf(KTxtPressAnyKeyToExit);
+<a name="l01320"></a>01320         gConsole->Getch();
 <a name="l01321"></a>01321         CleanupStack::PopAndDestroy(gConsole); <span class="comment">// delete the gConsole</span>
 <a name="l01322"></a>01322         <span class="keywordflow">return</span> KErrNone;
 <a name="l01323"></a>01323         }
@@ -1335,10 +1335,10 @@
 <a name="l01341"></a>01341 
 <a name="l01342"></a>01342 <span class="comment">// eof</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated byÂ 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright Â©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

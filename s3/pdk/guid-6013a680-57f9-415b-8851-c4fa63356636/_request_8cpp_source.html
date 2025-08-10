@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/Symbian_OS_End-to-End_Sockets_API_Example/SocketTaskManager_S60/engine/Request.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -49,18 +49,18 @@
 <a name="l00009"></a>00009 <span class="comment">*/</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// INCLUDE FILES</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Request.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;TaskManager.pan&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "Request.h"</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "TaskManager.pan"</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="comment">// CONSTANTS</span>
-<a name="l00016"></a>00016 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTab, <span class="stringliteral">&quot;\t&quot;</span>);
-<a name="l00017"></a>00017 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KLineEnd, <span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00018"></a>00018 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSeparator, <span class="stringliteral">&quot;#&quot;</span>);
+<a name="l00016"></a>00016 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTab, <span class="stringliteral">"\t"</span>);
+<a name="l00017"></a>00017 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KLineEnd, <span class="stringliteral">"\n"</span>);
+<a name="l00018"></a>00018 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KSeparator, <span class="stringliteral">"#"</span>);
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFetchCommand, <span class="stringliteral">&quot;fetch&quot;</span>);
-<a name="l00021"></a>00021 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMarkCommand, <span class="stringliteral">&quot;mark&quot;</span>);
+<a name="l00020"></a>00020 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFetchCommand, <span class="stringliteral">"fetch"</span>);
+<a name="l00021"></a>00021 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMarkCommand, <span class="stringliteral">"mark"</span>);
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KUnknownOperation, <span class="stringliteral">&quot;Unknown operation!&quot;</span>);
+<a name="l00023"></a>00023 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KUnknownOperation, <span class="stringliteral">"Unknown operation!"</span>);
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="comment">// ================= MEMBER FUNCTIONS =======================</span>
 <a name="l00026"></a>00026 
@@ -70,9 +70,9 @@
 <a name="l00030"></a>00030 <span class="comment">// a client message that the server end understands.</span>
 <a name="l00031"></a>00031 <span class="comment">// ----------------------------------------------------</span>
 <a name="l00032"></a>00032 <span class="comment">//      </span>
-<a name="l00033"></a><a class="code" href="class_t_request.html#ad1bfe2a053a3d898a965a180e8a63373">00033</a> <span class="keywordtype">void</span> <a class="code" href="class_t_request.html#ad1bfe2a053a3d898a965a180e8a63373">TRequest::GetMessage</a>( TDesC&amp; aUsername, TDesC&amp; aPassword,
+<a name="l00033"></a><a class="code" href="class_t_request.html#ad1bfe2a053a3d898a965a180e8a63373">00033</a> <span class="keywordtype">void</span> <a class="code" href="class_t_request.html#ad1bfe2a053a3d898a965a180e8a63373">TRequest::GetMessage</a>( TDesC& aUsername, TDesC& aPassword,
 <a name="l00034"></a>00034                                <a class="code" href="class_t_request.html#aa84aea38f54090a2fc4755441ea99086">TRequest::TOperationType</a> aOperation,
-<a name="l00035"></a>00035                                TDesC&amp; aId, TDes8&amp; aMessage )
+<a name="l00035"></a>00035                                TDesC& aId, TDes8& aMessage )
 <a name="l00036"></a>00036     {
 <a name="l00037"></a>00037         <span class="comment">// A valid command string is built</span>
 <a name="l00038"></a>00038         <span class="comment">// Format: username#password#operation[#id]</span>
@@ -108,10 +108,10 @@
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 <span class="comment">// End of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

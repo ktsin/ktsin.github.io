@@ -3,31 +3,31 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="copyright" content="(C) Copyright 2010"/>
-<meta name="DC.rights.owner" content="(C) Copyright 2010"/>
-<meta name="DC.Type" content="concept"/>
-<meta name="DC.Title" content="SD Controller PSL Implementation"/>
-<meta name="abstract" content="Describes how to implement the Platform-Specific Layer (PSL) of the SD controller."/>
-<meta name="description" content="Describes how to implement the Platform-Specific Layer (PSL) of the SD controller."/>
-<meta name="DC.Relation" scheme="URI" content="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html"/>
-<meta name="DC.Relation" scheme="URI" content="index.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-CFD2236E-7775-5532-89CD-7D0E1E219FD8.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-2F114BC9-9B5D-5989-9CF3-37A43377DC58.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-0E5A241A-19F5-5754-B454-45747A8D80E1.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-114A23CF-BF8B-54F5-8AF6-FEF007891884.html"/>
-<meta name="DC.Format" content="XHTML"/>
-<meta name="DC.Identifier" content="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60"/>
-<meta name="DC.Language" content="en"/>
-<link rel="stylesheet" type="text/css" href="commonltr.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<meta name="copyright" content="(C) Copyright 2010"></meta>
+<meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+<meta name="DC.Type" content="concept"></meta>
+<meta name="DC.Title" content="SD Controller PSL Implementation"></meta>
+<meta name="abstract" content="Describes how to implement the Platform-Specific Layer (PSL) of the SD controller."></meta>
+<meta name="description" content="Describes how to implement the Platform-Specific Layer (PSL) of the SD controller."></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-CFD2236E-7775-5532-89CD-7D0E1E219FD8.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-2F114BC9-9B5D-5989-9CF3-37A43377DC58.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-0E5A241A-19F5-5754-B454-45747A8D80E1.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-114A23CF-BF8B-54F5-8AF6-FEF007891884.html"></meta>
+<meta name="DC.Format" content="XHTML"></meta>
+<meta name="DC.Identifier" content="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60"></meta>
+<meta name="DC.Language" content="en"></meta>
+<link rel="stylesheet" type="text/css" href="commonltr.css"></link>
 <title>SD Controller PSL Implementation</title>
 
      
-<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -35,7 +35,7 @@
 
 
 
-     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"/></head>
+     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link></head>
 <body id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60"><!-- --></a>
 
 
@@ -47,7 +47,7 @@
     <a id="index" href="index.html">Symbian^3 Product Developer Library</a>        
 </div>
      <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
-<div id="treeDiv1">&#160;</div>
+<div id="treeDiv1"> </div>
      <script type="text/javascript">
 	var currentIconMode = 0; window.name="id2563754 id2387835 id2400576 id2400607 id2400744 ";
 	YAHOO.util.Event.onDOMReady(buildTree, this,true);
@@ -58,7 +58,7 @@
 <div id="sdl_content">
 
 
-<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> &gt; <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> &gt; <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> &gt; <a href="GUID-CFD2236E-7775-5532-89CD-7D0E1E219FD8.html" title="Provides an overview of generic driver support.">Generic Driver Support</a> &gt; <a href="GUID-2F114BC9-9B5D-5989-9CF3-37A43377DC58.html" title="Provides the physical device drivers, called media drivers, and associated libraries that manage storage media hardware.">Media Drivers</a> &gt; <a href="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html" title="Describes the Secure Digital (SD) Controller to support SD cards on the Symbian platform.">SD Controller</a> &gt; </div>
+<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> > <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> > <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> > <a href="GUID-CFD2236E-7775-5532-89CD-7D0E1E219FD8.html" title="Provides an overview of generic driver support.">Generic Driver Support</a> > <a href="GUID-2F114BC9-9B5D-5989-9CF3-37A43377DC58.html" title="Provides the physical device drivers, called media drivers, and associated libraries that manage storage media hardware.">Media Drivers</a> > <a href="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html" title="Describes the Secure Digital (SD) Controller to support SD cards on the Symbian platform.">SD Controller</a> > </div>
 <h1 class="topictitle1">SD Controller
 PSL Implementation</h1>
 <div><p>Describes how to implement the Platform-Specific Layer (PSL) of
@@ -72,7 +72,7 @@ functions and behaviours. </p>
 the SD controller for your platform requires to be familiar with the following
 material: </p>
  <ul>
-<li id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-C55300E3-EE06-5B9D-BBEB-733EBF93D6C1"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-C55300E3-EE06-5B9D-BBEB-733EBF93D6C1"><!-- --></a><p>the <a href="http://www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf" target="_blank">Physical Layer Simplified Specification Version 2.00</a> from
+<li id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-C55300E3-EE06-5B9D-BBEB-733EBF93D6C1"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-C55300E3-EE06-5B9D-BBEB-733EBF93D6C1"><!-- --></a><p>the <a href="https://web.archive.org/web/20110000000000*/http://www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf" target="_blank">Physical Layer Simplified Specification Version 2.00</a> from
 the SD card association </p>
  </li>
 
@@ -93,7 +93,7 @@ MMC controller is described <a href="GUID-40F2BC43-5022-5F4E-B445-56FEF43FEB8B.h
  <p>The
 Platform-Independent Layer (PIL) of the SD controller can be found here: <span class="filepath">..\eka\drivers\pbus\sdcard\sdcard3c\</span>  </p>
  <p>The
-suggested location for the main source file of the PSL is <span class="filepath">..\&lt;VARIANT&gt;\specific\sdcard3c\sdstack.cpp</span>  </p>
+suggested location for the main source file of the PSL is <span class="filepath">..\<VARIANT>\specific\sdcard3c\sdstack.cpp</span>  </p>
  </div>
 
 <div class="section" id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-65BC9BCC-2C64-4E19-9AD3-D5CE8EFA0B0C"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-65BC9BCC-2C64-4E19-9AD3-D5CE8EFA0B0C"><!-- --></a><h2 class="sectiontitle">Implementations</h2> <p>The core class of the PSL must
@@ -318,7 +318,7 @@ to CMD1 in the MMC case). </p>
 </table>
 </div>
  <p>The following example illustrates how to detect an ACMD6 command: </p>
- <pre class="codeblock" id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-CAA2B541-AD7D-58BF-BECB-BA5F25A00272"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-CAA2B541-AD7D-58BF-BECB-BA5F25A00272"><!-- --></a>if ((cmd.iSpec.iCommandClass == KMMCCmdClassApplication) &amp;&amp; (cmd.iCommand == ECmd6))
+ <pre class="codeblock" id="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-CAA2B541-AD7D-58BF-BECB-BA5F25A00272"><a name="GUID-E194A923-99E7-5DC1-BB78-D050A4793A60__GUID-CAA2B541-AD7D-58BF-BECB-BA5F25A00272"><!-- --></a>if ((cmd.iSpec.iCommandClass == KMMCCmdClassApplication) && (cmd.iCommand == ECmd6))
      {
          /* [...] */ 
      }
@@ -330,12 +330,12 @@ to CMD1 in the MMC case). </p>
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a href="GUID-F15DBB8B-A79D-5C3B-BE07-F0356936A2DC.html" title="Describes the Secure Digital (SD) Controller to support SD cards on the Symbian platform.">SD Controller</a></div>
 </div>
-<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br></br>
 <div><a href="GUID-0E5A241A-19F5-5754-B454-45747A8D80E1.html" title="Description of SD card features available to application developers and what a device creator must write to provide SD card support.">SD Card Overview</a></div>
 <div><a href="GUID-114A23CF-BF8B-54F5-8AF6-FEF007891884.html" title="Describes the Secure Digital (SD) controller supported on the Symbian platform.">SD Card Controller</a></div>
 </div>
 </div>   
-<p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
 </div>

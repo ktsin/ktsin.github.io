@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/MemMan/Cleanup/ErrorOnFail/ErrorOnFail.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/MemMan/Cleanup/ErrorOnFail/ErrorOnFail.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -57,7 +57,7 @@
 <a name="l00017"></a>00017 <span class="comment">//</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;e32cons.h&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include <e32cons.h></span>
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="comment">//</span>
@@ -65,7 +65,7 @@
 <a name="l00025"></a>00025 <span class="comment">//</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCommonFormat1,<span class="stringliteral">&quot;Value of iInt is %d.\n&quot;</span>);
+<a name="l00028"></a>00028 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KCommonFormat1,<span class="stringliteral">"Value of iInt is %d.\n"</span>);
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031   <span class="comment">// All messages written to this</span>
@@ -90,7 +90,7 @@
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 
 <a name="l00053"></a>00053 <span class="comment">//</span>
-<a name="l00054"></a>00054 <span class="comment">// -----&gt; CExample (definition)</span>
+<a name="l00054"></a>00054 <span class="comment">// -----> CExample (definition)</span>
 <a name="l00055"></a>00055 <span class="comment">//</span>
 <a name="l00056"></a>00056 <span class="comment">// The class is used by the example code</span>
 <a name="l00057"></a>00057 <span class="comment">//</span>
@@ -104,18 +104,18 @@
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 
 <a name="l00069"></a>00069 <span class="comment">//</span>
-<a name="l00070"></a>00070 <span class="comment">// -----&gt; CExample (implementation)</span>
+<a name="l00070"></a>00070 <span class="comment">// -----> CExample (implementation)</span>
 <a name="l00071"></a>00071 <span class="comment">//</span>
 <a name="l00073"></a>00073 <span class="comment"></span><span class="keywordtype">void</span> CExample::DoSomethingL() 
 <a name="l00074"></a>00074         {
 <a name="l00075"></a>00075           <span class="comment">// Leave if the global flag is set</span>
 <a name="l00076"></a>00076         <span class="keywordflow">if</span> (leaveFlag)
 <a name="l00077"></a>00077                 {
-<a name="l00078"></a>00078                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgLeaving,<span class="stringliteral">&quot;DoSomethingL leaving.\n&quot;</span>);
-<a name="l00079"></a>00079                 console-&gt;Printf(KMsgLeaving);
+<a name="l00078"></a>00078                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgLeaving,<span class="stringliteral">"DoSomethingL leaving.\n"</span>);
+<a name="l00079"></a>00079                 console->Printf(KMsgLeaving);
 <a name="l00080"></a>00080                 User::Leave(KErrGeneral);               
 <a name="l00081"></a>00081                 }
-<a name="l00082"></a>00082         console-&gt;Printf(KCommonFormat1,iInt);
+<a name="l00082"></a>00082         console->Printf(KCommonFormat1,iInt);
 <a name="l00083"></a>00083         }
 <a name="l00084"></a>00084 
 <a name="l00086"></a>00086 <span class="comment">//</span>
@@ -130,7 +130,7 @@
 <a name="l00096"></a>00096         TRAPD(error,callExampleL());
 <a name="l00097"></a>00097           
 <a name="l00098"></a>00098           <span class="comment">// callExampleL() should never leave.</span>
-<a name="l00099"></a>00099         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgPanicEpoc32ex,<span class="stringliteral">&quot;EPOC32EX&quot;</span>);
+<a name="l00099"></a>00099         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgPanicEpoc32ex,<span class="stringliteral">"EPOC32EX"</span>);
 <a name="l00100"></a>00100         __ASSERT_ALWAYS(!error,User::Panic(KMsgPanicEpoc32ex,error));
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102           <span class="comment">// destroy the cleanup stack</span>
@@ -147,7 +147,7 @@
 <a name="l00115"></a>00115 <span class="comment"></span>LOCAL_C <span class="keywordtype">void</span> callExampleL() 
 <a name="l00116"></a>00116     {
 <a name="l00117"></a>00117           <span class="comment">// Initialize and call the example code under cleanup stack</span>
-<a name="l00118"></a>00118         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgExampleCode,<span class="stringliteral">&quot;Symbian platform Example Code&quot;</span>);
+<a name="l00118"></a>00118         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgExampleCode,<span class="stringliteral">"Symbian platform Example Code"</span>);
 <a name="l00119"></a>00119         console = Console::NewL(KMsgExampleCode,TSize(KConsFullScreen,KConsFullScreen));
 <a name="l00120"></a>00120           <span class="comment">// Put console onto the cleanup stack</span>
 <a name="l00121"></a>00121         CleanupStack::PushL(console);
@@ -157,11 +157,11 @@
 <a name="l00125"></a>00125         retVal = doExample();
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127           <span class="comment">// Show the value returned from the example</span>
-<a name="l00128"></a>00128         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">&quot;Return code=%d.\n&quot;</span>);
-<a name="l00129"></a>00129         console-&gt;Printf(KFormat2, retVal);
-<a name="l00130"></a>00130         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgPressAnyKey,<span class="stringliteral">&quot; [press any key]&quot;</span>);
-<a name="l00131"></a>00131         console-&gt;Printf(KMsgPressAnyKey);
-<a name="l00132"></a>00132         console-&gt;Getch();
+<a name="l00128"></a>00128         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">"Return code=%d.\n"</span>);
+<a name="l00129"></a>00129         console->Printf(KFormat2, retVal);
+<a name="l00130"></a>00130         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KMsgPressAnyKey,<span class="stringliteral">" [press any key]"</span>);
+<a name="l00131"></a>00131         console->Printf(KMsgPressAnyKey);
+<a name="l00132"></a>00132         console->Getch();
 <a name="l00133"></a>00133 
 <a name="l00134"></a>00134           <span class="comment">// Remove the console object from the cleanupstack</span>
 <a name="l00135"></a>00135           <span class="comment">// and destroy it </span>
@@ -174,15 +174,15 @@
 <a name="l00143"></a>00143 <span class="comment">//</span>
 <a name="l00145"></a>00145 <span class="comment"></span>TInt doExample()
 <a name="l00146"></a>00146         {
-<a name="l00147"></a>00147           <span class="comment">// Memory alloc fails on the &#39;allocFailNumber&#39; attempt.</span>
+<a name="l00147"></a>00147           <span class="comment">// Memory alloc fails on the 'allocFailNumber' attempt.</span>
 <a name="l00148"></a>00148         __UHEAP_SETFAIL(RHeap::EDeterministic,allocFailNumber);
 <a name="l00149"></a>00149           <span class="comment">// Allocate and test</span>
 <a name="l00150"></a>00150         CExample* myExample = <span class="keyword">new</span> CExample;
 <a name="l00151"></a>00151         <span class="keywordflow">if</span> (!myExample) <span class="keywordflow">return</span>(KErrNoMemory); 
 <a name="l00152"></a>00152           <span class="comment">// Do something with the CExample object</span>
-<a name="l00153"></a>00153         myExample-&gt;iInt = 5;
+<a name="l00153"></a>00153         myExample->iInt = 5;
 <a name="l00154"></a>00154           <span class="comment">//</span>
-<a name="l00155"></a>00155         console-&gt;Printf(KCommonFormat1,myExample-&gt;iInt);
+<a name="l00155"></a>00155         console->Printf(KCommonFormat1,myExample->iInt);
 <a name="l00156"></a>00156           <span class="comment">// Delete the CExample object</span>
 <a name="l00157"></a>00157         <span class="keyword">delete</span> myExample;
 <a name="l00158"></a>00158           <span class="comment">// Completed OK</span>
@@ -197,10 +197,10 @@
 <a name="l00167"></a>00167 
 <a name="l00168"></a>00168 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

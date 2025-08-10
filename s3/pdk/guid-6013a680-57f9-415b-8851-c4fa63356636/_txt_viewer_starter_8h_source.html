@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/S60_3rd_Edition_TextMTM_Example/modules/Install/src/TxtViewerStarter.h Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -69,10 +69,10 @@
 <a name="l00029"></a>00029 <span class="preprocessor"></span>
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="comment">//  INCLUDES</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;apparc.h&gt;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;msvapi.h&gt;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;msvids.h&gt;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;MTCLBASE.H&gt;</span>   <span class="comment">// TMsvPartList</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include <apparc.h></span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include <msvapi.h></span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include <msvids.h></span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include <MTCLBASE.H></span>   <span class="comment">// TMsvPartList</span>
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="comment">// CONSTANTS</span>
 <a name="l00038"></a>00038 <span class="keyword">const</span> TUid KUidMsvEditorParameterValue = {0x100014AA};
@@ -90,9 +90,9 @@
 <a name="l00053"></a>00053     {
 <a name="l00054"></a>00054     <span class="keyword">public</span>:
 <a name="l00055"></a>00055         <span class="keyword">inline</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>();
-<a name="l00056"></a>00056         <span class="keyword">inline</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams );
-<a name="l00057"></a>00057         <span class="keyword">inline</span> <span class="keywordtype">void</span> ExternalizeL( RWriteStream&amp; aStream ) <span class="keyword">const</span>;
-<a name="l00058"></a>00058         <span class="keyword">inline</span> <span class="keywordtype">void</span> InternalizeL( RReadStream&amp; aStream );
+<a name="l00056"></a>00056         <span class="keyword">inline</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams );
+<a name="l00057"></a>00057         <span class="keyword">inline</span> <span class="keywordtype">void</span> ExternalizeL( RWriteStream& aStream ) <span class="keyword">const</span>;
+<a name="l00058"></a>00058         <span class="keyword">inline</span> <span class="keywordtype">void</span> InternalizeL( RReadStream& aStream );
 <a name="l00059"></a>00059     <span class="keyword">public</span>:
 <a name="l00060"></a>00060         TMsvId  iId;
 <a name="l00061"></a>00061         TInt    iFlags;
@@ -128,7 +128,7 @@
 <a name="l00094"></a>00094     iSpecialAppId( TUid::Uid(0) )
 <a name="l00095"></a>00095     {}
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="keyword">inline</span> TEditorParameters::TEditorParameters( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams )
+<a name="l00097"></a>00097 <span class="keyword">inline</span> TEditorParameters::TEditorParameters( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams )
 <a name="l00098"></a>00098 :   iId( aParams.iId ),
 <a name="l00099"></a>00099     iFlags( aParams.iFlags ),
 <a name="l00100"></a>00100     iPartList( aParams.iPartList ),
@@ -136,14 +136,14 @@
 <a name="l00102"></a>00102     iSpecialAppId( aParams.iSpecialAppId )
 <a name="l00103"></a>00103     {}
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="keyword">inline</span> <span class="keywordtype">void</span> TEditorParameters::ExternalizeL( RWriteStream&amp; aStream )<span class="keyword"> const</span>
+<a name="l00105"></a>00105 <span class="keyword">inline</span> <span class="keywordtype">void</span> TEditorParameters::ExternalizeL( RWriteStream& aStream )<span class="keyword"> const</span>
 <a name="l00106"></a>00106 <span class="keyword">    </span>{
 <a name="l00107"></a>00107     aStream.WriteInt32L( iId );
 <a name="l00108"></a>00108     aStream.WriteInt32L( iFlags );
 <a name="l00109"></a>00109     aStream.WriteInt32L( iPartList );
 <a name="l00110"></a>00110     aStream.WriteInt32L( iDestinationFolderId );
 <a name="l00111"></a>00111     }
-<a name="l00112"></a>00112 <span class="keyword">inline</span> <span class="keywordtype">void</span> TEditorParameters::InternalizeL( RReadStream&amp; aStream )
+<a name="l00112"></a>00112 <span class="keyword">inline</span> <span class="keywordtype">void</span> TEditorParameters::InternalizeL( RReadStream& aStream )
 <a name="l00113"></a>00113     {
 <a name="l00114"></a>00114     iId = aStream.ReadInt32L();
 <a name="l00115"></a>00115     iFlags = aStream.ReadInt32L();
@@ -159,44 +159,44 @@
 <a name="l00136"></a>00136     <span class="keyword">public</span>:
 <a name="l00137"></a>00137 
 <a name="l00147"></a>00147         IMPORT_C <span class="keyword">static</span> CMsvOperation* <a class="code" href="class_viewer_starter.html#a178f324348f5d41092cb2f0b5210b41b">LaunchEditorApplicationL</a>(
-<a name="l00148"></a>00148             CMsvSession&amp; aSession,
+<a name="l00148"></a>00148             CMsvSession& aSession,
 <a name="l00149"></a>00149             TUid aMtmType,
-<a name="l00150"></a>00150             TRequestStatus&amp; aStatus,
-<a name="l00151"></a>00151             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams,
-<a name="l00152"></a>00152             <span class="keyword">const</span> TDesC&amp; aAppName,
+<a name="l00150"></a>00150             TRequestStatus& aStatus,
+<a name="l00151"></a>00151             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams,
+<a name="l00152"></a>00152             <span class="keyword">const</span> TDesC& aAppName,
 <a name="l00153"></a>00153             <span class="keyword">const</span> TDesC8* aAddtionalParams = NULL );
 <a name="l00154"></a>00154 
 <a name="l00165"></a>00165         IMPORT_C <span class="keyword">static</span> CMsvOperation* <a class="code" href="class_viewer_starter.html#a178f324348f5d41092cb2f0b5210b41b">LaunchEditorApplicationL</a>(
-<a name="l00166"></a>00166             CMsvSession&amp; aSession,
+<a name="l00166"></a>00166             CMsvSession& aSession,
 <a name="l00167"></a>00167             TUid aMtmType,
-<a name="l00168"></a>00168             TRequestStatus&amp; aStatus,
-<a name="l00169"></a>00169             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams,
-<a name="l00170"></a>00170             <span class="keyword">const</span> TDesC&amp; aAppName,
-<a name="l00171"></a>00171             <span class="keyword">const</span> TDesC8&amp; aProgressPack,
+<a name="l00168"></a>00168             TRequestStatus& aStatus,
+<a name="l00169"></a>00169             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams,
+<a name="l00170"></a>00170             <span class="keyword">const</span> TDesC& aAppName,
+<a name="l00171"></a>00171             <span class="keyword">const</span> TDesC8& aProgressPack,
 <a name="l00172"></a>00172             <span class="keyword">const</span> TDesC8* aAddtionalParams = NULL );
 <a name="l00173"></a>00173 
 <a name="l00174"></a>00174     <span class="keyword">private</span>:
 <a name="l00178"></a>00178         <span class="keyword">static</span> CMsvOperation* LaunchEditorApplicationEmbeddedL(
-<a name="l00179"></a>00179             CMsvSession&amp; aSession,
+<a name="l00179"></a>00179             CMsvSession& aSession,
 <a name="l00180"></a>00180             TUid aMtmType,
-<a name="l00181"></a>00181             TRequestStatus&amp; aStatus,
-<a name="l00182"></a>00182             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams,
-<a name="l00183"></a>00183             <span class="keyword">const</span> TDesC&amp; aAppName,
-<a name="l00184"></a>00184             <span class="keyword">const</span> TDesC8&amp; aProgressPack );
+<a name="l00181"></a>00181             TRequestStatus& aStatus,
+<a name="l00182"></a>00182             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams,
+<a name="l00183"></a>00183             <span class="keyword">const</span> TDesC& aAppName,
+<a name="l00184"></a>00184             <span class="keyword">const</span> TDesC8& aProgressPack );
 <a name="l00185"></a>00185 
 <a name="l00189"></a>00189         <span class="keyword">static</span> CMsvOperation* LaunchEditorApplicationStandAloneL(
-<a name="l00190"></a>00190             CMsvSession&amp; aSession,
+<a name="l00190"></a>00190             CMsvSession& aSession,
 <a name="l00191"></a>00191             TUid aMtmType,
-<a name="l00192"></a>00192             TRequestStatus&amp; aStatus,
-<a name="l00193"></a>00193             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>&amp; aParams,
-<a name="l00194"></a>00194             <span class="keyword">const</span> TDesC&amp; aAppName,
-<a name="l00195"></a>00195             <span class="keyword">const</span> TDesC8&amp; aProgressPack,
+<a name="l00192"></a>00192             TRequestStatus& aStatus,
+<a name="l00193"></a>00193             <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a>& aParams,
+<a name="l00194"></a>00194             <span class="keyword">const</span> TDesC& aAppName,
+<a name="l00195"></a>00195             <span class="keyword">const</span> TDesC8& aProgressPack,
 <a name="l00196"></a>00196             <span class="keyword">const</span> TDesC8* aAddtionalParams,
 <a name="l00197"></a>00197             TBool aLaunchThenWait );
 <a name="l00198"></a>00198 
 <a name="l00209"></a>00209         <span class="keyword">static</span> TUid DiscoverL( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams );
 <a name="l00210"></a>00210 
-<a name="l00221"></a>00221         <span class="keyword">static</span> TBool TryMatchL(  <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams, <span class="keyword">const</span> TApaAppServiceInfo aInfo, TUid&amp; aAppUid  );
+<a name="l00221"></a>00221         <span class="keyword">static</span> TBool TryMatchL(  <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams, <span class="keyword">const</span> TApaAppServiceInfo aInfo, TUid& aAppUid  );
 <a name="l00222"></a>00222 
 <a name="l00223"></a>00223     };
 <a name="l00224"></a>00224 
@@ -213,7 +213,7 @@
 <a name="l00247"></a>00247         <span class="keyword">public</span>:
 <a name="l00258"></a>00258         <span class="keyword">static</span> TUid <a class="code" href="class_msg_editor_service_resolver.html#a16b552abe0c8d4cc1a50519ca10af04e">DiscoverL</a>( <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams, TUid aMtmType );
 <a name="l00259"></a>00259 
-<a name="l00270"></a>00270         <span class="keyword">static</span> TBool <a class="code" href="class_msg_editor_service_resolver.html#a61f943efa43f4e0bc57f5bdb8a69d2bf">TryMatchL</a>(  <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams, TUid aMtmType, <span class="keyword">const</span> TApaAppServiceInfo aInfo, TUid&amp; aAppUid  );
+<a name="l00270"></a>00270         <span class="keyword">static</span> TBool <a class="code" href="class_msg_editor_service_resolver.html#a61f943efa43f4e0bc57f5bdb8a69d2bf">TryMatchL</a>(  <span class="keyword">const</span> <a class="code" href="class_t_editor_parameters.html">TEditorParameters</a> aParams, TUid aMtmType, <span class="keyword">const</span> TApaAppServiceInfo aInfo, TUid& aAppUid  );
 <a name="l00271"></a>00271         };
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273 
@@ -222,10 +222,10 @@
 <a name="l00276"></a>00276 <span class="preprocessor"></span>
 <a name="l00277"></a>00277 <span class="comment">// End of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

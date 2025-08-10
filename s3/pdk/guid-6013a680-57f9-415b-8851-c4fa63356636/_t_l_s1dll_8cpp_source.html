@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/ThreadsAndProcesses/TLS1/TLS1dll.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/ThreadsAndProcesses/TLS1/TLS1dll.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -63,12 +63,12 @@
 <a name="l00023"></a>00023 <span class="comment">// through the pointer in thread local storage - it is a matter of application design.</span>
 <a name="l00024"></a>00024 <span class="comment">//</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;TLS1dll.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include "TLS1dll.h"</span>
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;e32uid.h&gt;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include <e32uid.h></span>
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxt1,<span class="stringliteral">&quot;&lt;&gt;\n&quot;</span>);
-<a name="l00031"></a>00031 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">&quot;&lt;%S&gt;\n&quot;</span>);
+<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxt1,<span class="stringliteral">"<>\n"</span>);
+<a name="l00031"></a>00031 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">"<%S>\n"</span>);
 <a name="l00032"></a>00032 
 <a name="l00034"></a>00034 <span class="comment">//</span>
 <a name="l00035"></a>00035 <span class="comment">// Class CSetter implementation</span>
@@ -78,7 +78,7 @@
 <a name="l00040"></a>00040         <span class="comment">// initializer list.</span>
 <a name="l00041"></a>00041     <span class="comment">// Body of constructor is empty.</span>
 <a name="l00042"></a>00042     <span class="comment">// Constructor is exported because it is non-trivial</span>
-<a name="l00043"></a>00043 EXPORT_C CSetter::CSetter(CConsoleBase&amp; aConsole)
+<a name="l00043"></a>00043 EXPORT_C CSetter::CSetter(CConsoleBase& aConsole)
 <a name="l00044"></a>00044         : iConsole(aConsole)
 <a name="l00045"></a>00045         {
 <a name="l00046"></a>00046         }
@@ -94,7 +94,7 @@
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057         <span class="comment">// Delete any existing static string; allocates a new HBufC</span>
 <a name="l00058"></a>00058         <span class="comment">// and sets thread local storage to point to the HBufC.</span>
-<a name="l00059"></a>00059 EXPORT_C <span class="keywordtype">void</span> CSetter::SetStaticTextL(<span class="keyword">const</span> TDesC&amp; aString)
+<a name="l00059"></a>00059 EXPORT_C <span class="keywordtype">void</span> CSetter::SetStaticTextL(<span class="keyword">const</span> TDesC& aString)
 <a name="l00060"></a>00060         {
 <a name="l00061"></a>00061         <span class="keyword">delete</span> (HBufC*)Dll::Tls();
 <a name="l00062"></a>00062         HBufC* pD = aString.AllocL();
@@ -123,7 +123,7 @@
 <a name="l00087"></a>00087         <span class="comment">// initializer list.</span>
 <a name="l00088"></a>00088     <span class="comment">// Body of constructor is empty.</span>
 <a name="l00089"></a>00089     <span class="comment">// Constructor is exported because it is non-trivial</span>
-<a name="l00090"></a>00090 EXPORT_C CGeneral::CGeneral(CConsoleBase&amp; aConsole)
+<a name="l00090"></a>00090 EXPORT_C CGeneral::CGeneral(CConsoleBase& aConsole)
 <a name="l00091"></a>00091         : iConsole(aConsole)
 <a name="l00092"></a>00092         {
 <a name="l00093"></a>00093         }
@@ -142,10 +142,10 @@
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

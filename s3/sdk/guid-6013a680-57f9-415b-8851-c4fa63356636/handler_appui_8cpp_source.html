@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/Document_Handler_Example/HandlerApp/src/handlerAppui.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -43,27 +43,27 @@
 <a name="l00005"></a>00005 <span class="comment"> * Copyright (c):  All rights reserved</span>
 <a name="l00006"></a>00006 <span class="comment"> * ==================================================================== */</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;avkon.hrh&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;aknnotewrappers.h&gt;</span> 
+<a name="l00008"></a>00008 <span class="preprocessor">#include <avkon.hrh></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include <aknnotewrappers.h></span> 
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;utf.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include <utf.h></span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;handler.pan&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;handlerAppUi.h&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;handlerAppView.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;handler.hrh&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;handlerDocument.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "handler.pan"</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "handlerAppUi.h"</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "handlerAppView.h"</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "handler.hrh"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "handlerDocument.h"</span>
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;DocumentHandler.h&gt;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;eikenv.h&gt;</span> 
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;eikappui.h&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;eikapp.h&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;APPARC.H&gt;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;eikproc.H&gt;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;apmstd.h&gt;</span> <span class="comment">//TDAtatype, Link against: apmime.lib </span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include <DocumentHandler.h></span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include <eikenv.h></span> 
+<a name="l00021"></a>00021 <span class="preprocessor">#include <eikappui.h></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <eikapp.h></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <APPARC.H></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include <eikproc.H></span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include <apmstd.h></span> <span class="comment">//TDAtatype, Link against: apmime.lib </span>
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;handler.rsg&gt;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;eikbtgpc.h&gt;</span> <span class="comment">//CEikButtonGroupContainer</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include <handler.rsg></span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include <eikbtgpc.h></span> <span class="comment">//CEikButtonGroupContainer</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="preprocessor">#define KEnableSkinFlag 0x1000</span>
 <a name="l00031"></a>00031 <span class="preprocessor"></span><span class="preprocessor">#define KLayoutAwareFlag 0x08</span>
@@ -81,12 +81,12 @@
 <a name="l00043"></a>00043     <span class="keywordflow">if</span> (IsEmbedded())
 <a name="l00044"></a>00044         {
 <a name="l00045"></a>00045         <span class="comment">//If the handler application is launched as embedded </span>
-<a name="l00046"></a>00046         <span class="comment">//then set the right softkey to &quot;Back&quot;</span>
+<a name="l00046"></a>00046         <span class="comment">//then set the right softkey to "Back"</span>
 <a name="l00047"></a>00047         CEikButtonGroupContainer * iCba = CEikButtonGroupContainer::Current();
 <a name="l00048"></a>00048         <span class="keywordflow">if</span>( iCba) 
 <a name="l00049"></a>00049                 {
-<a name="l00050"></a>00050                 iCba-&gt;SetCommandSetL( R_AVKON_SOFTKEYS_OPTIONS_BACK );
-<a name="l00051"></a>00051                 iCba-&gt;DrawNow(); 
+<a name="l00050"></a>00050                 iCba->SetCommandSetL( R_AVKON_SOFTKEYS_OPTIONS_BACK );
+<a name="l00051"></a>00051                 iCba->DrawNow(); 
 <a name="l00052"></a>00052                 }        
 <a name="l00053"></a>00053         }
 <a name="l00054"></a>00054 
@@ -110,7 +110,7 @@
 <a name="l00072"></a>00072     <span class="comment">//This only works in 1st and 2nd edition</span>
 <a name="l00073"></a>00073     <span class="keywordflow">if</span>( iDoorObserver )
 <a name="l00074"></a>00074         {        
-<a name="l00075"></a>00075         iDoorObserver-&gt;NotifyExit( MApaEmbeddedDocObserver::ENoChanges );            
+<a name="l00075"></a>00075         iDoorObserver->NotifyExit( MApaEmbeddedDocObserver::ENoChanges );            
 <a name="l00076"></a>00076         }
 <a name="l00077"></a>00077         
 <a name="l00078"></a>00078     }
@@ -142,11 +142,11 @@
 <a name="l00104"></a>00104         }
 <a name="l00105"></a>00105     }
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="keywordtype">void</span> CHandlerAppUi::SetFileData(TFileName&amp; aFileName, TDes8&amp; aData)
+<a name="l00107"></a>00107 <span class="keywordtype">void</span> CHandlerAppUi::SetFileData(TFileName& aFileName, TDes8& aData)
 <a name="l00108"></a>00108     {
 <a name="l00109"></a>00109     <span class="keywordflow">if</span> (iAppView)
 <a name="l00110"></a>00110         {
-<a name="l00111"></a>00111         iAppView-&gt;SetFileData(aFileName,aData);
+<a name="l00111"></a>00111         iAppView->SetFileData(aFileName,aData);
 <a name="l00112"></a>00112         }
 <a name="l00113"></a>00113     }
 <a name="l00114"></a>00114 
@@ -161,33 +161,33 @@
 <a name="l00123"></a>00123         
 <a name="l00124"></a>00124         <span class="keywordflow">if</span> ( aType == 0x101F8121 )
 <a name="l00125"></a>00125             {
-<a name="l00126"></a>00126             iAppView-&gt;SetRect( ClientRect() );
+<a name="l00126"></a>00126             iAppView->SetRect( ClientRect() );
 <a name="l00127"></a>00127             }
 <a name="l00128"></a>00128         }
 <a name="l00129"></a>00129 
-<a name="l00130"></a><a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">00130</a> TBool <a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">CHandlerAppUi::ProcessCommandParametersL</a>(TApaCommand <span class="comment">/*aCommand*/</span>,TFileName&amp; <span class="comment">/*aDocumentName*/</span>)
+<a name="l00130"></a><a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">00130</a> TBool <a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">CHandlerAppUi::ProcessCommandParametersL</a>(TApaCommand <span class="comment">/*aCommand*/</span>,TFileName& <span class="comment">/*aDocumentName*/</span>)
 <a name="l00131"></a>00131     {
 <a name="l00132"></a>00132     <span class="keywordflow">return</span> ETrue;
 <a name="l00133"></a>00133     }
 <a name="l00134"></a>00134 
-<a name="l00135"></a><a class="code" href="class_c_handler_app_ui.html#a716e15fd3d4286dcff0fb652c042db23">00135</a> TBool <a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">CHandlerAppUi::ProcessCommandParametersL</a>(TApaCommand <span class="comment">/*aCommand*/</span>,TFileName&amp; <span class="comment">/*aDocumentName*/</span>,<span class="keyword">const</span> TDesC8&amp; <span class="comment">/*aTail*/</span>)
+<a name="l00135"></a><a class="code" href="class_c_handler_app_ui.html#a716e15fd3d4286dcff0fb652c042db23">00135</a> TBool <a class="code" href="class_c_handler_app_ui.html#a5420d5da910b47d409106e0c8bc2f0ff">CHandlerAppUi::ProcessCommandParametersL</a>(TApaCommand <span class="comment">/*aCommand*/</span>,TFileName& <span class="comment">/*aDocumentName*/</span>,<span class="keyword">const</span> TDesC8& <span class="comment">/*aTail*/</span>)
 <a name="l00136"></a>00136     {
-<a name="l00137"></a>00137     <span class="comment">//return true here so that document&#39;s OpenFileL gets called</span>
+<a name="l00137"></a>00137     <span class="comment">//return true here so that document's OpenFileL gets called</span>
 <a name="l00138"></a>00138     <span class="keywordflow">return</span> ETrue;
 <a name="l00139"></a>00139     }
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
-<a name="l00143"></a><a class="code" href="class_c_handler_app_ui.html#ae18d4c05000f0ad0f6b901de5f9c5e09">00143</a> <span class="keywordtype">void</span> <a class="code" href="class_c_handler_app_ui.html#ae18d4c05000f0ad0f6b901de5f9c5e09">CHandlerAppUi::OpenFileL</a>(<span class="keyword">const</span> TDesC&amp; aFileName)
+<a name="l00143"></a><a class="code" href="class_c_handler_app_ui.html#ae18d4c05000f0ad0f6b901de5f9c5e09">00143</a> <span class="keywordtype">void</span> <a class="code" href="class_c_handler_app_ui.html#ae18d4c05000f0ad0f6b901de5f9c5e09">CHandlerAppUi::OpenFileL</a>(<span class="keyword">const</span> TDesC& aFileName)
 <a name="l00144"></a>00144         {
 <a name="l00145"></a>00145         <span class="comment">// File changed. Open new file with documents OpenFileL method.</span>
-<a name="l00146"></a>00146         <a class="code" href="class_c_handler_document.html">CHandlerDocument</a>* doc = <span class="keyword">static_cast&lt;</span><a class="code" href="class_c_handler_document.html">CHandlerDocument</a>*<span class="keyword">&gt;</span> (Document());
-<a name="l00147"></a>00147         doc-&gt;<a class="code" href="class_c_handler_document.html#ad94b2d5d94375cc63a2cc5654c8374b7">OpenFileL</a>( ETrue, aFileName, iEikonEnv-&gt;FsSession() );    
+<a name="l00146"></a>00146         <a class="code" href="class_c_handler_document.html">CHandlerDocument</a>* doc = <span class="keyword">static_cast<</span><a class="code" href="class_c_handler_document.html">CHandlerDocument</a>*<span class="keyword">></span> (Document());
+<a name="l00147"></a>00147         doc-><a class="code" href="class_c_handler_document.html#ad94b2d5d94375cc63a2cc5654c8374b7">OpenFileL</a>( ETrue, aFileName, iEikonEnv->FsSession() );    
 <a name="l00148"></a>00148         }
 <a name="l00149"></a>00149 TBool CHandlerAppUi::IsEmbedded()
 <a name="l00150"></a>00150     {
 <a name="l00151"></a>00151 <span class="preprocessor">    #ifdef __SERIES60_3X__</span>
-<a name="l00152"></a>00152 <span class="preprocessor"></span>    <span class="keywordflow">return</span> iEikonEnv-&gt;StartedAsServerApp();
+<a name="l00152"></a>00152 <span class="preprocessor"></span>    <span class="keywordflow">return</span> iEikonEnv->StartedAsServerApp();
 <a name="l00153"></a>00153 <span class="preprocessor">    #else</span>
 <a name="l00154"></a>00154 <span class="preprocessor"></span>    <span class="keywordflow">return</span> (iDoorObserver != NULL);
 <a name="l00155"></a>00155 <span class="preprocessor">    #endif</span>
@@ -195,10 +195,10 @@
 <a name="l00157"></a>00157         
 <a name="l00158"></a>00158 <span class="comment">//End of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

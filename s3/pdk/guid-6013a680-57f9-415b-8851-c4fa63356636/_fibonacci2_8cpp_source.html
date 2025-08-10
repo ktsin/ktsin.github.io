@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/IPC/Async/Fibonacci2/Fibonacci2.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/IPC/Async/Fibonacci2/Fibonacci2.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -59,22 +59,22 @@
 <a name="l00019"></a>00019 <span class="comment">//</span>
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;e32std.h&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;e32cons.h&gt;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;e32base.h&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include <e32std.h></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include <e32cons.h></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include <e32base.h></span>
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="comment">//</span>
 <a name="l00027"></a>00027 <span class="comment">// Common literals</span>
 <a name="l00028"></a>00028 <span class="comment">//</span>
-<a name="l00029"></a>00029 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibThread,<span class="stringliteral">&quot;FibThread&quot;</span>);
+<a name="l00029"></a>00029 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibThread,<span class="stringliteral">"FibThread"</span>);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 LOCAL_D CConsoleBase* console;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtMainInstructions,<span class="stringliteral">&quot;\n\nPress &#39;F&#39; to start\n      &#39;ESC&#39; to exit\n      &#39;C&#39; to cancel, anytime\n&quot;</span>);
+<a name="l00034"></a>00034 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtMainInstructions,<span class="stringliteral">"\n\nPress 'F' to start\n      'ESC' to exit\n      'C' to cancel, anytime\n"</span>);
 <a name="l00035"></a>00035 
 <a name="l00037"></a>00037 <span class="comment">//</span>
-<a name="l00038"></a>00038 <span class="comment">// -----&gt; CActiveConsole (definition)</span>
+<a name="l00038"></a>00038 <span class="comment">// -----> CActiveConsole (definition)</span>
 <a name="l00039"></a>00039 <span class="comment">//</span>
 <a name="l00040"></a>00040 <span class="comment">// An abstract class which provides the facility to issue key requests. </span>
 <a name="l00041"></a>00041 <span class="comment">//</span>
@@ -112,7 +112,7 @@
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
 <a name="l00077"></a>00077 <span class="comment">//</span>
-<a name="l00078"></a>00078 <span class="comment">// -----&gt; CExampleScheduler (definition)</span>
+<a name="l00078"></a>00078 <span class="comment">// -----> CExampleScheduler (definition)</span>
 <a name="l00079"></a>00079 <span class="comment">//</span>
 <a name="l00081"></a>00081 <span class="comment"></span>
 <a name="l00082"></a>00082 <span class="keyword">class </span>CExampleScheduler : <span class="keyword">public</span> CActiveScheduler
@@ -128,7 +128,7 @@
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 
 <a name="l00095"></a>00095 <span class="comment">//</span>
-<a name="l00096"></a>00096 <span class="comment">// -----&gt; CFibonacciEngine (definition)</span>
+<a name="l00096"></a>00096 <span class="comment">// -----> CFibonacciEngine (definition)</span>
 <a name="l00097"></a>00097 <span class="comment">//</span>
 <a name="l00098"></a>00098 <span class="comment">// This class provides the fibonacci calculation engine</span>
 <a name="l00099"></a>00099 <span class="comment">//</span>
@@ -143,7 +143,7 @@
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 
 <a name="l00112"></a>00112 <span class="comment">//</span>
-<a name="l00113"></a>00113 <span class="comment">// -----&gt; TFibonacciParameters (definition)</span>
+<a name="l00113"></a>00113 <span class="comment">// -----> TFibonacciParameters (definition)</span>
 <a name="l00114"></a>00114 <span class="comment">//</span>
 <a name="l00115"></a>00115 <span class="comment">// This class provides for passing parameters to the thread </span>
 <a name="l00116"></a>00116 <span class="comment">//</span>
@@ -158,7 +158,7 @@
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127 
 <a name="l00129"></a>00129 <span class="comment">//</span>
-<a name="l00130"></a>00130 <span class="comment">// -----&gt; CFibonacciThreadHandler (definition)</span>
+<a name="l00130"></a>00130 <span class="comment">// -----> CFibonacciThreadHandler (definition)</span>
 <a name="l00131"></a>00131 <span class="comment">//</span>
 <a name="l00132"></a>00132 <span class="comment">// This class encapsulates the fibonacci thread that runs the fibonacci engine</span>
 <a name="l00133"></a>00133 <span class="comment">//</span>
@@ -184,7 +184,7 @@
 <a name="l00154"></a>00154 
 <a name="l00155"></a>00155 
 <a name="l00157"></a>00157 <span class="comment">//</span>
-<a name="l00158"></a>00158 <span class="comment">// -----&gt; CFibonacciKeyHandler (definition)</span>
+<a name="l00158"></a>00158 <span class="comment">// -----> CFibonacciKeyHandler (definition)</span>
 <a name="l00159"></a>00159 <span class="comment">//</span>
 <a name="l00160"></a>00160 <span class="comment">// This class encapsulates the fibonacci keyboard handler</span>
 <a name="l00161"></a>00161 <span class="comment">//</span>
@@ -211,7 +211,7 @@
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184 
 <a name="l00186"></a>00186 <span class="comment">//</span>
-<a name="l00187"></a>00187 <span class="comment">// -----&gt; CActiveConsole (implementation)</span>
+<a name="l00187"></a>00187 <span class="comment">// -----> CActiveConsole (implementation)</span>
 <a name="l00188"></a>00188 <span class="comment">//</span>
 <a name="l00190"></a>00190 <span class="comment"></span>CActiveConsole::CActiveConsole( CConsoleBase* aConsole) 
 <a name="l00191"></a>00191         : CActive(CActive::EPriorityUserInput)
@@ -228,44 +228,44 @@
 <a name="l00202"></a>00202 
 <a name="l00203"></a>00203 CActiveConsole::~CActiveConsole()
 <a name="l00204"></a>00204         {
-<a name="l00205"></a>00205         <span class="comment">// Make sure we&#39;re cancelled</span>
+<a name="l00205"></a>00205         <span class="comment">// Make sure we're cancelled</span>
 <a name="l00206"></a>00206         Cancel();
 <a name="l00207"></a>00207         }
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209 <span class="keywordtype">void</span>  CActiveConsole::DoCancel()
 <a name="l00210"></a>00210         {
-<a name="l00211"></a>00211         iConsole-&gt;ReadCancel();
+<a name="l00211"></a>00211         iConsole->ReadCancel();
 <a name="l00212"></a>00212         }
 <a name="l00213"></a>00213 
 <a name="l00214"></a>00214 <span class="keywordtype">void</span>  CActiveConsole::RunL()
 <a name="l00215"></a>00215         {
 <a name="l00216"></a>00216           <span class="comment">// Handle completed request</span>
-<a name="l00217"></a>00217         ProcessKeyPress(TChar(iConsole-&gt;KeyCode()));
+<a name="l00217"></a>00217         ProcessKeyPress(TChar(iConsole->KeyCode()));
 <a name="l00218"></a>00218         }
 <a name="l00219"></a>00219 
 <a name="l00220"></a>00220 <span class="keywordtype">void</span> CActiveConsole::RequestCharacter()
 <a name="l00221"></a>00221         {
 <a name="l00222"></a>00222           <span class="comment">// A request is issued to the CConsoleBase to accept a</span>
 <a name="l00223"></a>00223           <span class="comment">// character from the keyboard.</span>
-<a name="l00224"></a>00224         iConsole-&gt;Read(iStatus); 
+<a name="l00224"></a>00224         iConsole->Read(iStatus); 
 <a name="l00225"></a>00225         SetActive();
 <a name="l00226"></a>00226         }
 <a name="l00227"></a>00227 
 <a name="l00228"></a>00228 
 <a name="l00230"></a>00230 <span class="comment">//</span>
-<a name="l00231"></a>00231 <span class="comment">// -----&gt; CExampleScheduler (implementation)</span>
+<a name="l00231"></a>00231 <span class="comment">// -----> CExampleScheduler (implementation)</span>
 <a name="l00232"></a>00232 <span class="comment">//</span>
 <a name="l00234"></a>00234 <span class="comment"></span><span class="keywordtype">void</span> CExampleScheduler::Error(TInt aError)<span class="keyword"> const</span>
 <a name="l00235"></a>00235 <span class="keyword">        </span>{
-<a name="l00236"></a>00236         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSchedulerError,<span class="stringliteral">&quot;CExampleScheduler - error&quot;</span>);
+<a name="l00236"></a>00236         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtSchedulerError,<span class="stringliteral">"CExampleScheduler - error"</span>);
 <a name="l00237"></a>00237         User::Panic(KTxtSchedulerError,aError);
 <a name="l00238"></a>00238         }
 <a name="l00239"></a>00239 
 <a name="l00240"></a>00240 
 <a name="l00241"></a>00241 <span class="keywordtype">void</span> CExampleScheduler::WaitForAnyRequest()
 <a name="l00242"></a>00242         {
-<a name="l00243"></a>00243         <span class="keywordflow">if</span> (!(iActiveConsole-&gt;IsActive()))
-<a name="l00244"></a>00244                 iActiveConsole-&gt;RequestCharacter();     
+<a name="l00243"></a>00243         <span class="keywordflow">if</span> (!(iActiveConsole->IsActive()))
+<a name="l00244"></a>00244                 iActiveConsole->RequestCharacter();     
 <a name="l00245"></a>00245         CActiveScheduler::WaitForAnyRequest();
 <a name="l00246"></a>00246         }
 <a name="l00247"></a>00247 
@@ -279,22 +279,22 @@
 <a name="l00255"></a>00255 
 <a name="l00256"></a>00256 
 <a name="l00258"></a>00258 <span class="comment">// CFibonacciKeyHandler support routine</span>
-<a name="l00259"></a>00259 <span class="comment">//   uses up arrow &amp; down arrow to change number, Enter to select</span>
+<a name="l00259"></a>00259 <span class="comment">//   uses up arrow & down arrow to change number, Enter to select</span>
 <a name="l00261"></a>00261 <span class="comment"></span>
-<a name="l00262"></a>00262 TInt GetValueFromKeyboard (TInt aInitial, TInt aStep, TInt lowerLimit, TInt upperLimit, <span class="keyword">const</span> TDesC&amp; aPrompt, CConsoleBase* aConsole)
+<a name="l00262"></a>00262 TInt GetValueFromKeyboard (TInt aInitial, TInt aStep, TInt lowerLimit, TInt upperLimit, <span class="keyword">const</span> TDesC& aPrompt, CConsoleBase* aConsole)
 <a name="l00263"></a>00263         {
 <a name="l00264"></a>00264         TChar input ;
 <a name="l00265"></a>00265         TInt value = aInitial ;
 <a name="l00266"></a>00266 
-<a name="l00267"></a>00267         aConsole-&gt;Printf(aPrompt) ;
+<a name="l00267"></a>00267         aConsole->Printf(aPrompt) ;
 <a name="l00268"></a>00268         <span class="keywordflow">do</span>
 <a name="l00269"></a>00269                 {
-<a name="l00270"></a>00270                 aConsole-&gt;SetPos(0);
-<a name="l00271"></a>00271                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">&quot;%d  &quot;</span>);
-<a name="l00272"></a>00272                 aConsole-&gt;Printf(KFormat1, value);
-<a name="l00273"></a>00273                 input = aConsole-&gt;Getch() ;
-<a name="l00274"></a>00274                 <span class="keywordflow">if</span> (input == EKeyUpArrow &amp;&amp; value &lt; upperLimit) value = value + aStep ;
-<a name="l00275"></a>00275                 <span class="keywordflow">if</span> (input == EKeyDownArrow &amp;&amp; value &gt; lowerLimit) value = value - aStep ;
+<a name="l00270"></a>00270                 aConsole->SetPos(0);
+<a name="l00271"></a>00271                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">"%d  "</span>);
+<a name="l00272"></a>00272                 aConsole->Printf(KFormat1, value);
+<a name="l00273"></a>00273                 input = aConsole->Getch() ;
+<a name="l00274"></a>00274                 <span class="keywordflow">if</span> (input == EKeyUpArrow && value < upperLimit) value = value + aStep ;
+<a name="l00275"></a>00275                 <span class="keywordflow">if</span> (input == EKeyDownArrow && value > lowerLimit) value = value - aStep ;
 <a name="l00276"></a>00276                 }
 <a name="l00277"></a>00277         <span class="keywordflow">while</span> (input != EKeyEnter) ;
 <a name="l00278"></a>00278 
@@ -303,7 +303,7 @@
 <a name="l00281"></a>00281 
 <a name="l00282"></a>00282 
 <a name="l00284"></a>00284 <span class="comment">//</span>
-<a name="l00285"></a>00285 <span class="comment">// -----&gt; CFibonacciKeyHandler (implementation)</span>
+<a name="l00285"></a>00285 <span class="comment">// -----> CFibonacciKeyHandler (implementation)</span>
 <a name="l00286"></a>00286 <span class="comment">//</span>
 <a name="l00288"></a>00288 <span class="comment"></span>
 <a name="l00289"></a>00289 
@@ -316,7 +316,7 @@
 <a name="l00296"></a>00296           <span class="comment">// Add to active scheduler</span>
 <a name="l00297"></a>00297         CActiveScheduler::Add(<span class="keyword">this</span>);
 <a name="l00298"></a>00298           <span class="comment">// Make this the active object</span>
-<a name="l00299"></a>00299         ((CExampleScheduler*)(CActiveScheduler::Current()))-&gt;SetActiveObject(<span class="keyword">this</span>);
+<a name="l00299"></a>00299         ((CExampleScheduler*)(CActiveScheduler::Current()))->SetActiveObject(<span class="keyword">this</span>);
 <a name="l00300"></a>00300         } 
 <a name="l00301"></a>00301 
 <a name="l00302"></a>00302 
@@ -331,43 +331,43 @@
 <a name="l00311"></a>00311                 <span class="keywordflow">return</span>;
 <a name="l00312"></a>00312                 }
 <a name="l00313"></a>00313 
-<a name="l00314"></a>00314           <span class="comment">// If key is &quot;f&quot; or &quot;F&quot;</span>
+<a name="l00314"></a>00314           <span class="comment">// If key is "f" or "F"</span>
 <a name="l00315"></a>00315           <span class="comment">//   cancel any outstanding request</span>
 <a name="l00316"></a>00316           <span class="comment">//   issue a fibonacci request.</span>
-<a name="l00317"></a>00317         <span class="keywordflow">if</span> (aChar == <span class="charliteral">&#39;f&#39;</span> || aChar == <span class="charliteral">&#39;F&#39;</span>) 
+<a name="l00317"></a>00317         <span class="keywordflow">if</span> (aChar == <span class="charliteral">'f'</span> || aChar == <span class="charliteral">'F'</span>) 
 <a name="l00318"></a>00318                 {
-<a name="l00319"></a>00319                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtStartingFibonacci,<span class="stringliteral">&quot;\nStarting Fibonacci....  \n&quot;</span>);
-<a name="l00320"></a>00320                 iConsole-&gt;Printf(KTxtStartingFibonacci);
-<a name="l00321"></a>00321                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtReturnTermNumber,<span class="stringliteral">&quot;\nENTER selects num\nUP    arrow increases num\nDOWN  arrow decreases num\n\n&quot;</span>);
+<a name="l00319"></a>00319                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtStartingFibonacci,<span class="stringliteral">"\nStarting Fibonacci....  \n"</span>);
+<a name="l00320"></a>00320                 iConsole->Printf(KTxtStartingFibonacci);
+<a name="l00321"></a>00321                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtReturnTermNumber,<span class="stringliteral">"\nENTER selects num\nUP    arrow increases num\nDOWN  arrow decreases num\n\n"</span>);
 <a name="l00322"></a>00322                 TInt iterations = GetValueFromKeyboard(5,1,2,46, KTxtReturnTermNumber, iConsole) ;
-<a name="l00323"></a>00323                 TRAPD(err,iThreadHandler-&gt;CalculateFibonacciL(iterations));
+<a name="l00323"></a>00323                 TRAPD(err,iThreadHandler->CalculateFibonacciL(iterations));
 <a name="l00324"></a>00324                 <span class="keywordflow">if</span>(err)
 <a name="l00325"></a>00325                         {
-<a name="l00326"></a>00326                                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat4,<span class="stringliteral">&quot;CalculateFibonacciL failed: leave code=%d&quot;</span>);
-<a name="l00327"></a>00327                                 console-&gt;Printf(KFormat4, err); 
+<a name="l00326"></a>00326                                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat4,<span class="stringliteral">"CalculateFibonacciL failed: leave code=%d"</span>);
+<a name="l00327"></a>00327                                 console->Printf(KFormat4, err); 
 <a name="l00328"></a>00328                         }
 <a name="l00329"></a>00329                 <span class="keywordflow">return</span>;
 <a name="l00330"></a>00330                 }
 <a name="l00331"></a>00331 
-<a name="l00332"></a>00332       <span class="comment">// If key is &quot;c&quot; or &quot;C&quot; </span>
+<a name="l00332"></a>00332       <span class="comment">// If key is "c" or "C" </span>
 <a name="l00333"></a>00333           <span class="comment">//    cancel any outstanding request  </span>
-<a name="l00334"></a>00334         <span class="keywordflow">if</span> (aChar == <span class="charliteral">&#39;c&#39;</span> || aChar == <span class="charliteral">&#39;C&#39;</span>)
+<a name="l00334"></a>00334         <span class="keywordflow">if</span> (aChar == <span class="charliteral">'c'</span> || aChar == <span class="charliteral">'C'</span>)
 <a name="l00335"></a>00335                 {
-<a name="l00336"></a>00336                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCancelFibonacci,<span class="stringliteral">&quot;\nCancelling Fibonacci....  \n&quot;</span>);
-<a name="l00337"></a>00337                 iConsole-&gt;Printf(KTxtCancelFibonacci);
-<a name="l00338"></a>00338                 iThreadHandler-&gt;Cancel();
-<a name="l00339"></a>00339                 iConsole-&gt;Printf(KTxtMainInstructions);
+<a name="l00336"></a>00336                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCancelFibonacci,<span class="stringliteral">"\nCancelling Fibonacci....  \n"</span>);
+<a name="l00337"></a>00337                 iConsole->Printf(KTxtCancelFibonacci);
+<a name="l00338"></a>00338                 iThreadHandler->Cancel();
+<a name="l00339"></a>00339                 iConsole->Printf(KTxtMainInstructions);
 <a name="l00340"></a>00340                 <span class="keywordflow">return</span>;
 <a name="l00341"></a>00341                 }
 <a name="l00342"></a>00342 
-<a name="l00343"></a>00343         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNotRecognised,<span class="stringliteral">&quot;\nUnwanted key pressed&quot;</span>);
-<a name="l00344"></a>00344         iConsole-&gt;Printf(KTxtNotRecognised);
-<a name="l00345"></a>00345         iConsole-&gt;Printf(KTxtMainInstructions);
+<a name="l00343"></a>00343         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtNotRecognised,<span class="stringliteral">"\nUnwanted key pressed"</span>);
+<a name="l00344"></a>00344         iConsole->Printf(KTxtNotRecognised);
+<a name="l00345"></a>00345         iConsole->Printf(KTxtMainInstructions);
 <a name="l00346"></a>00346         }
 <a name="l00347"></a>00347 
 <a name="l00348"></a>00348 
 <a name="l00350"></a>00350 <span class="comment">//</span>
-<a name="l00351"></a>00351 <span class="comment">// -----&gt; CFibonacciThreadHandler (implementation)</span>
+<a name="l00351"></a>00351 <span class="comment">// -----> CFibonacciThreadHandler (implementation)</span>
 <a name="l00352"></a>00352 <span class="comment">//</span>
 <a name="l00354"></a>00354 <span class="comment"></span>
 <a name="l00355"></a>00355 CFibonacciThreadHandler::CFibonacciThreadHandler(CConsoleBase* aConsole, CFibonacciEngine* aFibonacciEngine)
@@ -402,9 +402,9 @@
 <a name="l00384"></a>00384 <span class="keywordtype">void</span> CFibonacciThreadHandler::RunL() 
 <a name="l00385"></a>00385         {
 <a name="l00386"></a>00386         <span class="comment">// handle requests - print out result and flag as handled (ie not cancelled)</span>
-<a name="l00387"></a>00387         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">&quot;    Result : %u \n&quot;</span>);  <span class="comment">//not used</span>
-<a name="l00388"></a>00388         iConsole-&gt;Printf(KFormat2, iFibonacciParameters.iResult) ;
-<a name="l00389"></a>00389         iConsole-&gt;Printf(KTxtMainInstructions);
+<a name="l00387"></a>00387         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat2,<span class="stringliteral">"    Result : %u \n"</span>);  <span class="comment">//not used</span>
+<a name="l00388"></a>00388         iConsole->Printf(KFormat2, iFibonacciParameters.iResult) ;
+<a name="l00389"></a>00389         iConsole->Printf(KTxtMainInstructions);
 <a name="l00390"></a>00390         }
 <a name="l00391"></a>00391 
 <a name="l00392"></a>00392 
@@ -413,8 +413,8 @@
 <a name="l00395"></a>00395         {
 <a name="l00396"></a>00396         <span class="keyword">const</span> TInt KHeapSize = 0x800 ;
 <a name="l00397"></a>00397         
-<a name="l00398"></a>00398         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibRequested,<span class="stringliteral">&quot;\nFibonacci requested ...  &quot;</span>);
-<a name="l00399"></a>00399         iConsole-&gt;Printf(KTxtFibRequested);
+<a name="l00398"></a>00398         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibRequested,<span class="stringliteral">"\nFibonacci requested ...  "</span>);
+<a name="l00399"></a>00399         iConsole->Printf(KTxtFibRequested);
 <a name="l00400"></a>00400 
 <a name="l00401"></a>00401 
 <a name="l00402"></a>00402         RThread thread ;
@@ -427,7 +427,7 @@
 <a name="l00409"></a>00409         <span class="comment">// generate thread, leave if fails</span>
 <a name="l00410"></a>00410         
 <a name="l00411"></a>00411         TInt result = thread.Create(KTxtFibThread,(TThreadFunction)FibonacciThread, KDefaultStackSize,
-<a name="l00412"></a>00412                                                                 KMinHeapSize, KHeapSize, &amp;iFibonacciParameters, EOwnerThread) ;
+<a name="l00412"></a>00412                                                                 KMinHeapSize, KHeapSize, &iFibonacciParameters, EOwnerThread) ;
 <a name="l00413"></a>00413         User::LeaveIfError(result) ;
 <a name="l00414"></a>00414 
 <a name="l00415"></a>00415         <span class="comment">// log on to thread -   sets iStatus to KRequestPending </span>
@@ -445,12 +445,12 @@
 <a name="l00427"></a>00427         <span class="comment">// ensure scheduler checks status </span>
 <a name="l00428"></a>00428         SetActive() ;
 <a name="l00429"></a>00429         
-<a name="l00430"></a>00430         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOK,<span class="stringliteral">&quot;OK  \n&quot;</span>);
-<a name="l00431"></a>00431         iConsole-&gt;Printf(KTxtOK);
+<a name="l00430"></a>00430         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtOK,<span class="stringliteral">"OK  \n"</span>);
+<a name="l00431"></a>00431         iConsole->Printf(KTxtOK);
 <a name="l00432"></a>00432         }
 <a name="l00433"></a>00433 
 <a name="l00434"></a>00434 
-<a name="l00436"></a>00436 <span class="comment">//  Thread routine that sorts out parameters &amp; calls engine</span>
+<a name="l00436"></a>00436 <span class="comment">//  Thread routine that sorts out parameters & calls engine</span>
 <a name="l00438"></a>00438 <span class="comment"></span>
 <a name="l00439"></a>00439 TInt CFibonacciThreadHandler::FibonacciThread(TAny* aParameters)
 <a name="l00440"></a>00440         {
@@ -458,21 +458,21 @@
 <a name="l00442"></a>00442         TFibonacciParameters* parameters = (TFibonacciParameters*) aParameters ;
 <a name="l00443"></a>00443 
 <a name="l00444"></a>00444         <span class="comment">// get variables from parameters class</span>
-<a name="l00445"></a>00445         TInt iterations = parameters-&gt;iVar1 ;
-<a name="l00446"></a>00446         CFibonacciEngine* fibonacciEngine = (CFibonacciEngine*)parameters-&gt;iVar2 ;
+<a name="l00445"></a>00445         TInt iterations = parameters->iVar1 ;
+<a name="l00446"></a>00446         CFibonacciEngine* fibonacciEngine = (CFibonacciEngine*)parameters->iVar2 ;
 <a name="l00447"></a>00447 
 <a name="l00448"></a>00448         <span class="comment">// call the engine</span>
-<a name="l00449"></a>00449         fibonacciEngine-&gt;Calculate(iterations) ;
+<a name="l00449"></a>00449         fibonacciEngine->Calculate(iterations) ;
 <a name="l00450"></a>00450 
 <a name="l00451"></a>00451         <span class="comment">// store result</span>
-<a name="l00452"></a>00452         parameters-&gt;iResult = fibonacciEngine-&gt;iResult ;
+<a name="l00452"></a>00452         parameters->iResult = fibonacciEngine->iResult ;
 <a name="l00453"></a>00453 
 <a name="l00454"></a>00454         <span class="keywordflow">return</span> KErrNone ;
 <a name="l00455"></a>00455 }
 <a name="l00456"></a>00456 
 <a name="l00457"></a>00457 
 <a name="l00459"></a>00459 <span class="comment">//</span>
-<a name="l00460"></a>00460 <span class="comment">// -----&gt; CFibonacciEngine (implementation)</span>
+<a name="l00460"></a>00460 <span class="comment">// -----> CFibonacciEngine (implementation)</span>
 <a name="l00461"></a>00461 <span class="comment">//</span>
 <a name="l00463"></a>00463 <span class="comment"></span>
 <a name="l00464"></a>00464 <span class="keywordtype">void</span> CFibonacciEngine::Calculate (TInt aTerms) 
@@ -481,12 +481,12 @@
 <a name="l00467"></a>00467 
 <a name="l00468"></a>00468         TInt currentTotal = 1 ;
 <a name="l00469"></a>00469         TInt previousTotal = 0 ;
-<a name="l00470"></a>00470         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTooManyIterations,<span class="stringliteral">&quot;Too many iterations&quot;</span>);
-<a name="l00471"></a>00471         __ASSERT_ALWAYS(iterations&lt;47,User::Panic(KTxtTooManyIterations,iterations));
+<a name="l00470"></a>00470         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtTooManyIterations,<span class="stringliteral">"Too many iterations"</span>);
+<a name="l00471"></a>00471         __ASSERT_ALWAYS(iterations<47,User::Panic(KTxtTooManyIterations,iterations));
 <a name="l00472"></a>00472 
 <a name="l00473"></a>00473 
 <a name="l00474"></a>00474         <span class="comment">// if limit not yet reached</span>
-<a name="l00475"></a>00475         <span class="keywordflow">while</span> (iterations-- &gt; 0)        
+<a name="l00475"></a>00475         <span class="keywordflow">while</span> (iterations-- > 0)        
 <a name="l00476"></a>00476                 {
 <a name="l00477"></a>00477                 <span class="comment">// calculate next number in series</span>
 <a name="l00478"></a>00478                 TInt newTotal = currentTotal + previousTotal ;
@@ -515,7 +515,7 @@
 <a name="l00503"></a>00503     {
 <a name="l00504"></a>00504         CTrapCleanup* cleanup=CTrapCleanup::New();              <span class="comment">// get clean-up stack</span>
 <a name="l00505"></a>00505         TRAPD(error,SetupConsoleL());                                   <span class="comment">// more initialization, then do example</span>
-<a name="l00506"></a>00506         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibonacciExampleError,<span class="stringliteral">&quot;Fibonacci example error&quot;</span>);
+<a name="l00506"></a>00506         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibonacciExampleError,<span class="stringliteral">"Fibonacci example error"</span>);
 <a name="l00507"></a>00507         __ASSERT_ALWAYS(!error,User::Panic(KTxtFibonacciExampleError,error));
 <a name="l00508"></a>00508         <span class="keyword">delete</span> cleanup;                                                                 <span class="comment">// destroy clean-up stack</span>
 <a name="l00509"></a>00509         <span class="keywordflow">return</span> 0;                                                                               <span class="comment">// and return</span>
@@ -523,19 +523,19 @@
 <a name="l00511"></a>00511 
 <a name="l00512"></a>00512 <span class="keywordtype">void</span> SetupConsoleL()                             <span class="comment">// initialize and call example code under cleanup stack</span>
 <a name="l00513"></a>00513     {
-<a name="l00514"></a>00514         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibActObjInThread,<span class="stringliteral">&quot;Active Object and thread&quot;</span>);
+<a name="l00514"></a>00514         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtFibActObjInThread,<span class="stringliteral">"Active Object and thread"</span>);
 <a name="l00515"></a>00515         console=Console::NewL(KTxtFibActObjInThread,TSize(KConsFullScreen,KConsFullScreen));
 <a name="l00516"></a>00516         CleanupStack::PushL(console);
-<a name="l00517"></a>00517         console-&gt;Printf(KTxtMainInstructions) ;
+<a name="l00517"></a>00517         console->Printf(KTxtMainInstructions) ;
 <a name="l00518"></a>00518         TRAPD(error, doExampleL());                                                     <span class="comment">// perform example function</span>
 <a name="l00519"></a>00519         <span class="keywordflow">if</span> (error)
 <a name="l00520"></a>00520                 {
-<a name="l00521"></a>00521                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat3,<span class="stringliteral">&quot;failed: leave code=%d&quot;</span>);
-<a name="l00522"></a>00522                 console-&gt;Printf(KFormat3, error);
+<a name="l00521"></a>00521                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat3,<span class="stringliteral">"failed: leave code=%d"</span>);
+<a name="l00522"></a>00522                 console->Printf(KFormat3, error);
 <a name="l00523"></a>00523                 }
-<a name="l00524"></a>00524         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKey,<span class="stringliteral">&quot;[Press any key to exit]&quot;</span>);
-<a name="l00525"></a>00525         console-&gt;Printf(KTxtPressAnyKey);
-<a name="l00526"></a>00526         console-&gt;Getch();                                                               <span class="comment">// get and ignore character</span>
+<a name="l00524"></a>00524         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPressAnyKey,<span class="stringliteral">"[Press any key to exit]"</span>);
+<a name="l00525"></a>00525         console->Printf(KTxtPressAnyKey);
+<a name="l00526"></a>00526         console->Getch();                                                               <span class="comment">// get and ignore character</span>
 <a name="l00527"></a>00527         CleanupStack::PopAndDestroy(console);                                   <span class="comment">// close console</span>
 <a name="l00528"></a>00528     }
 <a name="l00529"></a>00529 
@@ -565,7 +565,7 @@
 <a name="l00555"></a>00555     CleanupStack::PushL(fibKeyHandler); 
 <a name="l00556"></a>00556 
 <a name="l00557"></a>00557           <span class="comment">// issue initial request; push onto cleanup stack</span>
-<a name="l00558"></a>00558         fibKeyHandler-&gt;RequestCharacter() ;
+<a name="l00558"></a>00558         fibKeyHandler->RequestCharacter() ;
 <a name="l00559"></a>00559                         
 <a name="l00560"></a>00560         <span class="comment">// Main part of the program:</span>
 <a name="l00561"></a>00561         <span class="comment">//    wait loop that cycles until ActiveScheduler::Stop called</span>
@@ -579,10 +579,10 @@
 <a name="l00569"></a>00569 
 <a name="l00570"></a>00570 
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Basics/MClasses3/MClasses3.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Basics/MClasses3/MClasses3.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -58,7 +58,7 @@
 <a name="l00018"></a>00018 <span class="comment">// pass some protocol, and an associated object, from</span>
 <a name="l00019"></a>00019 <span class="comment">// a protocol provider to an protocol user.  The user</span>
 <a name="l00020"></a>00020 <span class="comment">// is not supposed to know everything about the provider,</span>
-<a name="l00021"></a>00021 <span class="comment">// only about the protocol it&#39;s interested in.</span>
+<a name="l00021"></a>00021 <span class="comment">// only about the protocol it's interested in.</span>
 <a name="l00022"></a>00022 <span class="comment">// In this specific example, the provider is derived from</span>
 <a name="l00023"></a>00023 <span class="comment">// an appropriate base class, and a mixin class representing</span>
 <a name="l00024"></a>00024 <span class="comment">// the protocol. The benefits of the method shown in example EUTYPEM2</span>
@@ -68,10 +68,10 @@
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;CommonFramework.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include "CommonFramework.h"</span>
 <a name="l00032"></a>00032 
 <a name="l00034"></a>00034 <span class="comment">//</span>
-<a name="l00035"></a>00035 <span class="comment">// -----&gt; CProtocol (definition)</span>
+<a name="l00035"></a>00035 <span class="comment">// -----> CProtocol (definition)</span>
 <a name="l00036"></a>00036 <span class="comment">//</span>
 <a name="l00037"></a>00037 <span class="comment">// A protocol class for mixing in</span>
 <a name="l00038"></a>00038 <span class="comment">//</span>
@@ -83,7 +83,7 @@
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 
 <a name="l00048"></a>00048 <span class="comment">//</span>
-<a name="l00049"></a>00049 <span class="comment">// -----&gt; CProtocolUser (definition)</span>
+<a name="l00049"></a>00049 <span class="comment">// -----> CProtocolUser (definition)</span>
 <a name="l00050"></a>00050 <span class="comment">//</span>
 <a name="l00051"></a>00051 <span class="comment">// Define a protocol user which uses this protocol</span>
 <a name="l00052"></a>00052 <span class="comment">//</span>
@@ -107,7 +107,7 @@
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 
 <a name="l00074"></a>00074 <span class="comment">//</span>
-<a name="l00075"></a>00075 <span class="comment">// -----&gt; CProtocolProvider (definition)</span>
+<a name="l00075"></a>00075 <span class="comment">// -----> CProtocolProvider (definition)</span>
 <a name="l00076"></a>00076 <span class="comment">//</span>
 <a name="l00077"></a>00077 <span class="comment">// A simple class which uses the mixin</span>
 <a name="l00078"></a>00078 <span class="comment">//</span>
@@ -137,13 +137,13 @@
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
 <a name="l00106"></a>00106 <span class="comment">//</span>
-<a name="l00107"></a>00107 <span class="comment">// -----&gt; CProtocolUser (implementation)</span>
+<a name="l00107"></a>00107 <span class="comment">// -----> CProtocolUser (implementation)</span>
 <a name="l00108"></a>00108 <span class="comment">//</span>
 <a name="l00110"></a>00110 <span class="comment"></span>CProtocolUser* CProtocolUser::NewLC()
 <a name="l00111"></a>00111         {
 <a name="l00112"></a>00112         CProtocolUser* <span class="keyword">self</span>=<span class="keyword">new</span>(ELeave) CProtocolUser;
 <a name="l00113"></a>00113         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00114"></a>00114         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00114"></a>00114         <span class="keyword">self</span>->ConstructL();
 <a name="l00115"></a>00115         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00116"></a>00116         }
 <a name="l00117"></a>00117 
@@ -165,23 +165,23 @@
 <a name="l00133"></a>00133 <span class="keywordtype">void</span> CProtocolUser::DoSomething(MProtocol* aProtocol)
 <a name="l00134"></a>00134         {
 <a name="l00135"></a>00135           <span class="comment">// Do something that requires a protocol</span>
-<a name="l00136"></a>00136         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtExtSystemDoing,<span class="stringliteral">&quot;External system doing something\n&quot;</span>);
-<a name="l00137"></a>00137         console-&gt;Printf(KTxtExtSystemDoing);
-<a name="l00138"></a>00138         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtInvokingProtocol,<span class="stringliteral">&quot;invoking protocol - event 3\n&quot;</span>);
-<a name="l00139"></a>00139         console-&gt;Printf(KTxtInvokingProtocol);
+<a name="l00136"></a>00136         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtExtSystemDoing,<span class="stringliteral">"External system doing something\n"</span>);
+<a name="l00137"></a>00137         console->Printf(KTxtExtSystemDoing);
+<a name="l00138"></a>00138         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtInvokingProtocol,<span class="stringliteral">"invoking protocol - event 3\n"</span>);
+<a name="l00139"></a>00139         console->Printf(KTxtInvokingProtocol);
 <a name="l00140"></a>00140           <span class="comment">// Handle an event</span>
-<a name="l00141"></a>00141         aProtocol-&gt;HandleEvent(3);
+<a name="l00141"></a>00141         aProtocol->HandleEvent(3);
 <a name="l00142"></a>00142         }
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144 
 <a name="l00146"></a>00146 <span class="comment">//</span>
-<a name="l00147"></a>00147 <span class="comment">// -----&gt; CProtocolProvider (implementation)</span>
+<a name="l00147"></a>00147 <span class="comment">// -----> CProtocolProvider (implementation)</span>
 <a name="l00148"></a>00148 <span class="comment">//</span>
 <a name="l00150"></a>00150 <span class="comment"></span>CProtocolProvider* CProtocolProvider::NewLC()
 <a name="l00151"></a>00151         {
 <a name="l00152"></a>00152         CProtocolProvider* <span class="keyword">self</span>=<span class="keyword">new</span>(ELeave) CProtocolProvider;
 <a name="l00153"></a>00153         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00154"></a>00154         <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00154"></a>00154         <span class="keyword">self</span>->ConstructL();
 <a name="l00155"></a>00155         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00156"></a>00156         };
 <a name="l00157"></a>00157 
@@ -198,9 +198,9 @@
 <a name="l00168"></a>00168 <span class="keywordtype">void</span> CProtocolProvider::CallProtocolUser()
 <a name="l00169"></a>00169         { 
 <a name="l00170"></a>00170           <span class="comment">// Call the protocol user to do some work</span>
-<a name="l00171"></a>00171         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCallProtUser,<span class="stringliteral">&quot;CProtocolProvider calling protocol user\n&quot;</span>);
-<a name="l00172"></a>00172         console-&gt;Printf(KTxtCallProtUser);
-<a name="l00173"></a>00173         iProtocolUser-&gt;DoSomething(<span class="keyword">this</span>);
+<a name="l00171"></a>00171         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtCallProtUser,<span class="stringliteral">"CProtocolProvider calling protocol user\n"</span>);
+<a name="l00172"></a>00172         console->Printf(KTxtCallProtUser);
+<a name="l00173"></a>00173         iProtocolUser->DoSomething(<span class="keyword">this</span>);
 <a name="l00174"></a>00174          <span class="comment">// pass ourselves, disguised as our mixin</span>
 <a name="l00175"></a>00175          <span class="comment">// protocol base, to the protocol user</span>
 <a name="l00176"></a>00176         }
@@ -209,8 +209,8 @@
 <a name="l00179"></a>00179         { 
 <a name="l00180"></a>00180           <span class="comment">// A concrete implementation of the abstract protocol.</span>
 <a name="l00181"></a>00181           <span class="comment">// Handle an event in the protocol user</span>
-<a name="l00182"></a>00182         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">&quot;CProtocolProvider handling event %d\n&quot;</span>);
-<a name="l00183"></a>00183         console-&gt;Printf(KFormat1,aEventCode);
+<a name="l00182"></a>00182         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KFormat1,<span class="stringliteral">"CProtocolProvider handling event %d\n"</span>);
+<a name="l00183"></a>00183         console->Printf(KFormat1,aEventCode);
 <a name="l00184"></a>00184         }
 <a name="l00185"></a>00185 
 <a name="l00186"></a>00186 
@@ -222,15 +222,15 @@
 <a name="l00194"></a>00194           <span class="comment">// show use of mixin with simple class</span>
 <a name="l00195"></a>00195         CProtocolProvider* simpleProvider=CProtocolProvider::NewLC();
 <a name="l00196"></a>00196           <span class="comment">// call protocol user</span>
-<a name="l00197"></a>00197         simpleProvider-&gt;CallProtocolUser();
+<a name="l00197"></a>00197         simpleProvider->CallProtocolUser();
 <a name="l00198"></a>00198           <span class="comment">// Remove simpleProvider from cleanup stack and destroy</span>
 <a name="l00199"></a>00199         CleanupStack::PopAndDestroy();
 <a name="l00200"></a>00200         }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

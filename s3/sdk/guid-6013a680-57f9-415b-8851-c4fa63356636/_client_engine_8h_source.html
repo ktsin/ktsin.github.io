@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/HTTPClientExample/inc/ClientEngine.h Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -43,13 +43,13 @@
 <a name="l00005"></a>00005 <span class="preprocessor">#ifndef __CLIENTENGINE_H__</span>
 <a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define __CLIENTENGINE_H__</span>
 <a name="l00007"></a>00007 <span class="preprocessor"></span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;coecntrl.h&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;http\mhttpdatasupplier.h&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;http\mhttptransactioncallback.h&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;http\mhttpauthenticationcallback.h&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;es_sock.h&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;comms-infras/cs_mobility_apiext.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;cmapplicationsettingsui.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include <coecntrl.h></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include <http\mhttpdatasupplier.h></span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include <http\mhttptransactioncallback.h></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include <http\mhttpauthenticationcallback.h></span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include <es_sock.h></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include <comms-infras/cs_mobility_apiext.h></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include <cmapplicationsettingsui.h></span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="keyword">class </span>RHTTPSession;
 <a name="l00017"></a>00017 <span class="keyword">class </span>RHTTPTransaction;
@@ -71,13 +71,13 @@
 <a name="l00033"></a>00033 <span class="comment">    *</span>
 <a name="l00034"></a>00034 <span class="comment">    * Params:</span>
 <a name="l00035"></a>00035 <span class="comment">    *   aEventDescription:  A event in textual format, e.g.</span>
-<a name="l00036"></a>00036 <span class="comment">    *             &quot;Transaction Successful&quot;</span>
+<a name="l00036"></a>00036 <span class="comment">    *             "Transaction Successful"</span>
 <a name="l00037"></a>00037 <span class="comment">    *</span>
 <a name="l00038"></a>00038 <span class="comment">    * Returns:</span>
 <a name="l00039"></a>00039 <span class="comment">    *     -</span>
 <a name="l00040"></a>00040 <span class="comment">    *</span>
 <a name="l00041"></a>00041 <span class="comment">    */</span>
-<a name="l00042"></a>00042     <span class="keyword">virtual</span> <span class="keywordtype">void</span> ClientEvent(<span class="keyword">const</span> TDesC&amp; aEventDescription) = 0;
+<a name="l00042"></a>00042     <span class="keyword">virtual</span> <span class="keywordtype">void</span> ClientEvent(<span class="keyword">const</span> TDesC& aEventDescription) = 0;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044     <span class="comment">/*</span>
 <a name="l00045"></a>00045 <span class="comment">    * ClientBodyReceived()</span>
@@ -92,7 +92,7 @@
 <a name="l00054"></a>00054 <span class="comment">    *     -</span>
 <a name="l00055"></a>00055 <span class="comment">    *</span>
 <a name="l00056"></a>00056 <span class="comment">    */</span>
-<a name="l00057"></a>00057     <span class="keyword">virtual</span> <span class="keywordtype">void</span> ClientBodyReceived(<span class="keyword">const</span> TDesC8&amp; aBodyData) = 0;
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <span class="keywordtype">void</span> ClientBodyReceived(<span class="keyword">const</span> TDesC8& aBodyData) = 0;
 <a name="l00058"></a>00058   };
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060 <span class="comment">/*</span>
@@ -125,7 +125,7 @@
 <a name="l00087"></a>00087 <span class="comment">  *     A pointer to the created instance of CClientEngine</span>
 <a name="l00088"></a>00088 <span class="comment">  *</span>
 <a name="l00089"></a>00089 <span class="comment">  */</span>
-<a name="l00090"></a>00090   <span class="keyword">static</span> <a class="code" href="class_c_client_engine.html">CClientEngine</a>* NewL(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; iObserver);
+<a name="l00090"></a>00090   <span class="keyword">static</span> <a class="code" href="class_c_client_engine.html">CClientEngine</a>* NewL(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& iObserver);
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092   <span class="comment">/*</span>
 <a name="l00093"></a>00093 <span class="comment">  * NewLC()</span>
@@ -139,7 +139,7 @@
 <a name="l00101"></a>00101 <span class="comment">  *     A pointer to the created instance of CClientEngine</span>
 <a name="l00102"></a>00102 <span class="comment">  *</span>
 <a name="l00103"></a>00103 <span class="comment">  */</span>
-<a name="l00104"></a>00104   <span class="keyword">static</span> <a class="code" href="class_c_client_engine.html">CClientEngine</a>* NewLC(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; iObserver);
+<a name="l00104"></a>00104   <span class="keyword">static</span> <a class="code" href="class_c_client_engine.html">CClientEngine</a>* NewLC(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& iObserver);
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106   <span class="comment">/*</span>
 <a name="l00107"></a>00107 <span class="comment">  * ~CClientEngine()</span>
@@ -161,13 +161,13 @@
 <a name="l00123"></a>00123 <span class="comment">  * Starts a new HTTP GET transaction.</span>
 <a name="l00124"></a>00124 <span class="comment">  *</span>
 <a name="l00125"></a>00125 <span class="comment">  * Params:</span>
-<a name="l00126"></a>00126 <span class="comment">  *   aUri: URI to get. (e.g. http://host.org&quot;)</span>
+<a name="l00126"></a>00126 <span class="comment">  *   aUri: URI to get. (e.g. http://host.org")</span>
 <a name="l00127"></a>00127 <span class="comment">  *</span>
 <a name="l00128"></a>00128 <span class="comment">  * Returns:</span>
 <a name="l00129"></a>00129 <span class="comment">  *     -</span>
 <a name="l00130"></a>00130 <span class="comment">  *</span>
 <a name="l00131"></a>00131 <span class="comment">  */</span>
-<a name="l00132"></a>00132   <span class="keywordtype">void</span> IssueHTTPGetL(<span class="keyword">const</span> TDesC8&amp; aUri);
+<a name="l00132"></a>00132   <span class="keywordtype">void</span> IssueHTTPGetL(<span class="keyword">const</span> TDesC8& aUri);
 <a name="l00133"></a>00133 
 <a name="l00134"></a>00134   <span class="comment">/*</span>
 <a name="l00135"></a>00135 <span class="comment">  * IssueHTTPPostL()</span>
@@ -175,17 +175,17 @@
 <a name="l00137"></a>00137 <span class="comment">  * Starts a new HTTP POST transaction.</span>
 <a name="l00138"></a>00138 <span class="comment">  *</span>
 <a name="l00139"></a>00139 <span class="comment">  * Params:</span>
-<a name="l00140"></a>00140 <span class="comment">  *   aUri: URI where to post the data (e.g. http://host.org&quot;)</span>
-<a name="l00141"></a>00141 <span class="comment">  *   aContentType: Content type of the body, e.g. &quot;text/plain&quot;</span>
+<a name="l00140"></a>00140 <span class="comment">  *   aUri: URI where to post the data (e.g. http://host.org")</span>
+<a name="l00141"></a>00141 <span class="comment">  *   aContentType: Content type of the body, e.g. "text/plain"</span>
 <a name="l00142"></a>00142 <span class="comment">  *   aBody: Body data for the transaction.</span>
 <a name="l00143"></a>00143 <span class="comment">  *</span>
 <a name="l00144"></a>00144 <span class="comment">  * Returns:</span>
 <a name="l00145"></a>00145 <span class="comment">  *     -</span>
 <a name="l00146"></a>00146 <span class="comment">  *</span>
 <a name="l00147"></a>00147 <span class="comment">  */</span>
-<a name="l00148"></a>00148   <span class="keywordtype">void</span> IssueHTTPPostL(<span class="keyword">const</span> TDesC8&amp; aUri,
-<a name="l00149"></a>00149             <span class="keyword">const</span> TDesC8&amp; aContentType,
-<a name="l00150"></a>00150             <span class="keyword">const</span> TDesC8&amp; aBody);
+<a name="l00148"></a>00148   <span class="keywordtype">void</span> IssueHTTPPostL(<span class="keyword">const</span> TDesC8& aUri,
+<a name="l00149"></a>00149             <span class="keyword">const</span> TDesC8& aContentType,
+<a name="l00150"></a>00150             <span class="keyword">const</span> TDesC8& aBody);
 <a name="l00151"></a>00151 
 <a name="l00152"></a>00152   <span class="comment">/*</span>
 <a name="l00153"></a>00153 <span class="comment">  * CancelTransaction()</span>
@@ -242,7 +242,7 @@
 <a name="l00204"></a>00204 <span class="comment">  *     -</span>
 <a name="l00205"></a>00205 <span class="comment">  *</span>
 <a name="l00206"></a>00206 <span class="comment">  */</span>
-<a name="l00207"></a>00207   <a class="code" href="class_c_client_engine.html">CClientEngine</a>(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; iObserver);
+<a name="l00207"></a>00207   <a class="code" href="class_c_client_engine.html">CClientEngine</a>(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& iObserver);
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209   <span class="comment">/*</span>
 <a name="l00210"></a>00210 <span class="comment">  * SetHeaderL()</span>
@@ -259,7 +259,7 @@
 <a name="l00221"></a>00221 <span class="comment">  *</span>
 <a name="l00222"></a>00222 <span class="comment">  */</span>
 <a name="l00223"></a>00223   <span class="keywordtype">void</span> SetHeaderL(RHTTPHeaders aHeaders, TInt aHdrField,
-<a name="l00224"></a>00224           <span class="keyword">const</span> TDesC8&amp; aHdrValue);
+<a name="l00224"></a>00224           <span class="keyword">const</span> TDesC8& aHdrValue);
 <a name="l00225"></a>00225 
 <a name="l00226"></a>00226   <span class="keywordtype">void</span> SetupConnectionL();
 <a name="l00227"></a>00227 
@@ -282,7 +282,7 @@
 <a name="l00247"></a>00247 <span class="comment">  *     -</span>
 <a name="l00248"></a>00248 <span class="comment">  *</span>
 <a name="l00249"></a>00249 <span class="comment">  */</span>
-<a name="l00250"></a>00250   <span class="keywordtype">void</span> MHFRunL(RHTTPTransaction aTransaction, <span class="keyword">const</span> THTTPEvent&amp; aEvent);
+<a name="l00250"></a>00250   <span class="keywordtype">void</span> MHFRunL(RHTTPTransaction aTransaction, <span class="keyword">const</span> THTTPEvent& aEvent);
 <a name="l00251"></a>00251 
 <a name="l00252"></a>00252   <span class="comment">/*</span>
 <a name="l00253"></a>00253 <span class="comment">  * MHFRunError()</span>
@@ -304,7 +304,7 @@
 <a name="l00269"></a>00269 <span class="comment">  */</span>
 <a name="l00270"></a>00270   TInt MHFRunError( TInt aError,
 <a name="l00271"></a>00271             RHTTPTransaction aTransaction,
-<a name="l00272"></a>00272             <span class="keyword">const</span> THTTPEvent&amp; aEvent);
+<a name="l00272"></a>00272             <span class="keyword">const</span> THTTPEvent& aEvent);
 <a name="l00273"></a>00273 
 <a name="l00274"></a>00274 <span class="comment">/*</span>
 <a name="l00275"></a>00275 <span class="comment">* From MHTTPDataSupplier (needed for HTTP POST)</span>
@@ -338,7 +338,7 @@
 <a name="l00303"></a>00303 <span class="comment">  *   are needed after the provided one, return EFalse.</span>
 <a name="l00304"></a>00304 <span class="comment">  *</span>
 <a name="l00305"></a>00305 <span class="comment">  */</span>
-<a name="l00306"></a>00306   TBool GetNextDataPart(TPtrC8&amp; aDataPart);
+<a name="l00306"></a>00306   TBool GetNextDataPart(TPtrC8& aDataPart);
 <a name="l00307"></a>00307 
 <a name="l00308"></a>00308   <span class="comment">/*</span>
 <a name="l00309"></a>00309 <span class="comment">  * Reset()</span>
@@ -381,9 +381,9 @@
 <a name="l00346"></a>00346 <span class="comment">  * needed.</span>
 <a name="l00347"></a>00347 <span class="comment">  *</span>
 <a name="l00348"></a>00348 <span class="comment">  * Params:</span>
-<a name="l00349"></a>00349 <span class="comment">  *   aURI: The URI being requested (e.g. &quot;http://host.org&quot;)</span>
-<a name="l00350"></a>00350 <span class="comment">  *   aRealm: The realm being requested (e.g. &quot;user@host.org&quot;)</span>
-<a name="l00351"></a>00351 <span class="comment">  *   aAuthenticationType: Authentication type. (e.g. &quot;Basic&quot;)</span>
+<a name="l00349"></a>00349 <span class="comment">  *   aURI: The URI being requested (e.g. "http://host.org")</span>
+<a name="l00350"></a>00350 <span class="comment">  *   aRealm: The realm being requested (e.g. "user@host.org")</span>
+<a name="l00351"></a>00351 <span class="comment">  *   aAuthenticationType: Authentication type. (e.g. "Basic")</span>
 <a name="l00352"></a>00352 <span class="comment">  *   aUsername: Given user name.</span>
 <a name="l00353"></a>00353 <span class="comment">  *   aPassword: Given password.</span>
 <a name="l00354"></a>00354 <span class="comment">  *</span>
@@ -391,11 +391,11 @@
 <a name="l00356"></a>00356 <span class="comment">  *     A pointer to the created document</span>
 <a name="l00357"></a>00357 <span class="comment">  *</span>
 <a name="l00358"></a>00358 <span class="comment">  */</span>
-<a name="l00359"></a>00359   TBool GetCredentialsL(  <span class="keyword">const</span> TUriC8&amp; aURI,
+<a name="l00359"></a>00359   TBool GetCredentialsL(  <span class="keyword">const</span> TUriC8& aURI,
 <a name="l00360"></a>00360               RString aRealm,
 <a name="l00361"></a>00361               RStringF aAuthenticationType,
-<a name="l00362"></a>00362               RString&amp; aUsername,
-<a name="l00363"></a>00363               RString&amp; aPassword);
+<a name="l00362"></a>00362               RString& aUsername,
+<a name="l00363"></a>00363               RString& aPassword);
 <a name="l00364"></a>00364 
 <a name="l00365"></a>00365   
 <a name="l00366"></a>00366 <span class="keyword">private</span>:  <span class="comment">// from MMobilityProtocolResp</span>
@@ -423,7 +423,7 @@
 <a name="l00388"></a>00388     RHTTPSession                iSession;
 <a name="l00389"></a>00389     RHTTPTransaction            iTransaction;
 <a name="l00390"></a>00390 
-<a name="l00391"></a>00391     <a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp;            iObserver;  <span class="comment">// Used for passing body data and events to UI</span>
+<a name="l00391"></a>00391     <a class="code" href="class_m_client_observer.html">MClientObserver</a>&            iObserver;  <span class="comment">// Used for passing body data and events to UI</span>
 <a name="l00392"></a>00392     HBufC8*                     iPostData;  <span class="comment">// Data for HTTP POST</span>
 <a name="l00393"></a>00393     TBool                       iRunning;   <span class="comment">// ETrue, if transaction running</span>
 <a name="l00394"></a>00394     TBool                       iConnectionSetupDone;
@@ -442,10 +442,10 @@
 <a name="l00407"></a>00407 
 <a name="l00408"></a>00408 <span class="preprocessor">#endif // __CLIENTENGINE_H__</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

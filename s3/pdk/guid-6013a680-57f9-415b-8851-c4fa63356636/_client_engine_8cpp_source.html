@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/HTTPClientExample/src/ClientEngine.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -42,33 +42,33 @@
 <a name="l00002"></a>00002 <span class="comment"> * Copyright (c) 2009 Nokia Corporation.</span>
 <a name="l00003"></a>00003 <span class="comment"> */</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;avkon.hrh&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;aknnotewrappers.h&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;aknlists.h&gt;</span> <span class="comment">// CAknSinglePopupMenuStyleListBox</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;uri8.h&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;http.h&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stringloader.h&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;chttpformencoder.h&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;HttpStringConstants.h&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;http\RHTTPTransaction.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;http\RHTTPSession.h&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;http\RHTTPHeaders.h&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;HTTPClientExample.rsg&gt;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;CommDbConnPref.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include <avkon.hrh></span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include <aknnotewrappers.h></span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include <aknlists.h></span> <span class="comment">// CAknSinglePopupMenuStyleListBox</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include <uri8.h></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include <http.h></span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include <stringloader.h></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include <chttpformencoder.h></span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include <HttpStringConstants.h></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include <http\RHTTPTransaction.h></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include <http\RHTTPSession.h></span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include <http\RHTTPHeaders.h></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include <HTTPClientExample.rsg></span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include <CommDbConnPref.h></span>
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;Client.pan&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;Client.hrh&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;ClientEngine.h&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "Client.pan"</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include "Client.hrh"</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include "ClientEngine.h"</span>
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="comment">// Used user agent for requests</span>
-<a name="l00024"></a>00024 _LIT8(KUserAgent, <span class="stringliteral">&quot;SimpleClient 1.0&quot;</span>);
+<a name="l00024"></a>00024 _LIT8(KUserAgent, <span class="stringliteral">"SimpleClient 1.0"</span>);
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="comment">// This client accepts all content types.</span>
-<a name="l00027"></a>00027 <span class="comment">// (change to e.g. &quot;text/plain&quot; for plain text only)</span>
-<a name="l00028"></a>00028 _LIT8(KAccept, <span class="stringliteral">&quot;*/*&quot;</span>);
+<a name="l00027"></a>00027 <span class="comment">// (change to e.g. "text/plain" for plain text only)</span>
+<a name="l00028"></a>00028 _LIT8(KAccept, <span class="stringliteral">"*/*"</span>);
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPreferredCarrierAvailable,<span class="stringliteral">&quot;Preferred carrier available&quot;</span>);
-<a name="l00031"></a>00031 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextNewCarrierActive,         <span class="stringliteral">&quot;New carrier active&quot;</span>);
+<a name="l00030"></a>00030 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextPreferredCarrierAvailable,<span class="stringliteral">"Preferred carrier available"</span>);
+<a name="l00031"></a>00031 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextNewCarrierActive,         <span class="stringliteral">"New carrier active"</span>);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">const</span> TInt KStatustextBufferSize = 32;
 <a name="l00034"></a>00034 <span class="keyword">const</span> TInt KInfotextBufferSize = 64;
@@ -77,7 +77,7 @@
 <a name="l00037"></a>00037 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00038"></a>00038 <span class="comment">// CClientEngine::NewL()</span>
 <a name="l00039"></a>00039 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00040"></a>00040 <a class="code" href="class_c_client_engine.html">CClientEngine</a>* CClientEngine::NewL(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; aObserver)
+<a name="l00040"></a>00040 <a class="code" href="class_c_client_engine.html">CClientEngine</a>* CClientEngine::NewL(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& aObserver)
 <a name="l00041"></a>00041   {
 <a name="l00042"></a>00042     <a class="code" href="class_c_client_engine.html">CClientEngine</a>* <span class="keyword">self</span> = CClientEngine::NewLC(aObserver);
 <a name="l00043"></a>00043     CleanupStack::Pop(<span class="keyword">self</span>);
@@ -88,11 +88,11 @@
 <a name="l00048"></a>00048 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00049"></a>00049 <span class="comment">// CClientEngine::NewLC()</span>
 <a name="l00050"></a>00050 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00051"></a>00051 <a class="code" href="class_c_client_engine.html">CClientEngine</a>* CClientEngine::NewLC(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; aObserver)
+<a name="l00051"></a>00051 <a class="code" href="class_c_client_engine.html">CClientEngine</a>* CClientEngine::NewLC(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& aObserver)
 <a name="l00052"></a>00052   {
 <a name="l00053"></a>00053     <a class="code" href="class_c_client_engine.html">CClientEngine</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_client_engine.html">CClientEngine</a>(aObserver);
 <a name="l00054"></a>00054     CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00055"></a>00055     <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00055"></a>00055     <span class="keyword">self</span>->ConstructL();
 <a name="l00056"></a>00056     <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00057"></a>00057   }
 <a name="l00058"></a>00058 
@@ -100,7 +100,7 @@
 <a name="l00060"></a>00060 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00061"></a>00061 <span class="comment">// CClientEngine::CClientEngine()</span>
 <a name="l00062"></a>00062 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00063"></a>00063 CClientEngine::CClientEngine(<a class="code" href="class_m_client_observer.html">MClientObserver</a>&amp; aObserver)
+<a name="l00063"></a>00063 CClientEngine::CClientEngine(<a class="code" href="class_m_client_observer.html">MClientObserver</a>& aObserver)
 <a name="l00064"></a>00064 : CActive(CActive::EPriorityStandard),
 <a name="l00065"></a>00065   iObserver(aObserver),
 <a name="l00066"></a>00066   iPostData(NULL),
@@ -126,7 +126,7 @@
 <a name="l00086"></a>00086     
 <a name="l00087"></a>00087     <span class="keywordflow">if</span> (iMobility)
 <a name="l00088"></a>00088         {
-<a name="l00089"></a>00089         iMobility-&gt;Cancel();
+<a name="l00089"></a>00089         iMobility->Cancel();
 <a name="l00090"></a>00090         }
 <a name="l00091"></a>00091     <span class="keyword">delete</span> iMobility;
 <a name="l00092"></a>00092 
@@ -183,7 +183,7 @@
 <a name="l00143"></a>00143                         CMManager::EShowDestinations |
 <a name="l00144"></a>00144                         CMManager::EShowConnectionMethods;
 <a name="l00145"></a>00145     TBearerFilterArray filter;
-<a name="l00146"></a>00146     TBool selected = settings-&gt;RunApplicationSettingsL(userSelection,listedItems,filter);
+<a name="l00146"></a>00146     TBool selected = settings->RunApplicationSettingsL(userSelection,listedItems,filter);
 <a name="l00147"></a>00147     CleanupStack::PopAndDestroy(settings);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149     <span class="comment">// Check selection</span>
@@ -247,7 +247,7 @@
 <a name="l00207"></a>00207     TUint count;
 <a name="l00208"></a>00208     <span class="keywordflow">if</span> (iConnection.EnumerateConnections(count) == KErrNone)
 <a name="l00209"></a>00209         {
-<a name="l00210"></a>00210         <span class="keywordflow">for</span> (TUint i=1; i&lt;=count; i++)
+<a name="l00210"></a>00210         <span class="keywordflow">for</span> (TUint i=1; i<=count; i++)
 <a name="l00211"></a>00211             {
 <a name="l00212"></a>00212             <span class="comment">// Note: GetConnectionInfo expects 1-based index.</span>
 <a name="l00213"></a>00213             <span class="keywordflow">if</span> (iConnection.GetConnectionInfo(i, connInfo) == KErrNone)
@@ -268,7 +268,7 @@
 <a name="l00228"></a>00228 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00229"></a>00229 <span class="keywordtype">void</span> CClientEngine::SetHeaderL(RHTTPHeaders aHeaders,
 <a name="l00230"></a>00230                TInt aHdrField,
-<a name="l00231"></a>00231                <span class="keyword">const</span> TDesC8&amp; aHdrValue)
+<a name="l00231"></a>00231                <span class="keyword">const</span> TDesC8& aHdrValue)
 <a name="l00232"></a>00232   {
 <a name="l00233"></a>00233   RStringF valStr = iSession.StringPool().OpenFStringL(aHdrValue);
 <a name="l00234"></a>00234   CleanupClosePushL(valStr);
@@ -282,7 +282,7 @@
 <a name="l00242"></a>00242 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00243"></a>00243 <span class="comment">// CClientEngine::IssueHTTPGetL()</span>
 <a name="l00244"></a>00244 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00245"></a>00245 <span class="keywordtype">void</span> CClientEngine::IssueHTTPGetL(<span class="keyword">const</span> TDesC8&amp; aUri)
+<a name="l00245"></a>00245 <span class="keywordtype">void</span> CClientEngine::IssueHTTPGetL(<span class="keyword">const</span> TDesC8& aUri)
 <a name="l00246"></a>00246   {
 <a name="l00247"></a>00247   <span class="keywordflow">if</span> (IsActive())
 <a name="l00248"></a>00248       {
@@ -348,9 +348,9 @@
 <a name="l00308"></a>00308 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00309"></a>00309 <span class="comment">// CClientEngine::IssueHTTPPostL()</span>
 <a name="l00310"></a>00310 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00311"></a>00311 <span class="keywordtype">void</span> CClientEngine::IssueHTTPPostL(<span class="keyword">const</span> TDesC8&amp; aUri,
-<a name="l00312"></a>00312                  <span class="keyword">const</span> TDesC8&amp; aContentType,
-<a name="l00313"></a>00313                  <span class="keyword">const</span> TDesC8&amp; aBody)
+<a name="l00311"></a>00311 <span class="keywordtype">void</span> CClientEngine::IssueHTTPPostL(<span class="keyword">const</span> TDesC8& aUri,
+<a name="l00312"></a>00312                  <span class="keyword">const</span> TDesC8& aContentType,
+<a name="l00313"></a>00313                  <span class="keyword">const</span> TDesC8& aBody)
 <a name="l00314"></a>00314   {
 <a name="l00315"></a>00315   <span class="keywordflow">if</span> (IsActive())
 <a name="l00316"></a>00316       {
@@ -395,7 +395,7 @@
 <a name="l00355"></a>00355   <span class="comment">// methods inherited from MHTTPDataSupplier.</span>
 <a name="l00356"></a>00356   <span class="keyword">delete</span> iPostData;
 <a name="l00357"></a>00357   iPostData = 0;
-<a name="l00358"></a>00358   iPostData = iBody-&gt;AllocL();
+<a name="l00358"></a>00358   iPostData = iBody->AllocL();
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360   <span class="comment">// Get request method string for HTTP POST</span>
 <a name="l00361"></a>00361   RStringF method = iSession.StringPool().StringF(HTTP::EPOST,RHTTPSession::GetTable());
@@ -405,7 +405,7 @@
 <a name="l00365"></a>00365   iTransaction = iSession.OpenTransactionL(uri, *<span class="keyword">this</span>, method);
 <a name="l00366"></a>00366   iTransactionOpen = ETrue;
 <a name="l00367"></a>00367 
-<a name="l00368"></a>00368   <span class="comment">// Set headers for request; user agent, accepted content type and body&#39;s</span>
+<a name="l00368"></a>00368   <span class="comment">// Set headers for request; user agent, accepted content type and body's</span>
 <a name="l00369"></a>00369   <span class="comment">// content type.</span>
 <a name="l00370"></a>00370   RHTTPHeaders hdr = iTransaction.Request().GetHeaderCollection();
 <a name="l00371"></a>00371   SetHeaderL(hdr, HTTP::EUserAgent, KUserAgent);
@@ -454,22 +454,22 @@
 <a name="l00414"></a>00414 <span class="comment">// CClientEngine::MHFRunL()</span>
 <a name="l00415"></a>00415 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00416"></a>00416 <span class="keywordtype">void</span> CClientEngine::MHFRunL(RHTTPTransaction aTransaction,
-<a name="l00417"></a>00417               <span class="keyword">const</span> THTTPEvent&amp; aEvent)
+<a name="l00417"></a>00417               <span class="keyword">const</span> THTTPEvent& aEvent)
 <a name="l00418"></a>00418   {
 <a name="l00419"></a>00419   <span class="keywordflow">switch</span> (aEvent.iStatus)
 <a name="l00420"></a>00420     {
 <a name="l00421"></a>00421     <span class="keywordflow">case</span> THTTPEvent::EGotResponseHeaders:
 <a name="l00422"></a>00422       {
 <a name="l00423"></a>00423       <span class="comment">// HTTP response headers have been received. Use</span>
-<a name="l00424"></a>00424       <span class="comment">// aTransaction.Response() to get the response. However, it&#39;s not</span>
+<a name="l00424"></a>00424       <span class="comment">// aTransaction.Response() to get the response. However, it's not</span>
 <a name="l00425"></a>00425       <span class="comment">// necessary to do anything with the response when this event occurs.</span>
 <a name="l00426"></a>00426 
 <a name="l00427"></a>00427       <span class="comment">// Get HTTP status code from header (e.g. 200)</span>
 <a name="l00428"></a>00428       RHTTPResponse resp = aTransaction.Response();
 <a name="l00429"></a>00429       TInt status = resp.StatusCode();
 <a name="l00430"></a>00430 
-<a name="l00431"></a>00431       <span class="comment">// Get status text (e.g. &quot;OK&quot;)</span>
-<a name="l00432"></a>00432       TBuf&lt;KStatustextBufferSize&gt; statusText;
+<a name="l00431"></a>00431       <span class="comment">// Get status text (e.g. "OK")</span>
+<a name="l00432"></a>00432       TBuf<KStatustextBufferSize> statusText;
 <a name="l00433"></a>00433       statusText.Copy(resp.StatusText().DesC());
 <a name="l00434"></a>00434 
 <a name="l00435"></a>00435       HBufC* resHeaderReceived = StringLoader::LoadLC(R_HTTP_HEADER_RECEIVED, statusText, status);
@@ -480,8 +480,8 @@
 <a name="l00440"></a>00440 
 <a name="l00441"></a>00441     <span class="keywordflow">case</span> THTTPEvent::EGotResponseBodyData:
 <a name="l00442"></a>00442       {
-<a name="l00443"></a>00443       <span class="comment">// Part (or all) of response&#39;s body data received. Use</span>
-<a name="l00444"></a>00444       <span class="comment">// aTransaction.Response().Body()-&gt;GetNextDataPart() to get the actual</span>
+<a name="l00443"></a>00443       <span class="comment">// Part (or all) of response's body data received. Use</span>
+<a name="l00444"></a>00444       <span class="comment">// aTransaction.Response().Body()->GetNextDataPart() to get the actual</span>
 <a name="l00445"></a>00445       <span class="comment">// body data.</span>
 <a name="l00446"></a>00446 
 <a name="l00447"></a>00447       <span class="comment">// Get the body data supplier</span>
@@ -490,7 +490,7 @@
 <a name="l00450"></a>00450 
 <a name="l00451"></a>00451       <span class="comment">// GetNextDataPart() returns ETrue, if the received part is the last</span>
 <a name="l00452"></a>00452       <span class="comment">// one.</span>
-<a name="l00453"></a>00453       TBool isLast = body-&gt;GetNextDataPart(dataChunk);
+<a name="l00453"></a>00453       TBool isLast = body->GetNextDataPart(dataChunk);
 <a name="l00454"></a>00454       iObserver.ClientBodyReceived(dataChunk);
 <a name="l00455"></a>00455 
 <a name="l00456"></a>00456       HBufC* resBytesReceived = StringLoader::LoadLC(R_HTTP_BYTES_RECEIVED, dataChunk.Length());
@@ -509,13 +509,13 @@
 <a name="l00469"></a>00469         }
 <a name="l00470"></a>00470 
 <a name="l00471"></a>00471       <span class="comment">// Always remember to release the body data.</span>
-<a name="l00472"></a>00472       body-&gt;ReleaseData();
+<a name="l00472"></a>00472       body->ReleaseData();
 <a name="l00473"></a>00473       <span class="keywordflow">break</span>;
 <a name="l00474"></a>00474       }
 <a name="l00475"></a>00475 
 <a name="l00476"></a>00476     <span class="keywordflow">case</span> THTTPEvent::EResponseComplete:
 <a name="l00477"></a>00477       {
-<a name="l00478"></a>00478       <span class="comment">// Indicates that header &amp; body of response is completely received.</span>
+<a name="l00478"></a>00478       <span class="comment">// Indicates that header & body of response is completely received.</span>
 <a name="l00479"></a>00479       <span class="comment">// No further action here needed.</span>
 <a name="l00480"></a>00480       HBufC* resTxComplete = StringLoader::LoadLC(R_HTTP_TX_COMPLETE);
 <a name="l00481"></a>00481       iObserver.ClientEvent(*resTxComplete);
@@ -530,7 +530,7 @@
 <a name="l00490"></a>00490       iObserver.ClientEvent(*resTxSuccessful);
 <a name="l00491"></a>00491       CleanupStack::PopAndDestroy(resTxSuccessful);
 <a name="l00492"></a>00492 
-<a name="l00493"></a>00493       <span class="comment">// Transaction can be closed now. It&#39;s not needed anymore.</span>
+<a name="l00493"></a>00493       <span class="comment">// Transaction can be closed now. It's not needed anymore.</span>
 <a name="l00494"></a>00494       aTransaction.Close();
 <a name="l00495"></a>00495       iTransactionOpen = EFalse;
 <a name="l00496"></a>00496       <span class="keywordflow">break</span>;
@@ -550,9 +550,9 @@
 <a name="l00510"></a>00510     <span class="keywordflow">default</span>:
 <a name="l00511"></a>00511       <span class="comment">// There are more events in THTTPEvent, but they are not usually</span>
 <a name="l00512"></a>00512       <span class="comment">// needed. However, event status smaller than zero should be handled</span>
-<a name="l00513"></a>00513       <span class="comment">// correctly since it&#39;s error.</span>
+<a name="l00513"></a>00513       <span class="comment">// correctly since it's error.</span>
 <a name="l00514"></a>00514       {
-<a name="l00515"></a>00515       <span class="keywordflow">if</span> (aEvent.iStatus &lt; 0)
+<a name="l00515"></a>00515       <span class="keywordflow">if</span> (aEvent.iStatus < 0)
 <a name="l00516"></a>00516         {
 <a name="l00517"></a>00517           HBufC* resNoInternetConnection = StringLoader::LoadLC(
 <a name="l00518"></a>00518             R_HTTP_NO_INTERNET_CONNECTION, aEvent.iStatus);
@@ -585,7 +585,7 @@
 <a name="l00545"></a>00545 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00546"></a>00546 TInt CClientEngine::MHFRunError(TInt aError,
 <a name="l00547"></a>00547                 RHTTPTransaction <span class="comment">/*aTransaction*/</span>,
-<a name="l00548"></a>00548                 <span class="keyword">const</span> THTTPEvent&amp; <span class="comment">/*aEvent*/</span>)
+<a name="l00548"></a>00548                 <span class="keyword">const</span> THTTPEvent& <span class="comment">/*aEvent*/</span>)
 <a name="l00549"></a>00549   {
 <a name="l00550"></a>00550   <span class="comment">// Just notify about the error and return KErrNone.</span>
 <a name="l00551"></a>00551   HBufC* resMHFRunError = StringLoader::LoadLC(R_HTTP_MHFRUN_ERROR, aError);
@@ -598,14 +598,14 @@
 <a name="l00558"></a>00558 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00559"></a>00559 <span class="comment">// CClientEngine::GetNextDataPart()</span>
 <a name="l00560"></a>00560 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00561"></a>00561 TBool CClientEngine::GetNextDataPart(TPtrC8&amp; aDataPart)
+<a name="l00561"></a>00561 TBool CClientEngine::GetNextDataPart(TPtrC8& aDataPart)
 <a name="l00562"></a>00562   {
 <a name="l00563"></a>00563   <span class="keywordflow">if</span>(iPostData)
 <a name="l00564"></a>00564     {
 <a name="l00565"></a>00565     <span class="comment">// Provide pointer to next chunk of data (return ETrue, if last chunk)</span>
 <a name="l00566"></a>00566     <span class="comment">// Usually only one chunk is needed, but sending big file could require</span>
 <a name="l00567"></a>00567     <span class="comment">// loading the file in small parts.</span>
-<a name="l00568"></a>00568     aDataPart.Set(iPostData-&gt;Des());
+<a name="l00568"></a>00568     aDataPart.Set(iPostData->Des());
 <a name="l00569"></a>00569     }
 <a name="l00570"></a>00570   <span class="keywordflow">return</span> ETrue;
 <a name="l00571"></a>00571   }
@@ -616,7 +616,7 @@
 <a name="l00576"></a>00576 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00577"></a>00577 <span class="keywordtype">void</span> CClientEngine::ReleaseData()
 <a name="l00578"></a>00578   {
-<a name="l00579"></a>00579   <span class="comment">// It&#39;s safe to delete iPostData now.</span>
+<a name="l00579"></a>00579   <span class="comment">// It's safe to delete iPostData now.</span>
 <a name="l00580"></a>00580   <span class="keyword">delete</span> iPostData;
 <a name="l00581"></a>00581   iPostData = NULL;
 <a name="l00582"></a>00582   }
@@ -639,7 +639,7 @@
 <a name="l00599"></a>00599 TInt CClientEngine::OverallDataSize()
 <a name="l00600"></a>00600   {
 <a name="l00601"></a>00601   <span class="keywordflow">if</span>(iPostData)
-<a name="l00602"></a>00602     <span class="keywordflow">return</span> iPostData-&gt;Length();
+<a name="l00602"></a>00602     <span class="keywordflow">return</span> iPostData->Length();
 <a name="l00603"></a>00603   <span class="keywordflow">else</span>
 <a name="l00604"></a>00604     <span class="keywordflow">return</span> KErrNotFound ;
 <a name="l00605"></a>00605   }
@@ -647,11 +647,11 @@
 <a name="l00607"></a>00607 <span class="comment">// ----------------------------------------------------------------------------</span>
 <a name="l00608"></a>00608 <span class="comment">// CClientEngine::GetCredentialsL()</span>
 <a name="l00609"></a>00609 <span class="comment">// ----------------------------------------------------------------------------</span>
-<a name="l00610"></a>00610 TBool CClientEngine::GetCredentialsL(<span class="keyword">const</span> TUriC8&amp; aURI,
+<a name="l00610"></a>00610 TBool CClientEngine::GetCredentialsL(<span class="keyword">const</span> TUriC8& aURI,
 <a name="l00611"></a>00611                    RString aRealm,
 <a name="l00612"></a>00612                    RStringF aAuthenticationType,
-<a name="l00613"></a>00613                    RString&amp; aUsername,
-<a name="l00614"></a>00614                    RString&amp; aPassword)
+<a name="l00613"></a>00613                    RString& aUsername,
+<a name="l00614"></a>00614                    RString& aPassword)
 <a name="l00615"></a>00615   {
 <a name="l00616"></a>00616   <span class="comment">// aURI, aReal and aAuthenticationType are informational only. We only need</span>
 <a name="l00617"></a>00617   <span class="comment">// to set aUsername and aPassword and return ETrue, if aUsername and</span>
@@ -665,34 +665,34 @@
 <a name="l00625"></a>00625 
 <a name="l00626"></a>00626   <span class="comment">// First parameter</span>
 <a name="l00627"></a>00627   HBufC* uri16 = HBufC::NewLC(aURI.UriDes().Length());
-<a name="l00628"></a>00628   uri16-&gt;Des().Copy(aURI.UriDes());
-<a name="l00629"></a>00629   strings-&gt;AppendL(*uri16);
+<a name="l00628"></a>00628   uri16->Des().Copy(aURI.UriDes());
+<a name="l00629"></a>00629   strings->AppendL(*uri16);
 <a name="l00630"></a>00630   CleanupStack::PopAndDestroy(uri16);
 <a name="l00631"></a>00631 
 <a name="l00632"></a>00632   <span class="comment">// Second parameter</span>
 <a name="l00633"></a>00633   HBufC* authType16 = HBufC::NewLC(aAuthenticationType.DesC().Length());
-<a name="l00634"></a>00634   authType16-&gt;Des().Copy(aAuthenticationType.DesC());
-<a name="l00635"></a>00635   strings-&gt;AppendL(*authType16);
+<a name="l00634"></a>00634   authType16->Des().Copy(aAuthenticationType.DesC());
+<a name="l00635"></a>00635   strings->AppendL(*authType16);
 <a name="l00636"></a>00636   CleanupStack::PopAndDestroy(authType16);
 <a name="l00637"></a>00637 
 <a name="l00638"></a>00638   HBufC* resAuthNote = StringLoader::LoadLC(R_HTTP_AUTH_NOTE, *strings);
 <a name="l00639"></a>00639   HBufC* resAuthRequired = StringLoader::LoadLC(R_HTTP_AUTH_REQUIRED);
-<a name="l00640"></a>00640   CEikonEnv::Static()-&gt;InfoWinL(*resAuthRequired, *resAuthNote);
+<a name="l00640"></a>00640   CEikonEnv::Static()->InfoWinL(*resAuthRequired, *resAuthNote);
 <a name="l00641"></a>00641 
 <a name="l00642"></a>00642   CleanupStack::PopAndDestroy(resAuthNote);
 <a name="l00643"></a>00643   CleanupStack::PopAndDestroy(resAuthRequired);
 <a name="l00644"></a>00644 
 <a name="l00645"></a>00645   <span class="comment">// Query user name and password</span>
-<a name="l00646"></a>00646   TBuf&lt;KDefaultBufferSize&gt; userName;
-<a name="l00647"></a>00647   TBuf&lt;KDefaultBufferSize&gt; password;
+<a name="l00646"></a>00646   TBuf<KDefaultBufferSize> userName;
+<a name="l00647"></a>00647   TBuf<KDefaultBufferSize> password;
 <a name="l00648"></a>00648   CAknMultiLineDataQueryDialog* dlg =
 <a name="l00649"></a>00649     CAknMultiLineDataQueryDialog::NewL(userName, password);
 <a name="l00650"></a>00650 
-<a name="l00651"></a>00651   <span class="keywordflow">if</span> (!dlg-&gt;ExecuteLD(R_DIALOG_USER_PASSWORD_QUERY))
+<a name="l00651"></a>00651   <span class="keywordflow">if</span> (!dlg->ExecuteLD(R_DIALOG_USER_PASSWORD_QUERY))
 <a name="l00652"></a>00652     <span class="keywordflow">return</span> EFalse; <span class="comment">// No credentials given; must return EFalse</span>
 <a name="l00653"></a>00653 
 <a name="l00654"></a>00654   <span class="comment">// Set aUsername and aPassword</span>
-<a name="l00655"></a>00655   TBuf8&lt;KDefaultBufferSize&gt; temp;
+<a name="l00655"></a>00655   TBuf8<KDefaultBufferSize> temp;
 <a name="l00656"></a>00656   temp.Copy(userName);
 <a name="l00657"></a>00657   TRAPD(err, aUsername = aRealm.Pool().OpenStringL(temp));
 <a name="l00658"></a>00658   <span class="keywordflow">if</span> (!err)
@@ -717,7 +717,7 @@
 <a name="l00677"></a>00677     {
 <a name="l00678"></a>00678     <span class="keywordflow">if</span> (!aIsSeamless)
 <a name="l00679"></a>00679         {
-<a name="l00680"></a>00680         iMobility-&gt;MigrateToPreferredCarrier();
+<a name="l00680"></a>00680         iMobility->MigrateToPreferredCarrier();
 <a name="l00681"></a>00681         }
 <a name="l00682"></a>00682     }
 <a name="l00683"></a>00683 
@@ -729,7 +729,7 @@
 <a name="l00689"></a>00689     {
 <a name="l00690"></a>00690     <span class="keywordflow">if</span> (!aIsSeamless)
 <a name="l00691"></a>00691         {
-<a name="l00692"></a>00692         iMobility-&gt;NewCarrierAccepted();
+<a name="l00692"></a>00692         iMobility->NewCarrierAccepted();
 <a name="l00693"></a>00693         }
 <a name="l00694"></a>00694     }
 <a name="l00695"></a>00695 
@@ -755,7 +755,7 @@
 <a name="l00715"></a>00715     {
 <a name="l00716"></a>00716     TInt statusCode = iStatus.Int();
 <a name="l00717"></a>00717 
-<a name="l00718"></a>00718     <span class="keywordflow">if</span> (!iConnectionSetupDone &amp;&amp; statusCode == KErrNone)
+<a name="l00718"></a>00718     <span class="keywordflow">if</span> (!iConnectionSetupDone && statusCode == KErrNone)
 <a name="l00719"></a>00719         {
 <a name="l00720"></a>00720         <span class="comment">// Connection done ok</span>
 <a name="l00721"></a>00721         iConnectionSetupDone = ETrue;
@@ -786,10 +786,10 @@
 <a name="l00746"></a>00746 
 <a name="l00747"></a>00747 <span class="comment">// end of file</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

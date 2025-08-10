@@ -3,26 +3,26 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="copyright" content="(C) Copyright 2010"/>
-<meta name="DC.rights.owner" content="(C) Copyright 2010"/>
-<meta name="DC.Type" content="concept"/>
-<meta name="DC.Title" content="CSPRNG Implementation in Kernel"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html"/>
-<meta name="DC.Relation" scheme="URI" content="index.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-A91C6359-E547-51AD-AA8C-45BCAFBA98AC.html"/>
-<meta name="DC.Relation" scheme="URI" content="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html"/>
-<meta name="DC.Format" content="XHTML"/>
-<meta name="DC.Identifier" content="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB"/>
-<meta name="DC.Language" content="en"/>
-<link rel="stylesheet" type="text/css" href="commonltr.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<meta name="copyright" content="(C) Copyright 2010"></meta>
+<meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+<meta name="DC.Type" content="concept"></meta>
+<meta name="DC.Title" content="CSPRNG Implementation in Kernel"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-32E29020-1956-461A-B79A-1492E06049E7.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-A91C6359-E547-51AD-AA8C-45BCAFBA98AC.html"></meta>
+<meta name="DC.Relation" scheme="URI" content="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html"></meta>
+<meta name="DC.Format" content="XHTML"></meta>
+<meta name="DC.Identifier" content="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB"></meta>
+<meta name="DC.Language" content="en"></meta>
+<link rel="stylesheet" type="text/css" href="commonltr.css"></link>
 <title>CSPRNG Implementation in Kernel</title>
 
      
-<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+<link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -30,7 +30,7 @@
 
 
 
-     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"/></head>
+     <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link></head>
 <body id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB"><!-- --></a>
 
 
@@ -42,7 +42,7 @@
     <a id="index" href="index.html">Symbian^3 Product Developer Library</a>        
 </div>
      <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
-<div id="treeDiv1">&#160;</div>
+<div id="treeDiv1"> </div>
      <script type="text/javascript">
 	var currentIconMode = 0; window.name="id2563754 id2387835 id2399872 id2399880 ";
 	YAHOO.util.Event.onDOMReady(buildTree, this,true);
@@ -53,7 +53,7 @@
 <div id="sdl_content">
 
 
-<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> &gt; <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> &gt; <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> &gt; <a href="GUID-A91C6359-E547-51AD-AA8C-45BCAFBA98AC.html" title="EKA2 is the principal Hardware and Kernel Services module. It manages the CPU and memory resources of a phone, and provides an architecture for device drivers to manage other hardware resources.">Kernel Architecture (EKA2)</a> &gt; <a href="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html" title="Describes the architecture and technology features of the Kernel that are important for a base port.">Concepts</a> &gt; </div>
+<div class="breadcrumb"><a href="index.html" title="Symbian^3 Product Developer Library">Symbian^3 Product Developer Library</a> > <a href="GUID-32E29020-1956-461A-B79A-1492E06049E7.html" title="The Symbian Guide describes the architecture and functionality of the platform, and provides guides on using its APIs.">Symbian Guide</a> > <a href="GUID-C14B2552-43A7-4499-ABFE-1725128DA6EF.html" title="Kernel and Hardware Services performs the fundamental operating system tasks of managing access to device resources.">Kernel and Hardware Services Guide</a> > <a href="GUID-A91C6359-E547-51AD-AA8C-45BCAFBA98AC.html" title="EKA2 is the principal Hardware and Kernel Services module. It manages the CPU and memory resources of a phone, and provides an architecture for device drivers to manage other hardware resources.">Kernel Architecture (EKA2)</a> > <a href="GUID-A16F9F31-182E-5301-B228-A457BD3530FE.html" title="Describes the architecture and technology features of the Kernel that are important for a base port.">Concepts</a> > </div>
 <h1 class="topictitle1">CSPRNG
 Implementation in Kernel</h1>
 <div>
@@ -74,7 +74,7 @@ Number Generator</a>.</p>
 <div class="section" id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-B5BD3E1A-AFBB-5526-B5EA-8FA51A17E596-GENID-1-12-1-18-1-1-11-1-5-1-19-1-2-2"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-B5BD3E1A-AFBB-5526-B5EA-8FA51A17E596-GENID-1-12-1-18-1-1-11-1-5-1-19-1-2-2"><!-- --></a><h2 class="sectiontitle">Description</h2> <p>The
 CSPRNG uses Hash_DRBG algorithm to generate pseudo-random number. Hash_DRBG
 algorithm is a standard recommended by National Institute of Secure Technology
-(<a href="http://csrc.nist.gov/publications/nistpubs/800-90/SP800-90revised_March2007.pdf" target="_blank">NIST SP800-90</a>), which uses cryptographic hash functions
+(<a href="https://web.archive.org/web/20110000000000*/http://csrc.nist.gov/publications/nistpubs/800-90/SP800-90revised_March2007.pdf" target="_blank">NIST SP800-90</a>), which uses cryptographic hash functions
 (SHA-256) to generate random numbers. The strength of CSPRNG not only depends
 on the generation algorithm, but also on the strength of entropy input. </p>
 <p>A
@@ -95,14 +95,14 @@ are listed below: </p>
 <li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-49840D10-1AA9-5B1E-89F2-EE76AA6EE168"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-49840D10-1AA9-5B1E-89F2-EE76AA6EE168"><!-- --></a><p> <samp class="codeph">TUint32 Math::Random()</samp>  </p>
  </li>
 
-<li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-44B4E31A-F2CD-57B1-841C-5D49FB31F761"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-44B4E31A-F2CD-57B1-841C-5D49FB31F761"><!-- --></a><p> <samp class="codeph">void Math::Random(TDes8&amp;
+<li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-44B4E31A-F2CD-57B1-841C-5D49FB31F761"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-44B4E31A-F2CD-57B1-841C-5D49FB31F761"><!-- --></a><p> <samp class="codeph">void Math::Random(TDes8&
 aRandomValue)</samp>  </p>
  </li>
 
 <li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-A44D2225-FD37-58F0-8371-93BE55FE0B14"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-A44D2225-FD37-58F0-8371-93BE55FE0B14"><!-- --></a><p> <samp class="codeph">TUint32 Math::RandomL()</samp>  </p>
  </li>
 
-<li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-CDA30955-23FE-574B-9C9D-EF60905AE143"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-CDA30955-23FE-574B-9C9D-EF60905AE143"><!-- --></a><p> <samp class="codeph">void Math::RandomL(TDes8&amp;
+<li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-CDA30955-23FE-574B-9C9D-EF60905AE143"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-CDA30955-23FE-574B-9C9D-EF60905AE143"><!-- --></a><p> <samp class="codeph">void Math::RandomL(TDes8&
 aRandomValue)</samp>  </p>
  </li>
 
@@ -113,7 +113,7 @@ aRandomValue)</samp>  </p>
 can be accessed using the following methods: </p>
  <ul>
 <li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-7B3E4D44-394F-5D51-8DA1-DC7515C6BD14"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-7B3E4D44-394F-5D51-8DA1-DC7515C6BD14"><!-- --></a><p> <samp class="codeph">EXPORT_C TInt
-Kern::SecureRandom(TDes8&amp; aRandomValue)</samp>  </p>
+Kern::SecureRandom(TDes8& aRandomValue)</samp>  </p>
  </li>
 
 <li id="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-8DD4B45E-4659-5F72-92CB-6774C8CCE12F"><a name="GUID-8290AAF0-577C-51D2-8AC1-0D37A10F45CB__GUID-8DD4B45E-4659-5F72-92CB-6774C8CCE12F"><!-- --></a><p> <samp class="codeph">EXPORT_C TUint32
@@ -134,9 +134,9 @@ the only functions that do not return any error codes.</p>
 <div class="example"><p>The following examples show the use of the various user-side APIs
 to generate a random number:</p>
 <ul>
-<li><p> Example of <a href="GUID-1DB7AE7A-A505-3530-AC2B-EBAEFCD3F36A.html#GUID-1DB7AE7A-A505-3530-AC2B-EBAEFCD3F36A__GUID-F37E64ED-4DE4-3F0D-9BE2-756CF9D00B13"><span class="apiname">Math::RandomL(TDes8&amp;)</span></a> </p>
+<li><p> Example of <a href="GUID-1DB7AE7A-A505-3530-AC2B-EBAEFCD3F36A.html#GUID-1DB7AE7A-A505-3530-AC2B-EBAEFCD3F36A__GUID-F37E64ED-4DE4-3F0D-9BE2-756CF9D00B13"><span class="apiname">Math::RandomL(TDes8&)</span></a> </p>
 <pre class="codeblock">const TInt KRandomBufferSize = 1024;
-TBuf8 &lt;KRandomBufferSize&gt; buffer(KRandomBufferSize);
+TBuf8 <KRandomBufferSize> buffer(KRandomBufferSize);
 Math::RandomL(buffer); // The function will leave if the number is not secure</pre>
 </li>
 
@@ -152,9 +152,9 @@ Math::RandomL(buffer); // The function will leave if the number is not secure</p
 <p>The following examples show the use of the kernel side APIs to generate
 a random number:</p>
 <ul>
-<li><p> Example of <a href="GUID-C6946ECB-775F-3EC2-A56F-78F25B9FBE3D.html#GUID-C6946ECB-775F-3EC2-A56F-78F25B9FBE3D__GUID-EA575BCE-D227-3D4A-8581-542DFAFB4E6C"><span class="apiname">Kern::SecureRandom(TDes8&amp;)</span></a> </p>
+<li><p> Example of <a href="GUID-C6946ECB-775F-3EC2-A56F-78F25B9FBE3D.html#GUID-C6946ECB-775F-3EC2-A56F-78F25B9FBE3D__GUID-EA575BCE-D227-3D4A-8581-542DFAFB4E6C"><span class="apiname">Kern::SecureRandom(TDes8&)</span></a> </p>
 <pre class="codeblock">const TInt KRandomBufferSize = 1024;
-TBuf8 &lt;KRandomBufferSize&gt; buffer(KRandomBufferSize);
+TBuf8 <KRandomBufferSize> buffer(KRandomBufferSize);
 Tint err = Kern::SecureRandom(buffer); // Number is secure if err is KErrNone else the number is not secure</pre>
 </li>
 
@@ -220,7 +220,7 @@ may affect the quality of the CSPRNG’s output.</div>
 </div>
 </div>
    
-<p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
 </div>

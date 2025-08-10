@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/Base/IPC/condvar/condvarglobal/src/subtractor.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,9 +41,9 @@
 <h1>examples/Base/IPC/condvar/condvarglobal/src/subtractor.cpp</h1><a href="subtractor_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).</span>
 <a name="l00002"></a>00002 <span class="comment">// All rights reserved.</span>
 <a name="l00003"></a>00003 <span class="comment">// This component and the accompanying materials are made available</span>
-<a name="l00004"></a>00004 <span class="comment">// under the terms of &quot;Eclipse Public License v1.0&quot;</span>
+<a name="l00004"></a>00004 <span class="comment">// under the terms of "Eclipse Public License v1.0"</span>
 <a name="l00005"></a>00005 <span class="comment">// which accompanies this distribution, and is available</span>
-<a name="l00006"></a>00006 <span class="comment">// at the URL &quot;http://www.eclipse.org/legal/epl-v10.html&quot;.</span>
+<a name="l00006"></a>00006 <span class="comment">// at the URL "http://www.eclipse.org/legal/epl-v10.html".</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">// Initial Contributors:</span>
 <a name="l00009"></a>00009 <span class="comment">// Nokia Corporation - initial contribution.</span>
@@ -56,14 +56,14 @@
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="sharedmem_8h.html">sharedmem.h</a>&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="subtractor_8h.html">subtractor.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include "<a class="code" href="sharedmem_8h.html">sharedmem.h</a>"</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include "<a class="code" href="subtractor_8h.html">subtractor.h</a>"</span>
 <a name="l00024"></a>00024 
 <a name="l00030"></a><a class="code" href="class_c_subtractor.html#a7d6002b0b8610a3241853c7fb4ef3995">00030</a> <a class="code" href="class_c_subtractor.html">CSubtractor</a>* <a class="code" href="class_c_subtractor.html#a7d6002b0b8610a3241853c7fb4ef3995">CSubtractor::NewL</a>(CConsoleBase* aConsole)
 <a name="l00031"></a>00031         {
 <a name="l00032"></a>00032         <a class="code" href="class_c_subtractor.html">CSubtractor</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_subtractor.html">CSubtractor</a>;
 <a name="l00033"></a>00033         CleanupStack::PushL(<span class="keyword">self</span>);
-<a name="l00034"></a>00034         <span class="keyword">self</span>-&gt;ConstructL(aConsole);
+<a name="l00034"></a>00034         <span class="keyword">self</span>->ConstructL(aConsole);
 <a name="l00035"></a>00035         CleanupStack::Pop(<span class="keyword">self</span>);
 <a name="l00036"></a>00036         <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00037"></a>00037         }
@@ -71,10 +71,10 @@
 <a name="l00043"></a><a class="code" href="class_c_subtractor.html#adafc90c62c12777fc2c1670cfc65ff7e">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_c_subtractor.html#adafc90c62c12777fc2c1670cfc65ff7e">CSubtractor::RunL</a>()
 <a name="l00044"></a>00044         {
 <a name="l00045"></a>00045         <span class="comment">// Get the key code.</span>
-<a name="l00046"></a>00046         TUint8 option = iConsole-&gt;KeyCode();
+<a name="l00046"></a>00046         TUint8 option = iConsole->KeyCode();
 <a name="l00047"></a>00047         <span class="comment">// Print the selected option.</span>
-<a name="l00048"></a>00048         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextFormat,<span class="stringliteral">&quot;%c\n&quot;</span>);
-<a name="l00049"></a>00049         iConsole-&gt;Printf(KTextFormat,option);
+<a name="l00048"></a>00048         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextFormat,<span class="stringliteral">"%c\n"</span>);
+<a name="l00049"></a>00049         iConsole->Printf(KTextFormat,option);
 <a name="l00050"></a>00050         <span class="comment">// Stop the timer and the active scheduler.</span>
 <a name="l00051"></a>00051         <a class="code" href="class_c_subtractor.html#a6fccf6a6e4f1b731f1d2105ccac84484">StopTimer</a>();
 <a name="l00052"></a>00052         CActiveScheduler::Stop();
@@ -85,7 +85,7 @@
 <a name="l00060"></a>00060         <span class="keywordflow">if</span>(IsActive())
 <a name="l00061"></a>00061                 {
 <a name="l00062"></a>00062                 <span class="comment">// Cancel any outstanding read requests.</span>
-<a name="l00063"></a>00063                 iConsole-&gt;ReadCancel();
+<a name="l00063"></a>00063                 iConsole->ReadCancel();
 <a name="l00064"></a>00064                 }
 <a name="l00065"></a>00065         }
 <a name="l00066"></a>00066 
@@ -94,7 +94,7 @@
 <a name="l00072"></a>00072         <span class="comment">// Cancel all outstanding requests.</span>
 <a name="l00073"></a>00073         <a class="code" href="class_c_subtractor.html#a8fe681f7232eb2d9a8e5d6b00d56d461">DoCancel</a>();
 <a name="l00074"></a>00074         <span class="comment">// Delete the timer object.</span>
-<a name="l00075"></a>00075         iPeriodic-&gt;Cancel();
+<a name="l00075"></a>00075         iPeriodic->Cancel();
 <a name="l00076"></a>00076         <span class="keyword">delete</span> iPeriodic;
 <a name="l00077"></a>00077         }
 <a name="l00078"></a>00078 
@@ -121,31 +121,31 @@
 <a name="l00107"></a>00107 
 <a name="l00111"></a><a class="code" href="class_c_subtractor.html#a0d39bfb8170e1923541fa6efd915d206">00111</a> <span class="keywordtype">void</span> <a class="code" href="class_c_subtractor.html#a0d39bfb8170e1923541fa6efd915d206">CSubtractor::ReadFunction</a>()
 <a name="l00112"></a>00112         {
-<a name="l00113"></a>00113         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextMessage,<span class="stringliteral">&quot;Press a key to exit...\n&quot;</span>);
-<a name="l00114"></a>00114         iConsole-&gt;Printf(KTextMessage);
+<a name="l00113"></a>00113         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTextMessage,<span class="stringliteral">"Press a key to exit...\n"</span>);
+<a name="l00114"></a>00114         iConsole->Printf(KTextMessage);
 <a name="l00115"></a>00115         <span class="comment">// Wait for a key press event.</span>
-<a name="l00116"></a>00116         iConsole-&gt;Read(iStatus);
+<a name="l00116"></a>00116         iConsole->Read(iStatus);
 <a name="l00117"></a>00117         SetActive();
 <a name="l00118"></a>00118         }
 <a name="l00119"></a>00119 
 <a name="l00124"></a><a class="code" href="class_c_subtractor.html#ab5a9d2c973fb9387a6519971ddcb61c2">00124</a> <span class="keywordtype">void</span> <a class="code" href="class_c_subtractor.html#ab5a9d2c973fb9387a6519971ddcb61c2">CSubtractor::StartTimer</a>()
 <a name="l00125"></a>00125         {
-<a name="l00126"></a>00126         iPeriodic-&gt;Start(0,3000000,TCallBack(<a class="code" href="class_c_subtractor.html#a44265608e41e7a13f8790fcd68a5589d">SubtractFunction</a>,<span class="keyword">this</span>));
+<a name="l00126"></a>00126         iPeriodic->Start(0,3000000,TCallBack(<a class="code" href="class_c_subtractor.html#a44265608e41e7a13f8790fcd68a5589d">SubtractFunction</a>,<span class="keyword">this</span>));
 <a name="l00127"></a>00127         }
 <a name="l00128"></a>00128 
 <a name="l00132"></a><a class="code" href="class_c_subtractor.html#a6fccf6a6e4f1b731f1d2105ccac84484">00132</a> <span class="keywordtype">void</span> <a class="code" href="class_c_subtractor.html#a6fccf6a6e4f1b731f1d2105ccac84484">CSubtractor::StopTimer</a>()
 <a name="l00133"></a>00133         {
 <a name="l00134"></a>00134         <span class="comment">// Cancel the  outstanding request.</span>
-<a name="l00135"></a>00135         iPeriodic-&gt;Cancel();
+<a name="l00135"></a>00135         iPeriodic->Cancel();
 <a name="l00136"></a>00136         }
 <a name="l00137"></a>00137 
 <a name="l00143"></a><a class="code" href="class_c_subtractor.html#a44265608e41e7a13f8790fcd68a5589d">00143</a> TInt <a class="code" href="class_c_subtractor.html#a44265608e41e7a13f8790fcd68a5589d">CSubtractor::SubtractFunction</a>(TAny* aPtr)
 <a name="l00144"></a>00144         {
-<a name="l00145"></a>00145         <a class="code" href="class_c_subtractor.html">CSubtractor</a>* ptr = <span class="keyword">static_cast&lt;</span><a class="code" href="class_c_subtractor.html">CSubtractor</a>*<span class="keyword">&gt;</span> (aPtr);
-<a name="l00146"></a>00146         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPanic,<span class="stringliteral">&quot;Unexpected datatype\n&quot;</span>);
+<a name="l00145"></a>00145         <a class="code" href="class_c_subtractor.html">CSubtractor</a>* ptr = <span class="keyword">static_cast<</span><a class="code" href="class_c_subtractor.html">CSubtractor</a>*<span class="keyword">></span> (aPtr);
+<a name="l00146"></a>00146         <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KTxtPanic,<span class="stringliteral">"Unexpected datatype\n"</span>);
 <a name="l00147"></a>00147         __ASSERT_ALWAYS(ptr,User::Panic(KTxtPanic,-1));
 <a name="l00148"></a>00148         <span class="comment">// Invoke the Subtract() function.</span>
-<a name="l00149"></a>00149         ptr-&gt;<a class="code" href="class_c_subtractor.html#aaea4ddea47a64945f5dcd280d9f5adcb">Subtract</a>();
+<a name="l00149"></a>00149         ptr-><a class="code" href="class_c_subtractor.html#aaea4ddea47a64945f5dcd280d9f5adcb">Subtract</a>();
 <a name="l00150"></a>00150         <span class="keywordflow">return</span> KErrNone;
 <a name="l00151"></a>00151         }
 <a name="l00152"></a>00152 
@@ -161,23 +161,23 @@
 <a name="l00165"></a>00165         TUint8 *ptr = iChunk.Base();
 <a name="l00166"></a>00166 
 <a name="l00167"></a>00167         <span class="comment">// Print the value of the chunk before subtraction.</span>
-<a name="l00168"></a>00168         iConsole-&gt;Printf(_L(<span class="stringliteral">&quot;Value read from the shared memory: %d\n&quot;</span>),*ptr);
+<a name="l00168"></a>00168         iConsole->Printf(_L(<span class="stringliteral">"Value read from the shared memory: %d\n"</span>),*ptr);
 <a name="l00169"></a>00169 
 <a name="l00170"></a>00170         <span class="comment">// Subtract the random value from the shared memory variable.</span>
 <a name="l00171"></a>00171         *ptr -= randVal;
 <a name="l00172"></a>00172 
-<a name="l00173"></a>00173         <span class="keywordflow">while</span>(*ptr &lt; <a class="code" href="sharedmem_8h.html#a817ce7a9d8ca9ead92509953f8dcdcad">KLowerThreshold</a>)
+<a name="l00173"></a>00173         <span class="keywordflow">while</span>(*ptr < <a class="code" href="sharedmem_8h.html#a817ce7a9d8ca9ead92509953f8dcdcad">KLowerThreshold</a>)
 <a name="l00174"></a>00174                 {
 <a name="l00175"></a>00175                 <span class="comment">// Wait on the condition variable if the result is lesser than 0.</span>
-<a name="l00176"></a>00176                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KBlockMessage,<span class="stringliteral">&quot;Subtractor blocked by condVar until Adder signals that value has been increased.\nIntermediate value of the chunk = %d\n&quot;</span>);
-<a name="l00177"></a>00177                 iConsole-&gt;Printf(KBlockMessage,*ptr);
+<a name="l00176"></a>00176                 <a class="code" href="secureclientandserver_8h.html#a5eadd4429627d82193b37536d4faa03a">_LIT</a>(KBlockMessage,<span class="stringliteral">"Subtractor blocked by condVar until Adder signals that value has been increased.\nIntermediate value of the chunk = %d\n"</span>);
+<a name="l00177"></a>00177                 iConsole->Printf(KBlockMessage,*ptr);
 <a name="l00178"></a>00178                 iCondVar.Wait(iMutex);
 <a name="l00179"></a>00179                 }
 <a name="l00180"></a>00180         <span class="comment">// Print the updated value of the chunk.</span>
-<a name="l00181"></a>00181         iConsole-&gt;Printf(_L(<span class="stringliteral">&quot;Value of the shared memory decreased to : %d\n&quot;</span>),*ptr);
+<a name="l00181"></a>00181         iConsole->Printf(_L(<span class="stringliteral">"Value of the shared memory decreased to : %d\n"</span>),*ptr);
 <a name="l00182"></a>00182 
 <a name="l00183"></a>00183         <span class="comment">// Signal the mutex and the condition variable.</span>
-<a name="l00184"></a>00184         <span class="keywordflow">if</span>(*ptr &lt; <a class="code" href="sharedmem_8h.html#a0f2ae9d486d80c446844be5480b7bbc2">KUpperThreshold</a>)
+<a name="l00184"></a>00184         <span class="keywordflow">if</span>(*ptr < <a class="code" href="sharedmem_8h.html#a0f2ae9d486d80c446844be5480b7bbc2">KUpperThreshold</a>)
 <a name="l00185"></a>00185                 {
 <a name="l00186"></a>00186                 <span class="comment">// Signal that the level is safe for addition to (re)start.</span>
 <a name="l00187"></a>00187                 iCondVar.Signal();
@@ -201,9 +201,9 @@
 <a name="l00205"></a>00205         CleanupStack::PushL(subtractor);
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207         <span class="comment">// Start the timer of the CSubtractor object.</span>
-<a name="l00208"></a>00208         subtractor-&gt;<a class="code" href="class_c_subtractor.html#ab5a9d2c973fb9387a6519971ddcb61c2">StartTimer</a>();
+<a name="l00208"></a>00208         subtractor-><a class="code" href="class_c_subtractor.html#ab5a9d2c973fb9387a6519971ddcb61c2">StartTimer</a>();
 <a name="l00209"></a>00209         <span class="comment">// Issue an asynchronous read request.</span>
-<a name="l00210"></a>00210         subtractor-&gt;<a class="code" href="class_c_subtractor.html#a0d39bfb8170e1923541fa6efd915d206">ReadFunction</a>();
+<a name="l00210"></a>00210         subtractor-><a class="code" href="class_c_subtractor.html#a0d39bfb8170e1923541fa6efd915d206">ReadFunction</a>();
 <a name="l00211"></a>00211         <span class="comment">// Start the active scheduler.</span>
 <a name="l00212"></a>00212         CActiveScheduler::Start();
 <a name="l00213"></a>00213 
@@ -227,18 +227,18 @@
 <a name="l00231"></a>00231         CleanupStack::PushL(console);
 <a name="l00232"></a>00232         TRAPD(error,DoExampleL()); <span class="comment">// perform example function</span>
 <a name="l00233"></a>00233         <span class="keywordflow">if</span> (error)
-<a name="l00234"></a>00234                 console-&gt;Printf(KFormatFailed, error);
+<a name="l00234"></a>00234                 console->Printf(KFormatFailed, error);
 <a name="l00235"></a>00235         <span class="keywordflow">else</span>
-<a name="l00236"></a>00236                 console-&gt;Printf(KTxtOK);
-<a name="l00237"></a>00237         console-&gt;Printf(KTxtPressAnyKey);
-<a name="l00238"></a>00238         console-&gt;Getch(); <span class="comment">// get and ignore character</span>
+<a name="l00236"></a>00236                 console->Printf(KTxtOK);
+<a name="l00237"></a>00237         console->Printf(KTxtPressAnyKey);
+<a name="l00238"></a>00238         console->Getch(); <span class="comment">// get and ignore character</span>
 <a name="l00239"></a>00239         CleanupStack::PopAndDestroy(); <span class="comment">// close console</span>
 <a name="l00240"></a>00240     }
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

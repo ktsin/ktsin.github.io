@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/ForumNokia/Symbian_OS_Basics_Lab_Exercises_v3_1/Lab_04304.cb1/solution/src/S60MemoryLabDocument.cpp Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -41,8 +41,8 @@
 <h1>examples/ForumNokia/Symbian_OS_Basics_Lab_Exercises_v3_1/Lab_04304.cb1/solution/src/S60MemoryLabDocument.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright: (c) 2006 Nokia Ltd.  All rights reserved.</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 <span class="comment">// INCLUDE FILES</span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;S60MemoryLabAppUi.h&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;S60MemoryLabDocument.h&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "S60MemoryLabAppUi.h"</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include "S60MemoryLabDocument.h"</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="comment">// ============================ MEMBER FUNCTIONS ===============================</span>
 <a name="l00008"></a>00008 
@@ -51,7 +51,7 @@
 <a name="l00011"></a>00011 <span class="comment">// Two-phased constructor.</span>
 <a name="l00012"></a>00012 <span class="comment">// -----------------------------------------------------------------------------</span>
 <a name="l00013"></a>00013 <span class="comment">//</span>
-<a name="l00014"></a><a class="code" href="class_c_s60_memory_lab_document.html#ada08c84e4453dc93c0692908f03ff283">00014</a> <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <a class="code" href="class_c_s60_memory_lab_document.html#ada08c84e4453dc93c0692908f03ff283">CS60MemoryLabDocument::NewL</a>(CEikApplication&amp; aApp)
+<a name="l00014"></a><a class="code" href="class_c_s60_memory_lab_document.html#ada08c84e4453dc93c0692908f03ff283">00014</a> <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <a class="code" href="class_c_s60_memory_lab_document.html#ada08c84e4453dc93c0692908f03ff283">CS60MemoryLabDocument::NewL</a>(CEikApplication& aApp)
 <a name="l00015"></a>00015     {
 <a name="l00016"></a>00016     <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <span class="keyword">self</span> = <a class="code" href="class_c_s60_memory_lab_document.html#acf6c344a101afa018032694542a77e97">NewLC</a>( aApp );
 <a name="l00017"></a>00017     CleanupStack::Pop( <span class="keyword">self</span> );
@@ -63,11 +63,11 @@
 <a name="l00023"></a>00023 <span class="comment">// Two-phased constructor.</span>
 <a name="l00024"></a>00024 <span class="comment">// -----------------------------------------------------------------------------</span>
 <a name="l00025"></a>00025 <span class="comment">//</span>
-<a name="l00026"></a><a class="code" href="class_c_s60_memory_lab_document.html#acf6c344a101afa018032694542a77e97">00026</a> <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <a class="code" href="class_c_s60_memory_lab_document.html#acf6c344a101afa018032694542a77e97">CS60MemoryLabDocument::NewLC</a>(CEikApplication&amp; aApp)
+<a name="l00026"></a><a class="code" href="class_c_s60_memory_lab_document.html#acf6c344a101afa018032694542a77e97">00026</a> <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <a class="code" href="class_c_s60_memory_lab_document.html#acf6c344a101afa018032694542a77e97">CS60MemoryLabDocument::NewLC</a>(CEikApplication& aApp)
 <a name="l00027"></a>00027     {
 <a name="l00028"></a>00028     <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>* <span class="keyword">self</span> = <span class="keyword">new</span> (ELeave) <a class="code" href="class_c_s60_memory_lab_document.html">CS60MemoryLabDocument</a>(aApp);
 <a name="l00029"></a>00029     CleanupStack::PushL( <span class="keyword">self</span> );
-<a name="l00030"></a>00030     <span class="keyword">self</span>-&gt;ConstructL();
+<a name="l00030"></a>00030     <span class="keyword">self</span>->ConstructL();
 <a name="l00031"></a>00031     
 <a name="l00032"></a>00032     <span class="keywordflow">return</span> <span class="keyword">self</span>;
 <a name="l00033"></a>00033     }
@@ -87,7 +87,7 @@
 <a name="l00047"></a>00047 <span class="comment">// C++ default constructor can NOT contain any code, that might leave.</span>
 <a name="l00048"></a>00048 <span class="comment">// -----------------------------------------------------------------------------</span>
 <a name="l00049"></a>00049 <span class="comment">//</span>
-<a name="l00050"></a>00050 CS60MemoryLabDocument::CS60MemoryLabDocument( CEikApplication&amp; aApp )
+<a name="l00050"></a>00050 CS60MemoryLabDocument::CS60MemoryLabDocument( CEikApplication& aApp )
 <a name="l00051"></a>00051     : CAknDocument( aApp )
 <a name="l00052"></a>00052     {
 <a name="l00053"></a>00053     <span class="comment">// No implementation required</span>
@@ -112,15 +112,15 @@
 <a name="l00072"></a>00072     {
 <a name="l00073"></a>00073     <span class="comment">// Create the application user interface, and return a pointer to it;</span>
 <a name="l00074"></a>00074     <span class="comment">// the framework takes ownership of this object</span>
-<a name="l00075"></a>00075     <span class="keywordflow">return</span> (static_cast &lt;CEikAppUi*&gt;(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_s60_memory_lab_app_ui.html">CS60MemoryLabAppUi</a>));
+<a name="l00075"></a>00075     <span class="keywordflow">return</span> (static_cast <CEikAppUi*>(<span class="keyword">new</span> (ELeave) <a class="code" href="class_c_s60_memory_lab_app_ui.html">CS60MemoryLabAppUi</a>));
 <a name="l00076"></a>00076     }
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 <span class="comment">// End of File</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

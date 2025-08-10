@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"></meta>
 <title>TB9.2 Example Applications: examples/S60CppExamples/ClientServerSync/client/inc/cssyncdocument.h Source File</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
-<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"></link>
+<link href="doxygen.css" rel="stylesheet" type="text/css"></link>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="../css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="../css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
@@ -29,7 +29,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0;
@@ -58,8 +58,8 @@
 <a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define __CSSYNCDOCUMENT_H__</span>
 <a name="l00019"></a>00019 <span class="preprocessor"></span>
 <a name="l00020"></a>00020 <span class="comment">// INCLUDE FILES</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;akndoc.h&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;TimeServerSession.h&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include <akndoc.h></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include "TimeServerSession.h"</span>
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 <span class="comment">// FORWARD DECLARATIONS</span>
 <a name="l00025"></a>00025 <span class="keyword">class </span><a class="code" href="class_c_c_s_sync_app_ui.html">CCSSyncAppUi</a>;
@@ -70,9 +70,9 @@
 <a name="l00035"></a>00035     {
 <a name="l00036"></a>00036     <span class="keyword">public</span>: <span class="comment">// Constructors and destructors</span>
 <a name="l00037"></a>00037 
-<a name="l00047"></a>00047         <span class="keyword">static</span> <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>* <a class="code" href="class_c_c_s_sync_document.html#aec1b39314506d58e5104cac0deb1b342">NewL</a>( CEikApplication&amp; aApp );
+<a name="l00047"></a>00047         <span class="keyword">static</span> <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>* <a class="code" href="class_c_c_s_sync_document.html#aec1b39314506d58e5104cac0deb1b342">NewL</a>( CEikApplication& aApp );
 <a name="l00048"></a>00048 
-<a name="l00058"></a>00058         <span class="keyword">static</span> <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>* <a class="code" href="class_c_c_s_sync_document.html#a00e979c1b19012e9f3f147be87343d0a">NewLC</a>( CEikApplication&amp; aApp );
+<a name="l00058"></a>00058         <span class="keyword">static</span> <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>* <a class="code" href="class_c_c_s_sync_document.html#a00e979c1b19012e9f3f147be87343d0a">NewLC</a>( CEikApplication& aApp );
 <a name="l00059"></a>00059 
 <a name="l00065"></a>00065         <span class="keyword">virtual</span> <a class="code" href="class_c_c_s_sync_document.html#ac80ec89ba868be8ebc34d3747f541432">~CCSSyncDocument</a>();
 <a name="l00066"></a>00066 
@@ -80,7 +80,7 @@
 <a name="l00068"></a>00068 
 <a name="l00073"></a>00073         <span class="keywordtype">void</span> <a class="code" href="class_c_c_s_sync_document.html#a01fb72bd887fb55fccf7394b14f534b9">UpdateTime</a>();
 <a name="l00074"></a>00074 
-<a name="l00080"></a>00080         <span class="keyword">const</span> TTime&amp; <a class="code" href="class_c_c_s_sync_document.html#adcc74f80be8bb9376ffd87979c4d11db">Time</a>() <span class="keyword">const</span>;
+<a name="l00080"></a>00080         <span class="keyword">const</span> TTime& <a class="code" href="class_c_c_s_sync_document.html#adcc74f80be8bb9376ffd87979c4d11db">Time</a>() <span class="keyword">const</span>;
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082     <span class="keyword">public</span>: <span class="comment">// Functions from base classes</span>
 <a name="l00083"></a>00083 
@@ -88,7 +88,7 @@
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091     <span class="keyword">private</span>: <span class="comment">// Constructors and destructors</span>
 <a name="l00092"></a>00092 
-<a name="l00099"></a>00099         <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>( CEikApplication&amp; aApp );
+<a name="l00099"></a>00099         <a class="code" href="class_c_c_s_sync_document.html">CCSSyncDocument</a>( CEikApplication& aApp );
 <a name="l00100"></a>00100 
 <a name="l00105"></a>00105         <span class="keywordtype">void</span> ConstructL();
 <a name="l00106"></a>00106 
@@ -105,10 +105,10 @@
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124 <span class="comment">// End of File</span>
 </pre></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated by&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
-     <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+<hr size="1"></hr><address style="text-align: right;"><small>Generated by 
+<a href="https://web.archive.org/web/20110000000000*/http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"></img></a> 1.6.2 </small></address>
+     <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>

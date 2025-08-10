@@ -3,28 +3,28 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en">
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="(C) Copyright 2010" />
-  <meta name="DC.rights.owner" content="(C) Copyright 2010" />
-  <meta name="DC.Type" content="concept" />
-  <meta name="DC.Title" content="Exporting and Importing Classes" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-35D7EEFC-B2E4-5444-8875-2A24790E08C2.html" />
-  <meta name="DC.Relation" scheme="URI" content="index.html" />
-  <meta name="DC.Relation" scheme="URI" content="GUID-35D7EEFC-B2E4-5444-8875-2A24790E08C2.html" />
-  <meta name="DC.Format" content="XHTML" />
-  <meta name="DC.Identifier" content="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12" />
-  <meta name="DC.Language" content="en" />
-  <link rel="stylesheet" type="text/css" href="commonltr.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta name="copyright" content="(C) Copyright 2010"></meta>
+  <meta name="DC.rights.owner" content="(C) Copyright 2010"></meta>
+  <meta name="DC.Type" content="concept"></meta>
+  <meta name="DC.Title" content="Exporting and Importing Classes"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-35D7EEFC-B2E4-5444-8875-2A24790E08C2.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="index.html"></meta>
+  <meta name="DC.Relation" scheme="URI" content="GUID-35D7EEFC-B2E4-5444-8875-2A24790E08C2.html"></meta>
+  <meta name="DC.Format" content="XHTML"></meta>
+  <meta name="DC.Identifier" content="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12"></meta>
+  <meta name="DC.Language" content="en"></meta>
+  <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
   <title>
    Exporting and Importing Classes
   </title>
-  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"/>
+  <link type="text/css" rel="stylesheet" href="css/common.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="css/sdl.css" media="screen"></link>
 
 <!--[if IE]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" media="screen" />
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="nokiacxxref.css" />
+  <link rel="stylesheet" type="text/css" href="nokiacxxref.css"></link>
  </head>
  <body id="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12">
   <a name="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12">
@@ -43,7 +43,7 @@
     </div>
     <iframe style="border:none" height="800" width="300" src="index-toc.html"></iframe>
 <div id="treeDiv1">
-     &#160;
+      
     </div>
     <script type="text/javascript">
      var currentIconMode = 0; window.name="id1197760 ";
@@ -55,11 +55,11 @@
      <a href="index.html" title="Symbian^3 Application Developer Library">
       Symbian^3 Application Developer Library
      </a>
-     &gt;
+     >
      <a href="GUID-35D7EEFC-B2E4-5444-8875-2A24790E08C2.html">
       Essential Idioms
      </a>
-     &gt;
+     >
     </div>
     <h1 class="topictitle1">
      Exporting and Importing Classes
@@ -966,7 +966,7 @@ _ZThn12_N7Derived3fooEv @6        // this one has appeared
       </p>
       <p>
        The problem is caused because the symbol name generated for the thunk contains an offset number. More details can be found in
-       <a href="http://www.codesourcery.com/cxx-abi/abi.html" target="_blank">
+       <a href="https://web.archive.org/web/20110000000000*/http://www.codesourcery.com/cxx-abi/abi.html" target="_blank">
         http://www.codesourcery.com/cxx-abi/abi.html
        </a>
        under section 5.1.4. This offset may change, when the signature of the base class is changed. For example when a data member is added or removed.
@@ -1012,7 +1012,7 @@ _ZThn12_N7Derived3fooEv @6        // this one has appeared
          <a name="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12__GUID-7C590699-C58D-5619-8FFA-1DE51A0D666F">
           <!-- -->
          </a>
-         <img src="GUID-377B04D8-4E8B-54C7-AE7F-8BD47CB81758_d0e10591_href.png" />
+         <img src="GUID-377B04D8-4E8B-54C7-AE7F-8BD47CB81758_d0e10591_href.png"></img>
         </div>
         <p>
          After fixing the DEF file, you will need to rebuild the DLL which uses the DEF file.
@@ -1029,7 +1029,7 @@ _ZThn12_N7Derived3fooEv @6        // this one has appeared
          If you own the class which has the extra member data, it is worth noting that this change is likely to affect your customers as well. They will have to rebuild because of the BC break. Adding to this they will also see the ABI Thunk Offset Problem if they derive from your class. This includes simple inheritance from a class which shows the problem, if it re-implements any of the virtual functions which require thunks.
         </p>
         <p>
-         When Symbian breaks compatibility in a way likely to cause this problem, the corresponding entry in the Compatibility Break spreadsheet will say "BC+ Break: Rebuild &amp; Check/Fix Def-File EABI Thunk Offsets".
+         When Symbian breaks compatibility in a way likely to cause this problem, the corresponding entry in the Compatibility Break spreadsheet will say "BC+ Break: Rebuild & Check/Fix Def-File EABI Thunk Offsets".
         </p>
        </li>
       </ol>
@@ -1145,13 +1145,13 @@ MInterface* fun4() { return new MoreDerived; }
        <a href="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12.html#GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12__GUID-A6382EAB-EEF5-56AC-B15E-B3740BB3C102">
         Class Exporting Rules
        </a>
-       ) by default will generate non-callable exports for all classes that are not marked non-sharable in source. Say two DLLs, A and B share one DEF file, in effect implementing similar but different functionality towards the same public interface. Further say, no classes are marked non-sharable. Say there are some classes that are shared between DLL A and DLL B and that these classes have names of the form CShared&lt;xyz&gt;. Classes that are specific to DLL A have names of the form CA&lt;xyz&gt;, classes specific to DLL B have names of the form CB&lt;xyz&gt;. When DLL A is built, DEF file entries for non-callable exports from CShared&lt;xyz&gt; and CA&lt;XYZ&gt; are automatically added to the DEF file. When DLL B is built, exports from CShared&lt;xyz&gt; and CB&lt;XYZ&gt; are added. So in fact the DEF file would be the sum of all non-callable exports from CShared&lt;xyz&gt;, CA&lt;xyz&gt; and CB&lt;XYZ&gt;. It also will contain symbols from functions that are marked for export using EXPORT_C. However, this means that neither A or B can be linked. This is because when A is built, the code linking against the non-callable exports of CB&lt;XYZ&gt; do not exist in A and vice versa.
+       ) by default will generate non-callable exports for all classes that are not marked non-sharable in source. Say two DLLs, A and B share one DEF file, in effect implementing similar but different functionality towards the same public interface. Further say, no classes are marked non-sharable. Say there are some classes that are shared between DLL A and DLL B and that these classes have names of the form CShared<xyz>. Classes that are specific to DLL A have names of the form CA<xyz>, classes specific to DLL B have names of the form CB<xyz>. When DLL A is built, DEF file entries for non-callable exports from CShared<xyz> and CA<XYZ> are automatically added to the DEF file. When DLL B is built, exports from CShared<xyz> and CB<XYZ> are added. So in fact the DEF file would be the sum of all non-callable exports from CShared<xyz>, CA<xyz> and CB<XYZ>. It also will contain symbols from functions that are marked for export using EXPORT_C. However, this means that neither A or B can be linked. This is because when A is built, the code linking against the non-callable exports of CB<XYZ> do not exist in A and vice versa.
       </p>
       <div class="fignone" id="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12__GUID-E2B571A3-0463-5886-AD08-D50F0420EAF9">
        <a name="GUID-CCE5DBCC-41D6-53D0-B929-ADB478B53F12__GUID-E2B571A3-0463-5886-AD08-D50F0420EAF9">
         <!-- -->
        </a>
-       <img src="GUID-D205622E-FB0F-59C4-A039-B418B551CBFA_d0e10676_href.png" />
+       <img src="GUID-D205622E-FB0F-59C4-A039-B418B551CBFA_d0e10676_href.png"></img>
       </div>
       <p>
        <strong>
@@ -1470,7 +1470,7 @@ MInterface* fun4() { return new MoreDerived; }
       </div>
      </div>
     </div>
-    <p class="copyright">Copyright &#169;2010 Nokia Corporation and/or its subsidiary(-ies).<br /> All rights
+    <p class="copyright">Copyright ©2010 Nokia Corporation and/or its subsidiary(-ies).<br></br> All rights
 reserved. Unless otherwise stated, these materials are provided under the terms of the <a href=" http://www.eclipse.org/legal/epl-v10.html"> Eclipse Public License
 v1.0</a>.</p> 
    </div>
